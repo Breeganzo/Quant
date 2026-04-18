@@ -121,7 +121,9 @@ cp .env.example .env.local
 - `VITE_SUPABASE_URL`
 - `VITE_SUPABASE_ANON_KEY`
 
-3. Create table and policies in Supabase SQL editor:
+3. In Supabase SQL editor, run the script from `site/supabase/schema.sql`.
+
+Equivalent SQL:
 
 ```sql
 create table if not exists public.study_progress (
