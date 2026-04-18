@@ -126,6 +126,8 @@ If you want backup/transfer, use the app's export/import progress JSON buttons.
 
 If you want progress to sync across multiple devices and browsers, enable Supabase cloud sync.
 
+### For Local Development
+
 1. Copy environment template:
 
 ```bash
@@ -134,47 +136,39 @@ cp .env.example .env.local
 ```
 
 2. Fill in:
-
 - `VITE_SUPABASE_URL`
 - `VITE_SUPABASE_ANON_KEY`
-- `VITE_SITE_BASE` (set this to your deployed subpath, for example `/Quant_Practise/`)
+- `VITE_SITE_BASE` (default: `/Quant_Practise/`)
 
-If your static host does not inject build-time env vars, set Supabase at runtime in:
+3. Run dev server:
 
-- `site/public/runtime-config.js`
-
-3. In Supabase SQL editor, run the script from `site/supabase/schema.sql`.
-
-Equivalent SQL:
-
-```sql
-create table if not exists public.study_progress (
-	id uuid primary key default gen_random_uuid(),
-	user_id uuid not null unique references auth.users(id) on delete cascade,
-	progress jsonb not null default '{}'::jsonb,
-	updated_at timestamptz not null default now()
-);
-
-alter table public.study_progress enable row level security;
-
-create policy "Users can read own progress"
-	on public.study_progress
-	for select
-	using (auth.uid() = user_id);
-
-create policy "Users can insert own progress"
-	on public.study_progress
-	for insert
-	with check (auth.uid() = user_id);
-
-create policy "Users can update own progress"
-	on public.study_progress
-	for update
-	using (auth.uid() = user_id)
-	with check (auth.uid() = user_id);
+```bash
+npm run dev
 ```
 
-4. Start the site and sign in from the dashboard Cloud Sync panel.
+### For Production Deployment
+
+**Option A: GitHub Actions (Recommended)**
+- Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in GitHub repo **Settings > Secrets and variables > Repository secrets**
+- The workflow automatically injects these during build
+
+**Option B: Runtime Configuration (Static Hosts)**
+If your host does not inject build-time env vars, manually set Supabase in:
+- `site/public/runtime-config.js`
+
+Edit the file and set your credentials:
+```javascript
+window.__QUANT_CONFIG__ = {
+  supabaseUrl: "https://your-project.supabase.co",
+  supabaseAnonKey: "your-anon-key"
+};
+```
+
+3. Set up Supabase schema (once):
+   - In Supabase SQL editor, run the schema from `site/supabase/schema.sql`
+   - Or use the equivalent SQL from the docs above
+
+4. Start dev server or deploy, then sign in from the dashboard Cloud Sync panel
 
 Behavior:
 
@@ -182,14 +176,25 @@ Behavior:
 - when you sign in, local and cloud progress are merged and then synced automatically
 - cloud sync keeps progress consistent across signed-in devices
 
-## GitHub Pages Output
+## Production Build & Deployment
+
+### Build Output
 
 - Production build output is written to `docs/`
-- Site base path is configured as `/Quant/` in `site/vite.config.js`
+- Site base path is configured via `VITE_SITE_BASE` environment variable (defaults to `/Quant_Practise/`)
 
-## Host on GitHub Pages
+### Automated Deployment with GitHub Actions
 
-1. Build the site:
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) automatically:
+- Builds the site when changes are pushed to `site/` or `curriculum/`
+- Injects Supabase secrets from GitHub repository settings
+- Outputs to `docs/` for immediate deployment
+
+The workflow supports both GitHub Pages and custom static hosting.
+
+### Manual Deployment Steps
+
+1. **Build locally or on host:**
 
 ```bash
 cd "/Users/anto/Quant Learning/site"
@@ -197,9 +202,22 @@ npm install
 npm run build
 ```
 
-2. Commit and push the updated `docs/` folder.
-3. In GitHub repo settings, enable Pages and set source to branch `main` / folder `docs`.
-4. Open the published URL.
+2. **Commit and push to GitHub:**
+
+```bash
+git add docs/
+git commit -m "Deploy: update site"
+git push origin main
+```
+
+3. **For custom hosting (e.g., parkconnect.me):**
+   - If host watches GitHub repo: pull latest and rebuild manually or use a webhook
+   - If host has direct file access: sync the `docs/` folder via FTP/SFTP or SSH
+
+### Hosting on GitHub Pages
+
+1. In GitHub repo settings, enable Pages and set source to branch `main` / folder `docs`.
+2. GitHub will automatically serve the site at `https://username.github.io/Quant/`
 
 Important: GitHub Pages is static hosting. Progress is browser-local by default; cross-device persistence requires optional backend sync (for example, Supabase as shown above).
 
