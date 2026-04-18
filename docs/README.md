@@ -67,17 +67,19 @@ Real-world dataset used by daily notebook labs:
 
 - `curriculum/datasets/real_market_prices.csv`
 
-## Notebook Access (No Jupyter Required)
+## Notebook Access
 
 Website behavior:
 
 - Notebook buttons in the site open an in-app notebook viewer by default.
-- Notebook buttons also include an "Open in VS Code" action (vscode.dev).
+- The viewer is read-only for study; use the download action or VS Code web when you want to edit.
 
 Notebook source locations:
 
 - `curriculum/week-01/notebooks/` ... `curriculum/week-24/notebooks/`
 - deployed static copy: `docs/curriculum/week-XX/notebooks/`
+
+If you fork or rename the repo, update `site/.env.local` with `VITE_GITHUB_REPO` and `VITE_GITHUB_BRANCH` so the VS Code web links stay correct.
 
 ## Run Website Locally (Development)
 

@@ -24,6 +24,7 @@
 html, body, #root {
   margin: 0;
   min-height: 100%;
+  height: 100%;
   background:
     radial-gradient(circle at top left, rgba(217, 124, 43, 0.12), transparent 28%),
     radial-gradient(circle at top right, rgba(15, 118, 110, 0.12), transparent 32%),
@@ -40,7 +41,7 @@ a {
 .shell {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -48,7 +49,8 @@ a {
   position: sticky;
   top: 0;
   align-self: start;
-  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
   padding: 1.4rem;
   border-right: 1px solid rgba(24, 32, 39, 0.08);
   background: rgba(255, 250, 243, 0.7);
@@ -98,6 +100,7 @@ a {
   display: grid;
   gap: 0.8rem;
   overflow-y: auto;
+  flex: 1 1 auto;
   min-height: 0;
   padding-right: 0.35rem;
 }
@@ -132,8 +135,10 @@ a {
   padding: 1.4rem;
   display: grid;
   gap: 1rem;
-  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .hero {
@@ -377,13 +382,13 @@ button.secondary-button,
   position: sticky;
   top: 1.4rem;
   align-self: start;
-  max-height: calc(100vh - 2.8rem);
+  max-height: calc(100dvh - 2.8rem);
   overflow-y: auto;
 }
 
 .lesson-main {
-  max-height: calc(100vh - 2.8rem);
-  overflow-y: auto;
+  min-height: 0;
+  overflow: visible;
 }
 
 .day-nav-row {
@@ -509,6 +514,39 @@ button.secondary-button,
   gap: 1rem;
 }
 
+.notebook-meta-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.notebook-outline {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.notebook-outline-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.notebook-outline-item {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(24, 32, 39, 0.08);
+  scroll-margin-top: 1rem;
+}
+
+.notebook-outline-item span,
+.notebook-outline-item small {
+  color: var(--muted);
+}
+
+.notebook-outline-item strong {
+  font-size: 0.97rem;
+}
+
 .notebook-cells {
   display: grid;
   gap: 0.85rem;
@@ -519,6 +557,7 @@ button.secondary-button,
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.75);
   overflow: hidden;
+  scroll-margin-top: 1rem;
 }
 
 .notebook-cell-head {

@@ -158,6 +158,40 @@ function useNotebook(path) {
   return { notebook, status, error };
 }
 
+function summarizeNotebook(notebook) {
+  const cells = Array.isArray(notebook?.cells) ? notebook.cells : [];
+  const markdownCells = cells.filter((cell) => cell.cell_type === "markdown").length;
+  const codeCells = cells.filter((cell) => cell.cell_type === "code").length;
+
+  return {
+    totalCells: cells.length,
+    markdownCells,
+    codeCells,
+  };
+}
+
+function extractNotebookOutline(notebook) {
+  const cells = Array.isArray(notebook?.cells) ? notebook.cells : [];
+
+  return cells.map((cell, index) => {
+    const source = Array.isArray(cell.source) ? cell.source.join("") : String(cell.source || "");
+    const headingMatch = source.match(/^#{1,6}\s+(.+)$/m);
+    const firstLine = source
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .find(Boolean);
+    const fallbackLabel = cell.cell_type === "code" ? `Code cell ${index + 1}` : `Markdown cell ${index + 1}`;
+    const label = (headingMatch?.[1] || firstLine || fallbackLabel).replace(/\s+/g, " ");
+
+    return {
+      id: `notebook-cell-${index + 1}`,
+      label: label.length > 80 ? `${label.slice(0, 77)}...` : label,
+      type: cell.cell_type === "code" ? "Code" : "Markdown",
+      index: index + 1,
+    };
+  });
+}
+
 function App() {
   const { data, error } = useCurriculum();
   const [progress, setProgress] = useState(loadProgress);
@@ -845,6 +879,9 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
         </div>
 
         <div className="day-nav-row">
+          <Link className="secondary-button compact" to="/">
+            Back to Dashboard
+          </Link>
           <Link className="secondary-button compact" to={`/week/${week.week}`}>
             Back to Week {week.week}
           </Link>
@@ -860,93 +897,107 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
           ) : null}
         </div>
 
-        <div className="control-stack">
-          <label>
-            Status
-            <select value={saved.status || "not_started"} onChange={(e) => updateDay({ status: e.target.value })}>
-              <option value="not_started">Not started</option>
-              <option value="in_progress">In progress</option>
-              <option value="done">Done</option>
-            </select>
-          </label>
+        <div className="week-meta-grid">
+          <div className="sub-panel">
+            <h4>Study Controls</h4>
+            <div className="control-stack">
+              <label>
+                Status
+                <select value={saved.status || "not_started"} onChange={(e) => updateDay({ status: e.target.value })}>
+                  <option value="not_started">Not started</option>
+                  <option value="in_progress">In progress</option>
+                  <option value="done">Done</option>
+                </select>
+              </label>
 
-          <label>
-            Confidence: {saved.confidence || 0}/5
-            <input
-              type="range"
-              min="0"
-              max="5"
-              step="1"
-              value={saved.confidence || 0}
-              onChange={(e) => updateDay({ confidence: Number(e.target.value) })}
-            />
-          </label>
+              <label>
+                Confidence: {saved.confidence || 0}/5
+                <input
+                  type="range"
+                  min="0"
+                  max="5"
+                  step="1"
+                  value={saved.confidence || 0}
+                  onChange={(e) => updateDay({ confidence: Number(e.target.value) })}
+                />
+              </label>
 
-          <label>
-            Notes
-            <textarea
-              rows="8"
-              value={saved.notes || ""}
-              onChange={(e) => updateDay({ notes: e.target.value })}
-              placeholder="Write what clicked, what was confusing, and what to review later."
-            />
-          </label>
-          <p className="panel-copy">
-            Progress autosaves locally. {saved.updatedAt ? `Last saved: ${new Date(saved.updatedAt).toLocaleString()}` : "Update any field to create the first save point."}
-          </p>
-          {remoteSync?.enabled ? (
+              <label>
+                Notes
+                <textarea
+                  rows="8"
+                  value={saved.notes || ""}
+                  onChange={(e) => updateDay({ notes: e.target.value })}
+                  placeholder="Write what clicked, what was confusing, and what to review later."
+                />
+              </label>
+              <p className="panel-copy">
+                Progress autosaves locally. {saved.updatedAt ? `Last saved: ${new Date(saved.updatedAt).toLocaleString()}` : "Update any field to create the first save point."}
+              </p>
+              {remoteSync?.enabled ? (
+                <p className="panel-copy">
+                  Cloud sync status: {remoteSync.syncStatus === "ready" ? "Connected" : remoteSync.syncStatus}
+                </p>
+              ) : null}
+            </div>
+          </div>
+
+          <div className="sub-panel">
+            <h4>Resources and Formula Flow</h4>
             <p className="panel-copy">
-              Cloud sync status: {remoteSync.syncStatus === "ready" ? "Connected" : remoteSync.syncStatus}
+              Use the lesson PDF for theory, the quiz PDF for retrieval, and the notebook for applied work. Keep the formula table and real-data lab in order.
             </p>
-          ) : null}
-        </div>
-
-        <div className="resource-list">
-          {detailedDayAvailable ? (
-            <>
-              <a className="secondary-button" href={withBase(day.lesson_pdf_path)} target="_blank" rel="noreferrer">
-                Open Lesson PDF
+            <div className="resource-list">
+              {detailedDayAvailable ? (
+                <>
+                  <a className="secondary-button" href={withBase(day.lesson_pdf_path)} target="_blank" rel="noreferrer">
+                    Open Lesson PDF
+                  </a>
+                  {day.quiz_pdf_path ? (
+                    <a className="secondary-button" href={withBase(day.quiz_pdf_path)} target="_blank" rel="noreferrer">
+                      Open Quiz PDF
+                    </a>
+                  ) : null}
+                  <Link className="secondary-button" to={withNotebookViewer(day.notebook_path)}>
+                    Study Notebook
+                  </Link>
+                  <a className="secondary-button" href={withBase(day.notebook_path)} target="_blank" rel="noreferrer">
+                    Download Notebook
+                  </a>
+                </>
+              ) : (
+                <span className="secondary-button disabled-button">Detailed daily lesson coming next phase</span>
+              )}
+              <a className="secondary-button" href={withBase(week.weekly_plan_pdf_path)} target="_blank" rel="noreferrer">
+                Open Weekly Plan PDF
               </a>
-              {day.quiz_pdf_path ? (
-                <a className="secondary-button" href={withBase(day.quiz_pdf_path)} target="_blank" rel="noreferrer">
-                  Open Quiz PDF
+              {week.weekly_project_notebook_path ? (
+                <Link className="secondary-button" to={withNotebookViewer(week.weekly_project_notebook_path)}>
+                  Open Weekly Project Notebook
+                </Link>
+              ) : null}
+              {day.notebook_path ? (
+                <a className="secondary-button" href={withVSCodeWeb(day.notebook_path)} target="_blank" rel="noreferrer">
+                  Open in VS Code
                 </a>
               ) : null}
-              <Link className="secondary-button" to={withNotebookViewer(day.notebook_path)}>
-                Open Notebook
-              </Link>
-              <a className="secondary-button" href={withBase(day.notebook_path)} target="_blank" rel="noreferrer">
-                Download Notebook
-              </a>
-            </>
-          ) : (
-            <span className="secondary-button disabled-button">Detailed daily lesson coming next phase</span>
-          )}
-          <a className="secondary-button" href={withBase(week.weekly_plan_pdf_path)} target="_blank" rel="noreferrer">
-            Open Weekly Plan PDF
-          </a>
-          {week.weekly_project_notebook_path ? (
-            <Link className="secondary-button" to={withNotebookViewer(week.weekly_project_notebook_path)}>
-              Open Weekly Project Notebook
-            </Link>
-          ) : null}
-          {day.notebook_path ? (
-            <a className="secondary-button" href={withVSCodeWeb(day.notebook_path)} target="_blank" rel="noreferrer">
-              Open in VS Code
-            </a>
-          ) : null}
+            </div>
+          </div>
+
+          <div className="sub-panel">
+            <h4>Day Navigation</h4>
+            <div className="day-links">
+              {week.daily_schedule.map((item) => (
+                <Link key={item.day_index} to={`/week/${week.week}/day/${item.day_index}`} className={`day-jump ${item.day_index === day.day_index ? "active" : ""}`}>
+                  {item.day}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
         <p className="panel-copy">
           Notebook opens directly in this website, and VS Code web is available for browser-based edits.
         </p>
-
-        <div className="day-links">
-          {week.daily_schedule.map((item) => (
-            <Link key={item.day_index} to={`/week/${week.week}/day/${item.day_index}`} className={`day-jump ${item.day_index === day.day_index ? "active" : ""}`}>
-              {item.day}
-            </Link>
-          ))}
-        </div>
       </section>
 
       <section className="panel lesson-main">
@@ -992,6 +1043,8 @@ function NotebookPage({ roadmap }) {
   const { encodedPath } = useParams();
   const decodedPath = encodedPath ? decodeURIComponent(encodedPath) : "";
   const { notebook, status, error } = useNotebook(decodedPath);
+  const notebookSummary = useMemo(() => summarizeNotebook(notebook), [notebook]);
+  const notebookOutline = useMemo(() => extractNotebookOutline(notebook), [notebook]);
 
   const relatedWeek = roadmap.find((week) =>
     week.daily_schedule.some((day) => day.notebook_path === decodedPath) ||
@@ -1014,6 +1067,9 @@ function NotebookPage({ roadmap }) {
             <a className="secondary-button" href={withVSCodeWeb(decodedPath)} target="_blank" rel="noreferrer">
               Open in VS Code
             </a>
+            <Link className="secondary-button" to="/">
+              Dashboard
+            </Link>
             {relatedWeek ? (
               <Link className="secondary-button" to={`/week/${relatedWeek.week}`}>
                 Back to Week {relatedWeek.week}
@@ -1029,12 +1085,40 @@ function NotebookPage({ roadmap }) {
         ) : null}
         <p className="panel-copy">Use this viewer for study flow, then open in VS Code when you want to edit the notebook directly.</p>
 
+        {status === "ready" ? (
+          <div className="week-meta-grid notebook-meta-grid">
+            <div className="sub-panel">
+              <h4>Notebook Summary</h4>
+              <p>{`${notebookSummary.totalCells} cells · ${notebookSummary.markdownCells} markdown · ${notebookSummary.codeCells} code`}</p>
+            </div>
+            <div className="sub-panel">
+              <h4>Study Flow</h4>
+              <p>The outline below helps you move through theory, formulas, real-data checks, and project notes in order.</p>
+            </div>
+          </div>
+        ) : null}
+
+        {status === "ready" && notebookOutline.length > 0 ? (
+          <div className="sub-panel notebook-outline">
+            <h4>Notebook Map</h4>
+            <div className="notebook-outline-list">
+              {notebookOutline.map((item) => (
+                <a key={item.id} href={`#${item.id}`} className="notebook-outline-item">
+                  <span>{`Cell ${item.index}`}</span>
+                  <strong>{item.label}</strong>
+                  <small>{item.type}</small>
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
         {status === "loading" ? <p>Loading notebook...</p> : null}
         {status === "error" ? <p>Could not load notebook. {error}</p> : null}
         {status === "ready" && Array.isArray(notebook?.cells) ? (
           <div className="notebook-cells">
             {notebook.cells.map((cell, index) => (
-              <article key={`${index}-${cell.cell_type || "cell"}`} className="notebook-cell">
+              <article id={`notebook-cell-${index + 1}`} key={`${index}-${cell.cell_type || "cell"}`} className="notebook-cell">
                 <div className="notebook-cell-head">
                   <strong>Cell {index + 1}</strong>
                   <span>{cell.cell_type === "code" ? "Code" : "Markdown"}</span>
