@@ -1,7 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 import { Link, NavLink, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
+import "katex/dist/katex.min.css";
 import {
   DEFAULT_PROGRESS,
   fetchRemoteProgress,
@@ -943,44 +946,38 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
           </div>
 
           <div className="sub-panel">
-            <h4>Resources and Formula Flow</h4>
+            <h4>Daily Study Actions</h4>
             <p className="panel-copy">
-              Use the lesson PDF for theory, the quiz PDF for retrieval, and the notebook for applied work. Keep the formula table and real-data lab in order.
+              Use these four actions in order: read the lesson, review the theory PDF, answer the quiz, then complete the daily notebook.
             </p>
-            <div className="resource-list">
+            <div className="daily-action-grid">
               {detailedDayAvailable ? (
                 <>
+                  <a className="secondary-button" href="#daily-content">
+                    Read Daily Content
+                  </a>
                   <a className="secondary-button" href={withBase(day.lesson_pdf_path)} target="_blank" rel="noreferrer">
-                    Open Lesson PDF
+                    Open Theory PDF
                   </a>
-                  {day.quiz_pdf_path ? (
-                    <a className="secondary-button" href={withBase(day.quiz_pdf_path)} target="_blank" rel="noreferrer">
-                      Open Quiz PDF
+                  {day.quiz_markdown_path || day.quiz_pdf_path ? (
+                    <a
+                      className="secondary-button"
+                      href={withBase(day.quiz_markdown_path || day.quiz_pdf_path)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Open Daily Quiz
                     </a>
-                  ) : null}
+                  ) : (
+                    <span className="secondary-button disabled-button">Daily Quiz Unavailable</span>
+                  )}
                   <Link className="secondary-button" to={withNotebookViewer(day.notebook_path)}>
-                    Study Notebook
+                    Open Daily Notebook
                   </Link>
-                  <a className="secondary-button" href={withBase(day.notebook_path)} target="_blank" rel="noreferrer">
-                    Download Notebook
-                  </a>
                 </>
               ) : (
                 <span className="secondary-button disabled-button">Detailed daily lesson coming next phase</span>
               )}
-              <a className="secondary-button" href={withBase(week.weekly_plan_pdf_path)} target="_blank" rel="noreferrer">
-                Open Weekly Plan PDF
-              </a>
-              {week.weekly_project_notebook_path ? (
-                <Link className="secondary-button" to={withNotebookViewer(week.weekly_project_notebook_path)}>
-                  Open Weekly Project Notebook
-                </Link>
-              ) : null}
-              {day.notebook_path ? (
-                <a className="secondary-button" href={withVSCodeWeb(day.notebook_path)} target="_blank" rel="noreferrer">
-                  Open in VS Code
-                </a>
-              ) : null}
             </div>
           </div>
 
@@ -995,12 +992,9 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
             </div>
           </div>
         </div>
-        <p className="panel-copy">
-          Notebook opens directly in this website, and VS Code web is available for browser-based edits.
-        </p>
       </section>
 
-      <section className="panel lesson-main">
+      <section id="daily-content" className="panel lesson-main">
         {!detailedDayAvailable ? (
           <div className="sub-panel">
             <h4>Daily Lesson File Missing</h4>
@@ -1014,7 +1008,7 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
         {status === "error" ? <p>Could not load this lesson file.</p> : null}
         {status === "ready" ? (
           <div className="markdown-shell">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>{content}</ReactMarkdown>
           </div>
         ) : null}
       </section>
@@ -1125,7 +1119,12 @@ function NotebookPage({ roadmap }) {
                 </div>
                 {cell.cell_type === "markdown" ? (
                   <div className="markdown-shell">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{Array.isArray(cell.source) ? cell.source.join("") : String(cell.source || "")}</ReactMarkdown>
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm, remarkMath]}
+                      rehypePlugins={[rehypeKatex]}
+                    >
+                      {Array.isArray(cell.source) ? cell.source.join("") : String(cell.source || "")}
+                    </ReactMarkdown>
                   </div>
                 ) : (
                   <pre className="notebook-code"><code>{Array.isArray(cell.source) ? cell.source.join("") : String(cell.source || "")}</code></pre>

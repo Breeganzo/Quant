@@ -40,10 +40,31 @@ Answer: Because it makes uncertainty concrete and shows the distribution of poss
 2. Write one formula/workflow and define all symbols/steps.
 3. Give one use case and one realistic failure mode.
 
-## Formula Organization
-- Core formula and meaning
-- Variable definitions and units
-- Practical implementation caveat
+## Interview-Ready Formula Sheet
+### Formula 1: Log Return
+$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
+Plain-English interpretation: Additive return representation over time.
+Notation check: Define each symbol and unit before coding.
+
+### Formula 2: Annualized Volatility
+$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
+Plain-English interpretation: Scales daily return uncertainty to annual horizon.
+Notation check: Confirm return frequency matches annualization factor.
+
+### Formula 3: Sharpe Ratio
+$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
+Plain-English interpretation: Excess return earned per unit of risk.
+Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+
+### Symbol Definitions
+| Symbol | Meaning | Units | Example |
+| --- | --- | --- | --- |
+| $P_t$ | Price at time $t$ | USD/share | 110.50 |
+| $r_t$ | Simple return | decimal | 0.012 |
+| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
+| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
+| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
+| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
 
 ## Extended Study (to complete a full 4-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
@@ -52,10 +73,12 @@ Answer: Because it makes uncertainty concrete and shows the distribution of poss
 4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Real-World Data Application
-1. Load `curriculum/datasets/real_market_prices.csv` for SPY, QQQ, TLT, and GLD.
-2. Compute daily returns and compare annualized volatility across symbols.
-3. Build one cumulative growth chart and one correlation table.
-4. Write one practical portfolio/risk insight from the data.
+1. Pull SPY, QQQ, TLT, and GLD with yfinance when internet is available.
+2. If available, compare with a Robinhood-style export CSV for source consistency.
+3. Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.
+4. Compute log returns, annualized volatility, and Sharpe ratio across symbols.
+5. Build one cumulative growth chart and one correlation table.
+6. Write one practical portfolio/risk insight from the data.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: mini project: expected value and monte carlo trade simulation.

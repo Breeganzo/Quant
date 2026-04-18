@@ -49,15 +49,37 @@ Answer: The goal, what you computed, what the results suggest, and one limitatio
 2. Write one key formula/workflow from memory and define all symbols.
 3. Give one practical quant use case and one failure mode.
 
-## Formula Organization
-- Core formula: rewrite and annotate each symbol.
-- Related formula: connect it to variance/risk/return interpretation.
-- Implementation note: list one coding pitfall to avoid.
+## Interview-Ready Formula Sheet
+### Formula 1: Log Return
+$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
+Plain-English interpretation: Additive return representation over time.
+Notation check: Define each symbol and unit before coding.
+
+### Formula 2: Annualized Volatility
+$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
+Plain-English interpretation: Scales daily return uncertainty to annual horizon.
+Notation check: Confirm return frequency matches annualization factor.
+
+### Formula 3: Sharpe Ratio
+$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
+Plain-English interpretation: Excess return earned per unit of risk.
+Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+
+### Symbol Definitions
+| Symbol | Meaning | Units | Example |
+| --- | --- | --- | --- |
+| $P_t$ | Price at time $t$ | USD/share | 110.50 |
+| $r_t$ | Simple return | decimal | 0.012 |
+| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
+| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
+| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
+| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
 
 ## Real-World Data Application
-- Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.
-- Compute daily returns and annualized volatility for each symbol.
-- Compare cumulative growth from a common starting value.
+- Start with yfinance (SPY, QQQ, TLT, GLD) when internet is available.
+- If available, load a Robinhood-style export CSV and compare to your yfinance pull.
+- Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.
+- Compute log returns, annualized volatility, and Sharpe ratio for each symbol.
 - Write one risk-control takeaway you would use in a real portfolio conversation.
 
 ## Coding Task

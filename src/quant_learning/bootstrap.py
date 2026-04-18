@@ -1453,19 +1453,38 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             "2. Write one formula or workflow from memory and define each term.",
             "3. Give one practical quant use case and one failure mode.",
             "",
-            "## Formula Sheet Drill",
-            "- Expected value: E[X] = sum_i p_i x_i",
-            "- Variance: Var(X) = E[(X - E[X])^2]",
-            "- Covariance and correlation: Cov(X,Y), Corr(X,Y) = Cov(X,Y)/(sigma_X sigma_Y)",
-            "- Compounding: W_t = W_0 * product(1 + r_t)",
-            f"- Topic-specific formula: write one formula central to {day['topic'].lower()} and explain every symbol.",
+            "## Interview-Ready Formula Sheet",
+            "### Formula 1: Log Return",
+            "$$\\ell_t = \\ln\\left(\\frac{P_t}{P_{t-1}}\\right)$$",
+            "Plain-English interpretation: Additive return representation over time.",
+            "Notation check: Define each symbol and unit before coding.",
+            "",
+            "### Formula 2: Annualized Volatility",
+            "$$\\sigma_{ann} = \\sqrt{252} \\cdot \\mathrm{Std}(r_t)$$",
+            "Plain-English interpretation: Scales daily return uncertainty to annual horizon.",
+            "Notation check: Confirm return frequency matches annualization factor.",
+            "",
+            "### Formula 3: Sharpe Ratio",
+            "$$S = \\frac{R_{ann} - R_f}{\\sigma_{ann}}$$",
+            "Plain-English interpretation: Excess return earned per unit of risk.",
+            "Notation check: Use consistent annualized units for return, risk-free rate, and volatility.",
+            "",
+            "### Symbol Definitions",
+            "| Symbol | Meaning | Units | Example |",
+            "| --- | --- | --- | --- |",
+            "| $P_t$ | Price at time $t$ | USD/share | 110.50 |",
+            "| $r_t$ | Simple return | decimal | 0.012 |",
+            "| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |",
+            "| $\\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |",
+            "| $R_f$ | Risk-free rate | annualized decimal | 0.03 |",
+            "| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |",
             "",
             "## Formula Organization Table",
             "| Formula/Workflow | Meaning | Finance Use Case | Common Misread |",
             "| --- | --- | --- | --- |",
-            "| Topic-specific formula | Core relationship for today's topic | Strategy/risk interpretation | Memorizing symbols without interpretation |",
-            "| Expected value | Probability-weighted average outcome | Comparing asymmetric payoff setups | Ignoring payoff magnitude |",
-            "| Volatility proxy | Dispersion of returns around average | Position sizing and risk budgeting | Treating low volatility as no risk |",
+            "| Log return | Additive return representation | Multi-period analytics and model features | Mixing with simple return without context |",
+            "| Annualized volatility | Scaled daily uncertainty | Position sizing and risk budgeting | Annualizing from inconsistent data frequency |",
+            "| Sharpe ratio | Excess return per risk unit | Strategy comparison and portfolio review | Ignoring regime shifts and estimation error |",
             "",
             "## Common Mistakes and Fixes",
             "- Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.",
@@ -1479,9 +1498,11 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             "- Schedule the next spaced repetition date before ending the session.",
             "",
             "## Real-World Data Lab",
-            "- Open the local market dataset at `curriculum/datasets/real_market_prices.csv`.",
-            "- Build a small panel for SPY, QQQ, TLT, and GLD and compute daily returns.",
-            "- Compare cumulative performance and volatility across symbols.",
+            "- Use yfinance first for SPY, QQQ, TLT, and GLD when internet is available.",
+            "- If available, validate against a Robinhood-style export CSV for consistency checks.",
+            "- Fall back to `curriculum/datasets/real_market_prices.csv` for reproducible runs.",
+            "- Build a small panel and compute log returns, annualized volatility, and Sharpe ratio.",
+            "- Compare cumulative performance across symbols and mark one stress-period observation.",
             "- Write one practical takeaway for position sizing or diversification.",
             "",
             "## Coding Task",
@@ -1538,30 +1559,71 @@ def daily_quiz_items(week_number: int, day_index: int, day: dict) -> list[dict[s
         {
             "id": "q1",
             "difficulty": "basic",
-            "question": f"Explain the core intuition of {topic_lower} in plain language.",
-            "answer": f"A strong answer defines {topic_lower}, gives one concrete example, and links it to decision quality.",
-            "explanation": "This tests whether the concept is understood beyond memorized vocabulary.",
+            "question": f"Explain {topic_lower} in plain language for a trading or risk audience.",
+            "answer": (
+                f"A strong answer defines {topic_lower}, gives one concrete market example, "
+                "and states why the concept improves decisions under uncertainty."
+            ),
+            "explanation": "This tests communication quality, not just memorized definitions.",
+            "python_task": "Compute log returns for SPY and QQQ daily closes and explain one volatile day.",
+            "python_solution": (
+                "import numpy as np\n"
+                "import pandas as pd\n"
+                "prices = market.pivot(index='date', columns='symbol', values='close')[['SPY','QQQ']].dropna()\n"
+                "log_ret = np.log(prices / prices.shift(1)).dropna()\n"
+                "print(log_ret.tail())"
+            ),
         },
         {
             "id": "q2",
             "difficulty": "intermediate",
-            "question": "Write one key formula or workflow from memory and define each symbol or step.",
-            "answer": "A strong answer includes the formula/workflow, variable definitions, units, and one implementation caveat.",
-            "explanation": "This checks mathematical fluency and operational clarity.",
+            "question": "Write one key formula/workflow and define every symbol with units.",
+            "answer": (
+                "A strong answer includes formula meaning, variable units, and one implementation caveat "
+                "(for example, annualization assumptions or missing data handling)."
+            ),
+            "explanation": "This checks mathematical fluency and operational reliability.",
+            "python_task": "Estimate annualized volatility for SPY, QQQ, TLT, and GLD.",
+            "python_solution": (
+                "returns = prices.pct_change().dropna()\n"
+                "ann_vol = returns.std() * (252 ** 0.5)\n"
+                "print(ann_vol.sort_values(ascending=False).round(4))"
+            ),
         },
         {
             "id": "q3",
             "difficulty": "intermediate",
-            "question": "Give one realistic quant use case and one failure mode if the concept is misapplied.",
-            "answer": "A strong answer ties the concept to trading, portfolio, or risk decisions and includes one practical misuse risk.",
-            "explanation": "This evaluates transfer from theory to real workflow judgment.",
+            "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
+            "answer": (
+                "A strong answer ties the concept to signal design, portfolio sizing, or risk control, "
+                "then names one concrete failure mode and detection check."
+            ),
+            "explanation": "This evaluates transfer from theory to practical quant workflow.",
+            "python_task": "Compute a simple Sharpe ratio proxy and explain one fragility.",
+            "python_solution": (
+                "rf = 0.03\n"
+                "ann_ret = returns.mean() * 252\n"
+                "ann_vol = returns.std() * (252 ** 0.5)\n"
+                "sharpe = (ann_ret - rf) / ann_vol\n"
+                "print(sharpe.round(3))"
+            ),
         },
         {
             "id": "q4",
             "difficulty": "advanced",
-            "question": "Using SPY/QQQ/TLT/GLD daily data, what quick diagnostic would you run before trusting conclusions?",
-            "answer": "Check data quality, missing values, return stability, and sensitivity of results to a stress period or alternate window.",
-            "explanation": "This tests robustness thinking with real market data.",
+            "question": "How would you validate real data from yfinance/Robinhood export/local CSV before trusting conclusions?",
+            "answer": (
+                "Check schema consistency, missing values, split/dividend handling, date alignment, and sensitivity to stress windows. "
+                "Then compare at least one metric across two data sources."
+            ),
+            "explanation": "This tests real-data robustness discipline and source reconciliation.",
+            "python_task": "Run a source-quality checklist before analysis.",
+            "python_solution": (
+                "print('rows:', len(market))\n"
+                "print('missing close:', market['close'].isna().sum())\n"
+                "print('duplicates:', market.duplicated(['date','symbol']).sum())\n"
+                "print('symbols:', sorted(market['symbol'].unique()))"
+            ),
         },
     ]
 
@@ -1597,25 +1659,39 @@ def daily_quiz_markdown(week_number: int, day_index: int, day: dict, quiz_items:
         "## Instructions",
         "- Attempt closed-book first.",
         "- After answering, compare with the answer key and write one correction note.",
+        "- Treat each question as a short trading interview prompt.",
+        "- For each item, complete the Python drill using real data and interpret the output.",
         "- Target score: at least 4/5 confidence on every item before moving on.",
         "",
-        "## Questions and Answer Key",
+        "## Trading Interview Questions, Answers, and Python Drills",
     ]
     for item in quiz_items:
         lines.extend(
             [
                 f"### {item['id'].upper()} ({item['difficulty']})",
-                f"Question: {item['question']}",
+                f"Interview question: {item['question']}",
                 "",
-                f"Answer guide: {item['answer']}",
+                f"Model answer: {item['answer']}",
                 f"Why this matters: {item['explanation']}",
                 "",
             ]
         )
+        if item.get("python_task") and item.get("python_solution"):
+            lines.extend(
+                [
+                    f"Python drill: {item['python_task']}",
+                    "Suggested Python solution:",
+                    "```python",
+                    item["python_solution"],
+                    "```",
+                    "",
+                ]
+            )
     lines.extend(
         [
             "## Reflection",
             "- Which item was weakest and why?",
+            "- What would you improve before saying this answer in a live interview?",
             "- What will you review before tomorrow?",
             "- What evidence shows your answer quality improved versus last week?",
         ]
@@ -1904,6 +1980,91 @@ def four_hour_notebook_extension(day: dict) -> list:
         """
     ).strip()
 
+    interview_python_markdown = textwrap.dedent(
+        """\
+        ## Interview Question + Python Solution Drill
+
+        Use this format for interview preparation:
+
+        1. State the question clearly.
+        2. Explain your approach in plain language.
+        3. Write Python code on real market data.
+        4. Interpret one risk caveat in words.
+
+        **Suggested data-source ladder**
+        - Source 1: yfinance pull (fresh market data)
+        - Source 2: Robinhood-style CSV export (if available locally)
+        - Source 3: local snapshot `curriculum/datasets/real_market_prices.csv` (reproducible fallback)
+        """
+    ).strip()
+
+    interview_python_code = _nb_code(
+        """\
+        from pathlib import Path
+        import numpy as np
+        import pandas as pd
+
+        prices = None
+        source_used = ""
+        USE_YFINANCE = False  # set True when you want a live market pull
+
+        try:
+            import yfinance as yf
+        except ImportError:
+            yf = None
+
+        if USE_YFINANCE and yf is not None:
+            downloaded = yf.download(
+                ["SPY", "QQQ", "TLT", "GLD"],
+                period="2y",
+                interval="1d",
+                auto_adjust=True,
+                progress=False,
+            )
+            if not downloaded.empty:
+                if isinstance(downloaded.columns, pd.MultiIndex):
+                    if "Close" in downloaded.columns.get_level_values(0):
+                        prices = downloaded["Close"].copy()
+                    elif "Adj Close" in downloaded.columns.get_level_values(0):
+                        prices = downloaded["Adj Close"].copy()
+                else:
+                    prices = downloaded.rename(columns=str.upper)
+                source_used = "yfinance"
+
+        robinhood_export = Path("curriculum/datasets/robinhood_export.csv")
+        if prices is None and robinhood_export.exists():
+            rh = pd.read_csv(robinhood_export, parse_dates=["date"])
+            prices = rh.pivot(index="date", columns="symbol", values="close").sort_index()
+            source_used = "robinhood_export_csv"
+
+        if prices is None:
+            local = pd.read_csv(
+                Path("curriculum/datasets/real_market_prices.csv"),
+                parse_dates=["date"],
+            )
+            prices = local.pivot(index="date", columns="symbol", values="close").sort_index()
+            source_used = "local_snapshot_csv"
+
+        prices = prices.dropna(how="all").ffill().dropna()
+        returns = prices.pct_change().dropna()
+        log_returns = np.log(prices / prices.shift(1)).dropna()
+
+        annualized_return = returns.mean() * 252
+        annualized_vol = returns.std() * np.sqrt(252)
+        sharpe_proxy = (annualized_return - 0.03) / annualized_vol
+
+        print("Source used:", source_used)
+        print("\\nAnnualized return:")
+        print(annualized_return.round(4))
+        print("\\nAnnualized volatility:")
+        print(annualized_vol.round(4))
+        print("\\nSharpe proxy (rf=3%):")
+        print(sharpe_proxy.round(3))
+        print("\\nRecent log returns:")
+        print(log_returns.tail().round(4))
+        """
+    )
+
     weekend_extension_cells = []
 
     if day["day"] == "Sat":
@@ -1966,6 +2127,8 @@ def four_hour_notebook_extension(day: dict) -> list:
         nbf.v4.new_markdown_cell(real_data_markdown),
         nbf.v4.new_code_cell(real_data_code),
         nbf.v4.new_markdown_cell(real_data_takeaway_markdown),
+        nbf.v4.new_markdown_cell(interview_python_markdown),
+        nbf.v4.new_code_cell(interview_python_code),
         *weekend_extension_cells,
         nbf.v4.new_markdown_cell(scenario_markdown),
         nbf.v4.new_code_cell(scenario_code),

@@ -47,19 +47,38 @@ AR, MA, and ARIMA intuition is part of real quant work inside time series i: sta
 2. Write one formula or workflow from memory and define each term.
 3. Give one practical quant use case and one failure mode.
 
-## Formula Sheet Drill
-- Expected value: E[X] = sum_i p_i x_i
-- Variance: Var(X) = E[(X - E[X])^2]
-- Covariance and correlation: Cov(X,Y), Corr(X,Y) = Cov(X,Y)/(sigma_X sigma_Y)
-- Compounding: W_t = W_0 * product(1 + r_t)
-- Topic-specific formula: write one formula central to ar, ma, and arima intuition and explain every symbol.
+## Interview-Ready Formula Sheet
+### Formula 1: Log Return
+$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
+Plain-English interpretation: Additive return representation over time.
+Notation check: Define each symbol and unit before coding.
+
+### Formula 2: Annualized Volatility
+$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
+Plain-English interpretation: Scales daily return uncertainty to annual horizon.
+Notation check: Confirm return frequency matches annualization factor.
+
+### Formula 3: Sharpe Ratio
+$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
+Plain-English interpretation: Excess return earned per unit of risk.
+Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+
+### Symbol Definitions
+| Symbol | Meaning | Units | Example |
+| --- | --- | --- | --- |
+| $P_t$ | Price at time $t$ | USD/share | 110.50 |
+| $r_t$ | Simple return | decimal | 0.012 |
+| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
+| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
+| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
+| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Topic-specific formula | Core relationship for today's topic | Strategy/risk interpretation | Memorizing symbols without interpretation |
-| Expected value | Probability-weighted average outcome | Comparing asymmetric payoff setups | Ignoring payoff magnitude |
-| Volatility proxy | Dispersion of returns around average | Position sizing and risk budgeting | Treating low volatility as no risk |
+| Log return | Additive return representation | Multi-period analytics and model features | Mixing with simple return without context |
+| Annualized volatility | Scaled daily uncertainty | Position sizing and risk budgeting | Annualizing from inconsistent data frequency |
+| Sharpe ratio | Excess return per risk unit | Strategy comparison and portfolio review | Ignoring regime shifts and estimation error |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.
@@ -73,9 +92,11 @@ AR, MA, and ARIMA intuition is part of real quant work inside time series i: sta
 - Schedule the next spaced repetition date before ending the session.
 
 ## Real-World Data Lab
-- Open the local market dataset at `curriculum/datasets/real_market_prices.csv`.
-- Build a small panel for SPY, QQQ, TLT, and GLD and compute daily returns.
-- Compare cumulative performance and volatility across symbols.
+- Use yfinance first for SPY, QQQ, TLT, and GLD when internet is available.
+- If available, validate against a Robinhood-style export CSV for consistency checks.
+- Fall back to `curriculum/datasets/real_market_prices.csv` for reproducible runs.
+- Build a small panel and compute log returns, annualized volatility, and Sharpe ratio.
+- Compare cumulative performance across symbols and mark one stress-period observation.
 - Write one practical takeaway for position sizing or diversification.
 
 ## Coding Task

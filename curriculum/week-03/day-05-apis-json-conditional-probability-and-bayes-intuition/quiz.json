@@ -7,30 +7,38 @@
     {
       "id": "q1",
       "difficulty": "basic",
-      "question": "Explain the core intuition of apis, json, conditional probability, and bayes intuition in plain language.",
-      "answer": "A strong answer defines apis, json, conditional probability, and bayes intuition, gives one concrete example, and links it to decision quality.",
-      "explanation": "This tests whether the concept is understood beyond memorized vocabulary."
+      "question": "Explain apis, json, conditional probability, and bayes intuition in plain language for a trading or risk audience.",
+      "answer": "A strong answer defines apis, json, conditional probability, and bayes intuition, gives one concrete market example, and states why the concept improves decisions under uncertainty.",
+      "explanation": "This tests communication quality, not just memorized definitions.",
+      "python_task": "Compute log returns for SPY and QQQ daily closes and explain one volatile day.",
+      "python_solution": "import numpy as np\nimport pandas as pd\nprices = market.pivot(index='date', columns='symbol', values='close')[['SPY','QQQ']].dropna()\nlog_ret = np.log(prices / prices.shift(1)).dropna()\nprint(log_ret.tail())"
     },
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write one key formula or workflow from memory and define each symbol or step.",
-      "answer": "A strong answer includes the formula/workflow, variable definitions, units, and one implementation caveat.",
-      "explanation": "This checks mathematical fluency and operational clarity."
+      "question": "Write one key formula/workflow and define every symbol with units.",
+      "answer": "A strong answer includes formula meaning, variable units, and one implementation caveat (for example, annualization assumptions or missing data handling).",
+      "explanation": "This checks mathematical fluency and operational reliability.",
+      "python_task": "Estimate annualized volatility for SPY, QQQ, TLT, and GLD.",
+      "python_solution": "returns = prices.pct_change().dropna()\nann_vol = returns.std() * (252 ** 0.5)\nprint(ann_vol.sort_values(ascending=False).round(4))"
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
-      "question": "Give one realistic quant use case and one failure mode if the concept is misapplied.",
-      "answer": "A strong answer ties the concept to trading, portfolio, or risk decisions and includes one practical misuse risk.",
-      "explanation": "This evaluates transfer from theory to real workflow judgment."
+      "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
+      "answer": "A strong answer ties the concept to signal design, portfolio sizing, or risk control, then names one concrete failure mode and detection check.",
+      "explanation": "This evaluates transfer from theory to practical quant workflow.",
+      "python_task": "Compute a simple Sharpe ratio proxy and explain one fragility.",
+      "python_solution": "rf = 0.03\nann_ret = returns.mean() * 252\nann_vol = returns.std() * (252 ** 0.5)\nsharpe = (ann_ret - rf) / ann_vol\nprint(sharpe.round(3))"
     },
     {
       "id": "q4",
       "difficulty": "advanced",
-      "question": "Using SPY/QQQ/TLT/GLD daily data, what quick diagnostic would you run before trusting conclusions?",
-      "answer": "Check data quality, missing values, return stability, and sensitivity of results to a stress period or alternate window.",
-      "explanation": "This tests robustness thinking with real market data."
+      "question": "How would you validate real data from yfinance/Robinhood export/local CSV before trusting conclusions?",
+      "answer": "Check schema consistency, missing values, split/dividend handling, date alignment, and sensitivity to stress windows. Then compare at least one metric across two data sources.",
+      "explanation": "This tests real-data robustness discipline and source reconciliation.",
+      "python_task": "Run a source-quality checklist before analysis.",
+      "python_solution": "print('rows:', len(market))\nprint('missing close:', market['close'].isna().sum())\nprint('duplicates:', market.duplicated(['date','symbol']).sum())\nprint('symbols:', sorted(market['symbol'].unique()))"
     }
   ]
 }

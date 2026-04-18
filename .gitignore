@@ -9,3 +9,7 @@ site/public/curriculum/
 site/public/references/
 site/public/templates/
 site/public/README.md
+site/.env
+site/.env.*
+.env
+.env.*

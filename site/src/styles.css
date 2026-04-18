@@ -349,6 +349,16 @@ button.secondary-button,
   gap: 0.8rem;
 }
 
+.daily-action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.daily-action-grid .secondary-button {
+  text-align: center;
+}
+
 .cloud-input {
   width: 100%;
   border: 1px solid var(--line);
@@ -425,6 +435,8 @@ button.secondary-button,
 .markdown-shell table {
   border-collapse: collapse;
   width: 100%;
+  display: block;
+  overflow-x: auto;
   margin: 1rem 0;
 }
 
@@ -455,6 +467,12 @@ button.secondary-button,
   border-left: 4px solid rgba(15, 118, 110, 0.35);
   background: rgba(218, 240, 235, 0.35);
   border-radius: 8px;
+}
+
+.markdown-shell .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.4rem 0;
 }
 
 .control-stack label {
