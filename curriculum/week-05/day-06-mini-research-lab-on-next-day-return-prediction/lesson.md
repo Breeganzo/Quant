@@ -38,6 +38,16 @@ Mini research lab on next-day return prediction is part of real quant work insid
 - Add one error-log entry with a scheduled review date.
 - Record a 60-90 second spoken explanation of the concept as interview practice.
 
+## Daily Quiz (Closed-Book)
+1. What is the core intuition behind mini research lab on next-day return prediction?
+2. Write one formula or workflow from memory and define each term.
+3. Give one practical quant use case and one failure mode.
+
+## Revision Sprint
+- Re-solve one earlier problem from memory before checking notes.
+- Review yesterday's weak point and state whether it is fixed.
+- Schedule the next spaced repetition date before ending the session.
+
 ## Coding Task
 Implement one notebook cell or small script focused on: mini research lab on next-day return prediction.
 

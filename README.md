@@ -64,6 +64,20 @@ Then open notebooks in JupyterLab. The site notebook buttons are configured for 
 
 This avoids opening raw `.ipynb` JSON in the browser.
 
+The local launcher starts JupyterLab without a token so the notebook links open directly in the browser.
+
+Website behavior (no Jupyter required):
+
+- Notebook buttons in the site open an in-app notebook viewer by default.
+- Notebook buttons also include an "Open in VS Code" action (vscode.dev).
+- JupyterLab links remain available as optional "run cells live" actions.
+
+Package-ready live execution:
+
+- Run `uv sync` once in repo root to install notebook dependencies into `.venv`.
+- Then run `uv run quant-jupyter` and use "Open in JupyterLab" links.
+- This applies to all weeks and all daily/weekly notebooks.
+
 ## Run Website Locally (Development)
 
 From repo root:

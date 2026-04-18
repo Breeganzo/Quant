@@ -14,5 +14,7 @@ def main() -> None:
         "--notebook-dir",
         str(root),
         "--ServerApp.open_browser=True",
+        "--ServerApp.token=",
+        "--ServerApp.password=",
     ]
     raise SystemExit(subprocess.call(command))

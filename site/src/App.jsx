@@ -17,10 +17,24 @@ import {
 
 const STORAGE_KEY = "quant-learning-progress-v2";
 const JUPYTER_BASE_URL = (import.meta.env.VITE_JUPYTER_BASE_URL || "http://localhost:8888").replace(/\/+$/, "");
+const GITHUB_REPO = (import.meta.env.VITE_GITHUB_REPO || "Breeganzo/Quant").trim();
+const GITHUB_BRANCH = (import.meta.env.VITE_GITHUB_BRANCH || "main").trim();
 
 function withBase(path) {
   if (!path) return "";
   return `${import.meta.env.BASE_URL}${path}`.replace(/([^:]\/)\/+/g, "$1");
+}
+
+function withNotebookViewer(path) {
+  if (!path) return "";
+  const normalized = path.replace(/^\/+/, "");
+  return `/notebook/${encodeURIComponent(normalized)}`;
+}
+
+function withVSCodeWeb(path) {
+  if (!path) return "";
+  const normalized = path.replace(/^\/+/, "");
+  return `https://vscode.dev/github/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${normalized}`;
 }
 
 function withJupyterLab(path) {
@@ -105,6 +119,50 @@ function useMarkdown(path) {
   }, [path]);
 
   return { content, status };
+}
+
+function useNotebook(path) {
+  const [notebook, setNotebook] = useState(null);
+  const [status, setStatus] = useState(path ? "loading" : "idle");
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!path) {
+      setStatus("idle");
+      setNotebook(null);
+      setError("");
+      return;
+    }
+
+    let cancelled = false;
+    setStatus("loading");
+    setError("");
+
+    fetch(withBase(path))
+      .then((res) => {
+        if (!res.ok) throw new Error(`Failed to load notebook: ${path}`);
+        return res.json();
+      })
+      .then((data) => {
+        if (!cancelled) {
+          setNotebook(data);
+          setStatus("ready");
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setNotebook(null);
+          setStatus("error");
+          setError(err.message);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [path]);
+
+  return { notebook, status, error };
 }
 
 function App() {
@@ -342,6 +400,7 @@ function App() {
               />
             )}
           />
+          <Route path="/notebook/:encodedPath" element={<NotebookPage roadmap={roadmap} />} />
         </Routes>
       </main>
     </div>
@@ -654,9 +713,14 @@ function WeekPage({ roadmap, progress, setProgress }) {
               Weekly PDF
             </a>
             {week.weekly_project_notebook_path ? (
-              <a className="secondary-button" href={withJupyterLab(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
-                Project Notebook (JupyterLab)
-              </a>
+              <>
+                <Link className="secondary-button" to={withNotebookViewer(week.weekly_project_notebook_path)}>
+                  Project Notebook
+                </Link>
+                <a className="secondary-button" href={withVSCodeWeb(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
+                  Open in VS Code
+                </a>
+              </>
             ) : null}
           </div>
         </div>
@@ -718,9 +782,9 @@ function WeekPage({ roadmap, progress, setProgress }) {
                     </a>
                   ) : null}
                   {day.notebook_path ? (
-                    <a className="secondary-button compact" href={withJupyterLab(day.notebook_path)} target="_blank" rel="noreferrer">
-                      JupyterLab
-                    </a>
+                    <Link className="secondary-button compact" to={withNotebookViewer(day.notebook_path)}>
+                      Notebook
+                    </Link>
                   ) : null}
                 </div>
               </div>
@@ -832,9 +896,9 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
               <a className="secondary-button" href={withBase(day.lesson_pdf_path)} target="_blank" rel="noreferrer">
                 Open Lesson PDF
               </a>
-              <a className="secondary-button" href={withJupyterLab(day.notebook_path)} target="_blank" rel="noreferrer">
-                Open Notebook in JupyterLab
-              </a>
+              <Link className="secondary-button" to={withNotebookViewer(day.notebook_path)}>
+                Open Notebook
+              </Link>
               <a className="secondary-button" href={withBase(day.notebook_path)} target="_blank" rel="noreferrer">
                 Download Notebook
               </a>
@@ -846,13 +910,23 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
             Open Weekly Plan PDF
           </a>
           {week.weekly_project_notebook_path ? (
-            <a className="secondary-button" href={withJupyterLab(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
-              Open Weekly Project in JupyterLab
+            <Link className="secondary-button" to={withNotebookViewer(week.weekly_project_notebook_path)}>
+              Open Weekly Project Notebook
+            </Link>
+          ) : null}
+          {day.notebook_path ? (
+            <a className="secondary-button" href={withVSCodeWeb(day.notebook_path)} target="_blank" rel="noreferrer">
+              Open in VS Code
+            </a>
+          ) : null}
+          {day.notebook_path ? (
+            <a className="secondary-button" href={withJupyterLab(day.notebook_path)} target="_blank" rel="noreferrer">
+              Open in JupyterLab (Optional)
             </a>
           ) : null}
         </div>
         <p className="panel-copy">
-          Notebook buttons target local JupyterLab at {JUPYTER_BASE_URL}. Start it from repo root with: uv run quant-jupyter
+          Notebook opens directly in this website. JupyterLab is optional for running cells live.
         </p>
 
         <div className="day-links">
@@ -901,6 +975,73 @@ function PanelList({ title, items }) {
 
 function StatusPill({ status }) {
   return <span className={`status-pill ${status}`}>{status.replace("_", " ")}</span>;
+}
+
+function NotebookPage({ roadmap }) {
+  const { encodedPath } = useParams();
+  const decodedPath = encodedPath ? decodeURIComponent(encodedPath) : "";
+  const { notebook, status, error } = useNotebook(decodedPath);
+
+  const relatedWeek = roadmap.find((week) =>
+    week.daily_schedule.some((day) => day.notebook_path === decodedPath) ||
+    week.weekly_project_notebook_path === decodedPath ||
+    week.weekly_overview_notebook_path === decodedPath
+  );
+
+  return (
+    <div className="page-grid">
+      <section className="panel span-2 notebook-panel">
+        <div className="panel-head">
+          <div>
+            <span className="eyebrow">Notebook Viewer</span>
+            <h3>{decodedPath || "Notebook"}</h3>
+          </div>
+          <div className="button-row">
+            <a className="secondary-button" href={withBase(decodedPath)} target="_blank" rel="noreferrer">
+              Download .ipynb
+            </a>
+            <a className="secondary-button" href={withVSCodeWeb(decodedPath)} target="_blank" rel="noreferrer">
+              Open in VS Code
+            </a>
+            <a className="secondary-button" href={withJupyterLab(decodedPath)} target="_blank" rel="noreferrer">
+              Open in JupyterLab (Optional)
+            </a>
+          </div>
+        </div>
+
+        {relatedWeek ? (
+          <p className="panel-copy">
+            Week {relatedWeek.week}: Theory is in day lessons, notebook practice is here, revision and quiz prompts are in lesson sections, and weekly mini-project/capstone is linked from the week/day pages.
+          </p>
+        ) : null}
+        <p className="panel-copy">
+          For live execution with installed packages, use JupyterLab after running uv sync from the project root.
+        </p>
+
+        {status === "loading" ? <p>Loading notebook...</p> : null}
+        {status === "error" ? <p>Could not load notebook. {error}</p> : null}
+        {status === "ready" && Array.isArray(notebook?.cells) ? (
+          <div className="notebook-cells">
+            {notebook.cells.map((cell, index) => (
+              <article key={`${index}-${cell.cell_type || "cell"}`} className="notebook-cell">
+                <div className="notebook-cell-head">
+                  <strong>Cell {index + 1}</strong>
+                  <span>{cell.cell_type === "code" ? "Code" : "Markdown"}</span>
+                </div>
+                {cell.cell_type === "markdown" ? (
+                  <div className="markdown-shell">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{Array.isArray(cell.source) ? cell.source.join("") : String(cell.source || "")}</ReactMarkdown>
+                  </div>
+                ) : (
+                  <pre className="notebook-code"><code>{Array.isArray(cell.source) ? cell.source.join("") : String(cell.source || "")}</code></pre>
+                )}
+              </article>
+            ))}
+          </div>
+        ) : null}
+      </section>
+    </div>
+  );
 }
 
 export default App;
