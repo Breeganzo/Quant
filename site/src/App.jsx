@@ -636,8 +636,8 @@ function CloudSyncPanel({ remoteSync }) {
           <h3>Cloud Sync (Optional)</h3>
         </div>
         <p className="panel-copy">
-          Cloud sync is disabled. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in site/.env.local to enable
-          cross-device progress persistence.
+          Cloud sync is disabled. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in site/.env.local, or set
+          site/public/runtime-config.js for static hosting, to enable cross-device progress persistence.
         </p>
       </section>
     );

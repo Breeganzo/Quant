@@ -93,7 +93,7 @@ npm run dev
 
 Open this URL in your browser:
 
-- `http://localhost:5173/Quant/`
+- `http://localhost:5173/Quant_Practise/`
 
 Notes:
 
@@ -108,7 +108,7 @@ cd site
 npm run preview
 ```
 
-Then open the URL printed by Vite (typically also under `/Quant/`).
+Then open the URL printed by Vite (typically also under `/Quant_Practise/`).
 
 ## Progress Persistence
 
@@ -137,6 +137,11 @@ cp .env.example .env.local
 
 - `VITE_SUPABASE_URL`
 - `VITE_SUPABASE_ANON_KEY`
+- `VITE_SITE_BASE` (set this to your deployed subpath, for example `/Quant_Practise/`)
+
+If your static host does not inject build-time env vars, set Supabase at runtime in:
+
+- `site/public/runtime-config.js`
 
 3. In Supabase SQL editor, run the script from `site/supabase/schema.sql`.
 

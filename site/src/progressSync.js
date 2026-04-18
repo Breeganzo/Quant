@@ -5,8 +5,21 @@ export const DEFAULT_PROGRESS = {
   weeklyReviews: {},
 };
 
-const SUPABASE_URL = (import.meta.env.VITE_SUPABASE_URL || "").trim();
-const SUPABASE_ANON_KEY = (import.meta.env.VITE_SUPABASE_ANON_KEY || "").trim();
+const runtimeConfig =
+  typeof window !== "undefined" && window.__QUANT_CONFIG__ && typeof window.__QUANT_CONFIG__ === "object"
+    ? window.__QUANT_CONFIG__
+    : {};
+
+const SUPABASE_URL = (
+  runtimeConfig.supabaseUrl ||
+  import.meta.env.VITE_SUPABASE_URL ||
+  ""
+).trim();
+const SUPABASE_ANON_KEY = (
+  runtimeConfig.supabaseAnonKey ||
+  import.meta.env.VITE_SUPABASE_ANON_KEY ||
+  ""
+).trim();
 const PROGRESS_TABLE = (import.meta.env.VITE_SUPABASE_PROGRESS_TABLE || "study_progress").trim();
 
 let cachedClient = null;
