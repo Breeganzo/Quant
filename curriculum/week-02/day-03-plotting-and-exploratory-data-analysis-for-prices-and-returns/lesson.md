@@ -1,6 +1,6 @@
 # Week 02 Wed: Plotting and exploratory data analysis for prices and returns
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

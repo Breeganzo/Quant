@@ -1,6 +1,6 @@
 # Week 04 Sun: Capstone review and write-up
 
-**Estimated time:** 2 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

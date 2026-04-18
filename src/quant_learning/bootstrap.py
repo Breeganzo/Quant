@@ -46,17 +46,24 @@ def weekly_project_notebook_name(week_number: int) -> str:
 def daily_session_plan(day_label: str) -> list[tuple[str, str, str]]:
     if day_label in {"Mon", "Tue", "Wed", "Thu", "Fri"}:
         return [
-            ("Session 1", "35 min", "Recall yesterday's ideas and define today's learning outcome."),
-            ("Session 2", "50 min", "Build intuition first, then formalize notation and key formulas."),
-            ("Session 3", "45 min", "Work through trading, portfolio, and risk examples with interpretation."),
-            ("Session 4", "50 min", "Run notebook labs, inspect outputs, and explain results in plain language."),
-            ("Session 5", "20 min", "Interview drill, reflection, and error-log update."),
+            ("Session 1", "75 min", "Theory deep dive: definitions, intuition, and assumptions."),
+            ("Session 2", "70 min", "Formula lab: derive, rewrite, and memorize key formulas from scratch."),
+            ("Session 3", "70 min", "Worked examples with finance interpretation and edge-case checks."),
+            ("Session 4", "70 min", "Notebook implementation and output interpretation."),
+            ("Session 5", "60 min", "Practice quiz and closed-book retrieval on formulas."),
+            ("Session 6", "50 min", "Mini-project increment and result write-up."),
+            ("Session 7", "45 min", "Revision sprint, spaced-repetition update, and error-log updates."),
+            ("Session 8", "40 min", "Interview drill and communication rehearsal."),
         ]
     return [
-        ("Session 1", "25 min", "Closed-book recall and formula rewrite."),
-        ("Session 2", "35 min", "High-value concept reinforcement with one worked example."),
-        ("Session 3", "35 min", "Notebook review and one focused extension task."),
-        ("Session 4", "25 min", "Interview-style explanation, reflection, and weekly checkpoint."),
+        ("Session 1", "75 min", "Closed-book recall and formula rewrite."),
+        ("Session 2", "70 min", "High-value concept reinforcement with two worked examples."),
+        ("Session 3", "70 min", "Notebook review and focused extension task."),
+        ("Session 4", "70 min", "Weekly mini-project or capstone build increment."),
+        ("Session 5", "60 min", "Quiz and interview rehearsal."),
+        ("Session 6", "50 min", "Error-log cleanup and revision planning."),
+        ("Session 7", "45 min", "Write one learning memo for portfolio evidence."),
+        ("Session 8", "40 min", "Checkpoint reflection and next-day bridge."),
     ]
 
 
@@ -64,7 +71,7 @@ def make_generic_day(day: str, topic: str, week_title: str, coding_task: str, re
     return {
         "day": day,
         "topic": topic,
-        "estimated_time": "4 hours" if day in {"Mon", "Tue", "Wed", "Thu", "Fri"} else "2 hours",
+        "estimated_time": "8 hours",
         "why": f"{topic} is part of real quant work inside {week_title.lower()} research, trading, or risk workflows.",
         "core_explanation": (
             f"Start with intuition for {topic.lower()}, then restate it using the formal quantitative language used in finance and ML."
@@ -1120,7 +1127,7 @@ def build_roadmap() -> list[dict]:
                 )
         for index, day in enumerate(days, start=1):
             day["day_index"] = index
-            day["estimated_time"] = "4 hours" if day["day"] in {"Mon", "Tue", "Wed", "Thu", "Fri"} else "2 hours"
+            day["estimated_time"] = "8 hours"
             day["session_plan"] = day.get("session_plan", daily_session_plan(day["day"]))
             day["week_theme"] = blueprint["title"]
             day["previous_topic"] = days[index - 2]["topic"] if index > 1 else ""
@@ -1204,15 +1211,15 @@ def write_json(roadmap: list[dict]) -> None:
         },
         "assumptions": [
             "You are restarting math almost from zero and need simple explanations before formal treatment.",
-            "You can sustain about 24 hours per week.",
+            "You can sustain about 56 hours per week for an intensive mastery track.",
             "You want a scholarship-aware master's preparation track in parallel with technical training.",
             "You prefer practical portfolio-building over purely theoretical study.",
         ],
         "weekly_time_budget": {
-            "Mon-Fri": "4 hours/day",
-            "Sat": "2 hours",
-            "Sun": "2 hours",
-            "Total": "About 24 hours/week",
+            "Mon-Fri": "8 hours/day",
+            "Sat": "8 hours",
+            "Sun": "8 hours",
+            "Total": "About 56 hours/week",
         },
         "roadmap": roadmap,
     }
@@ -1227,7 +1234,7 @@ def roadmap_markdown(roadmap: list[dict]) -> str:
         "- Math is being rebuilt almost from zero, so each lesson starts with intuition and then adds technical language.",
         "- Coding is good enough to move quickly once finance and math are tied back to practice.",
         "- The 24-week plan runs from 2026-04-20 to 2026-10-04 if you start on the next Monday after this build.",
-        "- Weekly workload is sized for about 24 hours.",
+        "- Weekly workload is sized for about 56 hours (8 hours/day intensive track).",
         "",
         "## 24-Week Roadmap Table",
         "| Week | Dates | Theme | Key Outcome |",
@@ -1426,7 +1433,7 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
     lines.extend(
         [
             "",
-            "## 4-Hour Deliverables",
+            "## 8-Hour Deliverables",
             "- Produce one page of notes with intuition, formulas, and one market example in your own words.",
             "- Complete all notebook cells and annotate each output with what it means financially.",
             "- Add one error-log entry with a scheduled review date.",
@@ -1436,6 +1443,13 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             f"1. What is the core intuition behind {day['topic'].lower()}?",
             "2. Write one formula or workflow from memory and define each term.",
             "3. Give one practical quant use case and one failure mode.",
+            "",
+            "## Formula Sheet Drill",
+            "- Expected value: E[X] = sum_i p_i x_i",
+            "- Variance: Var(X) = E[(X - E[X])^2]",
+            "- Covariance and correlation: Cov(X,Y), Corr(X,Y) = Cov(X,Y)/(sigma_X sigma_Y)",
+            "- Compounding: W_t = W_0 * product(1 + r_t)",
+            f"- Topic-specific formula: write one formula central to {day['topic'].lower()} and explain every symbol.",
             "",
             "## Revision Sprint",
             "- Re-solve one earlier problem from memory before checking notes.",

@@ -11,7 +11,7 @@ def _md(text: str) -> str:
 MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
     2: {
         "Mon": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Understand arrays, shapes, and vectorization."),
                 ("Block 2", "55 min", "Compare loops with array-based finance calculations."),
@@ -115,7 +115,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Tue": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Learn DataFrame structure and indexing."),
                 ("Block 2", "55 min", "Clean missing values and basic data problems."),
@@ -223,7 +223,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Wed": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Learn why plots are part of research, not decoration."),
                 ("Block 2", "55 min", "Plot price, return, and rolling statistics."),
@@ -318,7 +318,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Thu": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Understand correlation and covariance intuitively."),
                 ("Block 2", "55 min", "Compute co-movement measures from returns."),
@@ -412,7 +412,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Fri": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Learn weight vectors and rebalancing intuition."),
                 ("Block 2", "55 min", "Understand cumulative performance tracking."),
@@ -511,7 +511,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Sat": {
-            "estimated_time": "2 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "25 min", "Week 2 recall from memory."),
                 ("Block 2", "35 min", "SQL and data-cleaning drill."),
@@ -566,7 +566,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Sun": {
-            "estimated_time": "2 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "20 min", "Mini-project planning."),
                 ("Block 2", "55 min", "Build comparison notebook."),
@@ -624,7 +624,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
     },
     3: {
         "Mon": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Rebuild algebra basics."),
                 ("Block 2", "55 min", "Practice fractions, powers, and rearrangement."),
@@ -706,7 +706,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Tue": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Learn slope intuition."),
                 ("Block 2", "55 min", "Understand derivatives as sensitivity."),
@@ -788,7 +788,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Wed": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Understand accumulation and area intuition."),
                 ("Block 2", "55 min", "Relate integrals to totals and averages."),
@@ -866,7 +866,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Thu": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Learn probability rules and events."),
                 ("Block 2", "55 min", "Understand random variables and distributions."),
@@ -945,7 +945,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Fri": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Learn JSON and API response structure."),
                 ("Block 2", "55 min", "Understand conditional probability and Bayes intuition."),
@@ -1035,7 +1035,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Sat": {
-            "estimated_time": "2 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "25 min", "Math recall drill."),
                 ("Block 2", "35 min", "Probability and Bayes recap."),
@@ -1083,7 +1083,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Sun": {
-            "estimated_time": "2 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "20 min", "Project framing."),
                 ("Block 2", "55 min", "Monte Carlo simulation build."),
@@ -1137,7 +1137,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
     },
     4: {
         "Mon": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Learn samples, populations, estimators."),
                 ("Block 2", "55 min", "Understand bias and variance intuition."),
@@ -1217,7 +1217,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Tue": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Confidence interval intuition."),
                 ("Block 2", "55 min", "Hypothesis testing as evidence check."),
@@ -1289,7 +1289,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Wed": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Regression intuition."),
                 ("Block 2", "55 min", "Slope, intercept, residuals, fit quality."),
@@ -1372,7 +1372,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Thu": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Optimization intuition."),
                 ("Block 2", "55 min", "Objective functions and constraints."),
@@ -1449,7 +1449,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Fri": {
-            "estimated_time": "4 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "45 min", "Portfolio theory intuition."),
                 ("Block 2", "55 min", "Efficient frontier and Sharpe ratio."),
@@ -1524,7 +1524,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Sat": {
-            "estimated_time": "2 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "20 min", "Capstone plan."),
                 ("Block 2", "55 min", "Implement exploratory asset-allocation notebook."),
@@ -1579,7 +1579,7 @@ MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
             ],
         },
         "Sun": {
-            "estimated_time": "2 hours",
+            "estimated_time": "8 hours",
             "study_blocks": [
                 ("Block 1", "20 min", "Finalize capstone notebook."),
                 ("Block 2", "50 min", "Write conclusion and limitation note."),

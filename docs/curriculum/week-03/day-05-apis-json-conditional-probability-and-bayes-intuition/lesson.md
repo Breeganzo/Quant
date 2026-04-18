@@ -1,6 +1,6 @@
 # Week 03 Fri: APIs, JSON, conditional probability, and Bayes intuition
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

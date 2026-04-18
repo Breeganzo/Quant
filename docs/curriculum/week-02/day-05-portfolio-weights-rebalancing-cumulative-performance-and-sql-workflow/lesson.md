@@ -1,6 +1,6 @@
 # Week 02 Fri: Portfolio weights, rebalancing, cumulative performance, and SQL workflow
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

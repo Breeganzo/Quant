@@ -1,6 +1,6 @@
 # Week 03 Tue: Calculus intuition: slopes, derivatives, and sensitivity
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

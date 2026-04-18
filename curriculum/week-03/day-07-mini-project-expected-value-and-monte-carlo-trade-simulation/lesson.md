@@ -1,6 +1,6 @@
 # Week 03 Sun: Mini project: expected value and Monte Carlo trade simulation
 
-**Estimated time:** 2 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

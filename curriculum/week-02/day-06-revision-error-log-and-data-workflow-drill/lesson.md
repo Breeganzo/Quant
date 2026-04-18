@@ -1,6 +1,6 @@
 # Week 02 Sat: Revision, error log, and data workflow drill
 
-**Estimated time:** 2 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

@@ -1,6 +1,6 @@
 # Week 04 Wed: OLS regression intuition and interpretation
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

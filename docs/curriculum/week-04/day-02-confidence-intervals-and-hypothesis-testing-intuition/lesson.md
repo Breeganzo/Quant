@@ -1,6 +1,6 @@
 # Week 04 Tue: Confidence intervals and hypothesis testing intuition
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

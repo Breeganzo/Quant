@@ -1,6 +1,6 @@
 # Week 04 Fri: Portfolio theory, efficient frontier, and Sharpe ratio intuition
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

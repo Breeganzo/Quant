@@ -1,6 +1,6 @@
 # Week 04 Mon: Sampling, estimators, bias, and variance
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

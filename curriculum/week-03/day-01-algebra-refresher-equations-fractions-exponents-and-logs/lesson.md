@@ -1,6 +1,6 @@
 # Week 03 Mon: Algebra refresher: equations, fractions, exponents, and logs
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

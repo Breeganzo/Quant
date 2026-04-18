@@ -6,6 +6,7 @@ This repository provides a 24-week quant finance and ML learning system with:
 - day-by-day continuity across all weeks
 - expanded daily lesson plans with session-based study flow
 - notebook-based practice for every day and weekly project
+- explicit daily formula drills and closed-book quiz/revision structure
 - PDF export for offline study
 - a React tracker site ready for GitHub Pages deployment
 - local progress persistence in browser storage
@@ -95,7 +96,7 @@ Open this URL in your browser:
 Notes:
 
 - Day pages render lesson content directly in the app.
-- Notebook buttons open local JupyterLab instead of raw JSON files.
+- Notebook buttons open in-app notebook viewer by default, with optional VS Code and JupyterLab actions.
 - Progress updates autosave in browser storage.
 
 ## Preview Production Build Locally
@@ -214,7 +215,7 @@ Important: GitHub Pages is static hosting. Progress is browser-local by default;
 
 ## Suggested Weekly Time Budget
 
-- Monday-Friday: `4 hours/day`
-- Saturday: `2 hours`
-- Sunday: `2 hours`
-- Total: about `24 hours/week`
+- Monday-Friday: `8 hours/day`
+- Saturday: `8 hours`
+- Sunday: `8 hours`
+- Total: about `56 hours/week`

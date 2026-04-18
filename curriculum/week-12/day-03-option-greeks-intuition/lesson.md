@@ -1,6 +1,6 @@
 # Week 12 Wed: Option Greeks intuition
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Daily Mission
 This day belongs to the week theme "Finance Core IV: derivatives, options, Greeks, hedging, and risk management". Your objective is to understand, apply, and communicate option greeks intuition in a way a quant team would trust.
@@ -13,11 +13,14 @@ This day belongs to the week theme "Finance Core IV: derivatives, options, Greek
 ## Session Plan
 | Session | Duration | Focus |
 | --- | --- | --- |
-| Session 1 | 35 min | Recall yesterday's ideas and define today's learning outcome. |
-| Session 2 | 50 min | Build intuition first, then formalize notation and key formulas. |
-| Session 3 | 45 min | Work through trading, portfolio, and risk examples with interpretation. |
-| Session 4 | 50 min | Run notebook labs, inspect outputs, and explain results in plain language. |
-| Session 5 | 20 min | Interview drill, reflection, and error-log update. |
+| Session 1 | 75 min | Theory deep dive: definitions, intuition, and assumptions. |
+| Session 2 | 70 min | Formula lab: derive, rewrite, and memorize key formulas from scratch. |
+| Session 3 | 70 min | Worked examples with finance interpretation and edge-case checks. |
+| Session 4 | 70 min | Notebook implementation and output interpretation. |
+| Session 5 | 60 min | Practice quiz and closed-book retrieval on formulas. |
+| Session 6 | 50 min | Mini-project increment and result write-up. |
+| Session 7 | 45 min | Revision sprint, spaced-repetition update, and error-log updates. |
+| Session 8 | 40 min | Interview drill and communication rehearsal. |
 
 ## Why It Matters In Quant
 Option Greeks intuition is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
@@ -33,7 +36,7 @@ Option Greeks intuition is part of real quant work inside finance core iv: deriv
 - Write down the main formula or workflow for option greeks intuition from memory.
 - Connect option greeks intuition to one trading, portfolio, or risk problem.
 
-## 4-Hour Deliverables
+## 8-Hour Deliverables
 - Produce one page of notes with intuition, formulas, and one market example in your own words.
 - Complete all notebook cells and annotate each output with what it means financially.
 - Add one error-log entry with a scheduled review date.
@@ -43,6 +46,13 @@ Option Greeks intuition is part of real quant work inside finance core iv: deriv
 1. What is the core intuition behind option greeks intuition?
 2. Write one formula or workflow from memory and define each term.
 3. Give one practical quant use case and one failure mode.
+
+## Formula Sheet Drill
+- Expected value: E[X] = sum_i p_i x_i
+- Variance: Var(X) = E[(X - E[X])^2]
+- Covariance and correlation: Cov(X,Y), Corr(X,Y) = Cov(X,Y)/(sigma_X sigma_Y)
+- Compounding: W_t = W_0 * product(1 + r_t)
+- Topic-specific formula: write one formula central to option greeks intuition and explain every symbol.
 
 ## Revision Sprint
 - Re-solve one earlier problem from memory before checking notes.

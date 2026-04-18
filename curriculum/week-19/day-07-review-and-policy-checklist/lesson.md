@@ -1,6 +1,6 @@
 # Week 19 Sun: Review and policy checklist
 
-**Estimated time:** 2 hours
+**Estimated time:** 8 hours
 
 ## Daily Mission
 This day belongs to the week theme "Agentic AI for Quant I: research automation, literature review, idea generation, and guardrails". Your objective is to understand, apply, and communicate review and policy checklist in a way a quant team would trust.
@@ -13,10 +13,14 @@ This day belongs to the week theme "Agentic AI for Quant I: research automation,
 ## Session Plan
 | Session | Duration | Focus |
 | --- | --- | --- |
-| Session 1 | 25 min | Closed-book recall and formula rewrite. |
-| Session 2 | 35 min | High-value concept reinforcement with one worked example. |
-| Session 3 | 35 min | Notebook review and one focused extension task. |
-| Session 4 | 25 min | Interview-style explanation, reflection, and weekly checkpoint. |
+| Session 1 | 75 min | Closed-book recall and formula rewrite. |
+| Session 2 | 70 min | High-value concept reinforcement with two worked examples. |
+| Session 3 | 70 min | Notebook review and focused extension task. |
+| Session 4 | 70 min | Weekly mini-project or capstone build increment. |
+| Session 5 | 60 min | Quiz and interview rehearsal. |
+| Session 6 | 50 min | Error-log cleanup and revision planning. |
+| Session 7 | 45 min | Write one learning memo for portfolio evidence. |
+| Session 8 | 40 min | Checkpoint reflection and next-day bridge. |
 
 ## Why It Matters In Quant
 Review and policy checklist is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
@@ -32,7 +36,7 @@ Review and policy checklist is part of real quant work inside agentic ai for qua
 - Write down the main formula or workflow for review and policy checklist from memory.
 - Connect review and policy checklist to one trading, portfolio, or risk problem.
 
-## 4-Hour Deliverables
+## 8-Hour Deliverables
 - Produce one page of notes with intuition, formulas, and one market example in your own words.
 - Complete all notebook cells and annotate each output with what it means financially.
 - Add one error-log entry with a scheduled review date.
@@ -42,6 +46,13 @@ Review and policy checklist is part of real quant work inside agentic ai for qua
 1. What is the core intuition behind review and policy checklist?
 2. Write one formula or workflow from memory and define each term.
 3. Give one practical quant use case and one failure mode.
+
+## Formula Sheet Drill
+- Expected value: E[X] = sum_i p_i x_i
+- Variance: Var(X) = E[(X - E[X])^2]
+- Covariance and correlation: Cov(X,Y), Corr(X,Y) = Cov(X,Y)/(sigma_X sigma_Y)
+- Compounding: W_t = W_0 * product(1 + r_t)
+- Topic-specific formula: write one formula central to review and policy checklist and explain every symbol.
 
 ## Revision Sprint
 - Re-solve one earlier problem from memory before checking notes.

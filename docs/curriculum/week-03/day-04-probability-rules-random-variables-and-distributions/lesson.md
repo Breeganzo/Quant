@@ -1,6 +1,6 @@
 # Week 03 Thu: Probability rules, random variables, and distributions
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

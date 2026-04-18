@@ -1,6 +1,6 @@
 # Week 03 Wed: Integrals, accumulation, and area intuition
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

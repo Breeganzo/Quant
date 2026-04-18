@@ -1,6 +1,6 @@
 # Week 02 Thu: Correlation, covariance, and diversification
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

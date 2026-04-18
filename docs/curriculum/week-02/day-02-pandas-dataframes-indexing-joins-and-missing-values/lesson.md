@@ -1,6 +1,6 @@
 # Week 02 Tue: pandas DataFrames, indexing, joins, and missing values
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

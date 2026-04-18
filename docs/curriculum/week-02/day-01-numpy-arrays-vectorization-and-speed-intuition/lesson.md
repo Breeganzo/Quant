@@ -1,6 +1,6 @@
 # Week 02 Mon: NumPy arrays, vectorization, and speed intuition
 
-**Estimated time:** 4 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |

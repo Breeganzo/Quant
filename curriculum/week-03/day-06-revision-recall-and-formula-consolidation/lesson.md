@@ -1,6 +1,6 @@
 # Week 03 Sat: Revision, recall, and formula consolidation
 
-**Estimated time:** 2 hours
+**Estimated time:** 8 hours
 
 ## Session Plan
 | Session | Duration | Focus |
