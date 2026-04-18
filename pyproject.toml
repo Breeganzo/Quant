@@ -17,6 +17,7 @@ dependencies = [
   "nbformat>=5.10.4",
   "nbclient>=0.10.2",
   "ipykernel>=6.29.5",
+  "jupyterlab>=4.3.0",
   "reportlab>=4.4.0",
   "markdown-it-py>=3.0.0",
   "python-dateutil>=2.9.0",
@@ -41,6 +42,8 @@ where = ["src"]
 quant-bootstrap = "quant_learning.bootstrap:main"
 quant-export-pdfs = "quant_learning.export_pdf:main"
 quant-smoke-check = "quant_learning.smoke_check:main"
+quant-jupyter = "quant_learning.jupyter_launcher:main"
+quant-verify-notebooks = "quant_learning.verify_notebooks:main"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

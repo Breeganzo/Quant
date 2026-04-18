@@ -2,17 +2,24 @@
 
 **Estimated time:** 2 hours
 
-## Study Blocks
-- Block 1 (20 min): Finalize capstone notebook.
-- Block 2 (50 min): Write conclusion and limitation note.
-- Block 3 (25 min): Monthly assessment and tracker update.
-- Block 4 (25 min): Interview Q&A review.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 20 min | Finalize capstone notebook. |
+| Session 2 | 50 min | Write conclusion and limitation note. |
+| Session 3 | 25 min | Monthly assessment and tracker update. |
+| Session 4 | 25 min | Interview Q&A review. |
 
 ## Why It Matters In Quant
 Capstone review and write-up is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
 
 ## Learning Overview
 Month 1 finishes with communication, not just calculation. The capstone becomes valuable only when you can explain what it did, what it found, and what its limits are.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Communication as quant skill
@@ -26,6 +33,12 @@ Month 1 finishes with communication, not just calculation. The capstone becomes 
 ## Practice Questions With Answers
 ### Question: What should a capstone conclusion include?
 Answer: The question, method, main result, and at least one limitation or next step.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: capstone review and write-up.

@@ -2,17 +2,24 @@
 
 **Estimated time:** 2 hours
 
-## Study Blocks
-- Block 1 (25 min): Math recall drill.
-- Block 2 (35 min): Probability and Bayes recap.
-- Block 3 (35 min): Error log and formula rewrite.
-- Block 4 (25 min): Interview practice.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 25 min | Math recall drill. |
+| Session 2 | 35 min | Probability and Bayes recap. |
+| Session 3 | 35 min | Error log and formula rewrite. |
+| Session 4 | 25 min | Interview practice. |
 
 ## Why It Matters In Quant
 Revision, recall, and formula consolidation is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
 
 ## Learning Overview
 Today is about making the new math vocabulary stick. You should be able to explain exponents, logs, derivatives, integrals, probability, and Bayes at a clean beginner level after this revision block.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Integrated recall
@@ -26,6 +33,12 @@ Today is about making the new math vocabulary stick. You should be able to expla
 ## Practice Questions With Answers
 ### Question: What is the real sign that math is improving?
 Answer: You can restate the idea in plain English, do a simple calculation, and connect it to a finance use case without freezing.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: revision, recall, and formula consolidation.

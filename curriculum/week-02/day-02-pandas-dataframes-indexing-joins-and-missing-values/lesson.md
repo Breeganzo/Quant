@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Learn DataFrame structure and indexing.
-- Block 2 (55 min): Clean missing values and basic data problems.
-- Block 3 (55 min): Join and reshape simple market tables.
-- Block 4 (55 min): Code drills and small cleaning exercises.
-- Block 5 (30 min): Reflection and interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Learn DataFrame structure and indexing. |
+| Session 2 | 55 min | Clean missing values and basic data problems. |
+| Session 3 | 55 min | Join and reshape simple market tables. |
+| Session 4 | 55 min | Code drills and small cleaning exercises. |
+| Session 5 | 30 min | Reflection and interview recap. |
 
 ## Why It Matters In Quant
 pandas DataFrames, indexing, joins, and missing values is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
@@ -16,6 +18,11 @@ pandas DataFrames, indexing, joins, and missing values is part of real quant wor
 Most quant work is not glamorous modeling. A large part is understanding tables, cleaning messy inputs, and making sure what you model is actually what you think you are modeling.
 
 Today is about becoming comfortable with pandas as the day-to-day language of practical financial data handling.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### DataFrames as structured market tables
@@ -47,6 +54,12 @@ Answer: Joining on the wrong date key and accidentally aligning today's feature 
 
 ### Question: Why do labels matter in pandas?
 Answer: Because labeled indices and columns make transformations safer and easier to interpret than raw position-only arrays.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: pandas dataframes, indexing, joins, and missing values.

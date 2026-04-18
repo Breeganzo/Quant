@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Portfolio theory intuition.
-- Block 2 (55 min): Efficient frontier and Sharpe ratio.
-- Block 3 (55 min): Estimation fragility and caution.
-- Block 4 (55 min): Code small portfolio comparisons.
-- Block 5 (30 min): Interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Portfolio theory intuition. |
+| Session 2 | 55 min | Efficient frontier and Sharpe ratio. |
+| Session 3 | 55 min | Estimation fragility and caution. |
+| Session 4 | 55 min | Code small portfolio comparisons. |
+| Session 5 | 30 min | Interview recap. |
 
 ## Why It Matters In Quant
 Portfolio theory, efficient frontier, and Sharpe ratio intuition is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
@@ -16,6 +18,11 @@ Portfolio theory, efficient frontier, and Sharpe ratio intuition is part of real
 Portfolio theory is one of the core languages of quant finance. Even if later practice becomes more complex, the risk-return framework remains central.
 
 You should come away knowing not just what the efficient frontier and Sharpe ratio are, but also why naive use can be misleading.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Mean-variance thinking
@@ -43,6 +50,12 @@ Answer: It suggests strong average return relative to volatility, but it does no
 
 ### Question: Why is the efficient frontier fragile in practice?
 Answer: Because it depends heavily on estimated returns and covariances, which are noisy and unstable.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: portfolio theory, efficient frontier, and sharpe ratio intuition.

@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Learn samples, populations, estimators.
-- Block 2 (55 min): Understand bias and variance intuition.
-- Block 3 (55 min): Relate estimator quality to finance datasets.
-- Block 4 (55 min): Code sampling examples.
-- Block 5 (30 min): Interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Learn samples, populations, estimators. |
+| Session 2 | 55 min | Understand bias and variance intuition. |
+| Session 3 | 55 min | Relate estimator quality to finance datasets. |
+| Session 4 | 55 min | Code sampling examples. |
+| Session 5 | 30 min | Interview recap. |
 
 ## Why It Matters In Quant
 Sampling, estimators, bias, and variance is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
@@ -16,6 +18,11 @@ Sampling, estimators, bias, and variance is part of real quant work inside math 
 Statistics becomes far more useful once you understand that sample numbers are not truth. They are estimates produced from noisy limited data.
 
 That mindset is essential in finance because historical samples are often short, unstable, and regime-dependent.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Population versus sample
@@ -43,6 +50,12 @@ Answer: Because it is based on limited noisy observations and may differ materia
 
 ### Question: What is the intuition behind estimator variance?
 Answer: If you repeated the sampling process many times, a high-variance estimator would jump around a lot from sample to sample.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: sampling, estimators, bias, and variance.

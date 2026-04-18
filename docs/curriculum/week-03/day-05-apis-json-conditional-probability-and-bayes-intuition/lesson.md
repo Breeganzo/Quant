@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Learn JSON and API response structure.
-- Block 2 (55 min): Understand conditional probability and Bayes intuition.
-- Block 3 (55 min): Connect evidence updating to finance decisions.
-- Block 4 (55 min): Code a small response-parsing and Bayes example.
-- Block 5 (30 min): Interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Learn JSON and API response structure. |
+| Session 2 | 55 min | Understand conditional probability and Bayes intuition. |
+| Session 3 | 55 min | Connect evidence updating to finance decisions. |
+| Session 4 | 55 min | Code a small response-parsing and Bayes example. |
+| Session 5 | 30 min | Interview recap. |
 
 ## Why It Matters In Quant
 APIs, JSON, conditional probability, and Bayes intuition is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
@@ -16,6 +18,11 @@ APIs, JSON, conditional probability, and Bayes intuition is part of real quant w
 A modern quant often pulls or inspects data from APIs, but the deeper idea today is evidence updating. Bayes intuition teaches you not to overreact to one observation without considering base rates.
 
 That habit is useful in markets, model evaluation, and research interpretation.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### APIs and JSON
@@ -43,6 +50,12 @@ Answer: Because it teaches you to combine new evidence with prior uncertainty in
 
 ### Question: What is conditional probability in simple terms?
 Answer: It is the probability of one event after you already know another event has happened.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: apis, json, conditional probability, and bayes intuition.

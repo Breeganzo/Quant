@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Understand accumulation and area intuition.
-- Block 2 (55 min): Relate integrals to totals and averages.
-- Block 3 (55 min): Connect accumulation to finance.
-- Block 4 (55 min): Code approximation examples.
-- Block 5 (30 min): Interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Understand accumulation and area intuition. |
+| Session 2 | 55 min | Relate integrals to totals and averages. |
+| Session 3 | 55 min | Connect accumulation to finance. |
+| Session 4 | 55 min | Code approximation examples. |
+| Session 5 | 30 min | Interview recap. |
 
 ## Why It Matters In Quant
 Integrals, accumulation, and area intuition is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
@@ -16,6 +18,11 @@ Integrals, accumulation, and area intuition is part of real quant work inside ma
 Integrals are easier to digest when seen as accumulation rather than as abstract notation.
 
 In finance, accumulation ideas appear in continuous-time reasoning, total exposure, and moving from local change to total effect.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Integral as accumulation
@@ -43,6 +50,12 @@ Answer: It adds up many tiny contributions to get a total accumulated quantity.
 
 ### Question: How is integration related to finance?
 Answer: Finance often studies quantities that evolve continuously, so accumulation over time naturally leads to integral thinking.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: integrals, accumulation, and area intuition.

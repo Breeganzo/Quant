@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Understand arrays, shapes, and vectorization.
-- Block 2 (55 min): Compare loops with array-based finance calculations.
-- Block 3 (55 min): Apply vectorization to return and portfolio work.
-- Block 4 (55 min): Complete coding drills and rewrite concepts.
-- Block 5 (30 min): Interview recap and error log.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Understand arrays, shapes, and vectorization. |
+| Session 2 | 55 min | Compare loops with array-based finance calculations. |
+| Session 3 | 55 min | Apply vectorization to return and portfolio work. |
+| Session 4 | 55 min | Complete coding drills and rewrite concepts. |
+| Session 5 | 30 min | Interview recap and error log. |
 
 ## Why It Matters In Quant
 NumPy arrays, vectorization, and speed intuition is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
@@ -16,6 +18,11 @@ NumPy arrays, vectorization, and speed intuition is part of real quant work insi
 NumPy matters because quant work becomes painful and slow if every calculation is written as a manual loop. Arrays let you express the mathematical structure directly.
 
 The practical habit today is to stop treating market data as isolated numbers and start seeing it as organized numerical objects that can be transformed efficiently.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Arrays as financial objects
@@ -47,6 +54,12 @@ Answer: Shape tells you how many rows and columns or dimensions the array has, w
 
 ### Question: Why can shape mistakes be dangerous in finance code?
 Answer: Because a mismatched operation may silently produce the wrong result, which can distort signals, risk, or portfolio calculations.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: numpy arrays, vectorization, and speed intuition.

@@ -1875,13 +1875,24 @@ def render_detailed_day_markdown(week_number: int, day: dict[str, Any]) -> str:
         "",
         f"**Estimated time:** {detail['estimated_time']}",
         "",
-        "## Study Blocks",
+        "## Session Plan",
+        "| Session | Duration | Focus |",
+        "| --- | --- | --- |",
     ]
-    for label, duration, focus in detail["study_blocks"]:
-        lines.append(f"- {label} ({duration}): {focus}")
+    for index, (_, duration, focus) in enumerate(detail["study_blocks"], start=1):
+        lines.append(f"| Session {index} | {duration} | {focus} |")
     lines.extend(["", "## Why It Matters In Quant", day["why"], "", "## Learning Overview"])
     for paragraph in detail["overview"]:
         lines.extend([paragraph, ""])
+    lines.extend(
+        [
+            "## Continuity",
+            "- Start by recalling what from yesterday is still unclear.",
+            "- Use today's topic to fix at least one weak area from your error log.",
+            "- End by writing a one-paragraph bridge to tomorrow's topic.",
+            "",
+        ]
+    )
     lines.append("## Core Concepts")
     for concept in detail["concepts"]:
         lines.extend(
@@ -1899,6 +1910,16 @@ def render_detailed_day_markdown(week_number: int, day: dict[str, Any]) -> str:
     lines.extend(["", "## Practice Questions With Answers"])
     for item in detail["practice_with_answers"]:
         lines.extend([f"### Question: {item['question']}", f"Answer: {item['answer']}", ""])
+    lines.extend(
+        [
+            "## Extended Study (to complete a full 4-hour day)",
+            "1. Rewrite each core concept in your own words without looking at notes.",
+            "2. Add one extra worked example using different numbers or assumptions.",
+            "3. Explain one failure mode where this concept can be misapplied in trading or risk work.",
+            "4. Add one short paragraph linking this concept to your weekly project objective.",
+            "",
+        ]
+    )
     lines.extend(["## Coding Task", day["coding_task"], "", "## Daily Interview Drill"])
     for qa in detail["interview_drill"]:
         lines.extend([f"### Q: {qa['question']}", f"A: {qa['answer']}", ""])
@@ -1928,10 +1949,10 @@ def detailed_day_notebook_spec(week_number: int, day: dict[str, Any]) -> dict[st
         "## Why this matters",
         day["why"],
         "",
-        "## Study blocks",
+        "## Session plan",
     ]
-    for label, duration, focus in detail["study_blocks"]:
-        intro.append(f"- {label} ({duration}): {focus}")
+    for index, (_, duration, focus) in enumerate(detail["study_blocks"], start=1):
+        intro.append(f"- Session {index} ({duration}): {focus}")
     intro.extend(["", "## Concept notes"])
     for concept in detail["concepts"]:
         intro.extend(
@@ -1945,6 +1966,14 @@ def detailed_day_notebook_spec(week_number: int, day: dict[str, Any]) -> dict[st
                 "",
             ]
         )
+    intro.extend(
+        [
+            "## Continuity prompt",
+            "- What from yesterday's topic still needs reinforcement?",
+            "- What should tomorrow build on from today?",
+            "",
+        ]
+    )
     practice = ["## Practice recap"]
     for item in detail["practice_with_answers"]:
         practice.extend([f"- {item['question']}", f"  Suggested answer: {item['answer']}"])

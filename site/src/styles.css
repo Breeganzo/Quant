@@ -325,9 +325,25 @@ button.secondary-button,
 .roadmap-lines,
 .qa-stack,
 .control-stack,
-.resource-list {
+.resource-list,
+.cloud-sync-stack {
   display: grid;
   gap: 0.8rem;
+}
+
+.cloud-input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.75rem;
+  font: inherit;
+  background: var(--panel-strong);
+}
+
+.error-inline {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.9rem;
 }
 
 .roadmap-line {

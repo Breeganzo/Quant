@@ -11,6 +11,7 @@ from nbclient import NotebookClient
 from quant_learning.interview_packs import build_interview_pack
 from quant_learning.month1_extensions import (
     detailed_day_notebook_spec,
+    has_detailed_day,
     project_notebook_spec,
     render_detailed_day_markdown,
 )
@@ -34,6 +35,31 @@ def week_dates(week_number: int) -> str:
     return f"{start.isoformat()} to {end.isoformat()}"
 
 
+def weekly_project_notebook_name(week_number: int) -> str:
+    return (
+        f"week-{week_number:02d}-capstone.ipynb"
+        if week_number % 4 == 0
+        else f"week-{week_number:02d}-mini-project.ipynb"
+    )
+
+
+def daily_session_plan(day_label: str) -> list[tuple[str, str, str]]:
+    if day_label in {"Mon", "Tue", "Wed", "Thu", "Fri"}:
+        return [
+            ("Session 1", "35 min", "Recall yesterday's ideas and define today's learning outcome."),
+            ("Session 2", "50 min", "Build intuition first, then formalize notation and key formulas."),
+            ("Session 3", "45 min", "Work through trading, portfolio, and risk examples with interpretation."),
+            ("Session 4", "50 min", "Run notebook labs, inspect outputs, and explain results in plain language."),
+            ("Session 5", "20 min", "Interview drill, reflection, and error-log update."),
+        ]
+    return [
+        ("Session 1", "25 min", "Closed-book recall and formula rewrite."),
+        ("Session 2", "35 min", "High-value concept reinforcement with one worked example."),
+        ("Session 3", "35 min", "Notebook review and one focused extension task."),
+        ("Session 4", "25 min", "Interview-style explanation, reflection, and weekly checkpoint."),
+    ]
+
+
 def make_generic_day(day: str, topic: str, week_title: str, coding_task: str, reflection: str) -> dict:
     return {
         "day": day,
@@ -51,6 +77,7 @@ def make_generic_day(day: str, topic: str, week_title: str, coding_task: str, re
         ],
         "coding_task": coding_task,
         "reflection": reflection,
+        "session_plan": daily_session_plan(day),
     }
 
 
@@ -1094,21 +1121,20 @@ def build_roadmap() -> list[dict]:
         for index, day in enumerate(days, start=1):
             day["day_index"] = index
             day["estimated_time"] = "4 hours" if day["day"] in {"Mon", "Tue", "Wed", "Thu", "Fri"} else "2 hours"
-            if blueprint["week"] <= 4:
-                slug = slugify(day["topic"])
-                day["lesson_markdown_path"] = (
-                    f"curriculum/week-{blueprint['week']:02d}/day-{index:02d}-{slug}/lesson.md"
-                )
-                day["lesson_pdf_path"] = (
-                    f"curriculum/pdfs/week-{blueprint['week']:02d}/day-{index:02d}-{slug}/lesson.pdf"
-                )
-                day["notebook_path"] = (
-                    f"curriculum/week-{blueprint['week']:02d}/notebooks/day-{index:02d}-{slug}.ipynb"
-                )
-            else:
-                day["lesson_markdown_path"] = ""
-                day["lesson_pdf_path"] = ""
-                day["notebook_path"] = ""
+            day["session_plan"] = day.get("session_plan", daily_session_plan(day["day"]))
+            day["week_theme"] = blueprint["title"]
+            day["previous_topic"] = days[index - 2]["topic"] if index > 1 else ""
+            day["next_topic"] = days[index]["topic"] if index < len(days) else ""
+            slug = slugify(day["topic"])
+            day["lesson_markdown_path"] = (
+                f"curriculum/week-{blueprint['week']:02d}/day-{index:02d}-{slug}/lesson.md"
+            )
+            day["lesson_pdf_path"] = (
+                f"curriculum/pdfs/week-{blueprint['week']:02d}/day-{index:02d}-{slug}/lesson.pdf"
+            )
+            day["notebook_path"] = (
+                f"curriculum/week-{blueprint['week']:02d}/notebooks/day-{index:02d}-{slug}.ipynb"
+            )
         roadmap.append(
             {
                 "week": blueprint["week"],
@@ -1126,17 +1152,10 @@ def build_roadmap() -> list[dict]:
                 "weekly_plan_pdf_path": f"curriculum/pdfs/week-{blueprint['week']:02d}/plan.pdf",
                 "weekly_overview_notebook_path": (
                     f"curriculum/week-{blueprint['week']:02d}/notebooks/week-{blueprint['week']:02d}-foundations.ipynb"
-                    if blueprint["week"] <= 4
-                    else ""
                 ),
                 "weekly_project_notebook_path": (
-                    f"curriculum/week-{blueprint['week']:02d}/notebooks/week-{blueprint['week']:02d}-mini-project.ipynb"
-                    if blueprint["week"] in {1, 2, 3}
-                    else (
-                        f"curriculum/week-{blueprint['week']:02d}/notebooks/week-{blueprint['week']:02d}-capstone.ipynb"
-                        if blueprint["week"] == 4
-                        else ""
-                    )
+                    f"curriculum/week-{blueprint['week']:02d}/notebooks/"
+                    f"{weekly_project_notebook_name(blueprint['week'])}"
                 ),
                 "interview_questions": build_interview_pack(
                     blueprint["week"], blueprint["title"], blueprint["concepts"]
@@ -1153,11 +1172,12 @@ def ensure_dirs() -> None:
     for week in range(1, 25):
         (CURRICULUM_DIR / f"week-{week:02d}").mkdir(parents=True, exist_ok=True)
         (CURRICULUM_DIR / f"week-{week:02d}" / "notebooks").mkdir(parents=True, exist_ok=True)
-    for week_number in range(1, 5):
+    for week_number in range(1, 25):
+        blueprint = WEEK_BLUEPRINTS[week_number - 1]
         topics = (
-            [day["topic"] for day in WEEK_BLUEPRINTS[week_number - 1]["daily_schedule"]]
-            if "daily_schedule" in WEEK_BLUEPRINTS[week_number - 1]
-            else WEEK_BLUEPRINTS[week_number - 1]["day_topics"]
+            [day["topic"] for day in blueprint["daily_schedule"]]
+            if "daily_schedule" in blueprint
+            else blueprint["day_topics"]
         )
         for idx, topic in enumerate(topics, start=1):
             slug = slugify(topic)
@@ -1352,6 +1372,319 @@ def week1_day_markdown(day: dict, week_number: int, index: int) -> str:
     return render_week1_day_markdown(day)
 
 
+def generic_day_markdown(week_number: int, day: dict) -> str:
+    continuity_lines = ["## Continuity Map"]
+    if day.get("previous_topic"):
+        continuity_lines.append(f"- Previous day focus: {day['previous_topic']}")
+    else:
+        continuity_lines.append(
+            "- Week kickoff: establish baseline intuition and key definitions before moving into formal detail."
+        )
+    continuity_lines.append(f"- Today's focus: {day['topic']}")
+    if day.get("next_topic"):
+        continuity_lines.append(f"- Next day bridge: {day['next_topic']}")
+    else:
+        continuity_lines.append("- Week closure: consolidate this concept into your weekly project narrative.")
+
+    lines = [
+        f"# Week {week_number:02d} {day['day']}: {day['topic']}",
+        "",
+        f"**Estimated time:** {day['estimated_time']}",
+        "",
+        "## Daily Mission",
+        (
+            f"This day belongs to the week theme \"{day.get('week_theme', f'Week {week_number}')}\". "
+            f"Your objective is to understand, apply, and communicate {day['topic'].lower()} in a way a quant team would trust."
+        ),
+        "",
+        *continuity_lines,
+        "",
+        "## Session Plan",
+        "| Session | Duration | Focus |",
+        "| --- | --- | --- |",
+    ]
+    for label, duration, focus in day.get("session_plan", daily_session_plan(day["day"])):
+        lines.append(f"| {label} | {duration} | {focus} |")
+
+    lines.extend(
+        [
+            "",
+            "## Why It Matters In Quant",
+            day["why"],
+            "",
+            "## Concept Build (Intuition -> Technical -> Market Use)",
+            f"1. Intuition: describe {day['topic'].lower()} in plain language before touching formulas.",
+            f"2. Technical frame: {day['core_explanation']}",
+            f"3. Market interpretation: {day['worked_example']}",
+            "4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.",
+            "",
+            "## Practice Problems",
+        ]
+    )
+    for problem in day["practice_problems"]:
+        lines.append(f"- {problem}")
+    lines.extend(
+        [
+            "",
+            "## 4-Hour Deliverables",
+            "- Produce one page of notes with intuition, formulas, and one market example in your own words.",
+            "- Complete all notebook cells and annotate each output with what it means financially.",
+            "- Add one error-log entry with a scheduled review date.",
+            "- Record a 60-90 second spoken explanation of the concept as interview practice.",
+            "",
+            "## Coding Task",
+            day["coding_task"],
+            "",
+            "## Interview Drill",
+            f"- Q1: Explain {day['topic'].lower()} to a non-technical stakeholder in 3 sentences.",
+            "- Q2: Give one failure case where this concept can produce misleading confidence.",
+            "- Q3: Show one concrete link from this concept to trading, portfolio construction, or risk control.",
+            "",
+            "## Reflection Prompt",
+            day["reflection"],
+            "",
+            "## Completion Checklist",
+            "- I can explain the concept from memory without reading notes.",
+            "- I completed at least one coding exercise tied to the day topic.",
+            "- I wrote one realistic finance use case in my own words.",
+            "- I recorded at least one weak area in my error log.",
+            "- I set the next review date using spaced repetition.",
+        ]
+    )
+    return "\n".join(lines) + "\n"
+
+
+def _nb_code(code: str) -> str:
+    return textwrap.dedent(code).strip() + "\n"
+
+
+def generic_day_notebook_spec(week_number: int, day: dict) -> dict:
+    continuity_text = (
+        f"Previous day: {day['previous_topic']}\n\n"
+        if day.get("previous_topic")
+        else "Previous day: week kickoff and baseline setup.\n\n"
+    )
+    continuity_text += (
+        f"Next day: {day['next_topic']}"
+        if day.get("next_topic")
+        else "Next day: weekly consolidation and project integration."
+    )
+    intro = textwrap.dedent(
+        f"""\
+        # Week {week_number} {day['day']}: {day['topic']}
+
+        Estimated time: {day['estimated_time']}
+
+        ## Why this matters
+        {day['why']}
+
+        ## Core explanation
+        {day['core_explanation']}
+
+        ## Worked example
+        {day['worked_example']}
+
+        ## Continuity
+        {continuity_text}
+        """
+    ).strip()
+    practice = "\n".join([
+        "## Practice recap",
+        *[f"- {item}" for item in day["practice_problems"]],
+        f"- Reflection prompt: {day['reflection']}",
+        "- Deliverable: write a 100-word note connecting today's topic to a real trading or risk decision.",
+    ])
+    interview = textwrap.dedent(
+        f"""\
+        ## Interview drill
+        - Q: Explain {day['topic'].lower()} and one real quant use case.
+        - A: Start with intuition, provide one technical detail, and connect it to a trading, portfolio, or risk decision.
+        - Q: What would go wrong if this concept is applied carelessly?
+        - A: Discuss one realistic failure mode and how you would detect it.
+        """
+    ).strip()
+    code_cells = [
+        {
+            "markdown": "## Code Lab 1: Build a synthetic market panel",
+            "code": _nb_code(
+                """\
+                import numpy as np
+                import pandas as pd
+
+                rng = np.random.default_rng(42)
+                dates = pd.date_range("2026-01-01", periods=120, freq="D")
+                shock = rng.normal(0.0, 0.008, size=len(dates))
+                drift = 0.0005
+                returns = drift + shock
+                prices = 100 * np.cumprod(1 + returns)
+
+                panel = pd.DataFrame({"date": dates, "return": returns, "price": prices})
+                print(panel.head())
+                """
+            ),
+        },
+        {
+            "markdown": "## Code Lab 2: Core summary statistics and risk lens",
+            "code": _nb_code(
+                """\
+                summary = {
+                    "mean_return": panel["return"].mean(),
+                    "volatility": panel["return"].std(),
+                    "min_return": panel["return"].min(),
+                    "max_return": panel["return"].max(),
+                    "final_price": panel["price"].iloc[-1],
+                }
+
+                for k, v in summary.items():
+                    print(k, round(float(v), 6))
+                """
+            ),
+        },
+        {
+            "markdown": "## Code Lab 3: Scenario stress and interpretation",
+            "code": _nb_code(
+                """\
+                stressed = panel.copy()
+                stressed.loc[stressed.index[40:45], "return"] -= 0.02
+                stressed["price"] = 100 * (1 + stressed["return"]).cumprod()
+
+                baseline_final = panel["price"].iloc[-1]
+                stressed_final = stressed["price"].iloc[-1]
+                impact = stressed_final / baseline_final - 1
+
+                print("Baseline final price:", round(float(baseline_final), 2))
+                print("Stressed final price:", round(float(stressed_final), 2))
+                print("Stress impact:", round(float(impact), 4))
+                """
+            ),
+        },
+        {
+            "markdown": "## Code Lab 4: Study-note structure for revision",
+            "code": _nb_code(
+                f"""\
+                study_note = {{
+                    "topic": {day['topic']!r},
+                    "intuition": "Write this in your own words.",
+                    "formula_or_workflow": "Add one formula or step-by-step process.",
+                    "finance_use_case": "Add one real trading/risk use case.",
+                    "failure_mode": "Describe one pitfall.",
+                    "next_review": "Set a date for spaced repetition.",
+                }}
+
+                for key, value in study_note.items():
+                    print(f"{{key}}: {{value}}")
+                """
+            ),
+        },
+    ]
+    return {
+        "title_markdown": intro,
+        "practice_markdown": practice,
+        "interview_markdown": interview,
+        "code_cells": code_cells,
+    }
+
+
+def generic_project_notebook_spec(week: dict) -> dict:
+    week_number = week["week"]
+    project_type = "Capstone" if week_number % 4 == 0 else "Mini Project"
+    title_markdown = textwrap.dedent(
+        f"""\
+        # Week {week_number:02d} {project_type}: {week['title']}
+
+        Build a concise research artifact that:
+
+        - states the question clearly
+        - creates at least one measurable output
+        - compares alternatives transparently
+        - documents limitations honestly
+        """
+    ).strip()
+    closing_markdown = textwrap.dedent(
+        f"""\
+        ## Suggested conclusion
+
+        Summarize:
+
+        - what worked
+        - what failed
+        - how assumptions affected outcomes
+        - one improvement for next week
+
+        Weekend objective: {week['weekend_project']}
+
+        Use this closing structure:
+
+        1. Problem definition and motivation.
+        2. Data and assumptions.
+        3. Result summary with one risk caveat.
+        4. What you would improve next week.
+        """
+    ).strip()
+    code_cells = [
+        {
+            "markdown": "## Step 1: Create a toy score table",
+            "code": _nb_code(
+                """\
+                import pandas as pd
+
+                candidates = pd.DataFrame(
+                    {
+                        "strategy": ["baseline", "variant_a", "variant_b"],
+                        "expected_return": [0.010, 0.013, 0.009],
+                        "volatility": [0.020, 0.024, 0.015],
+                        "max_drawdown": [0.050, 0.070, 0.040],
+                    }
+                )
+                print(candidates)
+                """
+            ),
+        },
+        {
+            "markdown": "## Step 2: Compute a simple quality score",
+            "code": _nb_code(
+                """\
+                candidates = candidates.assign(
+                    return_to_risk=candidates["expected_return"] / candidates["volatility"],
+                    penalty=candidates["max_drawdown"] * 2,
+                )
+                candidates["quality_score"] = candidates["return_to_risk"] - candidates["penalty"]
+                print(candidates.round(4))
+                """
+            ),
+        },
+        {
+            "markdown": "## Step 3: Rank and interpret",
+            "code": _nb_code(
+                """\
+                ranked = candidates.sort_values("quality_score", ascending=False)
+                print(ranked[["strategy", "quality_score"]].round(4))
+                """
+            ),
+        },
+        {
+            "markdown": "## Step 4: Add decision notes",
+            "code": _nb_code(
+                f"""\
+                decision_note = {{
+                    "week": {week_number},
+                    "theme": {week['title']!r},
+                    "best_candidate": ranked.iloc[0]["strategy"],
+                    "risk_note": "Document one fragility before trusting this result.",
+                    "next_iteration": "Define one concrete improvement for the next research cycle.",
+                }}
+                print(decision_note)
+                """
+            ),
+        },
+    ]
+    return {
+        "title_markdown": title_markdown + "\n",
+        "code_cells": code_cells,
+        "closing_markdown": closing_markdown + "\n",
+    }
+
+
 def templates() -> dict[str, str]:
     return {
         "daily-completion-checklist.md": textwrap.dedent(
@@ -1495,19 +1828,36 @@ def write_templates() -> None:
         (TEMPLATES_DIR / name).write_text(content, encoding="utf-8")
 
 
-def create_and_execute_notebook(path: Path, cells: list) -> None:
+def write_notebook(path: Path, cells: list) -> None:
     nb = nbf.v4.new_notebook()
     nb.cells = cells
+    nb.metadata["kernelspec"] = {
+        "display_name": "Python 3",
+        "language": "python",
+        "name": "python3",
+    }
+    nb.metadata["language_info"] = {"name": "python"}
     path.write_text(nbf.writes(nb), encoding="utf-8")
-    executed = nbf.read(path.open("r", encoding="utf-8"), as_version=4)
-    client = NotebookClient(executed, timeout=120, kernel_name="python3")
-    client.execute()
-    path.write_text(nbf.writes(executed), encoding="utf-8")
 
 
-def create_month1_notebooks(roadmap: list[dict]) -> None:
-    for week in roadmap[:4]:
+def create_and_execute_notebook(path: Path, cells: list) -> None:
+    write_notebook(path, cells)
+    try:
+        executed = nbf.read(path.open("r", encoding="utf-8"), as_version=4)
+        client = NotebookClient(executed, timeout=120, kernel_name="python3")
+        client.execute()
+        path.write_text(nbf.writes(executed), encoding="utf-8")
+    except Exception as exc:  # noqa: BLE001
+        print(
+            f"Warning: could not execute notebook {path}. "
+            f"Saved unexecuted notebook instead. Reason: {exc}"
+        )
+
+
+def create_curriculum_notebooks(roadmap: list[dict]) -> None:
+    for week in roadmap:
         notebooks_dir = CURRICULUM_DIR / f"week-{week['week']:02d}" / "notebooks"
+        notebook_writer = write_notebook
         week_overview_cells = [
             nbf.v4.new_markdown_cell(
                 f"# Week {week['week']} Notebook Hub\n\nThis overview notebook points you to the daily notebooks and the weekly project notebook."
@@ -1516,7 +1866,7 @@ def create_month1_notebooks(roadmap: list[dict]) -> None:
                 "Work through the daily notebooks in order, then complete the weekly mini-project or capstone notebook at the weekend."
             ),
         ]
-        create_and_execute_notebook(
+        notebook_writer(
             notebooks_dir / f"week-{week['week']:02d}-foundations.ipynb",
             week_overview_cells,
         )
@@ -1525,7 +1875,11 @@ def create_month1_notebooks(roadmap: list[dict]) -> None:
             spec = (
                 week1_day_notebook_specs(day)
                 if week["week"] == 1
-                else detailed_day_notebook_spec(week["week"], day)
+                else (
+                    detailed_day_notebook_spec(week["week"], day)
+                    if has_detailed_day(week["week"], day["day"])
+                    else generic_day_notebook_spec(week["week"], day)
+                )
             )
             slug = slugify(day["topic"])
             cells = [nbf.v4.new_markdown_cell(spec["title_markdown"])]
@@ -1534,24 +1888,23 @@ def create_month1_notebooks(roadmap: list[dict]) -> None:
                 cells.append(nbf.v4.new_code_cell(item["code"]))
             cells.append(nbf.v4.new_markdown_cell(spec["practice_markdown"]))
             cells.append(nbf.v4.new_markdown_cell(spec["interview_markdown"]))
-            create_and_execute_notebook(notebooks_dir / f"day-{index:02d}-{slug}.ipynb", cells)
+            notebook_writer(notebooks_dir / f"day-{index:02d}-{slug}.ipynb", cells)
 
         if week["week"] == 1:
             project_spec = week1_project_notebook_spec()
-            project_name = "week-01-mini-project.ipynb"
         else:
-            project_spec = project_notebook_spec(week["week"])
-            project_name = (
-                f"week-{week['week']:02d}-capstone.ipynb"
-                if week["week"] == 4
-                else f"week-{week['week']:02d}-mini-project.ipynb"
+            project_spec = (
+                project_notebook_spec(week["week"])
+                if week["week"] <= 4
+                else generic_project_notebook_spec(week)
             )
+        project_name = weekly_project_notebook_name(week["week"])
         project_cells = [nbf.v4.new_markdown_cell(project_spec["title_markdown"])]
         for item in project_spec["code_cells"]:
             project_cells.append(nbf.v4.new_markdown_cell(item["markdown"]))
             project_cells.append(nbf.v4.new_code_cell(item["code"]))
         project_cells.append(nbf.v4.new_markdown_cell(project_spec["closing_markdown"]))
-        create_and_execute_notebook(notebooks_dir / project_name, project_cells)
+        notebook_writer(notebooks_dir / project_name, project_cells)
 
 
 def write_curriculum_files(roadmap: list[dict]) -> None:
@@ -1563,14 +1916,18 @@ def write_curriculum_files(roadmap: list[dict]) -> None:
         week_dir = CURRICULUM_DIR / f"week-{week['week']:02d}"
         (week_dir / "plan.md").write_text(week_markdown(week), encoding="utf-8")
 
-    for week in roadmap[:4]:
+    for week in roadmap:
         for idx, day in enumerate(week["daily_schedule"], start=1):
             slug = slugify(day["topic"])
             day_dir = CURRICULUM_DIR / f"week-{week['week']:02d}" / f"day-{idx:02d}-{slug}"
             content = (
                 week1_day_markdown(day, week["week"], idx)
                 if week["week"] == 1
-                else render_detailed_day_markdown(week["week"], day)
+                else (
+                    render_detailed_day_markdown(week["week"], day)
+                    if has_detailed_day(week["week"], day["day"])
+                    else generic_day_markdown(week["week"], day)
+                )
             )
             (day_dir / "lesson.md").write_text(content, encoding="utf-8")
 
@@ -1582,5 +1939,5 @@ def main() -> None:
     write_curriculum_files(roadmap)
     write_templates()
     write_docs()
-    create_month1_notebooks(roadmap)
-    print("Bootstrapped curriculum, templates, docs, and notebooks.")
+    create_curriculum_notebooks(roadmap)
+    print("Bootstrapped curriculum, templates, docs, and notebooks for all 24 weeks.")

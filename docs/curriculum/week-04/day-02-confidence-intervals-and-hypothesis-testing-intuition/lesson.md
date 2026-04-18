@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Confidence interval intuition.
-- Block 2 (55 min): Hypothesis testing as evidence check.
-- Block 3 (55 min): Common misuse in finance.
-- Block 4 (55 min): Code interval examples.
-- Block 5 (30 min): Interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Confidence interval intuition. |
+| Session 2 | 55 min | Hypothesis testing as evidence check. |
+| Session 3 | 55 min | Common misuse in finance. |
+| Session 4 | 55 min | Code interval examples. |
+| Session 5 | 30 min | Interview recap. |
 
 ## Why It Matters In Quant
 Confidence intervals and hypothesis testing intuition is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
@@ -16,6 +18,11 @@ Confidence intervals and hypothesis testing intuition is part of real quant work
 Confidence intervals and tests are often memorized badly. Today the goal is not symbolic overload. The goal is to understand what level of uncertainty remains around an estimate.
 
 That matters in finance because weak evidence can easily be mistaken for edge.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Confidence interval intuition
@@ -43,6 +50,12 @@ Answer: Because trading viability also depends on effect size, costs, risk, stab
 
 ### Question: What does a wide confidence interval suggest?
 Answer: It suggests high uncertainty about the true parameter given the sample and assumptions.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: confidence intervals and hypothesis testing intuition.

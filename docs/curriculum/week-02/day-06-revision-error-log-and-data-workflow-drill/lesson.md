@@ -2,17 +2,24 @@
 
 **Estimated time:** 2 hours
 
-## Study Blocks
-- Block 1 (25 min): Week 2 recall from memory.
-- Block 2 (35 min): SQL and data-cleaning drill.
-- Block 3 (35 min): Error log and concept map.
-- Block 4 (25 min): Interview practice.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 25 min | Week 2 recall from memory. |
+| Session 2 | 35 min | SQL and data-cleaning drill. |
+| Session 3 | 35 min | Error log and concept map. |
+| Session 4 | 25 min | Interview practice. |
 
 ## Why It Matters In Quant
 Revision, error log, and data workflow drill is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
 
 ## Learning Overview
 This weekend block keeps Week 2 practical. Instead of learning a large new topic, you consolidate the data workflow habits that will support every later quant project.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Revision through active data tasks
@@ -27,6 +34,12 @@ This weekend block keeps Week 2 practical. Instead of learning a large new topic
 ## Practice Questions With Answers
 ### Question: What is one sign you truly understand a data workflow?
 Answer: You can rebuild it cleanly from memory and explain why each step exists.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: revision, error log, and data workflow drill.

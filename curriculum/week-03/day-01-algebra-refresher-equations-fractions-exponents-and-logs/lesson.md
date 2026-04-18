@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Rebuild algebra basics.
-- Block 2 (55 min): Practice fractions, powers, and rearrangement.
-- Block 3 (55 min): Learn exponents and logs in finance language.
-- Block 4 (55 min): Code simple growth and log examples.
-- Block 5 (30 min): Interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Rebuild algebra basics. |
+| Session 2 | 55 min | Practice fractions, powers, and rearrangement. |
+| Session 3 | 55 min | Learn exponents and logs in finance language. |
+| Session 4 | 55 min | Code simple growth and log examples. |
+| Session 5 | 30 min | Interview recap. |
 
 ## Why It Matters In Quant
 Algebra refresher: equations, fractions, exponents, and logs is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
@@ -16,6 +18,11 @@ Algebra refresher: equations, fractions, exponents, and logs is part of real qua
 Quant finance becomes painful very quickly if algebra feels shaky. This day is about regaining control of the symbols so later probability, optimization, and ML feel manageable.
 
 You are not trying to be flashy here. You are building fluency with the manipulations that appear constantly in formulas, scaling laws, and growth calculations.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Equations and rearrangement
@@ -43,6 +50,12 @@ Answer: Because repeating the same growth factor many times is repeated multipli
 
 ### Question: Why are logarithms useful in quant finance?
 Answer: Because they simplify multiplicative growth and support continuous-compounding and log-return interpretations.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: algebra refresher: equations, fractions, exponents, and logs.

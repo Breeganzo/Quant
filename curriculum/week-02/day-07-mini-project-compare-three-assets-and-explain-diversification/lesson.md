@@ -2,17 +2,24 @@
 
 **Estimated time:** 2 hours
 
-## Study Blocks
-- Block 1 (20 min): Mini-project planning.
-- Block 2 (55 min): Build comparison notebook.
-- Block 3 (20 min): Write interpretation.
-- Block 4 (25 min): Weekly review and interview summary.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 20 min | Mini-project planning. |
+| Session 2 | 55 min | Build comparison notebook. |
+| Session 3 | 20 min | Write interpretation. |
+| Session 4 | 25 min | Weekly review and interview summary. |
 
 ## Why It Matters In Quant
 Mini project: compare three assets and explain diversification is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
 
 ## Learning Overview
 The Week 2 mini-project turns your data skills into a simple research artifact: compare three assets and explain diversification with evidence.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Mini-project framing
@@ -27,6 +34,12 @@ The Week 2 mini-project turns your data skills into a simple research artifact: 
 ## Practice Questions With Answers
 ### Question: What makes the Week 2 project stronger than just a chart dump?
 Answer: A clear question, clean data handling, an interpretable correlation result, and an honest written conclusion.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: mini project: compare three assets and explain diversification.

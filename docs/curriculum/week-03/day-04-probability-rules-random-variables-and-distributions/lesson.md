@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Learn probability rules and events.
-- Block 2 (55 min): Understand random variables and distributions.
-- Block 3 (55 min): Connect probabilities to payoffs.
-- Block 4 (55 min): Code simple discrete simulations.
-- Block 5 (30 min): Interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Learn probability rules and events. |
+| Session 2 | 55 min | Understand random variables and distributions. |
+| Session 3 | 55 min | Connect probabilities to payoffs. |
+| Session 4 | 55 min | Code simple discrete simulations. |
+| Session 5 | 30 min | Interview recap. |
 
 ## Why It Matters In Quant
 Probability rules, random variables, and distributions is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
@@ -16,6 +18,11 @@ Probability rules, random variables, and distributions is part of real quant wor
 Probability is not an optional side topic in quant finance. It is the language for uncertainty, risk, forecasting, and expected outcomes.
 
 Today focuses on intuitive foundations rather than advanced formalism, but the goal is still technical correctness.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Events and probabilities
@@ -43,6 +50,12 @@ Answer: Because risk, drawdown, and extreme outcomes live in the distribution's 
 
 ### Question: What is a random variable in one sentence?
 Answer: It is a numerical representation of an uncertain outcome.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: probability rules, random variables, and distributions.

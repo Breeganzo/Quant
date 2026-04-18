@@ -1,0 +1,30 @@
+# Week 24 Wed: Evaluate, stress test, and document limitations
+
+**Estimated time:** 4 hours
+
+## Why It Matters In Quant
+Evaluate, stress test, and document limitations is part of real quant work inside final integration: end-to-end capstone, final assessments, and application transition plan research, trading, or risk workflows.
+
+## Core Explanation
+Start with intuition for evaluate, stress test, and document limitations, then restate it using the formal quantitative language used in finance and ML.
+
+## Worked Example
+Build one small finance example around evaluate, stress test, and document limitations and explain what the output would mean for a trader or risk analyst.
+
+## Practice Problems
+- Explain evaluate, stress test, and document limitations in one paragraph without jargon.
+- Write down the main formula or workflow for evaluate, stress test, and document limitations from memory.
+- Connect evaluate, stress test, and document limitations to one trading, portfolio, or risk problem.
+
+## Coding Task
+Implement one notebook cell or small script focused on: evaluate, stress test, and document limitations.
+
+## Reflection Prompt
+What from evaluate, stress test, and document limitations felt truly clear, and what still needs a slower revisit?
+
+## Completion Checklist
+- I can explain the core concept in plain language from memory.
+- I completed at least one coding exercise tied to the day topic.
+- I wrote one realistic finance use case in my own words.
+- I recorded at least one weak area in my error log.
+- I set the next review date using spaced repetition.

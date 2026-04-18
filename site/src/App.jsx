@@ -1,26 +1,45 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Link, NavLink, Route, Routes, useLocation, useNavigate, useParams } from "react-router-dom";
+import {
+  DEFAULT_PROGRESS,
+  fetchRemoteProgress,
+  getSupabaseClient,
+  hasProgressData,
+  mergeProgress,
+  normalizeProgress,
+  saveRemoteProgress,
+  signInWithEmail,
+  signOutUser,
+  signUpWithEmail,
+} from "./progressSync";
 
 const STORAGE_KEY = "quant-learning-progress-v2";
+const JUPYTER_BASE_URL = (import.meta.env.VITE_JUPYTER_BASE_URL || "http://localhost:8888").replace(/\/+$/, "");
 
 function withBase(path) {
   if (!path) return "";
   return `${import.meta.env.BASE_URL}${path}`.replace(/([^:]\/)\/+/g, "$1");
 }
 
+function withJupyterLab(path) {
+  if (!path) return "";
+  const normalized = path.replace(/^\/+/, "");
+  return `${JUPYTER_BASE_URL}/lab/tree/${normalized}`;
+}
+
 function loadProgress() {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : { days: {}, weeklyReviews: {} };
+    return raw ? normalizeProgress(JSON.parse(raw)) : { ...DEFAULT_PROGRESS };
   } catch {
-    return { days: {}, weeklyReviews: {} };
+    return { ...DEFAULT_PROGRESS };
   }
 }
 
 function saveProgress(progress) {
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(normalizeProgress(progress)));
 }
 
 function dayKey(week, dayIndex) {
@@ -91,13 +110,190 @@ function useMarkdown(path) {
 function App() {
   const { data, error } = useCurriculum();
   const [progress, setProgress] = useState(loadProgress);
+  const [authStatus, setAuthStatus] = useState("disabled");
+  const [authUser, setAuthUser] = useState(null);
+  const [syncStatus, setSyncStatus] = useState("local");
+  const [syncMessage, setSyncMessage] = useState("Cloud sync is disabled in this build.");
+  const supabase = useMemo(() => getSupabaseClient(), []);
+  const remoteSyncEnabled = Boolean(supabase);
+  const progressRef = useRef(progress);
+  const skipNextCloudWriteRef = useRef(false);
+  const cloudReadyRef = useRef(false);
+
+  useEffect(() => {
+    progressRef.current = progress;
+  }, [progress]);
 
   useEffect(() => {
     saveProgress(progress);
   }, [progress]);
 
+  useEffect(() => {
+    if (!supabase) {
+      setAuthStatus("disabled");
+      setSyncStatus("local");
+      setSyncMessage("Cloud sync is disabled in this build.");
+      return;
+    }
+
+    let active = true;
+    setAuthStatus("loading");
+
+    supabase.auth.getSession().then(({ data: sessionData, error: sessionError }) => {
+      if (!active) {
+        return;
+      }
+      if (sessionError) {
+        setAuthStatus("error");
+        setSyncStatus("error");
+        setSyncMessage(`Cloud auth error: ${sessionError.message}`);
+        return;
+      }
+      const user = sessionData.session?.user ?? null;
+      setAuthUser(user);
+      setAuthStatus(user ? "signed_in" : "signed_out");
+      setSyncStatus(user ? "syncing" : "local");
+      setSyncMessage(
+        user
+          ? "Cloud account found. Syncing progress now..."
+          : "Signed out. Progress still autosaves locally."
+      );
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      const user = session?.user ?? null;
+      setAuthUser(user);
+      setAuthStatus(user ? "signed_in" : "signed_out");
+      setSyncStatus(user ? "syncing" : "local");
+      setSyncMessage(
+        user
+          ? "Signed in. Syncing progress now..."
+          : "Signed out. Progress still autosaves locally."
+      );
+      cloudReadyRef.current = false;
+      skipNextCloudWriteRef.current = false;
+    });
+
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
+  }, [supabase]);
+
+  useEffect(() => {
+    if (!supabase || !authUser) {
+      return;
+    }
+
+    let cancelled = false;
+
+    async function hydrateCloudProgress() {
+      setSyncStatus("syncing");
+      setSyncMessage("Loading cloud progress...");
+      try {
+        const localProgress = normalizeProgress(progressRef.current);
+        const remoteProgress = await fetchRemoteProgress(supabase, authUser.id);
+        const remoteHasData = hasProgressData(remoteProgress);
+        const localHasData = hasProgressData(localProgress);
+        let merged = localProgress;
+
+        if (remoteHasData) {
+          merged = mergeProgress(localProgress, remoteProgress);
+          if (!cancelled) {
+            skipNextCloudWriteRef.current = true;
+            setProgress(merged);
+          }
+          await saveRemoteProgress(supabase, authUser.id, merged);
+          if (!cancelled) {
+            setSyncMessage("Cloud sync active. Local and remote progress merged successfully.");
+          }
+        } else if (localHasData) {
+          await saveRemoteProgress(supabase, authUser.id, localProgress);
+          if (!cancelled) {
+            setSyncMessage("Cloud sync active. Existing local progress was uploaded.");
+          }
+        } else if (!cancelled) {
+          setSyncMessage("Cloud sync active. Start editing lessons to create your first cloud save.");
+        }
+
+        if (!cancelled) {
+          cloudReadyRef.current = true;
+          setSyncStatus("ready");
+        }
+      } catch (cloudError) {
+        if (!cancelled) {
+          setSyncStatus("error");
+          setSyncMessage(`Cloud sync failed: ${cloudError.message}`);
+        }
+      }
+    }
+
+    hydrateCloudProgress();
+    return () => {
+      cancelled = true;
+    };
+  }, [supabase, authUser]);
+
+  useEffect(() => {
+    if (!supabase || !authUser || !cloudReadyRef.current) {
+      return;
+    }
+
+    if (skipNextCloudWriteRef.current) {
+      skipNextCloudWriteRef.current = false;
+      return;
+    }
+
+    const timeoutId = window.setTimeout(async () => {
+      try {
+        setSyncStatus("syncing");
+        await saveRemoteProgress(supabase, authUser.id, progressRef.current);
+        setSyncStatus("ready");
+        setSyncMessage(`Cloud sync active. Last cloud save: ${new Date().toLocaleTimeString()}.`);
+      } catch (cloudError) {
+        setSyncStatus("error");
+        setSyncMessage(`Cloud sync failed: ${cloudError.message}`);
+      }
+    }, 700);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [progress, supabase, authUser]);
+
+  async function handleSignUp(email, password) {
+    if (!supabase) {
+      throw new Error("Cloud sync is not configured.");
+    }
+    setSyncStatus("syncing");
+    setSyncMessage("Creating your account...");
+    await signUpWithEmail(supabase, email, password);
+    setSyncStatus("ready");
+    setSyncMessage("Account created. Check your inbox if email confirmation is enabled.");
+  }
+
+  async function handleSignIn(email, password) {
+    if (!supabase) {
+      throw new Error("Cloud sync is not configured.");
+    }
+    setSyncStatus("syncing");
+    setSyncMessage("Signing in...");
+    await signInWithEmail(supabase, email, password);
+  }
+
+  async function handleSignOut() {
+    if (!supabase) {
+      return;
+    }
+    await signOutUser(supabase);
+  }
+
   const roadmap = data?.roadmap ?? [];
-  const monthOneComplete = roadmap.filter((week) => week.week <= 4).length === 4;
+  const fullTrackReady =
+    roadmap.length === 24
+    && roadmap.every((week) => week.daily_schedule.every((day) => day.lesson_markdown_path && day.lesson_pdf_path && day.notebook_path));
 
   if (error) {
     return <div className="shell"><p className="error-card">{error}</p></div>;
@@ -111,11 +307,41 @@ function App() {
     <div className="shell">
       <Sidebar roadmap={roadmap} progress={progress} />
       <main className="content">
-        <Hero data={data} roadmap={roadmap} progress={progress} monthOneComplete={monthOneComplete} />
+        <Hero data={data} roadmap={roadmap} progress={progress} fullTrackReady={fullTrackReady} />
         <Routes>
-          <Route path="/" element={<Overview data={data} roadmap={roadmap} progress={progress} setProgress={setProgress} />} />
+          <Route
+            path="/"
+            element={(
+              <Overview
+                data={data}
+                roadmap={roadmap}
+                progress={progress}
+                setProgress={setProgress}
+                remoteSync={{
+                  enabled: remoteSyncEnabled,
+                  authStatus,
+                  userEmail: authUser?.email || "",
+                  syncStatus,
+                  syncMessage,
+                  onSignIn: handleSignIn,
+                  onSignOut: handleSignOut,
+                  onSignUp: handleSignUp,
+                }}
+              />
+            )}
+          />
           <Route path="/week/:weekNumber" element={<WeekPage roadmap={roadmap} progress={progress} setProgress={setProgress} />} />
-          <Route path="/week/:weekNumber/day/:dayIndex" element={<DayPage roadmap={roadmap} progress={progress} setProgress={setProgress} />} />
+          <Route
+            path="/week/:weekNumber/day/:dayIndex"
+            element={(
+              <DayPage
+                roadmap={roadmap}
+                progress={progress}
+                setProgress={setProgress}
+                remoteSync={{ enabled: remoteSyncEnabled, syncStatus }}
+              />
+            )}
+          />
         </Routes>
       </main>
     </div>
@@ -159,7 +385,7 @@ function Sidebar({ roadmap, progress }) {
   );
 }
 
-function Hero({ data, roadmap, progress, monthOneComplete }) {
+function Hero({ data, roadmap, progress, fullTrackReady }) {
   const totalDays = roadmap.reduce((acc, week) => acc + week.daily_schedule.length, 0);
   const completedDays = Object.values(progress.days ?? {}).filter((item) => item.status === "done").length;
 
@@ -169,16 +395,16 @@ function Hero({ data, roadmap, progress, monthOneComplete }) {
         <div className="hero-chip">GitHub Pages Ready</div>
         <h2>Build a real quant profile, week by week.</h2>
         <p>
-          Month 1 is fully expanded with daily theory, examples, executed notebooks, interview drills,
-          revision blocks, and project notebooks. The rest of the 24-week path is visible in the roadmap
-          and ready for the same treatment.
+          All six months now include daily lesson pages, PDFs, and notebook paths across the full 24-week
+          roadmap. Month 1 remains the most deeply expanded set, and Months 2-6 are now fully structured
+          so you can run the entire sequence without blocked days.
         </p>
       </div>
       <div className="hero-stats">
         <StatCard label="Completed days" value={`${completedDays}/${totalDays}`} />
         <StatCard label="Weekday budget" value={data.weekly_time_budget["Mon-Fri"]} />
         <StatCard label="Weekend budget" value={`${data.weekly_time_budget.Sat} + ${data.weekly_time_budget.Sun}`} />
-        <StatCard label="Month 1 detail" value={monthOneComplete ? "Ready" : "In progress"} />
+        <StatCard label="24-week detail" value={fullTrackReady ? "Ready" : "In progress"} />
       </div>
     </section>
   );
@@ -193,7 +419,7 @@ function StatCard({ label, value }) {
   );
 }
 
-function Overview({ data, roadmap, progress, setProgress }) {
+function Overview({ data, roadmap, progress, setProgress, remoteSync }) {
   const navigate = useNavigate();
   const monthOneWeeks = roadmap.filter((week) => week.week <= 4);
   const weeksByMonth = useMemo(() => {
@@ -235,14 +461,14 @@ function Overview({ data, roadmap, progress, setProgress }) {
     <div className="page-grid">
       <section className="panel">
         <div className="panel-head">
-          <h3>Month 1 Execution</h3>
+          <h3>Execution Launchpad</h3>
           <button className="primary-button" onClick={() => navigate("/week/1")}>
             Start Week 1
           </button>
         </div>
         <p className="panel-copy">
-          Month 1 is the current fully detailed build. Every day from Weeks 1-4 has theory, worked examples,
-          practice, an executed notebook, and interview prep. Weekends are structured for revision and project work.
+          Weeks 1-4 are highlighted here as the fastest starting path. The full six-month track now includes daily
+          lesson files, weekly plans, and notebook artifacts through Week 24.
         </p>
         <div className="week-card-grid">
           {monthOneWeeks.map((week) => (
@@ -268,9 +494,11 @@ function Overview({ data, roadmap, progress, setProgress }) {
           </a>
         </div>
         <p className="panel-copy">
-          Progress is stored in your browser with localStorage, so your completion state remains when you close and reopen the site on the same device and browser.
+          Progress always autosaves in your browser. Cloud sync is optional and can keep progress consistent across signed-in devices.
         </p>
       </section>
+
+      <CloudSyncPanel remoteSync={remoteSync} />
 
       <section className="panel span-2">
         <div className="panel-head">
@@ -297,6 +525,95 @@ function Overview({ data, roadmap, progress, setProgress }) {
         </div>
       </section>
     </div>
+  );
+}
+
+function CloudSyncPanel({ remoteSync }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [formError, setFormError] = useState("");
+
+  async function submit(handler) {
+    setFormError("");
+    try {
+      await handler(email.trim(), password);
+      setPassword("");
+    } catch (err) {
+      setFormError(err.message || "Cloud auth request failed.");
+    }
+  }
+
+  if (!remoteSync.enabled) {
+    return (
+      <section className="panel">
+        <div className="panel-head">
+          <h3>Cloud Sync (Optional)</h3>
+        </div>
+        <p className="panel-copy">
+          Cloud sync is disabled. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in site/.env.local to enable
+          cross-device progress persistence.
+        </p>
+      </section>
+    );
+  }
+
+  return (
+    <section className="panel">
+      <div className="panel-head">
+        <h3>Cloud Sync</h3>
+      </div>
+      <p className="panel-copy">{remoteSync.syncMessage}</p>
+      {remoteSync.authStatus === "signed_in" ? (
+        <div className="cloud-sync-stack">
+          <p className="panel-copy">Signed in as {remoteSync.userEmail || "your account"}.</p>
+          <div className="button-row">
+            <button className="secondary-button" onClick={remoteSync.onSignOut}>
+              Sign Out
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="cloud-sync-stack">
+          <label>
+            Email
+            <input
+              className="cloud-input"
+              type="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              placeholder="you@example.com"
+            />
+          </label>
+          <label>
+            Password
+            <input
+              className="cloud-input"
+              type="password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              placeholder="At least 6 characters"
+            />
+          </label>
+          <div className="button-row">
+            <button
+              className="primary-button"
+              onClick={() => submit(remoteSync.onSignIn)}
+              disabled={remoteSync.authStatus === "loading" || remoteSync.syncStatus === "syncing"}
+            >
+              Sign In
+            </button>
+            <button
+              className="secondary-button"
+              onClick={() => submit(remoteSync.onSignUp)}
+              disabled={remoteSync.authStatus === "loading" || remoteSync.syncStatus === "syncing"}
+            >
+              Create Account
+            </button>
+          </div>
+          {formError ? <p className="error-inline">{formError}</p> : null}
+        </div>
+      )}
+    </section>
   );
 }
 
@@ -336,12 +653,9 @@ function WeekPage({ roadmap, progress, setProgress }) {
             <a className="secondary-button" href={withBase(week.weekly_plan_pdf_path)} target="_blank" rel="noreferrer">
               Weekly PDF
             </a>
-            <a className="secondary-button" href={withBase(week.weekly_plan_markdown_path)} target="_blank" rel="noreferrer">
-              Weekly Markdown
-            </a>
             {week.weekly_project_notebook_path ? (
-              <a className="secondary-button" href={withBase(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
-                Project Notebook
+              <a className="secondary-button" href={withJupyterLab(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
+                Project Notebook (JupyterLab)
               </a>
             ) : null}
           </div>
@@ -404,8 +718,8 @@ function WeekPage({ roadmap, progress, setProgress }) {
                     </a>
                   ) : null}
                   {day.notebook_path ? (
-                    <a className="secondary-button compact" href={withBase(day.notebook_path)} target="_blank" rel="noreferrer">
-                      Notebook
+                    <a className="secondary-button compact" href={withJupyterLab(day.notebook_path)} target="_blank" rel="noreferrer">
+                      JupyterLab
                     </a>
                   ) : null}
                 </div>
@@ -432,7 +746,7 @@ function WeekPage({ roadmap, progress, setProgress }) {
   );
 }
 
-function DayPage({ roadmap, progress, setProgress }) {
+function DayPage({ roadmap, progress, setProgress, remoteSync }) {
   const { weekNumber, dayIndex } = useParams();
   const location = useLocation();
   const week = roadmap.find((item) => item.week === Number(weekNumber));
@@ -502,19 +816,27 @@ function DayPage({ roadmap, progress, setProgress }) {
               placeholder="Write what clicked, what was confusing, and what to review later."
             />
           </label>
+          <p className="panel-copy">
+            Progress autosaves locally. {saved.updatedAt ? `Last saved: ${new Date(saved.updatedAt).toLocaleString()}` : "Update any field to create the first save point."}
+          </p>
+          {remoteSync?.enabled ? (
+            <p className="panel-copy">
+              Cloud sync status: {remoteSync.syncStatus === "ready" ? "Connected" : remoteSync.syncStatus}
+            </p>
+          ) : null}
         </div>
 
         <div className="resource-list">
           {detailedDayAvailable ? (
             <>
-              <a className="secondary-button" href={withBase(day.lesson_markdown_path)} target="_blank" rel="noreferrer">
-                Open Lesson Markdown
-              </a>
               <a className="secondary-button" href={withBase(day.lesson_pdf_path)} target="_blank" rel="noreferrer">
                 Open Lesson PDF
               </a>
+              <a className="secondary-button" href={withJupyterLab(day.notebook_path)} target="_blank" rel="noreferrer">
+                Open Notebook in JupyterLab
+              </a>
               <a className="secondary-button" href={withBase(day.notebook_path)} target="_blank" rel="noreferrer">
-                Open Notebook
+                Download Notebook
               </a>
             </>
           ) : (
@@ -524,11 +846,14 @@ function DayPage({ roadmap, progress, setProgress }) {
             Open Weekly Plan PDF
           </a>
           {week.weekly_project_notebook_path ? (
-            <a className="secondary-button" href={withBase(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
-              Open Weekly Project
+            <a className="secondary-button" href={withJupyterLab(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
+              Open Weekly Project in JupyterLab
             </a>
           ) : null}
         </div>
+        <p className="panel-copy">
+          Notebook buttons target local JupyterLab at {JUPYTER_BASE_URL}. Start it from repo root with: uv run quant-jupyter
+        </p>
 
         <div className="day-links">
           {week.daily_schedule.map((item) => (
@@ -542,10 +867,10 @@ function DayPage({ roadmap, progress, setProgress }) {
       <section className="panel lesson-main">
         {!detailedDayAvailable ? (
           <div className="sub-panel">
-            <h4>Detailed Daily Build Pending</h4>
+            <h4>Daily Lesson File Missing</h4>
             <p>
-              The weekly plan for this week is already available, but the fully expanded daily lesson, executed notebook,
-              and inline theory page have not been generated yet. Month 1 is the current fully detailed build.
+              The day path exists in the roadmap but the corresponding lesson file could not be loaded. Re-run the
+              bootstrap and export commands to regenerate content.
             </p>
           </div>
         ) : null}

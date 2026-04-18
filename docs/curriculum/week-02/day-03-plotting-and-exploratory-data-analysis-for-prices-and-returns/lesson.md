@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Learn why plots are part of research, not decoration.
-- Block 2 (55 min): Plot price, return, and rolling statistics.
-- Block 3 (55 min): Interpret visual patterns carefully.
-- Block 4 (55 min): Code charting drills.
-- Block 5 (30 min): Interview recap and notes.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Learn why plots are part of research, not decoration. |
+| Session 2 | 55 min | Plot price, return, and rolling statistics. |
+| Session 3 | 55 min | Interpret visual patterns carefully. |
+| Session 4 | 55 min | Code charting drills. |
+| Session 5 | 30 min | Interview recap and notes. |
 
 ## Why It Matters In Quant
 Plotting and exploratory data analysis for prices and returns is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
@@ -16,6 +18,11 @@ Plotting and exploratory data analysis for prices and returns is part of real qu
 Visualization is part of quantitative reasoning. A good chart can reveal a bug, an outlier, a regime change, or a structure that summary numbers missed.
 
 The main goal today is to stop plotting mechanically and start asking what each visual tells you about the data-generating process.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Price plots versus return plots
@@ -47,6 +54,12 @@ Answer: Because visual patterns can be sample-specific, scale-dependent, or just
 
 ### Question: What can a return histogram reveal?
 Answer: It can reveal skew, fat tails, clustering near zero, or outliers that matter for risk and modeling.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: plotting and exploratory data analysis for prices and returns.

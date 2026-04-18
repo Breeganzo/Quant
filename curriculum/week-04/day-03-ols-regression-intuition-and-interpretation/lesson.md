@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Regression intuition.
-- Block 2 (55 min): Slope, intercept, residuals, fit quality.
-- Block 3 (55 min): Interpret coefficients economically.
-- Block 4 (55 min): Code a tiny OLS example.
-- Block 5 (30 min): Interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Regression intuition. |
+| Session 2 | 55 min | Slope, intercept, residuals, fit quality. |
+| Session 3 | 55 min | Interpret coefficients economically. |
+| Session 4 | 55 min | Code a tiny OLS example. |
+| Session 5 | 30 min | Interview recap. |
 
 ## Why It Matters In Quant
 OLS regression intuition and interpretation is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
@@ -16,6 +18,11 @@ OLS regression intuition and interpretation is part of real quant work inside ma
 Regression is a foundational bridge between statistics, ML, and finance. It gives you a language for relationships, sensitivity, and residual noise.
 
 Today is about interpreting regression meaningfully, not memorizing a formula without context.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Regression as best-fit relationship
@@ -43,6 +50,12 @@ Answer: It represents the expected change in the target for a one-unit change in
 
 ### Question: Why are residuals useful?
 Answer: They show what the model failed to explain and can reveal noise, missing structure, or instability.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: ols regression intuition and interpretation.

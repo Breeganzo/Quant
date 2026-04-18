@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Learn weight vectors and rebalancing intuition.
-- Block 2 (55 min): Understand cumulative performance tracking.
-- Block 3 (55 min): Learn where SQL fits in a quant workflow.
-- Block 4 (55 min): Run code labs on portfolio tables and SQL queries.
-- Block 5 (30 min): Interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Learn weight vectors and rebalancing intuition. |
+| Session 2 | 55 min | Understand cumulative performance tracking. |
+| Session 3 | 55 min | Learn where SQL fits in a quant workflow. |
+| Session 4 | 55 min | Run code labs on portfolio tables and SQL queries. |
+| Session 5 | 30 min | Interview recap. |
 
 ## Why It Matters In Quant
 Portfolio weights, rebalancing, cumulative performance, and SQL workflow is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
@@ -16,6 +18,11 @@ Portfolio weights, rebalancing, cumulative performance, and SQL workflow is part
 A quant researcher needs both portfolio mechanics and data retrieval discipline. Today combines those two practical skills.
 
 The goal is to understand how weights translate into performance and why SQL remains useful even when much of the analysis happens in Python.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Portfolio weights and rebalancing
@@ -47,6 +54,12 @@ Answer: Because many research workflows start by pulling or filtering large stru
 
 ### Question: What is a simple cumulative wealth index?
 Answer: It is the compounded value of starting capital after applying each period's gross return in sequence.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: portfolio weights, rebalancing, cumulative performance, and sql workflow.

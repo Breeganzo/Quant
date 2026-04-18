@@ -2,12 +2,14 @@
 
 **Estimated time:** 4 hours
 
-## Study Blocks
-- Block 1 (45 min): Learn slope intuition.
-- Block 2 (55 min): Understand derivatives as sensitivity.
-- Block 3 (55 min): Connect derivatives to finance and optimization.
-- Block 4 (55 min): Code slope examples.
-- Block 5 (30 min): Interview recap.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 45 min | Learn slope intuition. |
+| Session 2 | 55 min | Understand derivatives as sensitivity. |
+| Session 3 | 55 min | Connect derivatives to finance and optimization. |
+| Session 4 | 55 min | Code slope examples. |
+| Session 5 | 30 min | Interview recap. |
 
 ## Why It Matters In Quant
 Calculus intuition: slopes, derivatives, and sensitivity is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
@@ -16,6 +18,11 @@ Calculus intuition: slopes, derivatives, and sensitivity is part of real quant w
 Calculus starts becoming useful once you stop seeing the derivative as a scary symbol and start seeing it as a sensitivity measure.
 
 In quant finance, sensitivity is everywhere: how price changes when yield changes, how option value changes when volatility changes, or how loss changes when a model parameter changes.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Slope as rate of change
@@ -43,6 +50,12 @@ Answer: Because finance constantly asks how one value changes with another, whic
 
 ### Question: What does it mean if a derivative is positive?
 Answer: It means the function is locally increasing as the input rises.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: calculus intuition: slopes, derivatives, and sensitivity.

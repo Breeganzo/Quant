@@ -2,17 +2,24 @@
 
 **Estimated time:** 2 hours
 
-## Study Blocks
-- Block 1 (20 min): Capstone plan.
-- Block 2 (55 min): Implement exploratory asset-allocation notebook.
-- Block 3 (20 min): Interpret results.
-- Block 4 (25 min): Interview practice.
+## Session Plan
+| Session | Duration | Focus |
+| --- | --- | --- |
+| Session 1 | 20 min | Capstone plan. |
+| Session 2 | 55 min | Implement exploratory asset-allocation notebook. |
+| Session 3 | 20 min | Interpret results. |
+| Session 4 | 25 min | Interview practice. |
 
 ## Why It Matters In Quant
 Capstone build day is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
 
 ## Learning Overview
 This is the first proper Month 1 capstone build session. The job is not to create a perfect optimizer, but to combine returns, volatility, correlation, and portfolio logic into one coherent piece of work.
+
+## Continuity
+- Start by recalling what from yesterday is still unclear.
+- Use today's topic to fix at least one weak area from your error log.
+- End by writing a one-paragraph bridge to tomorrow's topic.
 
 ## Core Concepts
 ### Capstone integration
@@ -26,6 +33,12 @@ This is the first proper Month 1 capstone build session. The job is not to creat
 ## Practice Questions With Answers
 ### Question: What makes a capstone useful for applications?
 Answer: It shows you can frame a question, implement analysis, interpret results, and communicate limitations.
+
+## Extended Study (to complete a full 4-hour day)
+1. Rewrite each core concept in your own words without looking at notes.
+2. Add one extra worked example using different numbers or assumptions.
+3. Explain one failure mode where this concept can be misapplied in trading or risk work.
+4. Add one short paragraph linking this concept to your weekly project objective.
 
 ## Coding Task
 Implement one notebook cell or small script focused on: capstone build day.

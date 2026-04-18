@@ -1,0 +1,1307 @@
+{
+  "summary": {
+    "total": 216,
+    "passed": 216,
+    "failed": 0,
+    "kernel": "python3",
+    "timeout": 180
+  },
+  "results": [
+    {
+      "path": "curriculum/week-01/notebooks/day-01-reset-your-toolkit-numbers-variables-returns-and-compounding.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.826,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-01/notebooks/day-02-functions-control-flow-probability-intuition-and-expected-value.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.967,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-01/notebooks/day-03-vectors-matrices-and-linear-algebra-intuition-for-portfolios-and-ml.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.013,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-01/notebooks/day-04-descriptive-statistics-sampling-intuition-and-visualizing-market-data.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.367,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-01/notebooks/day-05-market-structure-asset-classes-risk-return-and-what-quants-actually-do.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.007,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-01/notebooks/day-06-revision-spaced-repetition-and-first-market-diary-notebook.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.263,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-01/notebooks/day-07-week-1-quiz-and-mini-project-build-a-simple-return-and-risk-dashboard.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.564,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-01/notebooks/week-01-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.709,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-01/notebooks/week-01-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.268,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-02/notebooks/day-01-numpy-arrays-vectorization-and-speed-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.715,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-02/notebooks/day-02-pandas-dataframes-indexing-joins-and-missing-values.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.935,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-02/notebooks/day-03-plotting-and-exploratory-data-analysis-for-prices-and-returns.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.354,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-02/notebooks/day-04-correlation-covariance-and-diversification.ipynb",
+      "status": "passed",
+      "duration_seconds": 4.034,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-02/notebooks/day-05-portfolio-weights-rebalancing-cumulative-performance-and-sql-workflow.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.215,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-02/notebooks/day-06-revision-error-log-and-data-workflow-drill.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.04,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-02/notebooks/day-07-mini-project-compare-three-assets-and-explain-diversification.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.972,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-02/notebooks/week-02-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.766,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-02/notebooks/week-02-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.266,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-03/notebooks/day-01-algebra-refresher-equations-fractions-exponents-and-logs.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.738,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-03/notebooks/day-02-calculus-intuition-slopes-derivatives-and-sensitivity.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.031,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-03/notebooks/day-03-integrals-accumulation-and-area-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.782,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-03/notebooks/day-04-probability-rules-random-variables-and-distributions.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.719,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-03/notebooks/day-05-apis-json-conditional-probability-and-bayes-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 4.038,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-03/notebooks/day-06-revision-recall-and-formula-consolidation.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.909,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-03/notebooks/day-07-mini-project-expected-value-and-monte-carlo-trade-simulation.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.772,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-03/notebooks/week-03-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.601,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-03/notebooks/week-03-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.148,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-04/notebooks/day-01-sampling-estimators-bias-and-variance.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.766,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-04/notebooks/day-02-confidence-intervals-and-hypothesis-testing-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.744,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-04/notebooks/day-03-ols-regression-intuition-and-interpretation.ipynb",
+      "status": "passed",
+      "duration_seconds": 3.268,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-04/notebooks/day-04-optimization-basics-and-constrained-thinking.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.953,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-04/notebooks/day-05-portfolio-theory-efficient-frontier-and-sharpe-ratio-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.689,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-04/notebooks/day-06-capstone-build-day.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.024,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-04/notebooks/day-07-capstone-review-and-write-up.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.937,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-04/notebooks/week-04-capstone.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.208,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-04/notebooks/week-04-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.66,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-05/notebooks/day-01-prediction-problems-in-finance-what-are-we-forecasting.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.989,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-05/notebooks/day-02-linear-regression-as-an-ml-baseline.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.039,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-05/notebooks/day-03-feature-engineering-from-price-and-volume-data.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.013,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-05/notebooks/day-04-train-validation-test-split-and-leakage.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.981,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-05/notebooks/day-05-regularization-and-overfitting-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.944,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-05/notebooks/day-06-mini-research-lab-on-next-day-return-prediction.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.93,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-05/notebooks/day-07-review-and-checkpoint.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.021,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-05/notebooks/week-05-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.649,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-05/notebooks/week-05-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.034,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-06/notebooks/day-01-classification-intuition-and-decision-boundaries.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.11,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-06/notebooks/day-02-confusion-matrix-precision-recall-f1-and-roc-auc.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.951,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-06/notebooks/day-03-class-imbalance-and-cost-sensitive-decisions.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.988,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-06/notebooks/day-04-cross-validation-resampling-and-model-stability.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.966,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-06/notebooks/day-05-credit-risk-and-event-prediction-examples.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.973,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-06/notebooks/day-06-mini-lab-classify-positive-versus-negative-future-returns.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.158,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-06/notebooks/day-07-review-and-error-log-day.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.121,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-06/notebooks/week-06-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.685,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-06/notebooks/week-06-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 4.034,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-07/notebooks/day-01-unsupervised-learning-overview.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.966,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-07/notebooks/day-02-clustering-assets-and-regimes.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.036,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-07/notebooks/day-03-pca-and-variance-decomposition.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.053,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-07/notebooks/day-04-factor-intuition-and-common-risk-drivers.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.03,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-07/notebooks/day-05-feature-compression-and-dimensionality-reduction.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.962,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-07/notebooks/day-06-mini-lab-cluster-assets-by-behavior.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.991,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-07/notebooks/day-07-review-and-communication-practice.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.979,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-07/notebooks/week-07-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.672,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-07/notebooks/week-07-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.97,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-08/notebooks/day-01-what-makes-time-series-different-from-tabular-data.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.028,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-08/notebooks/day-02-stationarity-trends-seasonality-and-differencing.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.048,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-08/notebooks/day-03-ar-ma-and-arima-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.961,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-08/notebooks/day-04-autocorrelation-partial-autocorrelation-and-lag-structure.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.951,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-08/notebooks/day-05-walk-forward-validation-and-forecast-error-metrics.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.98,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-08/notebooks/day-06-capstone-build-day.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.238,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-08/notebooks/day-07-capstone-review-and-write-up.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.11,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-08/notebooks/week-08-capstone.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.232,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-08/notebooks/week-08-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.782,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-09/notebooks/day-01-market-microstructure-and-order-books.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.046,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-09/notebooks/day-02-bid-ask-spread-liquidity-and-adverse-selection.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.94,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-09/notebooks/day-03-order-types-and-execution-choices.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.972,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-09/notebooks/day-04-transaction-costs-and-slippage-models.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.994,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-09/notebooks/day-05-turnover-holding-period-and-capacity-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.993,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-09/notebooks/day-06-mini-lab-strategy-before-and-after-costs.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.962,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-09/notebooks/day-07-review-and-trading-diary.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.057,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-09/notebooks/week-09-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.63,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-09/notebooks/week-09-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.967,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-10/notebooks/day-01-markowitz-portfolio-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.046,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-10/notebooks/day-02-efficient-frontier-and-sharpe-ratio.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.029,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-10/notebooks/day-03-capm-and-beta-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.982,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-10/notebooks/day-04-factor-investing-basics.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.947,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-10/notebooks/day-05-risk-budgeting-and-constraints.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.031,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-10/notebooks/day-06-mini-lab-factor-exposure-overview.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.979,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-10/notebooks/day-07-review-and-checkpoint.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.028,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-10/notebooks/week-10-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.724,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-10/notebooks/week-10-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.0,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-11/notebooks/day-01-bond-cash-flows-and-discounting.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.897,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-11/notebooks/day-02-yield-yield-curve-and-term-structure-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.94,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-11/notebooks/day-03-duration-and-interest-rate-sensitivity.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.986,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-11/notebooks/day-04-convexity-and-nonlinear-bond-behavior.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.943,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-11/notebooks/day-05-credit-spreads-and-default-risk-basics.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.003,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-11/notebooks/day-06-mini-lab-simple-bond-price-sensitivity.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.989,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-11/notebooks/day-07-review-and-recap.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.991,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-11/notebooks/week-11-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.734,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-11/notebooks/week-11-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.011,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-12/notebooks/day-01-forwards-futures-and-option-payoffs.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.988,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-12/notebooks/day-02-calls-puts-and-payoff-diagrams.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.025,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-12/notebooks/day-03-option-greeks-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.927,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-12/notebooks/day-04-volatility-smile-and-pricing-inputs.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.979,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-12/notebooks/day-05-risk-management-var-stress-and-scenarios.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.965,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-12/notebooks/day-06-capstone-build-day.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.011,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-12/notebooks/day-07-capstone-review-and-write-up.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.994,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-12/notebooks/week-12-capstone.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.953,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-12/notebooks/week-12-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.683,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-13/notebooks/day-01-what-makes-a-good-quant-hypothesis.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.98,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-13/notebooks/day-02-signal-design-and-economic-reasoning.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.987,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-13/notebooks/day-03-label-design-and-target-horizon-choice.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.966,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-13/notebooks/day-04-data-cleaning-survivorship-bias-and-look-ahead-bias.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.032,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-13/notebooks/day-05-research-logging-and-experiment-notebooks.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.928,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-13/notebooks/day-06-mini-lab-define-one-alpha-hypothesis-cleanly.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.926,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-13/notebooks/day-07-review-and-refinement.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.012,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-13/notebooks/week-13-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.679,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-13/notebooks/week-13-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.968,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-14/notebooks/day-01-backtesting-workflow-from-signal-to-trades.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.982,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-14/notebooks/day-02-look-ahead-survivorship-and-data-snooping-pitfalls.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.013,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-14/notebooks/day-03-position-sizing-and-exposure-control.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.034,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-14/notebooks/day-04-turnover-slippage-and-implementation-realism.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.965,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-14/notebooks/day-05-performance-attribution-and-diagnostics.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.007,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-14/notebooks/day-06-mini-lab-backtest-a-toy-rule-with-costs.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.864,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-14/notebooks/day-07-review-and-write-up.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.997,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-14/notebooks/week-14-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.682,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-14/notebooks/week-14-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.047,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-15/notebooks/day-01-momentum-intuition-and-empirical-logic.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.931,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-15/notebooks/day-02-mean-reversion-intuition-and-failure-modes.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.968,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-15/notebooks/day-03-cross-sectional-ranking-signals.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.976,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-15/notebooks/day-04-signal-combination-and-normalization.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.964,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-15/notebooks/day-05-attribution-what-is-actually-driving-pnl.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.967,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-15/notebooks/day-06-mini-lab-compare-momentum-versus-mean-reversion-rule.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.932,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-15/notebooks/day-07-review-and-critique.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.965,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-15/notebooks/week-15-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.654,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-15/notebooks/week-15-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.917,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-16/notebooks/day-01-factor-models-and-common-risk-decomposition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.979,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-16/notebooks/day-02-residual-signals-and-relative-value-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.95,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-16/notebooks/day-03-cointegration-and-spread-logic.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.947,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-16/notebooks/day-04-regime-shifts-and-model-instability.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.963,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-16/notebooks/day-05-cross-sectional-portfolio-construction.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.008,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-16/notebooks/day-06-capstone-build-day.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.017,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-16/notebooks/day-07-capstone-review-and-write-up.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.835,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-16/notebooks/week-16-capstone.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.941,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-16/notebooks/week-16-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.699,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-17/notebooks/day-01-decision-trees-and-rule-based-splits.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.018,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-17/notebooks/day-02-random-forests-and-bagging-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.949,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-17/notebooks/day-03-gradient-boosting-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.987,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-17/notebooks/day-04-feature-importance-and-interpretation-caveats.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.045,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-17/notebooks/day-05-model-risk-and-stability-across-regimes.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.969,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-17/notebooks/day-06-mini-lab-nonlinear-tabular-finance-model.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.913,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-17/notebooks/day-07-review-and-limitations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.935,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-17/notebooks/week-17-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.658,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-17/notebooks/week-17-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.921,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-18/notebooks/day-01-volatility-clustering-and-stylized-facts.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.883,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-18/notebooks/day-02-rolling-volatility-and-ewma.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.009,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-18/notebooks/day-03-garch-intuition-and-limitations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.976,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-18/notebooks/day-04-forecast-evaluation-for-risk-models.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.935,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-18/notebooks/day-05-stress-testing-and-scenario-design.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.988,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-18/notebooks/day-06-mini-lab-volatility-forecast-comparison.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.996,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-18/notebooks/day-07-review-and-risk-memo.ipynb",
+      "status": "passed",
+      "duration_seconds": 4.057,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-18/notebooks/week-18-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.72,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-18/notebooks/week-18-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 4.047,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-19/notebooks/day-01-what-agentic-ai-can-and-cannot-do-in-quant.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.008,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-19/notebooks/day-02-literature-summarization-and-idea-extraction.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.068,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-19/notebooks/day-03-feature-brainstorming-and-hypothesis-generation.ipynb",
+      "status": "passed",
+      "duration_seconds": 4.053,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-19/notebooks/day-04-code-review-assistants-and-debugging-workflow.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.077,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-19/notebooks/day-05-guardrails-hallucination-leakage-benchmark-cheating.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.01,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-19/notebooks/day-06-mini-lab-ai-assisted-research-memo.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.067,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-19/notebooks/day-07-review-and-policy-checklist.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.994,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-19/notebooks/week-19-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.676,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-19/notebooks/week-19-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.024,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-20/notebooks/day-01-alternative-data-and-when-it-is-useful.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.169,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-20/notebooks/day-02-nlp-and-sentiment-feature-intuition.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.035,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-20/notebooks/day-03-experiment-tracking-and-reproducibility.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.966,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-20/notebooks/day-04-research-report-generation-with-ai-support.ipynb",
+      "status": "passed",
+      "duration_seconds": 4.04,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-20/notebooks/day-05-robustness-checks-and-final-validation.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.963,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-20/notebooks/day-06-capstone-build-day.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.987,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-20/notebooks/day-07-capstone-review-and-write-up.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.015,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-20/notebooks/week-20-capstone.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.003,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-20/notebooks/week-20-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.654,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-21/notebooks/day-01-program-tiers-and-fit-analysis.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.01,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-21/notebooks/day-02-scholarship-matrix-and-funding-logic.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.232,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-21/notebooks/day-03-sop-structure-past-pivot-proof-future.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.922,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-21/notebooks/day-04-recommendation-strategy-and-evidence-package.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.894,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-21/notebooks/day-05-cv-and-project-narrative-refinement.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.935,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-21/notebooks/day-06-mini-lab-draft-your-application-story.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.123,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-21/notebooks/day-07-review-and-evidence-gap-check.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.952,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-21/notebooks/week-21-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.646,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-21/notebooks/week-21-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.028,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-22/notebooks/day-01-probability-drills-and-expected-value.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.982,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-22/notebooks/day-02-statistics-and-regression-drills.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.018,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-22/notebooks/day-03-linear-algebra-and-optimization-drills.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.028,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-22/notebooks/day-04-python-and-numpy-drills.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.991,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-22/notebooks/day-05-sql-and-data-reasoning-drills.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.988,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-22/notebooks/day-06-markets-and-finance-discussion-drills.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.023,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-22/notebooks/day-07-mock-interview-day.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.959,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-22/notebooks/week-22-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.697,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-22/notebooks/week-22-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.973,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-23/notebooks/day-01-github-cleanup-and-repository-storytelling.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.043,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-23/notebooks/day-02-project-readme-writing-and-visual-clarity.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.119,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-23/notebooks/day-03-networking-and-outreach-messages.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.021,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-23/notebooks/day-04-case-study-presentation-and-limitations-defense.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.011,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-23/notebooks/day-05-behavioral-stories-for-finance-roles.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.991,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-23/notebooks/day-06-mock-presentation-day.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.977,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-23/notebooks/day-07-review-and-polish.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.97,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-23/notebooks/week-23-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.649,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-23/notebooks/week-23-mini-project.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.97,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-24/notebooks/day-01-choose-final-capstone-question-and-scope.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.997,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-24/notebooks/day-02-implement-pipeline-and-verify-assumptions.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.085,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-24/notebooks/day-03-evaluate-stress-test-and-document-limitations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.981,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-24/notebooks/day-04-prepare-final-report-and-presentation.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.984,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-24/notebooks/day-05-final-self-assessment-and-gap-map.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.046,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-24/notebooks/day-06-capstone-presentation-day.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.017,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-24/notebooks/day-07-transition-roadmap-for-2026-2027-applications.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.949,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-24/notebooks/week-24-capstone.ipynb",
+      "status": "passed",
+      "duration_seconds": 1.123,
+      "error": ""
+    },
+    {
+      "path": "curriculum/week-24/notebooks/week-24-foundations.ipynb",
+      "status": "passed",
+      "duration_seconds": 0.753,
+      "error": ""
+    }
+  ]
+}
