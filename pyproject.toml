@@ -1,0 +1,50 @@
+[project]
+name = "quant-learning-tracker"
+version = "0.1.0"
+description = "A 24-week quant finance and ML learning system with persistent progress tracking."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "pandas>=2.2.0",
+  "numpy>=2.1.0",
+  "matplotlib>=3.10.0",
+  "scipy>=1.14.0",
+  "scikit-learn>=1.6.0",
+  "statsmodels>=0.14.4",
+  "duckdb>=1.2.2",
+  "requests>=2.32.0",
+  "yfinance>=0.2.54",
+  "nbformat>=5.10.4",
+  "nbclient>=0.10.2",
+  "ipykernel>=6.29.5",
+  "reportlab>=4.4.0",
+  "markdown-it-py>=3.0.0",
+  "python-dateutil>=2.9.0",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3.5",
+  "ruff>=0.11.0",
+]
+
+[tool.uv]
+package = true
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+quant-bootstrap = "quant_learning.bootstrap:main"
+quant-export-pdfs = "quant_learning.export_pdf:main"
+quant-smoke-check = "quant_learning.smoke_check:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

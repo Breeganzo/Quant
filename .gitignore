@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+site/node_modules/
+site/public/curriculum/
+site/public/references/
+site/public/templates/
+site/public/README.md
