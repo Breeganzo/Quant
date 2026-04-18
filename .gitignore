@@ -3,6 +3,7 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 *.pyc
+*.egg-info/
 site/node_modules/
 site/public/curriculum/
 site/public/references/

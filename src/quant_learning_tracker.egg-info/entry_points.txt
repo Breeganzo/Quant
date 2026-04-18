@@ -1,4 +1,0 @@
-[console_scripts]
-quant-bootstrap = quant_learning.bootstrap:main
-quant-export-pdfs = quant_learning.export_pdf:main
-quant-smoke-check = quant_learning.smoke_check:main
