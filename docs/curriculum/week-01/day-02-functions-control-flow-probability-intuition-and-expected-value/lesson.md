@@ -48,6 +48,16 @@ Answer: It represents a conditional action, such as buy if a signal exceeds a th
 ### Question: A setup has outcomes +4 with probability 0.25 and -1 with probability 0.75. What is expected value?
 Answer: 0.25 * 4 + 0.75 * (-1) = 0.25.
 
+## Daily Quiz (Closed-Book)
+1. State the main intuition in your own words without notes.
+2. Write one key formula/workflow from memory and define all symbols.
+3. Give one practical quant use case and one failure mode.
+
+## Formula Organization
+- Core formula: rewrite and annotate each symbol.
+- Related formula: connect it to variance/risk/return interpretation.
+- Implementation note: list one coding pitfall to avoid.
+
 ## Real-World Data Application
 - Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.
 - Compute daily returns and annualized volatility for each symbol.

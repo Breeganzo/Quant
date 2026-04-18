@@ -54,6 +54,19 @@ Review and critique is part of real quant work inside signals i: momentum, mean 
 - Compounding: W_t = W_0 * product(1 + r_t)
 - Topic-specific formula: write one formula central to review and critique and explain every symbol.
 
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
+| --- | --- | --- | --- |
+| Topic-specific formula | Core relationship for today's topic | Strategy/risk interpretation | Memorizing symbols without interpretation |
+| Expected value | Probability-weighted average outcome | Comparing asymmetric payoff setups | Ignoring payoff magnitude |
+| Volatility proxy | Dispersion of returns around average | Position sizing and risk budgeting | Treating low volatility as no risk |
+
+## Common Mistakes and Fixes
+- Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.
+- Mistake: reporting one number without context. Fix: compare to benchmark or alternate scenario.
+- Mistake: reading model output as certainty. Fix: include one failure mode and one robustness check.
+- Mistake: skipping assumptions. Fix: list assumptions before interpretation.
+
 ## Revision Sprint
 - Re-solve one earlier problem from memory before checking notes.
 - Review yesterday's weak point and state whether it is fixed.
@@ -82,3 +95,9 @@ What from review and critique felt truly clear, and what still needs a slower re
 - I wrote one realistic finance use case in my own words.
 - I recorded at least one weak area in my error log.
 - I set the next review date using spaced repetition.
+
+## Sunday Mini-Project Blueprint
+1. Load real market data from `curriculum/datasets/real_market_prices.csv`.
+2. Define a clear project question and one measurable output metric.
+3. Build at least one baseline and one variation, then compare outcomes.
+4. Write a short conclusion with one limitation and one next-step improvement.

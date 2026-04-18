@@ -28,6 +28,16 @@ def main() -> None:
             assert day["lesson_markdown_path"], f"Week {week['week']} day lesson path missing"
             assert day["lesson_pdf_path"], f"Week {week['week']} day PDF path missing"
             assert day["notebook_path"], f"Week {week['week']} day notebook path missing"
+            assert day.get("quiz_markdown_path"), f"Week {week['week']} day quiz markdown path missing"
+            assert day.get("quiz_pdf_path"), f"Week {week['week']} day quiz PDF path missing"
+            assert day.get("quiz_json_path"), f"Week {week['week']} day quiz json path missing"
+
+            assert Path(day["lesson_markdown_path"]).exists(), f"Missing lesson markdown: {day['lesson_markdown_path']}"
+            assert Path(day["lesson_pdf_path"]).exists(), f"Missing lesson PDF: {day['lesson_pdf_path']}"
+            assert Path(day["notebook_path"]).exists(), f"Missing day notebook: {day['notebook_path']}"
+            assert Path(day["quiz_markdown_path"]).exists(), f"Missing quiz markdown: {day['quiz_markdown_path']}"
+            assert Path(day["quiz_pdf_path"]).exists(), f"Missing quiz PDF: {day['quiz_pdf_path']}"
+            assert Path(day["quiz_json_path"]).exists(), f"Missing quiz json: {day['quiz_json_path']}"
 
     assert Path("curriculum/week-01/notebooks/week-01-foundations.ipynb").exists()
     assert Path("curriculum/week-01/notebooks/day-01-reset-your-toolkit-numbers-variables-returns-and-compounding.ipynb").exists()

@@ -16,7 +16,6 @@ import {
 } from "./progressSync";
 
 const STORAGE_KEY = "quant-learning-progress-v2";
-const JUPYTER_BASE_URL = (import.meta.env.VITE_JUPYTER_BASE_URL || "http://localhost:8888").replace(/\/+$/, "");
 const GITHUB_REPO = (import.meta.env.VITE_GITHUB_REPO || "Breeganzo/Quant").trim();
 const GITHUB_BRANCH = (import.meta.env.VITE_GITHUB_BRANCH || "main").trim();
 
@@ -35,12 +34,6 @@ function withVSCodeWeb(path) {
   if (!path) return "";
   const normalized = path.replace(/^\/+/, "");
   return `https://vscode.dev/github/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${normalized}`;
-}
-
-function withJupyterLab(path) {
-  if (!path) return "";
-  const normalized = path.replace(/^\/+/, "");
-  return `${JUPYTER_BASE_URL}/lab/tree/${normalized}`;
 }
 
 function loadProgress() {
@@ -819,6 +812,8 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
   const key = week && day ? dayKey(week.week, day.day_index) : "";
   const saved = key ? progress.days?.[key] ?? { status: "not_started", confidence: 0, notes: "" } : null;
   const { content, status } = useMarkdown(day?.lesson_markdown_path);
+  const previousDay = week?.daily_schedule.find((item) => item.day_index === Number(dayIndex) - 1);
+  const nextDay = week?.daily_schedule.find((item) => item.day_index === Number(dayIndex) + 1);
 
   if (!week || !day || !saved) return <div className="panel"><p>Lesson not found.</p></div>;
   const detailedDayAvailable = Boolean(day.lesson_markdown_path);
@@ -839,7 +834,7 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
   }
 
   return (
-    <div className="page-grid">
+    <div className="page-grid day-layout">
       <section className="panel lesson-side">
         <div className="panel-head">
           <div>
@@ -847,6 +842,22 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
             <h3>{day.topic}</h3>
           </div>
           <StatusPill status={saved.status || "not_started"} />
+        </div>
+
+        <div className="day-nav-row">
+          <Link className="secondary-button compact" to={`/week/${week.week}`}>
+            Back to Week {week.week}
+          </Link>
+          {previousDay ? (
+            <Link className="secondary-button compact" to={`/week/${week.week}/day/${previousDay.day_index}`}>
+              Previous Day
+            </Link>
+          ) : null}
+          {nextDay ? (
+            <Link className="secondary-button compact" to={`/week/${week.week}/day/${nextDay.day_index}`}>
+              Next Day
+            </Link>
+          ) : null}
         </div>
 
         <div className="control-stack">
@@ -896,6 +907,11 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
               <a className="secondary-button" href={withBase(day.lesson_pdf_path)} target="_blank" rel="noreferrer">
                 Open Lesson PDF
               </a>
+              {day.quiz_pdf_path ? (
+                <a className="secondary-button" href={withBase(day.quiz_pdf_path)} target="_blank" rel="noreferrer">
+                  Open Quiz PDF
+                </a>
+              ) : null}
               <Link className="secondary-button" to={withNotebookViewer(day.notebook_path)}>
                 Open Notebook
               </Link>
@@ -919,14 +935,9 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
               Open in VS Code
             </a>
           ) : null}
-          {day.notebook_path ? (
-            <a className="secondary-button" href={withJupyterLab(day.notebook_path)} target="_blank" rel="noreferrer">
-              Open in JupyterLab (Optional)
-            </a>
-          ) : null}
         </div>
         <p className="panel-copy">
-          Notebook opens directly in this website. JupyterLab is optional for running cells live.
+          Notebook opens directly in this website, and VS Code web is available for browser-based edits.
         </p>
 
         <div className="day-links">
@@ -1003,9 +1014,11 @@ function NotebookPage({ roadmap }) {
             <a className="secondary-button" href={withVSCodeWeb(decodedPath)} target="_blank" rel="noreferrer">
               Open in VS Code
             </a>
-            <a className="secondary-button" href={withJupyterLab(decodedPath)} target="_blank" rel="noreferrer">
-              Open in JupyterLab (Optional)
-            </a>
+            {relatedWeek ? (
+              <Link className="secondary-button" to={`/week/${relatedWeek.week}`}>
+                Back to Week {relatedWeek.week}
+              </Link>
+            ) : null}
           </div>
         </div>
 
@@ -1014,9 +1027,7 @@ function NotebookPage({ roadmap }) {
             Week {relatedWeek.week}: Theory is in day lessons, notebook practice is here, revision and quiz prompts are in lesson sections, and weekly mini-project/capstone is linked from the week/day pages.
           </p>
         ) : null}
-        <p className="panel-copy">
-          For live execution with installed packages, use JupyterLab after running uv sync from the project root.
-        </p>
+        <p className="panel-copy">Use this viewer for study flow, then open in VS Code when you want to edit the notebook directly.</p>
 
         {status === "loading" ? <p>Loading notebook...</p> : null}
         {status === "error" ? <p>Could not load notebook. {error}</p> : null}

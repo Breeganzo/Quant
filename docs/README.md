@@ -6,6 +6,7 @@ This repository provides a 24-week quant finance and ML learning system with:
 - day-by-day continuity across all weeks
 - expanded daily lesson plans with session-based study flow
 - notebook-based practice for every day and weekly project
+- standalone daily quiz artifacts (`quiz.md` + `quiz.json`) with answer guides
 - explicit daily formula drills and closed-book quiz/revision structure
 - PDF export for offline study
 - a React tracker site ready for GitHub Pages deployment
@@ -66,35 +67,17 @@ Real-world dataset used by daily notebook labs:
 
 - `curriculum/datasets/real_market_prices.csv`
 
-## Run Notebooks Properly (JupyterLab)
+## Notebook Access (No Jupyter Required)
 
-Use the project environment so notebook packages are available:
-
-```bash
-cd "/Users/anto/Quant Learning"
-uv sync
-uv run quant-jupyter
-```
-
-Then open notebooks in JupyterLab. The site notebook buttons are configured for local JupyterLab at:
-
-- `http://localhost:8888/lab/tree/...`
-
-This avoids opening raw `.ipynb` JSON in the browser.
-
-The local launcher starts JupyterLab without a token so the notebook links open directly in the browser.
-
-Website behavior (no Jupyter required):
+Website behavior:
 
 - Notebook buttons in the site open an in-app notebook viewer by default.
 - Notebook buttons also include an "Open in VS Code" action (vscode.dev).
-- JupyterLab links remain available as optional "run cells live" actions.
 
-Package-ready live execution:
+Notebook source locations:
 
-- Run `uv sync` once in repo root to install notebook dependencies into `.venv`.
-- Then run `uv run quant-jupyter` and use "Open in JupyterLab" links.
-- This applies to all weeks and all daily/weekly notebooks.
+- `curriculum/week-01/notebooks/` ... `curriculum/week-24/notebooks/`
+- deployed static copy: `docs/curriculum/week-XX/notebooks/`
 
 ## Run Website Locally (Development)
 
@@ -113,7 +96,7 @@ Open this URL in your browser:
 Notes:
 
 - Day pages render lesson content directly in the app.
-- Notebook buttons open in-app notebook viewer by default, with optional VS Code and JupyterLab actions.
+- Notebook buttons open in-app notebook viewer by default, with optional VS Code action.
 - Progress updates autosave in browser storage.
 
 ## Preview Production Build Locally
@@ -227,9 +210,20 @@ So daily markdown is not redundant, even if you mainly consume PDFs.
 
 - Weeks 1-24: roadmap + weekly plans generated
 - Weeks 1-24: daily lesson markdown generated
+- Weeks 1-24: daily quiz markdown/json generated
 - Weeks 1-24: day notebook files and weekly project notebooks generated
-- Weeks 1-24: notebooks are generated as structured study templates ready to run in JupyterLab
-- Notebook execution is intentionally done interactively in JupyterLab (not during bootstrap) for reliability
+- Weeks 1-24: notebooks include real-data labs using `curriculum/datasets/real_market_prices.csv`
+
+## Daily Artifact Guarantee
+
+Every day (all 168 days) is generated with:
+
+- theory lesson markdown: `lesson.md`
+- theory PDF: `lesson.pdf`
+- daily quiz markdown: `quiz.md`
+- daily quiz PDF: `quiz.pdf`
+- structured quiz JSON with answer guide: `quiz.json`
+- daily notebook: `day-XX-*.ipynb`
 
 ## Repository Layout
 

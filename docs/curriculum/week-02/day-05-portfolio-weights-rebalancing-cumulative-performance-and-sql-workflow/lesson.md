@@ -55,6 +55,16 @@ Answer: Because many research workflows start by pulling or filtering large stru
 ### Question: What is a simple cumulative wealth index?
 Answer: It is the compounded value of starting capital after applying each period's gross return in sequence.
 
+## Daily Quiz (Closed-Book)
+1. Explain today's core intuition from memory.
+2. Write one formula/workflow and define all symbols/steps.
+3. Give one use case and one realistic failure mode.
+
+## Formula Organization
+- Core formula and meaning
+- Variable definitions and units
+- Practical implementation caveat
+
 ## Extended Study (to complete a full 4-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
 2. Add one extra worked example using different numbers or assumptions.

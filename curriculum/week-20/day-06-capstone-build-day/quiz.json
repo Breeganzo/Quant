@@ -1,0 +1,43 @@
+{
+  "week": 20,
+  "day_index": 6,
+  "day": "Sat",
+  "topic": "Capstone build day",
+  "questions": [
+    {
+      "id": "q1",
+      "difficulty": "basic",
+      "question": "Explain the core intuition of capstone build day in plain language.",
+      "answer": "A strong answer defines capstone build day, gives one concrete example, and links it to decision quality.",
+      "explanation": "This tests whether the concept is understood beyond memorized vocabulary."
+    },
+    {
+      "id": "q2",
+      "difficulty": "intermediate",
+      "question": "Write one key formula or workflow from memory and define each symbol or step.",
+      "answer": "A strong answer includes the formula/workflow, variable definitions, units, and one implementation caveat.",
+      "explanation": "This checks mathematical fluency and operational clarity."
+    },
+    {
+      "id": "q3",
+      "difficulty": "intermediate",
+      "question": "Give one realistic quant use case and one failure mode if the concept is misapplied.",
+      "answer": "A strong answer ties the concept to trading, portfolio, or risk decisions and includes one practical misuse risk.",
+      "explanation": "This evaluates transfer from theory to real workflow judgment."
+    },
+    {
+      "id": "q4",
+      "difficulty": "advanced",
+      "question": "Using SPY/QQQ/TLT/GLD daily data, what quick diagnostic would you run before trusting conclusions?",
+      "answer": "Check data quality, missing values, return stability, and sensitivity of results to a stress period or alternate window.",
+      "explanation": "This tests robustness thinking with real market data."
+    },
+    {
+      "id": "q5",
+      "difficulty": "advanced",
+      "question": "From your error log, pick one repeated mistake and describe the correction protocol for next week.",
+      "answer": "State the exact misconception, corrected rule, retrieval prompt, and next review schedule (1d/3d/7d/14d).",
+      "explanation": "Saturday should convert weak spots into an explicit revision mechanism."
+    }
+  ]
+}

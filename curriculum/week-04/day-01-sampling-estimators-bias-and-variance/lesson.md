@@ -51,6 +51,16 @@ Answer: Because it is based on limited noisy observations and may differ materia
 ### Question: What is the intuition behind estimator variance?
 Answer: If you repeated the sampling process many times, a high-variance estimator would jump around a lot from sample to sample.
 
+## Daily Quiz (Closed-Book)
+1. Explain today's core intuition from memory.
+2. Write one formula/workflow and define all symbols/steps.
+3. Give one use case and one realistic failure mode.
+
+## Formula Organization
+- Core formula and meaning
+- Variable definitions and units
+- Practical implementation caveat
+
 ## Extended Study (to complete a full 4-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
 2. Add one extra worked example using different numbers or assumptions.

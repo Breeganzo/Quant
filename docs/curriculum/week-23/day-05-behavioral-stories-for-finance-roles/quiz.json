@@ -1,0 +1,36 @@
+{
+  "week": 23,
+  "day_index": 5,
+  "day": "Fri",
+  "topic": "Behavioral stories for finance roles",
+  "questions": [
+    {
+      "id": "q1",
+      "difficulty": "basic",
+      "question": "Explain the core intuition of behavioral stories for finance roles in plain language.",
+      "answer": "A strong answer defines behavioral stories for finance roles, gives one concrete example, and links it to decision quality.",
+      "explanation": "This tests whether the concept is understood beyond memorized vocabulary."
+    },
+    {
+      "id": "q2",
+      "difficulty": "intermediate",
+      "question": "Write one key formula or workflow from memory and define each symbol or step.",
+      "answer": "A strong answer includes the formula/workflow, variable definitions, units, and one implementation caveat.",
+      "explanation": "This checks mathematical fluency and operational clarity."
+    },
+    {
+      "id": "q3",
+      "difficulty": "intermediate",
+      "question": "Give one realistic quant use case and one failure mode if the concept is misapplied.",
+      "answer": "A strong answer ties the concept to trading, portfolio, or risk decisions and includes one practical misuse risk.",
+      "explanation": "This evaluates transfer from theory to real workflow judgment."
+    },
+    {
+      "id": "q4",
+      "difficulty": "advanced",
+      "question": "Using SPY/QQQ/TLT/GLD daily data, what quick diagnostic would you run before trusting conclusions?",
+      "answer": "Check data quality, missing values, return stability, and sensitivity of results to a stress period or alternate window.",
+      "explanation": "This tests robustness thinking with real market data."
+    }
+  ]
+}

@@ -94,7 +94,10 @@
           "next_topic": "Functions, control flow, probability intuition, and expected value",
           "lesson_markdown_path": "curriculum/week-01/day-01-reset-your-toolkit-numbers-variables-returns-and-compounding/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-01/day-01-reset-your-toolkit-numbers-variables-returns-and-compounding/lesson.pdf",
-          "notebook_path": "curriculum/week-01/notebooks/day-01-reset-your-toolkit-numbers-variables-returns-and-compounding.ipynb"
+          "notebook_path": "curriculum/week-01/notebooks/day-01-reset-your-toolkit-numbers-variables-returns-and-compounding.ipynb",
+          "quiz_markdown_path": "curriculum/week-01/day-01-reset-your-toolkit-numbers-variables-returns-and-compounding/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-01/day-01-reset-your-toolkit-numbers-variables-returns-and-compounding/quiz.pdf",
+          "quiz_json_path": "curriculum/week-01/day-01-reset-your-toolkit-numbers-variables-returns-and-compounding/quiz.json"
         },
         {
           "day": "Tue",
@@ -158,7 +161,10 @@
           "next_topic": "Vectors, matrices, and linear algebra intuition for portfolios and ML",
           "lesson_markdown_path": "curriculum/week-01/day-02-functions-control-flow-probability-intuition-and-expected-value/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-01/day-02-functions-control-flow-probability-intuition-and-expected-value/lesson.pdf",
-          "notebook_path": "curriculum/week-01/notebooks/day-02-functions-control-flow-probability-intuition-and-expected-value.ipynb"
+          "notebook_path": "curriculum/week-01/notebooks/day-02-functions-control-flow-probability-intuition-and-expected-value.ipynb",
+          "quiz_markdown_path": "curriculum/week-01/day-02-functions-control-flow-probability-intuition-and-expected-value/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-01/day-02-functions-control-flow-probability-intuition-and-expected-value/quiz.pdf",
+          "quiz_json_path": "curriculum/week-01/day-02-functions-control-flow-probability-intuition-and-expected-value/quiz.json"
         },
         {
           "day": "Wed",
@@ -222,7 +228,10 @@
           "next_topic": "Descriptive statistics, sampling intuition, and visualizing market data",
           "lesson_markdown_path": "curriculum/week-01/day-03-vectors-matrices-and-linear-algebra-intuition-for-portfolios-and-ml/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-01/day-03-vectors-matrices-and-linear-algebra-intuition-for-portfolios-and-ml/lesson.pdf",
-          "notebook_path": "curriculum/week-01/notebooks/day-03-vectors-matrices-and-linear-algebra-intuition-for-portfolios-and-ml.ipynb"
+          "notebook_path": "curriculum/week-01/notebooks/day-03-vectors-matrices-and-linear-algebra-intuition-for-portfolios-and-ml.ipynb",
+          "quiz_markdown_path": "curriculum/week-01/day-03-vectors-matrices-and-linear-algebra-intuition-for-portfolios-and-ml/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-01/day-03-vectors-matrices-and-linear-algebra-intuition-for-portfolios-and-ml/quiz.pdf",
+          "quiz_json_path": "curriculum/week-01/day-03-vectors-matrices-and-linear-algebra-intuition-for-portfolios-and-ml/quiz.json"
         },
         {
           "day": "Thu",
@@ -286,7 +295,10 @@
           "next_topic": "Market structure, asset classes, risk, return, and what quants actually do",
           "lesson_markdown_path": "curriculum/week-01/day-04-descriptive-statistics-sampling-intuition-and-visualizing-market-data/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-01/day-04-descriptive-statistics-sampling-intuition-and-visualizing-market-data/lesson.pdf",
-          "notebook_path": "curriculum/week-01/notebooks/day-04-descriptive-statistics-sampling-intuition-and-visualizing-market-data.ipynb"
+          "notebook_path": "curriculum/week-01/notebooks/day-04-descriptive-statistics-sampling-intuition-and-visualizing-market-data.ipynb",
+          "quiz_markdown_path": "curriculum/week-01/day-04-descriptive-statistics-sampling-intuition-and-visualizing-market-data/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-01/day-04-descriptive-statistics-sampling-intuition-and-visualizing-market-data/quiz.pdf",
+          "quiz_json_path": "curriculum/week-01/day-04-descriptive-statistics-sampling-intuition-and-visualizing-market-data/quiz.json"
         },
         {
           "day": "Fri",
@@ -350,7 +362,10 @@
           "next_topic": "Revision, spaced repetition, and first market diary notebook",
           "lesson_markdown_path": "curriculum/week-01/day-05-market-structure-asset-classes-risk-return-and-what-quants-actually-do/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-01/day-05-market-structure-asset-classes-risk-return-and-what-quants-actually-do/lesson.pdf",
-          "notebook_path": "curriculum/week-01/notebooks/day-05-market-structure-asset-classes-risk-return-and-what-quants-actually-do.ipynb"
+          "notebook_path": "curriculum/week-01/notebooks/day-05-market-structure-asset-classes-risk-return-and-what-quants-actually-do.ipynb",
+          "quiz_markdown_path": "curriculum/week-01/day-05-market-structure-asset-classes-risk-return-and-what-quants-actually-do/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-01/day-05-market-structure-asset-classes-risk-return-and-what-quants-actually-do/quiz.pdf",
+          "quiz_json_path": "curriculum/week-01/day-05-market-structure-asset-classes-risk-return-and-what-quants-actually-do/quiz.json"
         },
         {
           "day": "Sat",
@@ -414,7 +429,10 @@
           "next_topic": "Week 1 quiz and mini project: build a simple return and risk dashboard",
           "lesson_markdown_path": "curriculum/week-01/day-06-revision-spaced-repetition-and-first-market-diary-notebook/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-01/day-06-revision-spaced-repetition-and-first-market-diary-notebook/lesson.pdf",
-          "notebook_path": "curriculum/week-01/notebooks/day-06-revision-spaced-repetition-and-first-market-diary-notebook.ipynb"
+          "notebook_path": "curriculum/week-01/notebooks/day-06-revision-spaced-repetition-and-first-market-diary-notebook.ipynb",
+          "quiz_markdown_path": "curriculum/week-01/day-06-revision-spaced-repetition-and-first-market-diary-notebook/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-01/day-06-revision-spaced-repetition-and-first-market-diary-notebook/quiz.pdf",
+          "quiz_json_path": "curriculum/week-01/day-06-revision-spaced-repetition-and-first-market-diary-notebook/quiz.json"
         },
         {
           "day": "Sun",
@@ -478,7 +496,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-01/day-07-week-1-quiz-and-mini-project-build-a-simple-return-and-risk-dashboard/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-01/day-07-week-1-quiz-and-mini-project-build-a-simple-return-and-risk-dashboard/lesson.pdf",
-          "notebook_path": "curriculum/week-01/notebooks/day-07-week-1-quiz-and-mini-project-build-a-simple-return-and-risk-dashboard.ipynb"
+          "notebook_path": "curriculum/week-01/notebooks/day-07-week-1-quiz-and-mini-project-build-a-simple-return-and-risk-dashboard.ipynb",
+          "quiz_markdown_path": "curriculum/week-01/day-07-week-1-quiz-and-mini-project-build-a-simple-return-and-risk-dashboard/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-01/day-07-week-1-quiz-and-mini-project-build-a-simple-return-and-risk-dashboard/quiz.pdf",
+          "quiz_json_path": "curriculum/week-01/day-07-week-1-quiz-and-mini-project-build-a-simple-return-and-risk-dashboard/quiz.json"
         }
       ],
       "concepts": [
@@ -595,7 +616,10 @@
           "next_topic": "pandas DataFrames, indexing, joins, and missing values",
           "lesson_markdown_path": "curriculum/week-02/day-01-numpy-arrays-vectorization-and-speed-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-02/day-01-numpy-arrays-vectorization-and-speed-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-02/notebooks/day-01-numpy-arrays-vectorization-and-speed-intuition.ipynb"
+          "notebook_path": "curriculum/week-02/notebooks/day-01-numpy-arrays-vectorization-and-speed-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-02/day-01-numpy-arrays-vectorization-and-speed-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-02/day-01-numpy-arrays-vectorization-and-speed-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-02/day-01-numpy-arrays-vectorization-and-speed-intuition/quiz.json"
         },
         {
           "day": "Tue",
@@ -659,7 +683,10 @@
           "next_topic": "Plotting and exploratory data analysis for prices and returns",
           "lesson_markdown_path": "curriculum/week-02/day-02-pandas-dataframes-indexing-joins-and-missing-values/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-02/day-02-pandas-dataframes-indexing-joins-and-missing-values/lesson.pdf",
-          "notebook_path": "curriculum/week-02/notebooks/day-02-pandas-dataframes-indexing-joins-and-missing-values.ipynb"
+          "notebook_path": "curriculum/week-02/notebooks/day-02-pandas-dataframes-indexing-joins-and-missing-values.ipynb",
+          "quiz_markdown_path": "curriculum/week-02/day-02-pandas-dataframes-indexing-joins-and-missing-values/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-02/day-02-pandas-dataframes-indexing-joins-and-missing-values/quiz.pdf",
+          "quiz_json_path": "curriculum/week-02/day-02-pandas-dataframes-indexing-joins-and-missing-values/quiz.json"
         },
         {
           "day": "Wed",
@@ -723,7 +750,10 @@
           "next_topic": "Correlation, covariance, and diversification",
           "lesson_markdown_path": "curriculum/week-02/day-03-plotting-and-exploratory-data-analysis-for-prices-and-returns/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-02/day-03-plotting-and-exploratory-data-analysis-for-prices-and-returns/lesson.pdf",
-          "notebook_path": "curriculum/week-02/notebooks/day-03-plotting-and-exploratory-data-analysis-for-prices-and-returns.ipynb"
+          "notebook_path": "curriculum/week-02/notebooks/day-03-plotting-and-exploratory-data-analysis-for-prices-and-returns.ipynb",
+          "quiz_markdown_path": "curriculum/week-02/day-03-plotting-and-exploratory-data-analysis-for-prices-and-returns/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-02/day-03-plotting-and-exploratory-data-analysis-for-prices-and-returns/quiz.pdf",
+          "quiz_json_path": "curriculum/week-02/day-03-plotting-and-exploratory-data-analysis-for-prices-and-returns/quiz.json"
         },
         {
           "day": "Thu",
@@ -787,7 +817,10 @@
           "next_topic": "Portfolio weights, rebalancing, cumulative performance, and SQL workflow",
           "lesson_markdown_path": "curriculum/week-02/day-04-correlation-covariance-and-diversification/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-02/day-04-correlation-covariance-and-diversification/lesson.pdf",
-          "notebook_path": "curriculum/week-02/notebooks/day-04-correlation-covariance-and-diversification.ipynb"
+          "notebook_path": "curriculum/week-02/notebooks/day-04-correlation-covariance-and-diversification.ipynb",
+          "quiz_markdown_path": "curriculum/week-02/day-04-correlation-covariance-and-diversification/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-02/day-04-correlation-covariance-and-diversification/quiz.pdf",
+          "quiz_json_path": "curriculum/week-02/day-04-correlation-covariance-and-diversification/quiz.json"
         },
         {
           "day": "Fri",
@@ -851,7 +884,10 @@
           "next_topic": "Revision, error log, and data workflow drill",
           "lesson_markdown_path": "curriculum/week-02/day-05-portfolio-weights-rebalancing-cumulative-performance-and-sql-workflow/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-02/day-05-portfolio-weights-rebalancing-cumulative-performance-and-sql-workflow/lesson.pdf",
-          "notebook_path": "curriculum/week-02/notebooks/day-05-portfolio-weights-rebalancing-cumulative-performance-and-sql-workflow.ipynb"
+          "notebook_path": "curriculum/week-02/notebooks/day-05-portfolio-weights-rebalancing-cumulative-performance-and-sql-workflow.ipynb",
+          "quiz_markdown_path": "curriculum/week-02/day-05-portfolio-weights-rebalancing-cumulative-performance-and-sql-workflow/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-02/day-05-portfolio-weights-rebalancing-cumulative-performance-and-sql-workflow/quiz.pdf",
+          "quiz_json_path": "curriculum/week-02/day-05-portfolio-weights-rebalancing-cumulative-performance-and-sql-workflow/quiz.json"
         },
         {
           "day": "Sat",
@@ -915,7 +951,10 @@
           "next_topic": "Mini project: compare three assets and explain diversification",
           "lesson_markdown_path": "curriculum/week-02/day-06-revision-error-log-and-data-workflow-drill/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-02/day-06-revision-error-log-and-data-workflow-drill/lesson.pdf",
-          "notebook_path": "curriculum/week-02/notebooks/day-06-revision-error-log-and-data-workflow-drill.ipynb"
+          "notebook_path": "curriculum/week-02/notebooks/day-06-revision-error-log-and-data-workflow-drill.ipynb",
+          "quiz_markdown_path": "curriculum/week-02/day-06-revision-error-log-and-data-workflow-drill/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-02/day-06-revision-error-log-and-data-workflow-drill/quiz.pdf",
+          "quiz_json_path": "curriculum/week-02/day-06-revision-error-log-and-data-workflow-drill/quiz.json"
         },
         {
           "day": "Sun",
@@ -979,7 +1018,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-02/day-07-mini-project-compare-three-assets-and-explain-diversification/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-02/day-07-mini-project-compare-three-assets-and-explain-diversification/lesson.pdf",
-          "notebook_path": "curriculum/week-02/notebooks/day-07-mini-project-compare-three-assets-and-explain-diversification.ipynb"
+          "notebook_path": "curriculum/week-02/notebooks/day-07-mini-project-compare-three-assets-and-explain-diversification.ipynb",
+          "quiz_markdown_path": "curriculum/week-02/day-07-mini-project-compare-three-assets-and-explain-diversification/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-02/day-07-mini-project-compare-three-assets-and-explain-diversification/quiz.pdf",
+          "quiz_json_path": "curriculum/week-02/day-07-mini-project-compare-three-assets-and-explain-diversification/quiz.json"
         }
       ],
       "concepts": [
@@ -1095,7 +1137,10 @@
           "next_topic": "Calculus intuition: slopes, derivatives, and sensitivity",
           "lesson_markdown_path": "curriculum/week-03/day-01-algebra-refresher-equations-fractions-exponents-and-logs/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-03/day-01-algebra-refresher-equations-fractions-exponents-and-logs/lesson.pdf",
-          "notebook_path": "curriculum/week-03/notebooks/day-01-algebra-refresher-equations-fractions-exponents-and-logs.ipynb"
+          "notebook_path": "curriculum/week-03/notebooks/day-01-algebra-refresher-equations-fractions-exponents-and-logs.ipynb",
+          "quiz_markdown_path": "curriculum/week-03/day-01-algebra-refresher-equations-fractions-exponents-and-logs/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-03/day-01-algebra-refresher-equations-fractions-exponents-and-logs/quiz.pdf",
+          "quiz_json_path": "curriculum/week-03/day-01-algebra-refresher-equations-fractions-exponents-and-logs/quiz.json"
         },
         {
           "day": "Tue",
@@ -1159,7 +1204,10 @@
           "next_topic": "Integrals, accumulation, and area intuition",
           "lesson_markdown_path": "curriculum/week-03/day-02-calculus-intuition-slopes-derivatives-and-sensitivity/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-03/day-02-calculus-intuition-slopes-derivatives-and-sensitivity/lesson.pdf",
-          "notebook_path": "curriculum/week-03/notebooks/day-02-calculus-intuition-slopes-derivatives-and-sensitivity.ipynb"
+          "notebook_path": "curriculum/week-03/notebooks/day-02-calculus-intuition-slopes-derivatives-and-sensitivity.ipynb",
+          "quiz_markdown_path": "curriculum/week-03/day-02-calculus-intuition-slopes-derivatives-and-sensitivity/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-03/day-02-calculus-intuition-slopes-derivatives-and-sensitivity/quiz.pdf",
+          "quiz_json_path": "curriculum/week-03/day-02-calculus-intuition-slopes-derivatives-and-sensitivity/quiz.json"
         },
         {
           "day": "Wed",
@@ -1223,7 +1271,10 @@
           "next_topic": "Probability rules, random variables, and distributions",
           "lesson_markdown_path": "curriculum/week-03/day-03-integrals-accumulation-and-area-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-03/day-03-integrals-accumulation-and-area-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-03/notebooks/day-03-integrals-accumulation-and-area-intuition.ipynb"
+          "notebook_path": "curriculum/week-03/notebooks/day-03-integrals-accumulation-and-area-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-03/day-03-integrals-accumulation-and-area-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-03/day-03-integrals-accumulation-and-area-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-03/day-03-integrals-accumulation-and-area-intuition/quiz.json"
         },
         {
           "day": "Thu",
@@ -1287,7 +1338,10 @@
           "next_topic": "APIs, JSON, conditional probability, and Bayes intuition",
           "lesson_markdown_path": "curriculum/week-03/day-04-probability-rules-random-variables-and-distributions/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-03/day-04-probability-rules-random-variables-and-distributions/lesson.pdf",
-          "notebook_path": "curriculum/week-03/notebooks/day-04-probability-rules-random-variables-and-distributions.ipynb"
+          "notebook_path": "curriculum/week-03/notebooks/day-04-probability-rules-random-variables-and-distributions.ipynb",
+          "quiz_markdown_path": "curriculum/week-03/day-04-probability-rules-random-variables-and-distributions/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-03/day-04-probability-rules-random-variables-and-distributions/quiz.pdf",
+          "quiz_json_path": "curriculum/week-03/day-04-probability-rules-random-variables-and-distributions/quiz.json"
         },
         {
           "day": "Fri",
@@ -1351,7 +1405,10 @@
           "next_topic": "Revision, recall, and formula consolidation",
           "lesson_markdown_path": "curriculum/week-03/day-05-apis-json-conditional-probability-and-bayes-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-03/day-05-apis-json-conditional-probability-and-bayes-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-03/notebooks/day-05-apis-json-conditional-probability-and-bayes-intuition.ipynb"
+          "notebook_path": "curriculum/week-03/notebooks/day-05-apis-json-conditional-probability-and-bayes-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-03/day-05-apis-json-conditional-probability-and-bayes-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-03/day-05-apis-json-conditional-probability-and-bayes-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-03/day-05-apis-json-conditional-probability-and-bayes-intuition/quiz.json"
         },
         {
           "day": "Sat",
@@ -1415,7 +1472,10 @@
           "next_topic": "Mini project: expected value and Monte Carlo trade simulation",
           "lesson_markdown_path": "curriculum/week-03/day-06-revision-recall-and-formula-consolidation/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-03/day-06-revision-recall-and-formula-consolidation/lesson.pdf",
-          "notebook_path": "curriculum/week-03/notebooks/day-06-revision-recall-and-formula-consolidation.ipynb"
+          "notebook_path": "curriculum/week-03/notebooks/day-06-revision-recall-and-formula-consolidation.ipynb",
+          "quiz_markdown_path": "curriculum/week-03/day-06-revision-recall-and-formula-consolidation/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-03/day-06-revision-recall-and-formula-consolidation/quiz.pdf",
+          "quiz_json_path": "curriculum/week-03/day-06-revision-recall-and-formula-consolidation/quiz.json"
         },
         {
           "day": "Sun",
@@ -1479,7 +1539,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-03/day-07-mini-project-expected-value-and-monte-carlo-trade-simulation/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-03/day-07-mini-project-expected-value-and-monte-carlo-trade-simulation/lesson.pdf",
-          "notebook_path": "curriculum/week-03/notebooks/day-07-mini-project-expected-value-and-monte-carlo-trade-simulation.ipynb"
+          "notebook_path": "curriculum/week-03/notebooks/day-07-mini-project-expected-value-and-monte-carlo-trade-simulation.ipynb",
+          "quiz_markdown_path": "curriculum/week-03/day-07-mini-project-expected-value-and-monte-carlo-trade-simulation/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-03/day-07-mini-project-expected-value-and-monte-carlo-trade-simulation/quiz.pdf",
+          "quiz_json_path": "curriculum/week-03/day-07-mini-project-expected-value-and-monte-carlo-trade-simulation/quiz.json"
         }
       ],
       "concepts": [
@@ -1595,7 +1658,10 @@
           "next_topic": "Confidence intervals and hypothesis testing intuition",
           "lesson_markdown_path": "curriculum/week-04/day-01-sampling-estimators-bias-and-variance/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-04/day-01-sampling-estimators-bias-and-variance/lesson.pdf",
-          "notebook_path": "curriculum/week-04/notebooks/day-01-sampling-estimators-bias-and-variance.ipynb"
+          "notebook_path": "curriculum/week-04/notebooks/day-01-sampling-estimators-bias-and-variance.ipynb",
+          "quiz_markdown_path": "curriculum/week-04/day-01-sampling-estimators-bias-and-variance/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-04/day-01-sampling-estimators-bias-and-variance/quiz.pdf",
+          "quiz_json_path": "curriculum/week-04/day-01-sampling-estimators-bias-and-variance/quiz.json"
         },
         {
           "day": "Tue",
@@ -1659,7 +1725,10 @@
           "next_topic": "OLS regression intuition and interpretation",
           "lesson_markdown_path": "curriculum/week-04/day-02-confidence-intervals-and-hypothesis-testing-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-04/day-02-confidence-intervals-and-hypothesis-testing-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-04/notebooks/day-02-confidence-intervals-and-hypothesis-testing-intuition.ipynb"
+          "notebook_path": "curriculum/week-04/notebooks/day-02-confidence-intervals-and-hypothesis-testing-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-04/day-02-confidence-intervals-and-hypothesis-testing-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-04/day-02-confidence-intervals-and-hypothesis-testing-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-04/day-02-confidence-intervals-and-hypothesis-testing-intuition/quiz.json"
         },
         {
           "day": "Wed",
@@ -1723,7 +1792,10 @@
           "next_topic": "Optimization basics and constrained thinking",
           "lesson_markdown_path": "curriculum/week-04/day-03-ols-regression-intuition-and-interpretation/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-04/day-03-ols-regression-intuition-and-interpretation/lesson.pdf",
-          "notebook_path": "curriculum/week-04/notebooks/day-03-ols-regression-intuition-and-interpretation.ipynb"
+          "notebook_path": "curriculum/week-04/notebooks/day-03-ols-regression-intuition-and-interpretation.ipynb",
+          "quiz_markdown_path": "curriculum/week-04/day-03-ols-regression-intuition-and-interpretation/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-04/day-03-ols-regression-intuition-and-interpretation/quiz.pdf",
+          "quiz_json_path": "curriculum/week-04/day-03-ols-regression-intuition-and-interpretation/quiz.json"
         },
         {
           "day": "Thu",
@@ -1787,7 +1859,10 @@
           "next_topic": "Portfolio theory, efficient frontier, and Sharpe ratio intuition",
           "lesson_markdown_path": "curriculum/week-04/day-04-optimization-basics-and-constrained-thinking/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-04/day-04-optimization-basics-and-constrained-thinking/lesson.pdf",
-          "notebook_path": "curriculum/week-04/notebooks/day-04-optimization-basics-and-constrained-thinking.ipynb"
+          "notebook_path": "curriculum/week-04/notebooks/day-04-optimization-basics-and-constrained-thinking.ipynb",
+          "quiz_markdown_path": "curriculum/week-04/day-04-optimization-basics-and-constrained-thinking/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-04/day-04-optimization-basics-and-constrained-thinking/quiz.pdf",
+          "quiz_json_path": "curriculum/week-04/day-04-optimization-basics-and-constrained-thinking/quiz.json"
         },
         {
           "day": "Fri",
@@ -1851,7 +1926,10 @@
           "next_topic": "Capstone build day",
           "lesson_markdown_path": "curriculum/week-04/day-05-portfolio-theory-efficient-frontier-and-sharpe-ratio-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-04/day-05-portfolio-theory-efficient-frontier-and-sharpe-ratio-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-04/notebooks/day-05-portfolio-theory-efficient-frontier-and-sharpe-ratio-intuition.ipynb"
+          "notebook_path": "curriculum/week-04/notebooks/day-05-portfolio-theory-efficient-frontier-and-sharpe-ratio-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-04/day-05-portfolio-theory-efficient-frontier-and-sharpe-ratio-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-04/day-05-portfolio-theory-efficient-frontier-and-sharpe-ratio-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-04/day-05-portfolio-theory-efficient-frontier-and-sharpe-ratio-intuition/quiz.json"
         },
         {
           "day": "Sat",
@@ -1915,7 +1993,10 @@
           "next_topic": "Capstone review and write-up",
           "lesson_markdown_path": "curriculum/week-04/day-06-capstone-build-day/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-04/day-06-capstone-build-day/lesson.pdf",
-          "notebook_path": "curriculum/week-04/notebooks/day-06-capstone-build-day.ipynb"
+          "notebook_path": "curriculum/week-04/notebooks/day-06-capstone-build-day.ipynb",
+          "quiz_markdown_path": "curriculum/week-04/day-06-capstone-build-day/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-04/day-06-capstone-build-day/quiz.pdf",
+          "quiz_json_path": "curriculum/week-04/day-06-capstone-build-day/quiz.json"
         },
         {
           "day": "Sun",
@@ -1979,7 +2060,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-04/day-07-capstone-review-and-write-up/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-04/day-07-capstone-review-and-write-up/lesson.pdf",
-          "notebook_path": "curriculum/week-04/notebooks/day-07-capstone-review-and-write-up.ipynb"
+          "notebook_path": "curriculum/week-04/notebooks/day-07-capstone-review-and-write-up.ipynb",
+          "quiz_markdown_path": "curriculum/week-04/day-07-capstone-review-and-write-up/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-04/day-07-capstone-review-and-write-up/quiz.pdf",
+          "quiz_json_path": "curriculum/week-04/day-07-capstone-review-and-write-up/quiz.json"
         }
       ],
       "concepts": [
@@ -2101,7 +2185,10 @@
           "next_topic": "Linear regression as an ML baseline",
           "lesson_markdown_path": "curriculum/week-05/day-01-prediction-problems-in-finance-what-are-we-forecasting/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-05/day-01-prediction-problems-in-finance-what-are-we-forecasting/lesson.pdf",
-          "notebook_path": "curriculum/week-05/notebooks/day-01-prediction-problems-in-finance-what-are-we-forecasting.ipynb"
+          "notebook_path": "curriculum/week-05/notebooks/day-01-prediction-problems-in-finance-what-are-we-forecasting.ipynb",
+          "quiz_markdown_path": "curriculum/week-05/day-01-prediction-problems-in-finance-what-are-we-forecasting/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-05/day-01-prediction-problems-in-finance-what-are-we-forecasting/quiz.pdf",
+          "quiz_json_path": "curriculum/week-05/day-01-prediction-problems-in-finance-what-are-we-forecasting/quiz.json"
         },
         {
           "day": "Tue",
@@ -2165,7 +2252,10 @@
           "next_topic": "Feature engineering from price and volume data",
           "lesson_markdown_path": "curriculum/week-05/day-02-linear-regression-as-an-ml-baseline/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-05/day-02-linear-regression-as-an-ml-baseline/lesson.pdf",
-          "notebook_path": "curriculum/week-05/notebooks/day-02-linear-regression-as-an-ml-baseline.ipynb"
+          "notebook_path": "curriculum/week-05/notebooks/day-02-linear-regression-as-an-ml-baseline.ipynb",
+          "quiz_markdown_path": "curriculum/week-05/day-02-linear-regression-as-an-ml-baseline/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-05/day-02-linear-regression-as-an-ml-baseline/quiz.pdf",
+          "quiz_json_path": "curriculum/week-05/day-02-linear-regression-as-an-ml-baseline/quiz.json"
         },
         {
           "day": "Wed",
@@ -2229,7 +2319,10 @@
           "next_topic": "Train, validation, test split and leakage",
           "lesson_markdown_path": "curriculum/week-05/day-03-feature-engineering-from-price-and-volume-data/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-05/day-03-feature-engineering-from-price-and-volume-data/lesson.pdf",
-          "notebook_path": "curriculum/week-05/notebooks/day-03-feature-engineering-from-price-and-volume-data.ipynb"
+          "notebook_path": "curriculum/week-05/notebooks/day-03-feature-engineering-from-price-and-volume-data.ipynb",
+          "quiz_markdown_path": "curriculum/week-05/day-03-feature-engineering-from-price-and-volume-data/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-05/day-03-feature-engineering-from-price-and-volume-data/quiz.pdf",
+          "quiz_json_path": "curriculum/week-05/day-03-feature-engineering-from-price-and-volume-data/quiz.json"
         },
         {
           "day": "Thu",
@@ -2293,7 +2386,10 @@
           "next_topic": "Regularization and overfitting intuition",
           "lesson_markdown_path": "curriculum/week-05/day-04-train-validation-test-split-and-leakage/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-05/day-04-train-validation-test-split-and-leakage/lesson.pdf",
-          "notebook_path": "curriculum/week-05/notebooks/day-04-train-validation-test-split-and-leakage.ipynb"
+          "notebook_path": "curriculum/week-05/notebooks/day-04-train-validation-test-split-and-leakage.ipynb",
+          "quiz_markdown_path": "curriculum/week-05/day-04-train-validation-test-split-and-leakage/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-05/day-04-train-validation-test-split-and-leakage/quiz.pdf",
+          "quiz_json_path": "curriculum/week-05/day-04-train-validation-test-split-and-leakage/quiz.json"
         },
         {
           "day": "Fri",
@@ -2357,7 +2453,10 @@
           "next_topic": "Mini research lab on next-day return prediction",
           "lesson_markdown_path": "curriculum/week-05/day-05-regularization-and-overfitting-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-05/day-05-regularization-and-overfitting-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-05/notebooks/day-05-regularization-and-overfitting-intuition.ipynb"
+          "notebook_path": "curriculum/week-05/notebooks/day-05-regularization-and-overfitting-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-05/day-05-regularization-and-overfitting-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-05/day-05-regularization-and-overfitting-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-05/day-05-regularization-and-overfitting-intuition/quiz.json"
         },
         {
           "day": "Sat",
@@ -2421,7 +2520,10 @@
           "next_topic": "Review and checkpoint",
           "lesson_markdown_path": "curriculum/week-05/day-06-mini-research-lab-on-next-day-return-prediction/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-05/day-06-mini-research-lab-on-next-day-return-prediction/lesson.pdf",
-          "notebook_path": "curriculum/week-05/notebooks/day-06-mini-research-lab-on-next-day-return-prediction.ipynb"
+          "notebook_path": "curriculum/week-05/notebooks/day-06-mini-research-lab-on-next-day-return-prediction.ipynb",
+          "quiz_markdown_path": "curriculum/week-05/day-06-mini-research-lab-on-next-day-return-prediction/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-05/day-06-mini-research-lab-on-next-day-return-prediction/quiz.pdf",
+          "quiz_json_path": "curriculum/week-05/day-06-mini-research-lab-on-next-day-return-prediction/quiz.json"
         },
         {
           "day": "Sun",
@@ -2485,7 +2587,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-05/day-07-review-and-checkpoint/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-05/day-07-review-and-checkpoint/lesson.pdf",
-          "notebook_path": "curriculum/week-05/notebooks/day-07-review-and-checkpoint.ipynb"
+          "notebook_path": "curriculum/week-05/notebooks/day-07-review-and-checkpoint.ipynb",
+          "quiz_markdown_path": "curriculum/week-05/day-07-review-and-checkpoint/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-05/day-07-review-and-checkpoint/quiz.pdf",
+          "quiz_json_path": "curriculum/week-05/day-07-review-and-checkpoint/quiz.json"
         }
       ],
       "concepts": [
@@ -2601,7 +2706,10 @@
           "next_topic": "Confusion matrix, precision, recall, F1, and ROC-AUC",
           "lesson_markdown_path": "curriculum/week-06/day-01-classification-intuition-and-decision-boundaries/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-06/day-01-classification-intuition-and-decision-boundaries/lesson.pdf",
-          "notebook_path": "curriculum/week-06/notebooks/day-01-classification-intuition-and-decision-boundaries.ipynb"
+          "notebook_path": "curriculum/week-06/notebooks/day-01-classification-intuition-and-decision-boundaries.ipynb",
+          "quiz_markdown_path": "curriculum/week-06/day-01-classification-intuition-and-decision-boundaries/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-06/day-01-classification-intuition-and-decision-boundaries/quiz.pdf",
+          "quiz_json_path": "curriculum/week-06/day-01-classification-intuition-and-decision-boundaries/quiz.json"
         },
         {
           "day": "Tue",
@@ -2665,7 +2773,10 @@
           "next_topic": "Class imbalance and cost-sensitive decisions",
           "lesson_markdown_path": "curriculum/week-06/day-02-confusion-matrix-precision-recall-f1-and-roc-auc/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-06/day-02-confusion-matrix-precision-recall-f1-and-roc-auc/lesson.pdf",
-          "notebook_path": "curriculum/week-06/notebooks/day-02-confusion-matrix-precision-recall-f1-and-roc-auc.ipynb"
+          "notebook_path": "curriculum/week-06/notebooks/day-02-confusion-matrix-precision-recall-f1-and-roc-auc.ipynb",
+          "quiz_markdown_path": "curriculum/week-06/day-02-confusion-matrix-precision-recall-f1-and-roc-auc/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-06/day-02-confusion-matrix-precision-recall-f1-and-roc-auc/quiz.pdf",
+          "quiz_json_path": "curriculum/week-06/day-02-confusion-matrix-precision-recall-f1-and-roc-auc/quiz.json"
         },
         {
           "day": "Wed",
@@ -2729,7 +2840,10 @@
           "next_topic": "Cross-validation, resampling, and model stability",
           "lesson_markdown_path": "curriculum/week-06/day-03-class-imbalance-and-cost-sensitive-decisions/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-06/day-03-class-imbalance-and-cost-sensitive-decisions/lesson.pdf",
-          "notebook_path": "curriculum/week-06/notebooks/day-03-class-imbalance-and-cost-sensitive-decisions.ipynb"
+          "notebook_path": "curriculum/week-06/notebooks/day-03-class-imbalance-and-cost-sensitive-decisions.ipynb",
+          "quiz_markdown_path": "curriculum/week-06/day-03-class-imbalance-and-cost-sensitive-decisions/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-06/day-03-class-imbalance-and-cost-sensitive-decisions/quiz.pdf",
+          "quiz_json_path": "curriculum/week-06/day-03-class-imbalance-and-cost-sensitive-decisions/quiz.json"
         },
         {
           "day": "Thu",
@@ -2793,7 +2907,10 @@
           "next_topic": "Credit risk and event prediction examples",
           "lesson_markdown_path": "curriculum/week-06/day-04-cross-validation-resampling-and-model-stability/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-06/day-04-cross-validation-resampling-and-model-stability/lesson.pdf",
-          "notebook_path": "curriculum/week-06/notebooks/day-04-cross-validation-resampling-and-model-stability.ipynb"
+          "notebook_path": "curriculum/week-06/notebooks/day-04-cross-validation-resampling-and-model-stability.ipynb",
+          "quiz_markdown_path": "curriculum/week-06/day-04-cross-validation-resampling-and-model-stability/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-06/day-04-cross-validation-resampling-and-model-stability/quiz.pdf",
+          "quiz_json_path": "curriculum/week-06/day-04-cross-validation-resampling-and-model-stability/quiz.json"
         },
         {
           "day": "Fri",
@@ -2857,7 +2974,10 @@
           "next_topic": "Mini lab: classify positive versus negative future returns",
           "lesson_markdown_path": "curriculum/week-06/day-05-credit-risk-and-event-prediction-examples/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-06/day-05-credit-risk-and-event-prediction-examples/lesson.pdf",
-          "notebook_path": "curriculum/week-06/notebooks/day-05-credit-risk-and-event-prediction-examples.ipynb"
+          "notebook_path": "curriculum/week-06/notebooks/day-05-credit-risk-and-event-prediction-examples.ipynb",
+          "quiz_markdown_path": "curriculum/week-06/day-05-credit-risk-and-event-prediction-examples/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-06/day-05-credit-risk-and-event-prediction-examples/quiz.pdf",
+          "quiz_json_path": "curriculum/week-06/day-05-credit-risk-and-event-prediction-examples/quiz.json"
         },
         {
           "day": "Sat",
@@ -2921,7 +3041,10 @@
           "next_topic": "Review and error-log day",
           "lesson_markdown_path": "curriculum/week-06/day-06-mini-lab-classify-positive-versus-negative-future-returns/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-06/day-06-mini-lab-classify-positive-versus-negative-future-returns/lesson.pdf",
-          "notebook_path": "curriculum/week-06/notebooks/day-06-mini-lab-classify-positive-versus-negative-future-returns.ipynb"
+          "notebook_path": "curriculum/week-06/notebooks/day-06-mini-lab-classify-positive-versus-negative-future-returns.ipynb",
+          "quiz_markdown_path": "curriculum/week-06/day-06-mini-lab-classify-positive-versus-negative-future-returns/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-06/day-06-mini-lab-classify-positive-versus-negative-future-returns/quiz.pdf",
+          "quiz_json_path": "curriculum/week-06/day-06-mini-lab-classify-positive-versus-negative-future-returns/quiz.json"
         },
         {
           "day": "Sun",
@@ -2985,7 +3108,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-06/day-07-review-and-error-log-day/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-06/day-07-review-and-error-log-day/lesson.pdf",
-          "notebook_path": "curriculum/week-06/notebooks/day-07-review-and-error-log-day.ipynb"
+          "notebook_path": "curriculum/week-06/notebooks/day-07-review-and-error-log-day.ipynb",
+          "quiz_markdown_path": "curriculum/week-06/day-07-review-and-error-log-day/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-06/day-07-review-and-error-log-day/quiz.pdf",
+          "quiz_json_path": "curriculum/week-06/day-07-review-and-error-log-day/quiz.json"
         }
       ],
       "concepts": [
@@ -3101,7 +3227,10 @@
           "next_topic": "Clustering assets and regimes",
           "lesson_markdown_path": "curriculum/week-07/day-01-unsupervised-learning-overview/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-07/day-01-unsupervised-learning-overview/lesson.pdf",
-          "notebook_path": "curriculum/week-07/notebooks/day-01-unsupervised-learning-overview.ipynb"
+          "notebook_path": "curriculum/week-07/notebooks/day-01-unsupervised-learning-overview.ipynb",
+          "quiz_markdown_path": "curriculum/week-07/day-01-unsupervised-learning-overview/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-07/day-01-unsupervised-learning-overview/quiz.pdf",
+          "quiz_json_path": "curriculum/week-07/day-01-unsupervised-learning-overview/quiz.json"
         },
         {
           "day": "Tue",
@@ -3165,7 +3294,10 @@
           "next_topic": "PCA and variance decomposition",
           "lesson_markdown_path": "curriculum/week-07/day-02-clustering-assets-and-regimes/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-07/day-02-clustering-assets-and-regimes/lesson.pdf",
-          "notebook_path": "curriculum/week-07/notebooks/day-02-clustering-assets-and-regimes.ipynb"
+          "notebook_path": "curriculum/week-07/notebooks/day-02-clustering-assets-and-regimes.ipynb",
+          "quiz_markdown_path": "curriculum/week-07/day-02-clustering-assets-and-regimes/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-07/day-02-clustering-assets-and-regimes/quiz.pdf",
+          "quiz_json_path": "curriculum/week-07/day-02-clustering-assets-and-regimes/quiz.json"
         },
         {
           "day": "Wed",
@@ -3229,7 +3361,10 @@
           "next_topic": "Factor intuition and common risk drivers",
           "lesson_markdown_path": "curriculum/week-07/day-03-pca-and-variance-decomposition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-07/day-03-pca-and-variance-decomposition/lesson.pdf",
-          "notebook_path": "curriculum/week-07/notebooks/day-03-pca-and-variance-decomposition.ipynb"
+          "notebook_path": "curriculum/week-07/notebooks/day-03-pca-and-variance-decomposition.ipynb",
+          "quiz_markdown_path": "curriculum/week-07/day-03-pca-and-variance-decomposition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-07/day-03-pca-and-variance-decomposition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-07/day-03-pca-and-variance-decomposition/quiz.json"
         },
         {
           "day": "Thu",
@@ -3293,7 +3428,10 @@
           "next_topic": "Feature compression and dimensionality reduction",
           "lesson_markdown_path": "curriculum/week-07/day-04-factor-intuition-and-common-risk-drivers/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-07/day-04-factor-intuition-and-common-risk-drivers/lesson.pdf",
-          "notebook_path": "curriculum/week-07/notebooks/day-04-factor-intuition-and-common-risk-drivers.ipynb"
+          "notebook_path": "curriculum/week-07/notebooks/day-04-factor-intuition-and-common-risk-drivers.ipynb",
+          "quiz_markdown_path": "curriculum/week-07/day-04-factor-intuition-and-common-risk-drivers/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-07/day-04-factor-intuition-and-common-risk-drivers/quiz.pdf",
+          "quiz_json_path": "curriculum/week-07/day-04-factor-intuition-and-common-risk-drivers/quiz.json"
         },
         {
           "day": "Fri",
@@ -3357,7 +3495,10 @@
           "next_topic": "Mini lab: cluster assets by behavior",
           "lesson_markdown_path": "curriculum/week-07/day-05-feature-compression-and-dimensionality-reduction/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-07/day-05-feature-compression-and-dimensionality-reduction/lesson.pdf",
-          "notebook_path": "curriculum/week-07/notebooks/day-05-feature-compression-and-dimensionality-reduction.ipynb"
+          "notebook_path": "curriculum/week-07/notebooks/day-05-feature-compression-and-dimensionality-reduction.ipynb",
+          "quiz_markdown_path": "curriculum/week-07/day-05-feature-compression-and-dimensionality-reduction/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-07/day-05-feature-compression-and-dimensionality-reduction/quiz.pdf",
+          "quiz_json_path": "curriculum/week-07/day-05-feature-compression-and-dimensionality-reduction/quiz.json"
         },
         {
           "day": "Sat",
@@ -3421,7 +3562,10 @@
           "next_topic": "Review and communication practice",
           "lesson_markdown_path": "curriculum/week-07/day-06-mini-lab-cluster-assets-by-behavior/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-07/day-06-mini-lab-cluster-assets-by-behavior/lesson.pdf",
-          "notebook_path": "curriculum/week-07/notebooks/day-06-mini-lab-cluster-assets-by-behavior.ipynb"
+          "notebook_path": "curriculum/week-07/notebooks/day-06-mini-lab-cluster-assets-by-behavior.ipynb",
+          "quiz_markdown_path": "curriculum/week-07/day-06-mini-lab-cluster-assets-by-behavior/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-07/day-06-mini-lab-cluster-assets-by-behavior/quiz.pdf",
+          "quiz_json_path": "curriculum/week-07/day-06-mini-lab-cluster-assets-by-behavior/quiz.json"
         },
         {
           "day": "Sun",
@@ -3485,7 +3629,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-07/day-07-review-and-communication-practice/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-07/day-07-review-and-communication-practice/lesson.pdf",
-          "notebook_path": "curriculum/week-07/notebooks/day-07-review-and-communication-practice.ipynb"
+          "notebook_path": "curriculum/week-07/notebooks/day-07-review-and-communication-practice.ipynb",
+          "quiz_markdown_path": "curriculum/week-07/day-07-review-and-communication-practice/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-07/day-07-review-and-communication-practice/quiz.pdf",
+          "quiz_json_path": "curriculum/week-07/day-07-review-and-communication-practice/quiz.json"
         }
       ],
       "concepts": [
@@ -3601,7 +3748,10 @@
           "next_topic": "Stationarity, trends, seasonality, and differencing",
           "lesson_markdown_path": "curriculum/week-08/day-01-what-makes-time-series-different-from-tabular-data/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-08/day-01-what-makes-time-series-different-from-tabular-data/lesson.pdf",
-          "notebook_path": "curriculum/week-08/notebooks/day-01-what-makes-time-series-different-from-tabular-data.ipynb"
+          "notebook_path": "curriculum/week-08/notebooks/day-01-what-makes-time-series-different-from-tabular-data.ipynb",
+          "quiz_markdown_path": "curriculum/week-08/day-01-what-makes-time-series-different-from-tabular-data/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-08/day-01-what-makes-time-series-different-from-tabular-data/quiz.pdf",
+          "quiz_json_path": "curriculum/week-08/day-01-what-makes-time-series-different-from-tabular-data/quiz.json"
         },
         {
           "day": "Tue",
@@ -3665,7 +3815,10 @@
           "next_topic": "AR, MA, and ARIMA intuition",
           "lesson_markdown_path": "curriculum/week-08/day-02-stationarity-trends-seasonality-and-differencing/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-08/day-02-stationarity-trends-seasonality-and-differencing/lesson.pdf",
-          "notebook_path": "curriculum/week-08/notebooks/day-02-stationarity-trends-seasonality-and-differencing.ipynb"
+          "notebook_path": "curriculum/week-08/notebooks/day-02-stationarity-trends-seasonality-and-differencing.ipynb",
+          "quiz_markdown_path": "curriculum/week-08/day-02-stationarity-trends-seasonality-and-differencing/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-08/day-02-stationarity-trends-seasonality-and-differencing/quiz.pdf",
+          "quiz_json_path": "curriculum/week-08/day-02-stationarity-trends-seasonality-and-differencing/quiz.json"
         },
         {
           "day": "Wed",
@@ -3729,7 +3882,10 @@
           "next_topic": "Autocorrelation, partial autocorrelation, and lag structure",
           "lesson_markdown_path": "curriculum/week-08/day-03-ar-ma-and-arima-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-08/day-03-ar-ma-and-arima-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-08/notebooks/day-03-ar-ma-and-arima-intuition.ipynb"
+          "notebook_path": "curriculum/week-08/notebooks/day-03-ar-ma-and-arima-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-08/day-03-ar-ma-and-arima-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-08/day-03-ar-ma-and-arima-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-08/day-03-ar-ma-and-arima-intuition/quiz.json"
         },
         {
           "day": "Thu",
@@ -3793,7 +3949,10 @@
           "next_topic": "Walk-forward validation and forecast error metrics",
           "lesson_markdown_path": "curriculum/week-08/day-04-autocorrelation-partial-autocorrelation-and-lag-structure/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-08/day-04-autocorrelation-partial-autocorrelation-and-lag-structure/lesson.pdf",
-          "notebook_path": "curriculum/week-08/notebooks/day-04-autocorrelation-partial-autocorrelation-and-lag-structure.ipynb"
+          "notebook_path": "curriculum/week-08/notebooks/day-04-autocorrelation-partial-autocorrelation-and-lag-structure.ipynb",
+          "quiz_markdown_path": "curriculum/week-08/day-04-autocorrelation-partial-autocorrelation-and-lag-structure/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-08/day-04-autocorrelation-partial-autocorrelation-and-lag-structure/quiz.pdf",
+          "quiz_json_path": "curriculum/week-08/day-04-autocorrelation-partial-autocorrelation-and-lag-structure/quiz.json"
         },
         {
           "day": "Fri",
@@ -3857,7 +4016,10 @@
           "next_topic": "Capstone build day",
           "lesson_markdown_path": "curriculum/week-08/day-05-walk-forward-validation-and-forecast-error-metrics/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-08/day-05-walk-forward-validation-and-forecast-error-metrics/lesson.pdf",
-          "notebook_path": "curriculum/week-08/notebooks/day-05-walk-forward-validation-and-forecast-error-metrics.ipynb"
+          "notebook_path": "curriculum/week-08/notebooks/day-05-walk-forward-validation-and-forecast-error-metrics.ipynb",
+          "quiz_markdown_path": "curriculum/week-08/day-05-walk-forward-validation-and-forecast-error-metrics/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-08/day-05-walk-forward-validation-and-forecast-error-metrics/quiz.pdf",
+          "quiz_json_path": "curriculum/week-08/day-05-walk-forward-validation-and-forecast-error-metrics/quiz.json"
         },
         {
           "day": "Sat",
@@ -3921,7 +4083,10 @@
           "next_topic": "Capstone review and write-up",
           "lesson_markdown_path": "curriculum/week-08/day-06-capstone-build-day/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-08/day-06-capstone-build-day/lesson.pdf",
-          "notebook_path": "curriculum/week-08/notebooks/day-06-capstone-build-day.ipynb"
+          "notebook_path": "curriculum/week-08/notebooks/day-06-capstone-build-day.ipynb",
+          "quiz_markdown_path": "curriculum/week-08/day-06-capstone-build-day/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-08/day-06-capstone-build-day/quiz.pdf",
+          "quiz_json_path": "curriculum/week-08/day-06-capstone-build-day/quiz.json"
         },
         {
           "day": "Sun",
@@ -3985,7 +4150,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-08/day-07-capstone-review-and-write-up/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-08/day-07-capstone-review-and-write-up/lesson.pdf",
-          "notebook_path": "curriculum/week-08/notebooks/day-07-capstone-review-and-write-up.ipynb"
+          "notebook_path": "curriculum/week-08/notebooks/day-07-capstone-review-and-write-up.ipynb",
+          "quiz_markdown_path": "curriculum/week-08/day-07-capstone-review-and-write-up/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-08/day-07-capstone-review-and-write-up/quiz.pdf",
+          "quiz_json_path": "curriculum/week-08/day-07-capstone-review-and-write-up/quiz.json"
         }
       ],
       "concepts": [
@@ -4107,7 +4275,10 @@
           "next_topic": "Bid-ask spread, liquidity, and adverse selection",
           "lesson_markdown_path": "curriculum/week-09/day-01-market-microstructure-and-order-books/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-09/day-01-market-microstructure-and-order-books/lesson.pdf",
-          "notebook_path": "curriculum/week-09/notebooks/day-01-market-microstructure-and-order-books.ipynb"
+          "notebook_path": "curriculum/week-09/notebooks/day-01-market-microstructure-and-order-books.ipynb",
+          "quiz_markdown_path": "curriculum/week-09/day-01-market-microstructure-and-order-books/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-09/day-01-market-microstructure-and-order-books/quiz.pdf",
+          "quiz_json_path": "curriculum/week-09/day-01-market-microstructure-and-order-books/quiz.json"
         },
         {
           "day": "Tue",
@@ -4171,7 +4342,10 @@
           "next_topic": "Order types and execution choices",
           "lesson_markdown_path": "curriculum/week-09/day-02-bid-ask-spread-liquidity-and-adverse-selection/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-09/day-02-bid-ask-spread-liquidity-and-adverse-selection/lesson.pdf",
-          "notebook_path": "curriculum/week-09/notebooks/day-02-bid-ask-spread-liquidity-and-adverse-selection.ipynb"
+          "notebook_path": "curriculum/week-09/notebooks/day-02-bid-ask-spread-liquidity-and-adverse-selection.ipynb",
+          "quiz_markdown_path": "curriculum/week-09/day-02-bid-ask-spread-liquidity-and-adverse-selection/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-09/day-02-bid-ask-spread-liquidity-and-adverse-selection/quiz.pdf",
+          "quiz_json_path": "curriculum/week-09/day-02-bid-ask-spread-liquidity-and-adverse-selection/quiz.json"
         },
         {
           "day": "Wed",
@@ -4235,7 +4409,10 @@
           "next_topic": "Transaction costs and slippage models",
           "lesson_markdown_path": "curriculum/week-09/day-03-order-types-and-execution-choices/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-09/day-03-order-types-and-execution-choices/lesson.pdf",
-          "notebook_path": "curriculum/week-09/notebooks/day-03-order-types-and-execution-choices.ipynb"
+          "notebook_path": "curriculum/week-09/notebooks/day-03-order-types-and-execution-choices.ipynb",
+          "quiz_markdown_path": "curriculum/week-09/day-03-order-types-and-execution-choices/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-09/day-03-order-types-and-execution-choices/quiz.pdf",
+          "quiz_json_path": "curriculum/week-09/day-03-order-types-and-execution-choices/quiz.json"
         },
         {
           "day": "Thu",
@@ -4299,7 +4476,10 @@
           "next_topic": "Turnover, holding period, and capacity intuition",
           "lesson_markdown_path": "curriculum/week-09/day-04-transaction-costs-and-slippage-models/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-09/day-04-transaction-costs-and-slippage-models/lesson.pdf",
-          "notebook_path": "curriculum/week-09/notebooks/day-04-transaction-costs-and-slippage-models.ipynb"
+          "notebook_path": "curriculum/week-09/notebooks/day-04-transaction-costs-and-slippage-models.ipynb",
+          "quiz_markdown_path": "curriculum/week-09/day-04-transaction-costs-and-slippage-models/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-09/day-04-transaction-costs-and-slippage-models/quiz.pdf",
+          "quiz_json_path": "curriculum/week-09/day-04-transaction-costs-and-slippage-models/quiz.json"
         },
         {
           "day": "Fri",
@@ -4363,7 +4543,10 @@
           "next_topic": "Mini lab: strategy before and after costs",
           "lesson_markdown_path": "curriculum/week-09/day-05-turnover-holding-period-and-capacity-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-09/day-05-turnover-holding-period-and-capacity-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-09/notebooks/day-05-turnover-holding-period-and-capacity-intuition.ipynb"
+          "notebook_path": "curriculum/week-09/notebooks/day-05-turnover-holding-period-and-capacity-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-09/day-05-turnover-holding-period-and-capacity-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-09/day-05-turnover-holding-period-and-capacity-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-09/day-05-turnover-holding-period-and-capacity-intuition/quiz.json"
         },
         {
           "day": "Sat",
@@ -4427,7 +4610,10 @@
           "next_topic": "Review and trading diary",
           "lesson_markdown_path": "curriculum/week-09/day-06-mini-lab-strategy-before-and-after-costs/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-09/day-06-mini-lab-strategy-before-and-after-costs/lesson.pdf",
-          "notebook_path": "curriculum/week-09/notebooks/day-06-mini-lab-strategy-before-and-after-costs.ipynb"
+          "notebook_path": "curriculum/week-09/notebooks/day-06-mini-lab-strategy-before-and-after-costs.ipynb",
+          "quiz_markdown_path": "curriculum/week-09/day-06-mini-lab-strategy-before-and-after-costs/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-09/day-06-mini-lab-strategy-before-and-after-costs/quiz.pdf",
+          "quiz_json_path": "curriculum/week-09/day-06-mini-lab-strategy-before-and-after-costs/quiz.json"
         },
         {
           "day": "Sun",
@@ -4491,7 +4677,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-09/day-07-review-and-trading-diary/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-09/day-07-review-and-trading-diary/lesson.pdf",
-          "notebook_path": "curriculum/week-09/notebooks/day-07-review-and-trading-diary.ipynb"
+          "notebook_path": "curriculum/week-09/notebooks/day-07-review-and-trading-diary.ipynb",
+          "quiz_markdown_path": "curriculum/week-09/day-07-review-and-trading-diary/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-09/day-07-review-and-trading-diary/quiz.pdf",
+          "quiz_json_path": "curriculum/week-09/day-07-review-and-trading-diary/quiz.json"
         }
       ],
       "concepts": [
@@ -4607,7 +4796,10 @@
           "next_topic": "Efficient frontier and Sharpe ratio",
           "lesson_markdown_path": "curriculum/week-10/day-01-markowitz-portfolio-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-10/day-01-markowitz-portfolio-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-10/notebooks/day-01-markowitz-portfolio-intuition.ipynb"
+          "notebook_path": "curriculum/week-10/notebooks/day-01-markowitz-portfolio-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-10/day-01-markowitz-portfolio-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-10/day-01-markowitz-portfolio-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-10/day-01-markowitz-portfolio-intuition/quiz.json"
         },
         {
           "day": "Tue",
@@ -4671,7 +4863,10 @@
           "next_topic": "CAPM and beta intuition",
           "lesson_markdown_path": "curriculum/week-10/day-02-efficient-frontier-and-sharpe-ratio/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-10/day-02-efficient-frontier-and-sharpe-ratio/lesson.pdf",
-          "notebook_path": "curriculum/week-10/notebooks/day-02-efficient-frontier-and-sharpe-ratio.ipynb"
+          "notebook_path": "curriculum/week-10/notebooks/day-02-efficient-frontier-and-sharpe-ratio.ipynb",
+          "quiz_markdown_path": "curriculum/week-10/day-02-efficient-frontier-and-sharpe-ratio/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-10/day-02-efficient-frontier-and-sharpe-ratio/quiz.pdf",
+          "quiz_json_path": "curriculum/week-10/day-02-efficient-frontier-and-sharpe-ratio/quiz.json"
         },
         {
           "day": "Wed",
@@ -4735,7 +4930,10 @@
           "next_topic": "Factor investing basics",
           "lesson_markdown_path": "curriculum/week-10/day-03-capm-and-beta-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-10/day-03-capm-and-beta-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-10/notebooks/day-03-capm-and-beta-intuition.ipynb"
+          "notebook_path": "curriculum/week-10/notebooks/day-03-capm-and-beta-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-10/day-03-capm-and-beta-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-10/day-03-capm-and-beta-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-10/day-03-capm-and-beta-intuition/quiz.json"
         },
         {
           "day": "Thu",
@@ -4799,7 +4997,10 @@
           "next_topic": "Risk budgeting and constraints",
           "lesson_markdown_path": "curriculum/week-10/day-04-factor-investing-basics/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-10/day-04-factor-investing-basics/lesson.pdf",
-          "notebook_path": "curriculum/week-10/notebooks/day-04-factor-investing-basics.ipynb"
+          "notebook_path": "curriculum/week-10/notebooks/day-04-factor-investing-basics.ipynb",
+          "quiz_markdown_path": "curriculum/week-10/day-04-factor-investing-basics/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-10/day-04-factor-investing-basics/quiz.pdf",
+          "quiz_json_path": "curriculum/week-10/day-04-factor-investing-basics/quiz.json"
         },
         {
           "day": "Fri",
@@ -4863,7 +5064,10 @@
           "next_topic": "Mini lab: factor exposure overview",
           "lesson_markdown_path": "curriculum/week-10/day-05-risk-budgeting-and-constraints/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-10/day-05-risk-budgeting-and-constraints/lesson.pdf",
-          "notebook_path": "curriculum/week-10/notebooks/day-05-risk-budgeting-and-constraints.ipynb"
+          "notebook_path": "curriculum/week-10/notebooks/day-05-risk-budgeting-and-constraints.ipynb",
+          "quiz_markdown_path": "curriculum/week-10/day-05-risk-budgeting-and-constraints/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-10/day-05-risk-budgeting-and-constraints/quiz.pdf",
+          "quiz_json_path": "curriculum/week-10/day-05-risk-budgeting-and-constraints/quiz.json"
         },
         {
           "day": "Sat",
@@ -4927,7 +5131,10 @@
           "next_topic": "Review and checkpoint",
           "lesson_markdown_path": "curriculum/week-10/day-06-mini-lab-factor-exposure-overview/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-10/day-06-mini-lab-factor-exposure-overview/lesson.pdf",
-          "notebook_path": "curriculum/week-10/notebooks/day-06-mini-lab-factor-exposure-overview.ipynb"
+          "notebook_path": "curriculum/week-10/notebooks/day-06-mini-lab-factor-exposure-overview.ipynb",
+          "quiz_markdown_path": "curriculum/week-10/day-06-mini-lab-factor-exposure-overview/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-10/day-06-mini-lab-factor-exposure-overview/quiz.pdf",
+          "quiz_json_path": "curriculum/week-10/day-06-mini-lab-factor-exposure-overview/quiz.json"
         },
         {
           "day": "Sun",
@@ -4991,7 +5198,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-10/day-07-review-and-checkpoint/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-10/day-07-review-and-checkpoint/lesson.pdf",
-          "notebook_path": "curriculum/week-10/notebooks/day-07-review-and-checkpoint.ipynb"
+          "notebook_path": "curriculum/week-10/notebooks/day-07-review-and-checkpoint.ipynb",
+          "quiz_markdown_path": "curriculum/week-10/day-07-review-and-checkpoint/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-10/day-07-review-and-checkpoint/quiz.pdf",
+          "quiz_json_path": "curriculum/week-10/day-07-review-and-checkpoint/quiz.json"
         }
       ],
       "concepts": [
@@ -5107,7 +5317,10 @@
           "next_topic": "Yield, yield curve, and term structure intuition",
           "lesson_markdown_path": "curriculum/week-11/day-01-bond-cash-flows-and-discounting/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-11/day-01-bond-cash-flows-and-discounting/lesson.pdf",
-          "notebook_path": "curriculum/week-11/notebooks/day-01-bond-cash-flows-and-discounting.ipynb"
+          "notebook_path": "curriculum/week-11/notebooks/day-01-bond-cash-flows-and-discounting.ipynb",
+          "quiz_markdown_path": "curriculum/week-11/day-01-bond-cash-flows-and-discounting/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-11/day-01-bond-cash-flows-and-discounting/quiz.pdf",
+          "quiz_json_path": "curriculum/week-11/day-01-bond-cash-flows-and-discounting/quiz.json"
         },
         {
           "day": "Tue",
@@ -5171,7 +5384,10 @@
           "next_topic": "Duration and interest rate sensitivity",
           "lesson_markdown_path": "curriculum/week-11/day-02-yield-yield-curve-and-term-structure-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-11/day-02-yield-yield-curve-and-term-structure-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-11/notebooks/day-02-yield-yield-curve-and-term-structure-intuition.ipynb"
+          "notebook_path": "curriculum/week-11/notebooks/day-02-yield-yield-curve-and-term-structure-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-11/day-02-yield-yield-curve-and-term-structure-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-11/day-02-yield-yield-curve-and-term-structure-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-11/day-02-yield-yield-curve-and-term-structure-intuition/quiz.json"
         },
         {
           "day": "Wed",
@@ -5235,7 +5451,10 @@
           "next_topic": "Convexity and nonlinear bond behavior",
           "lesson_markdown_path": "curriculum/week-11/day-03-duration-and-interest-rate-sensitivity/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-11/day-03-duration-and-interest-rate-sensitivity/lesson.pdf",
-          "notebook_path": "curriculum/week-11/notebooks/day-03-duration-and-interest-rate-sensitivity.ipynb"
+          "notebook_path": "curriculum/week-11/notebooks/day-03-duration-and-interest-rate-sensitivity.ipynb",
+          "quiz_markdown_path": "curriculum/week-11/day-03-duration-and-interest-rate-sensitivity/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-11/day-03-duration-and-interest-rate-sensitivity/quiz.pdf",
+          "quiz_json_path": "curriculum/week-11/day-03-duration-and-interest-rate-sensitivity/quiz.json"
         },
         {
           "day": "Thu",
@@ -5299,7 +5518,10 @@
           "next_topic": "Credit spreads and default risk basics",
           "lesson_markdown_path": "curriculum/week-11/day-04-convexity-and-nonlinear-bond-behavior/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-11/day-04-convexity-and-nonlinear-bond-behavior/lesson.pdf",
-          "notebook_path": "curriculum/week-11/notebooks/day-04-convexity-and-nonlinear-bond-behavior.ipynb"
+          "notebook_path": "curriculum/week-11/notebooks/day-04-convexity-and-nonlinear-bond-behavior.ipynb",
+          "quiz_markdown_path": "curriculum/week-11/day-04-convexity-and-nonlinear-bond-behavior/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-11/day-04-convexity-and-nonlinear-bond-behavior/quiz.pdf",
+          "quiz_json_path": "curriculum/week-11/day-04-convexity-and-nonlinear-bond-behavior/quiz.json"
         },
         {
           "day": "Fri",
@@ -5363,7 +5585,10 @@
           "next_topic": "Mini lab: simple bond price sensitivity",
           "lesson_markdown_path": "curriculum/week-11/day-05-credit-spreads-and-default-risk-basics/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-11/day-05-credit-spreads-and-default-risk-basics/lesson.pdf",
-          "notebook_path": "curriculum/week-11/notebooks/day-05-credit-spreads-and-default-risk-basics.ipynb"
+          "notebook_path": "curriculum/week-11/notebooks/day-05-credit-spreads-and-default-risk-basics.ipynb",
+          "quiz_markdown_path": "curriculum/week-11/day-05-credit-spreads-and-default-risk-basics/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-11/day-05-credit-spreads-and-default-risk-basics/quiz.pdf",
+          "quiz_json_path": "curriculum/week-11/day-05-credit-spreads-and-default-risk-basics/quiz.json"
         },
         {
           "day": "Sat",
@@ -5427,7 +5652,10 @@
           "next_topic": "Review and recap",
           "lesson_markdown_path": "curriculum/week-11/day-06-mini-lab-simple-bond-price-sensitivity/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-11/day-06-mini-lab-simple-bond-price-sensitivity/lesson.pdf",
-          "notebook_path": "curriculum/week-11/notebooks/day-06-mini-lab-simple-bond-price-sensitivity.ipynb"
+          "notebook_path": "curriculum/week-11/notebooks/day-06-mini-lab-simple-bond-price-sensitivity.ipynb",
+          "quiz_markdown_path": "curriculum/week-11/day-06-mini-lab-simple-bond-price-sensitivity/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-11/day-06-mini-lab-simple-bond-price-sensitivity/quiz.pdf",
+          "quiz_json_path": "curriculum/week-11/day-06-mini-lab-simple-bond-price-sensitivity/quiz.json"
         },
         {
           "day": "Sun",
@@ -5491,7 +5719,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-11/day-07-review-and-recap/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-11/day-07-review-and-recap/lesson.pdf",
-          "notebook_path": "curriculum/week-11/notebooks/day-07-review-and-recap.ipynb"
+          "notebook_path": "curriculum/week-11/notebooks/day-07-review-and-recap.ipynb",
+          "quiz_markdown_path": "curriculum/week-11/day-07-review-and-recap/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-11/day-07-review-and-recap/quiz.pdf",
+          "quiz_json_path": "curriculum/week-11/day-07-review-and-recap/quiz.json"
         }
       ],
       "concepts": [
@@ -5607,7 +5838,10 @@
           "next_topic": "Calls, puts, and payoff diagrams",
           "lesson_markdown_path": "curriculum/week-12/day-01-forwards-futures-and-option-payoffs/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-12/day-01-forwards-futures-and-option-payoffs/lesson.pdf",
-          "notebook_path": "curriculum/week-12/notebooks/day-01-forwards-futures-and-option-payoffs.ipynb"
+          "notebook_path": "curriculum/week-12/notebooks/day-01-forwards-futures-and-option-payoffs.ipynb",
+          "quiz_markdown_path": "curriculum/week-12/day-01-forwards-futures-and-option-payoffs/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-12/day-01-forwards-futures-and-option-payoffs/quiz.pdf",
+          "quiz_json_path": "curriculum/week-12/day-01-forwards-futures-and-option-payoffs/quiz.json"
         },
         {
           "day": "Tue",
@@ -5671,7 +5905,10 @@
           "next_topic": "Option Greeks intuition",
           "lesson_markdown_path": "curriculum/week-12/day-02-calls-puts-and-payoff-diagrams/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-12/day-02-calls-puts-and-payoff-diagrams/lesson.pdf",
-          "notebook_path": "curriculum/week-12/notebooks/day-02-calls-puts-and-payoff-diagrams.ipynb"
+          "notebook_path": "curriculum/week-12/notebooks/day-02-calls-puts-and-payoff-diagrams.ipynb",
+          "quiz_markdown_path": "curriculum/week-12/day-02-calls-puts-and-payoff-diagrams/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-12/day-02-calls-puts-and-payoff-diagrams/quiz.pdf",
+          "quiz_json_path": "curriculum/week-12/day-02-calls-puts-and-payoff-diagrams/quiz.json"
         },
         {
           "day": "Wed",
@@ -5735,7 +5972,10 @@
           "next_topic": "Volatility smile and pricing inputs",
           "lesson_markdown_path": "curriculum/week-12/day-03-option-greeks-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-12/day-03-option-greeks-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-12/notebooks/day-03-option-greeks-intuition.ipynb"
+          "notebook_path": "curriculum/week-12/notebooks/day-03-option-greeks-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-12/day-03-option-greeks-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-12/day-03-option-greeks-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-12/day-03-option-greeks-intuition/quiz.json"
         },
         {
           "day": "Thu",
@@ -5799,7 +6039,10 @@
           "next_topic": "Risk management: VaR, stress, and scenarios",
           "lesson_markdown_path": "curriculum/week-12/day-04-volatility-smile-and-pricing-inputs/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-12/day-04-volatility-smile-and-pricing-inputs/lesson.pdf",
-          "notebook_path": "curriculum/week-12/notebooks/day-04-volatility-smile-and-pricing-inputs.ipynb"
+          "notebook_path": "curriculum/week-12/notebooks/day-04-volatility-smile-and-pricing-inputs.ipynb",
+          "quiz_markdown_path": "curriculum/week-12/day-04-volatility-smile-and-pricing-inputs/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-12/day-04-volatility-smile-and-pricing-inputs/quiz.pdf",
+          "quiz_json_path": "curriculum/week-12/day-04-volatility-smile-and-pricing-inputs/quiz.json"
         },
         {
           "day": "Fri",
@@ -5863,7 +6106,10 @@
           "next_topic": "Capstone build day",
           "lesson_markdown_path": "curriculum/week-12/day-05-risk-management-var-stress-and-scenarios/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-12/day-05-risk-management-var-stress-and-scenarios/lesson.pdf",
-          "notebook_path": "curriculum/week-12/notebooks/day-05-risk-management-var-stress-and-scenarios.ipynb"
+          "notebook_path": "curriculum/week-12/notebooks/day-05-risk-management-var-stress-and-scenarios.ipynb",
+          "quiz_markdown_path": "curriculum/week-12/day-05-risk-management-var-stress-and-scenarios/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-12/day-05-risk-management-var-stress-and-scenarios/quiz.pdf",
+          "quiz_json_path": "curriculum/week-12/day-05-risk-management-var-stress-and-scenarios/quiz.json"
         },
         {
           "day": "Sat",
@@ -5927,7 +6173,10 @@
           "next_topic": "Capstone review and write-up",
           "lesson_markdown_path": "curriculum/week-12/day-06-capstone-build-day/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-12/day-06-capstone-build-day/lesson.pdf",
-          "notebook_path": "curriculum/week-12/notebooks/day-06-capstone-build-day.ipynb"
+          "notebook_path": "curriculum/week-12/notebooks/day-06-capstone-build-day.ipynb",
+          "quiz_markdown_path": "curriculum/week-12/day-06-capstone-build-day/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-12/day-06-capstone-build-day/quiz.pdf",
+          "quiz_json_path": "curriculum/week-12/day-06-capstone-build-day/quiz.json"
         },
         {
           "day": "Sun",
@@ -5991,7 +6240,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-12/day-07-capstone-review-and-write-up/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-12/day-07-capstone-review-and-write-up/lesson.pdf",
-          "notebook_path": "curriculum/week-12/notebooks/day-07-capstone-review-and-write-up.ipynb"
+          "notebook_path": "curriculum/week-12/notebooks/day-07-capstone-review-and-write-up.ipynb",
+          "quiz_markdown_path": "curriculum/week-12/day-07-capstone-review-and-write-up/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-12/day-07-capstone-review-and-write-up/quiz.pdf",
+          "quiz_json_path": "curriculum/week-12/day-07-capstone-review-and-write-up/quiz.json"
         }
       ],
       "concepts": [
@@ -6113,7 +6365,10 @@
           "next_topic": "Signal design and economic reasoning",
           "lesson_markdown_path": "curriculum/week-13/day-01-what-makes-a-good-quant-hypothesis/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-13/day-01-what-makes-a-good-quant-hypothesis/lesson.pdf",
-          "notebook_path": "curriculum/week-13/notebooks/day-01-what-makes-a-good-quant-hypothesis.ipynb"
+          "notebook_path": "curriculum/week-13/notebooks/day-01-what-makes-a-good-quant-hypothesis.ipynb",
+          "quiz_markdown_path": "curriculum/week-13/day-01-what-makes-a-good-quant-hypothesis/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-13/day-01-what-makes-a-good-quant-hypothesis/quiz.pdf",
+          "quiz_json_path": "curriculum/week-13/day-01-what-makes-a-good-quant-hypothesis/quiz.json"
         },
         {
           "day": "Tue",
@@ -6177,7 +6432,10 @@
           "next_topic": "Label design and target horizon choice",
           "lesson_markdown_path": "curriculum/week-13/day-02-signal-design-and-economic-reasoning/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-13/day-02-signal-design-and-economic-reasoning/lesson.pdf",
-          "notebook_path": "curriculum/week-13/notebooks/day-02-signal-design-and-economic-reasoning.ipynb"
+          "notebook_path": "curriculum/week-13/notebooks/day-02-signal-design-and-economic-reasoning.ipynb",
+          "quiz_markdown_path": "curriculum/week-13/day-02-signal-design-and-economic-reasoning/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-13/day-02-signal-design-and-economic-reasoning/quiz.pdf",
+          "quiz_json_path": "curriculum/week-13/day-02-signal-design-and-economic-reasoning/quiz.json"
         },
         {
           "day": "Wed",
@@ -6241,7 +6499,10 @@
           "next_topic": "Data cleaning, survivorship bias, and look-ahead bias",
           "lesson_markdown_path": "curriculum/week-13/day-03-label-design-and-target-horizon-choice/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-13/day-03-label-design-and-target-horizon-choice/lesson.pdf",
-          "notebook_path": "curriculum/week-13/notebooks/day-03-label-design-and-target-horizon-choice.ipynb"
+          "notebook_path": "curriculum/week-13/notebooks/day-03-label-design-and-target-horizon-choice.ipynb",
+          "quiz_markdown_path": "curriculum/week-13/day-03-label-design-and-target-horizon-choice/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-13/day-03-label-design-and-target-horizon-choice/quiz.pdf",
+          "quiz_json_path": "curriculum/week-13/day-03-label-design-and-target-horizon-choice/quiz.json"
         },
         {
           "day": "Thu",
@@ -6305,7 +6566,10 @@
           "next_topic": "Research logging and experiment notebooks",
           "lesson_markdown_path": "curriculum/week-13/day-04-data-cleaning-survivorship-bias-and-look-ahead-bias/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-13/day-04-data-cleaning-survivorship-bias-and-look-ahead-bias/lesson.pdf",
-          "notebook_path": "curriculum/week-13/notebooks/day-04-data-cleaning-survivorship-bias-and-look-ahead-bias.ipynb"
+          "notebook_path": "curriculum/week-13/notebooks/day-04-data-cleaning-survivorship-bias-and-look-ahead-bias.ipynb",
+          "quiz_markdown_path": "curriculum/week-13/day-04-data-cleaning-survivorship-bias-and-look-ahead-bias/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-13/day-04-data-cleaning-survivorship-bias-and-look-ahead-bias/quiz.pdf",
+          "quiz_json_path": "curriculum/week-13/day-04-data-cleaning-survivorship-bias-and-look-ahead-bias/quiz.json"
         },
         {
           "day": "Fri",
@@ -6369,7 +6633,10 @@
           "next_topic": "Mini lab: define one alpha hypothesis cleanly",
           "lesson_markdown_path": "curriculum/week-13/day-05-research-logging-and-experiment-notebooks/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-13/day-05-research-logging-and-experiment-notebooks/lesson.pdf",
-          "notebook_path": "curriculum/week-13/notebooks/day-05-research-logging-and-experiment-notebooks.ipynb"
+          "notebook_path": "curriculum/week-13/notebooks/day-05-research-logging-and-experiment-notebooks.ipynb",
+          "quiz_markdown_path": "curriculum/week-13/day-05-research-logging-and-experiment-notebooks/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-13/day-05-research-logging-and-experiment-notebooks/quiz.pdf",
+          "quiz_json_path": "curriculum/week-13/day-05-research-logging-and-experiment-notebooks/quiz.json"
         },
         {
           "day": "Sat",
@@ -6433,7 +6700,10 @@
           "next_topic": "Review and refinement",
           "lesson_markdown_path": "curriculum/week-13/day-06-mini-lab-define-one-alpha-hypothesis-cleanly/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-13/day-06-mini-lab-define-one-alpha-hypothesis-cleanly/lesson.pdf",
-          "notebook_path": "curriculum/week-13/notebooks/day-06-mini-lab-define-one-alpha-hypothesis-cleanly.ipynb"
+          "notebook_path": "curriculum/week-13/notebooks/day-06-mini-lab-define-one-alpha-hypothesis-cleanly.ipynb",
+          "quiz_markdown_path": "curriculum/week-13/day-06-mini-lab-define-one-alpha-hypothesis-cleanly/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-13/day-06-mini-lab-define-one-alpha-hypothesis-cleanly/quiz.pdf",
+          "quiz_json_path": "curriculum/week-13/day-06-mini-lab-define-one-alpha-hypothesis-cleanly/quiz.json"
         },
         {
           "day": "Sun",
@@ -6497,7 +6767,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-13/day-07-review-and-refinement/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-13/day-07-review-and-refinement/lesson.pdf",
-          "notebook_path": "curriculum/week-13/notebooks/day-07-review-and-refinement.ipynb"
+          "notebook_path": "curriculum/week-13/notebooks/day-07-review-and-refinement.ipynb",
+          "quiz_markdown_path": "curriculum/week-13/day-07-review-and-refinement/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-13/day-07-review-and-refinement/quiz.pdf",
+          "quiz_json_path": "curriculum/week-13/day-07-review-and-refinement/quiz.json"
         }
       ],
       "concepts": [
@@ -6613,7 +6886,10 @@
           "next_topic": "Look-ahead, survivorship, and data snooping pitfalls",
           "lesson_markdown_path": "curriculum/week-14/day-01-backtesting-workflow-from-signal-to-trades/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-14/day-01-backtesting-workflow-from-signal-to-trades/lesson.pdf",
-          "notebook_path": "curriculum/week-14/notebooks/day-01-backtesting-workflow-from-signal-to-trades.ipynb"
+          "notebook_path": "curriculum/week-14/notebooks/day-01-backtesting-workflow-from-signal-to-trades.ipynb",
+          "quiz_markdown_path": "curriculum/week-14/day-01-backtesting-workflow-from-signal-to-trades/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-14/day-01-backtesting-workflow-from-signal-to-trades/quiz.pdf",
+          "quiz_json_path": "curriculum/week-14/day-01-backtesting-workflow-from-signal-to-trades/quiz.json"
         },
         {
           "day": "Tue",
@@ -6677,7 +6953,10 @@
           "next_topic": "Position sizing and exposure control",
           "lesson_markdown_path": "curriculum/week-14/day-02-look-ahead-survivorship-and-data-snooping-pitfalls/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-14/day-02-look-ahead-survivorship-and-data-snooping-pitfalls/lesson.pdf",
-          "notebook_path": "curriculum/week-14/notebooks/day-02-look-ahead-survivorship-and-data-snooping-pitfalls.ipynb"
+          "notebook_path": "curriculum/week-14/notebooks/day-02-look-ahead-survivorship-and-data-snooping-pitfalls.ipynb",
+          "quiz_markdown_path": "curriculum/week-14/day-02-look-ahead-survivorship-and-data-snooping-pitfalls/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-14/day-02-look-ahead-survivorship-and-data-snooping-pitfalls/quiz.pdf",
+          "quiz_json_path": "curriculum/week-14/day-02-look-ahead-survivorship-and-data-snooping-pitfalls/quiz.json"
         },
         {
           "day": "Wed",
@@ -6741,7 +7020,10 @@
           "next_topic": "Turnover, slippage, and implementation realism",
           "lesson_markdown_path": "curriculum/week-14/day-03-position-sizing-and-exposure-control/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-14/day-03-position-sizing-and-exposure-control/lesson.pdf",
-          "notebook_path": "curriculum/week-14/notebooks/day-03-position-sizing-and-exposure-control.ipynb"
+          "notebook_path": "curriculum/week-14/notebooks/day-03-position-sizing-and-exposure-control.ipynb",
+          "quiz_markdown_path": "curriculum/week-14/day-03-position-sizing-and-exposure-control/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-14/day-03-position-sizing-and-exposure-control/quiz.pdf",
+          "quiz_json_path": "curriculum/week-14/day-03-position-sizing-and-exposure-control/quiz.json"
         },
         {
           "day": "Thu",
@@ -6805,7 +7087,10 @@
           "next_topic": "Performance attribution and diagnostics",
           "lesson_markdown_path": "curriculum/week-14/day-04-turnover-slippage-and-implementation-realism/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-14/day-04-turnover-slippage-and-implementation-realism/lesson.pdf",
-          "notebook_path": "curriculum/week-14/notebooks/day-04-turnover-slippage-and-implementation-realism.ipynb"
+          "notebook_path": "curriculum/week-14/notebooks/day-04-turnover-slippage-and-implementation-realism.ipynb",
+          "quiz_markdown_path": "curriculum/week-14/day-04-turnover-slippage-and-implementation-realism/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-14/day-04-turnover-slippage-and-implementation-realism/quiz.pdf",
+          "quiz_json_path": "curriculum/week-14/day-04-turnover-slippage-and-implementation-realism/quiz.json"
         },
         {
           "day": "Fri",
@@ -6869,7 +7154,10 @@
           "next_topic": "Mini lab: backtest a toy rule with costs",
           "lesson_markdown_path": "curriculum/week-14/day-05-performance-attribution-and-diagnostics/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-14/day-05-performance-attribution-and-diagnostics/lesson.pdf",
-          "notebook_path": "curriculum/week-14/notebooks/day-05-performance-attribution-and-diagnostics.ipynb"
+          "notebook_path": "curriculum/week-14/notebooks/day-05-performance-attribution-and-diagnostics.ipynb",
+          "quiz_markdown_path": "curriculum/week-14/day-05-performance-attribution-and-diagnostics/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-14/day-05-performance-attribution-and-diagnostics/quiz.pdf",
+          "quiz_json_path": "curriculum/week-14/day-05-performance-attribution-and-diagnostics/quiz.json"
         },
         {
           "day": "Sat",
@@ -6933,7 +7221,10 @@
           "next_topic": "Review and write-up",
           "lesson_markdown_path": "curriculum/week-14/day-06-mini-lab-backtest-a-toy-rule-with-costs/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-14/day-06-mini-lab-backtest-a-toy-rule-with-costs/lesson.pdf",
-          "notebook_path": "curriculum/week-14/notebooks/day-06-mini-lab-backtest-a-toy-rule-with-costs.ipynb"
+          "notebook_path": "curriculum/week-14/notebooks/day-06-mini-lab-backtest-a-toy-rule-with-costs.ipynb",
+          "quiz_markdown_path": "curriculum/week-14/day-06-mini-lab-backtest-a-toy-rule-with-costs/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-14/day-06-mini-lab-backtest-a-toy-rule-with-costs/quiz.pdf",
+          "quiz_json_path": "curriculum/week-14/day-06-mini-lab-backtest-a-toy-rule-with-costs/quiz.json"
         },
         {
           "day": "Sun",
@@ -6997,7 +7288,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-14/day-07-review-and-write-up/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-14/day-07-review-and-write-up/lesson.pdf",
-          "notebook_path": "curriculum/week-14/notebooks/day-07-review-and-write-up.ipynb"
+          "notebook_path": "curriculum/week-14/notebooks/day-07-review-and-write-up.ipynb",
+          "quiz_markdown_path": "curriculum/week-14/day-07-review-and-write-up/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-14/day-07-review-and-write-up/quiz.pdf",
+          "quiz_json_path": "curriculum/week-14/day-07-review-and-write-up/quiz.json"
         }
       ],
       "concepts": [
@@ -7113,7 +7407,10 @@
           "next_topic": "Mean reversion intuition and failure modes",
           "lesson_markdown_path": "curriculum/week-15/day-01-momentum-intuition-and-empirical-logic/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-15/day-01-momentum-intuition-and-empirical-logic/lesson.pdf",
-          "notebook_path": "curriculum/week-15/notebooks/day-01-momentum-intuition-and-empirical-logic.ipynb"
+          "notebook_path": "curriculum/week-15/notebooks/day-01-momentum-intuition-and-empirical-logic.ipynb",
+          "quiz_markdown_path": "curriculum/week-15/day-01-momentum-intuition-and-empirical-logic/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-15/day-01-momentum-intuition-and-empirical-logic/quiz.pdf",
+          "quiz_json_path": "curriculum/week-15/day-01-momentum-intuition-and-empirical-logic/quiz.json"
         },
         {
           "day": "Tue",
@@ -7177,7 +7474,10 @@
           "next_topic": "Cross-sectional ranking signals",
           "lesson_markdown_path": "curriculum/week-15/day-02-mean-reversion-intuition-and-failure-modes/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-15/day-02-mean-reversion-intuition-and-failure-modes/lesson.pdf",
-          "notebook_path": "curriculum/week-15/notebooks/day-02-mean-reversion-intuition-and-failure-modes.ipynb"
+          "notebook_path": "curriculum/week-15/notebooks/day-02-mean-reversion-intuition-and-failure-modes.ipynb",
+          "quiz_markdown_path": "curriculum/week-15/day-02-mean-reversion-intuition-and-failure-modes/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-15/day-02-mean-reversion-intuition-and-failure-modes/quiz.pdf",
+          "quiz_json_path": "curriculum/week-15/day-02-mean-reversion-intuition-and-failure-modes/quiz.json"
         },
         {
           "day": "Wed",
@@ -7241,7 +7541,10 @@
           "next_topic": "Signal combination and normalization",
           "lesson_markdown_path": "curriculum/week-15/day-03-cross-sectional-ranking-signals/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-15/day-03-cross-sectional-ranking-signals/lesson.pdf",
-          "notebook_path": "curriculum/week-15/notebooks/day-03-cross-sectional-ranking-signals.ipynb"
+          "notebook_path": "curriculum/week-15/notebooks/day-03-cross-sectional-ranking-signals.ipynb",
+          "quiz_markdown_path": "curriculum/week-15/day-03-cross-sectional-ranking-signals/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-15/day-03-cross-sectional-ranking-signals/quiz.pdf",
+          "quiz_json_path": "curriculum/week-15/day-03-cross-sectional-ranking-signals/quiz.json"
         },
         {
           "day": "Thu",
@@ -7305,7 +7608,10 @@
           "next_topic": "Attribution: what is actually driving PnL?",
           "lesson_markdown_path": "curriculum/week-15/day-04-signal-combination-and-normalization/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-15/day-04-signal-combination-and-normalization/lesson.pdf",
-          "notebook_path": "curriculum/week-15/notebooks/day-04-signal-combination-and-normalization.ipynb"
+          "notebook_path": "curriculum/week-15/notebooks/day-04-signal-combination-and-normalization.ipynb",
+          "quiz_markdown_path": "curriculum/week-15/day-04-signal-combination-and-normalization/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-15/day-04-signal-combination-and-normalization/quiz.pdf",
+          "quiz_json_path": "curriculum/week-15/day-04-signal-combination-and-normalization/quiz.json"
         },
         {
           "day": "Fri",
@@ -7369,7 +7675,10 @@
           "next_topic": "Mini lab: compare momentum versus mean reversion rule",
           "lesson_markdown_path": "curriculum/week-15/day-05-attribution-what-is-actually-driving-pnl/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-15/day-05-attribution-what-is-actually-driving-pnl/lesson.pdf",
-          "notebook_path": "curriculum/week-15/notebooks/day-05-attribution-what-is-actually-driving-pnl.ipynb"
+          "notebook_path": "curriculum/week-15/notebooks/day-05-attribution-what-is-actually-driving-pnl.ipynb",
+          "quiz_markdown_path": "curriculum/week-15/day-05-attribution-what-is-actually-driving-pnl/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-15/day-05-attribution-what-is-actually-driving-pnl/quiz.pdf",
+          "quiz_json_path": "curriculum/week-15/day-05-attribution-what-is-actually-driving-pnl/quiz.json"
         },
         {
           "day": "Sat",
@@ -7433,7 +7742,10 @@
           "next_topic": "Review and critique",
           "lesson_markdown_path": "curriculum/week-15/day-06-mini-lab-compare-momentum-versus-mean-reversion-rule/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-15/day-06-mini-lab-compare-momentum-versus-mean-reversion-rule/lesson.pdf",
-          "notebook_path": "curriculum/week-15/notebooks/day-06-mini-lab-compare-momentum-versus-mean-reversion-rule.ipynb"
+          "notebook_path": "curriculum/week-15/notebooks/day-06-mini-lab-compare-momentum-versus-mean-reversion-rule.ipynb",
+          "quiz_markdown_path": "curriculum/week-15/day-06-mini-lab-compare-momentum-versus-mean-reversion-rule/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-15/day-06-mini-lab-compare-momentum-versus-mean-reversion-rule/quiz.pdf",
+          "quiz_json_path": "curriculum/week-15/day-06-mini-lab-compare-momentum-versus-mean-reversion-rule/quiz.json"
         },
         {
           "day": "Sun",
@@ -7497,7 +7809,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-15/day-07-review-and-critique/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-15/day-07-review-and-critique/lesson.pdf",
-          "notebook_path": "curriculum/week-15/notebooks/day-07-review-and-critique.ipynb"
+          "notebook_path": "curriculum/week-15/notebooks/day-07-review-and-critique.ipynb",
+          "quiz_markdown_path": "curriculum/week-15/day-07-review-and-critique/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-15/day-07-review-and-critique/quiz.pdf",
+          "quiz_json_path": "curriculum/week-15/day-07-review-and-critique/quiz.json"
         }
       ],
       "concepts": [
@@ -7613,7 +7928,10 @@
           "next_topic": "Residual signals and relative-value intuition",
           "lesson_markdown_path": "curriculum/week-16/day-01-factor-models-and-common-risk-decomposition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-16/day-01-factor-models-and-common-risk-decomposition/lesson.pdf",
-          "notebook_path": "curriculum/week-16/notebooks/day-01-factor-models-and-common-risk-decomposition.ipynb"
+          "notebook_path": "curriculum/week-16/notebooks/day-01-factor-models-and-common-risk-decomposition.ipynb",
+          "quiz_markdown_path": "curriculum/week-16/day-01-factor-models-and-common-risk-decomposition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-16/day-01-factor-models-and-common-risk-decomposition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-16/day-01-factor-models-and-common-risk-decomposition/quiz.json"
         },
         {
           "day": "Tue",
@@ -7677,7 +7995,10 @@
           "next_topic": "Cointegration and spread logic",
           "lesson_markdown_path": "curriculum/week-16/day-02-residual-signals-and-relative-value-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-16/day-02-residual-signals-and-relative-value-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-16/notebooks/day-02-residual-signals-and-relative-value-intuition.ipynb"
+          "notebook_path": "curriculum/week-16/notebooks/day-02-residual-signals-and-relative-value-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-16/day-02-residual-signals-and-relative-value-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-16/day-02-residual-signals-and-relative-value-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-16/day-02-residual-signals-and-relative-value-intuition/quiz.json"
         },
         {
           "day": "Wed",
@@ -7741,7 +8062,10 @@
           "next_topic": "Regime shifts and model instability",
           "lesson_markdown_path": "curriculum/week-16/day-03-cointegration-and-spread-logic/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-16/day-03-cointegration-and-spread-logic/lesson.pdf",
-          "notebook_path": "curriculum/week-16/notebooks/day-03-cointegration-and-spread-logic.ipynb"
+          "notebook_path": "curriculum/week-16/notebooks/day-03-cointegration-and-spread-logic.ipynb",
+          "quiz_markdown_path": "curriculum/week-16/day-03-cointegration-and-spread-logic/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-16/day-03-cointegration-and-spread-logic/quiz.pdf",
+          "quiz_json_path": "curriculum/week-16/day-03-cointegration-and-spread-logic/quiz.json"
         },
         {
           "day": "Thu",
@@ -7805,7 +8129,10 @@
           "next_topic": "Cross-sectional portfolio construction",
           "lesson_markdown_path": "curriculum/week-16/day-04-regime-shifts-and-model-instability/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-16/day-04-regime-shifts-and-model-instability/lesson.pdf",
-          "notebook_path": "curriculum/week-16/notebooks/day-04-regime-shifts-and-model-instability.ipynb"
+          "notebook_path": "curriculum/week-16/notebooks/day-04-regime-shifts-and-model-instability.ipynb",
+          "quiz_markdown_path": "curriculum/week-16/day-04-regime-shifts-and-model-instability/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-16/day-04-regime-shifts-and-model-instability/quiz.pdf",
+          "quiz_json_path": "curriculum/week-16/day-04-regime-shifts-and-model-instability/quiz.json"
         },
         {
           "day": "Fri",
@@ -7869,7 +8196,10 @@
           "next_topic": "Capstone build day",
           "lesson_markdown_path": "curriculum/week-16/day-05-cross-sectional-portfolio-construction/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-16/day-05-cross-sectional-portfolio-construction/lesson.pdf",
-          "notebook_path": "curriculum/week-16/notebooks/day-05-cross-sectional-portfolio-construction.ipynb"
+          "notebook_path": "curriculum/week-16/notebooks/day-05-cross-sectional-portfolio-construction.ipynb",
+          "quiz_markdown_path": "curriculum/week-16/day-05-cross-sectional-portfolio-construction/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-16/day-05-cross-sectional-portfolio-construction/quiz.pdf",
+          "quiz_json_path": "curriculum/week-16/day-05-cross-sectional-portfolio-construction/quiz.json"
         },
         {
           "day": "Sat",
@@ -7933,7 +8263,10 @@
           "next_topic": "Capstone review and write-up",
           "lesson_markdown_path": "curriculum/week-16/day-06-capstone-build-day/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-16/day-06-capstone-build-day/lesson.pdf",
-          "notebook_path": "curriculum/week-16/notebooks/day-06-capstone-build-day.ipynb"
+          "notebook_path": "curriculum/week-16/notebooks/day-06-capstone-build-day.ipynb",
+          "quiz_markdown_path": "curriculum/week-16/day-06-capstone-build-day/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-16/day-06-capstone-build-day/quiz.pdf",
+          "quiz_json_path": "curriculum/week-16/day-06-capstone-build-day/quiz.json"
         },
         {
           "day": "Sun",
@@ -7997,7 +8330,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-16/day-07-capstone-review-and-write-up/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-16/day-07-capstone-review-and-write-up/lesson.pdf",
-          "notebook_path": "curriculum/week-16/notebooks/day-07-capstone-review-and-write-up.ipynb"
+          "notebook_path": "curriculum/week-16/notebooks/day-07-capstone-review-and-write-up.ipynb",
+          "quiz_markdown_path": "curriculum/week-16/day-07-capstone-review-and-write-up/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-16/day-07-capstone-review-and-write-up/quiz.pdf",
+          "quiz_json_path": "curriculum/week-16/day-07-capstone-review-and-write-up/quiz.json"
         }
       ],
       "concepts": [
@@ -8119,7 +8455,10 @@
           "next_topic": "Random forests and bagging intuition",
           "lesson_markdown_path": "curriculum/week-17/day-01-decision-trees-and-rule-based-splits/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-17/day-01-decision-trees-and-rule-based-splits/lesson.pdf",
-          "notebook_path": "curriculum/week-17/notebooks/day-01-decision-trees-and-rule-based-splits.ipynb"
+          "notebook_path": "curriculum/week-17/notebooks/day-01-decision-trees-and-rule-based-splits.ipynb",
+          "quiz_markdown_path": "curriculum/week-17/day-01-decision-trees-and-rule-based-splits/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-17/day-01-decision-trees-and-rule-based-splits/quiz.pdf",
+          "quiz_json_path": "curriculum/week-17/day-01-decision-trees-and-rule-based-splits/quiz.json"
         },
         {
           "day": "Tue",
@@ -8183,7 +8522,10 @@
           "next_topic": "Gradient boosting intuition",
           "lesson_markdown_path": "curriculum/week-17/day-02-random-forests-and-bagging-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-17/day-02-random-forests-and-bagging-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-17/notebooks/day-02-random-forests-and-bagging-intuition.ipynb"
+          "notebook_path": "curriculum/week-17/notebooks/day-02-random-forests-and-bagging-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-17/day-02-random-forests-and-bagging-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-17/day-02-random-forests-and-bagging-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-17/day-02-random-forests-and-bagging-intuition/quiz.json"
         },
         {
           "day": "Wed",
@@ -8247,7 +8589,10 @@
           "next_topic": "Feature importance and interpretation caveats",
           "lesson_markdown_path": "curriculum/week-17/day-03-gradient-boosting-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-17/day-03-gradient-boosting-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-17/notebooks/day-03-gradient-boosting-intuition.ipynb"
+          "notebook_path": "curriculum/week-17/notebooks/day-03-gradient-boosting-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-17/day-03-gradient-boosting-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-17/day-03-gradient-boosting-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-17/day-03-gradient-boosting-intuition/quiz.json"
         },
         {
           "day": "Thu",
@@ -8311,7 +8656,10 @@
           "next_topic": "Model risk and stability across regimes",
           "lesson_markdown_path": "curriculum/week-17/day-04-feature-importance-and-interpretation-caveats/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-17/day-04-feature-importance-and-interpretation-caveats/lesson.pdf",
-          "notebook_path": "curriculum/week-17/notebooks/day-04-feature-importance-and-interpretation-caveats.ipynb"
+          "notebook_path": "curriculum/week-17/notebooks/day-04-feature-importance-and-interpretation-caveats.ipynb",
+          "quiz_markdown_path": "curriculum/week-17/day-04-feature-importance-and-interpretation-caveats/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-17/day-04-feature-importance-and-interpretation-caveats/quiz.pdf",
+          "quiz_json_path": "curriculum/week-17/day-04-feature-importance-and-interpretation-caveats/quiz.json"
         },
         {
           "day": "Fri",
@@ -8375,7 +8723,10 @@
           "next_topic": "Mini lab: nonlinear tabular finance model",
           "lesson_markdown_path": "curriculum/week-17/day-05-model-risk-and-stability-across-regimes/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-17/day-05-model-risk-and-stability-across-regimes/lesson.pdf",
-          "notebook_path": "curriculum/week-17/notebooks/day-05-model-risk-and-stability-across-regimes.ipynb"
+          "notebook_path": "curriculum/week-17/notebooks/day-05-model-risk-and-stability-across-regimes.ipynb",
+          "quiz_markdown_path": "curriculum/week-17/day-05-model-risk-and-stability-across-regimes/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-17/day-05-model-risk-and-stability-across-regimes/quiz.pdf",
+          "quiz_json_path": "curriculum/week-17/day-05-model-risk-and-stability-across-regimes/quiz.json"
         },
         {
           "day": "Sat",
@@ -8439,7 +8790,10 @@
           "next_topic": "Review and limitations",
           "lesson_markdown_path": "curriculum/week-17/day-06-mini-lab-nonlinear-tabular-finance-model/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-17/day-06-mini-lab-nonlinear-tabular-finance-model/lesson.pdf",
-          "notebook_path": "curriculum/week-17/notebooks/day-06-mini-lab-nonlinear-tabular-finance-model.ipynb"
+          "notebook_path": "curriculum/week-17/notebooks/day-06-mini-lab-nonlinear-tabular-finance-model.ipynb",
+          "quiz_markdown_path": "curriculum/week-17/day-06-mini-lab-nonlinear-tabular-finance-model/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-17/day-06-mini-lab-nonlinear-tabular-finance-model/quiz.pdf",
+          "quiz_json_path": "curriculum/week-17/day-06-mini-lab-nonlinear-tabular-finance-model/quiz.json"
         },
         {
           "day": "Sun",
@@ -8503,7 +8857,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-17/day-07-review-and-limitations/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-17/day-07-review-and-limitations/lesson.pdf",
-          "notebook_path": "curriculum/week-17/notebooks/day-07-review-and-limitations.ipynb"
+          "notebook_path": "curriculum/week-17/notebooks/day-07-review-and-limitations.ipynb",
+          "quiz_markdown_path": "curriculum/week-17/day-07-review-and-limitations/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-17/day-07-review-and-limitations/quiz.pdf",
+          "quiz_json_path": "curriculum/week-17/day-07-review-and-limitations/quiz.json"
         }
       ],
       "concepts": [
@@ -8619,7 +8976,10 @@
           "next_topic": "Rolling volatility and EWMA",
           "lesson_markdown_path": "curriculum/week-18/day-01-volatility-clustering-and-stylized-facts/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-18/day-01-volatility-clustering-and-stylized-facts/lesson.pdf",
-          "notebook_path": "curriculum/week-18/notebooks/day-01-volatility-clustering-and-stylized-facts.ipynb"
+          "notebook_path": "curriculum/week-18/notebooks/day-01-volatility-clustering-and-stylized-facts.ipynb",
+          "quiz_markdown_path": "curriculum/week-18/day-01-volatility-clustering-and-stylized-facts/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-18/day-01-volatility-clustering-and-stylized-facts/quiz.pdf",
+          "quiz_json_path": "curriculum/week-18/day-01-volatility-clustering-and-stylized-facts/quiz.json"
         },
         {
           "day": "Tue",
@@ -8683,7 +9043,10 @@
           "next_topic": "GARCH intuition and limitations",
           "lesson_markdown_path": "curriculum/week-18/day-02-rolling-volatility-and-ewma/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-18/day-02-rolling-volatility-and-ewma/lesson.pdf",
-          "notebook_path": "curriculum/week-18/notebooks/day-02-rolling-volatility-and-ewma.ipynb"
+          "notebook_path": "curriculum/week-18/notebooks/day-02-rolling-volatility-and-ewma.ipynb",
+          "quiz_markdown_path": "curriculum/week-18/day-02-rolling-volatility-and-ewma/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-18/day-02-rolling-volatility-and-ewma/quiz.pdf",
+          "quiz_json_path": "curriculum/week-18/day-02-rolling-volatility-and-ewma/quiz.json"
         },
         {
           "day": "Wed",
@@ -8747,7 +9110,10 @@
           "next_topic": "Forecast evaluation for risk models",
           "lesson_markdown_path": "curriculum/week-18/day-03-garch-intuition-and-limitations/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-18/day-03-garch-intuition-and-limitations/lesson.pdf",
-          "notebook_path": "curriculum/week-18/notebooks/day-03-garch-intuition-and-limitations.ipynb"
+          "notebook_path": "curriculum/week-18/notebooks/day-03-garch-intuition-and-limitations.ipynb",
+          "quiz_markdown_path": "curriculum/week-18/day-03-garch-intuition-and-limitations/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-18/day-03-garch-intuition-and-limitations/quiz.pdf",
+          "quiz_json_path": "curriculum/week-18/day-03-garch-intuition-and-limitations/quiz.json"
         },
         {
           "day": "Thu",
@@ -8811,7 +9177,10 @@
           "next_topic": "Stress testing and scenario design",
           "lesson_markdown_path": "curriculum/week-18/day-04-forecast-evaluation-for-risk-models/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-18/day-04-forecast-evaluation-for-risk-models/lesson.pdf",
-          "notebook_path": "curriculum/week-18/notebooks/day-04-forecast-evaluation-for-risk-models.ipynb"
+          "notebook_path": "curriculum/week-18/notebooks/day-04-forecast-evaluation-for-risk-models.ipynb",
+          "quiz_markdown_path": "curriculum/week-18/day-04-forecast-evaluation-for-risk-models/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-18/day-04-forecast-evaluation-for-risk-models/quiz.pdf",
+          "quiz_json_path": "curriculum/week-18/day-04-forecast-evaluation-for-risk-models/quiz.json"
         },
         {
           "day": "Fri",
@@ -8875,7 +9244,10 @@
           "next_topic": "Mini lab: volatility forecast comparison",
           "lesson_markdown_path": "curriculum/week-18/day-05-stress-testing-and-scenario-design/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-18/day-05-stress-testing-and-scenario-design/lesson.pdf",
-          "notebook_path": "curriculum/week-18/notebooks/day-05-stress-testing-and-scenario-design.ipynb"
+          "notebook_path": "curriculum/week-18/notebooks/day-05-stress-testing-and-scenario-design.ipynb",
+          "quiz_markdown_path": "curriculum/week-18/day-05-stress-testing-and-scenario-design/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-18/day-05-stress-testing-and-scenario-design/quiz.pdf",
+          "quiz_json_path": "curriculum/week-18/day-05-stress-testing-and-scenario-design/quiz.json"
         },
         {
           "day": "Sat",
@@ -8939,7 +9311,10 @@
           "next_topic": "Review and risk memo",
           "lesson_markdown_path": "curriculum/week-18/day-06-mini-lab-volatility-forecast-comparison/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-18/day-06-mini-lab-volatility-forecast-comparison/lesson.pdf",
-          "notebook_path": "curriculum/week-18/notebooks/day-06-mini-lab-volatility-forecast-comparison.ipynb"
+          "notebook_path": "curriculum/week-18/notebooks/day-06-mini-lab-volatility-forecast-comparison.ipynb",
+          "quiz_markdown_path": "curriculum/week-18/day-06-mini-lab-volatility-forecast-comparison/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-18/day-06-mini-lab-volatility-forecast-comparison/quiz.pdf",
+          "quiz_json_path": "curriculum/week-18/day-06-mini-lab-volatility-forecast-comparison/quiz.json"
         },
         {
           "day": "Sun",
@@ -9003,7 +9378,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-18/day-07-review-and-risk-memo/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-18/day-07-review-and-risk-memo/lesson.pdf",
-          "notebook_path": "curriculum/week-18/notebooks/day-07-review-and-risk-memo.ipynb"
+          "notebook_path": "curriculum/week-18/notebooks/day-07-review-and-risk-memo.ipynb",
+          "quiz_markdown_path": "curriculum/week-18/day-07-review-and-risk-memo/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-18/day-07-review-and-risk-memo/quiz.pdf",
+          "quiz_json_path": "curriculum/week-18/day-07-review-and-risk-memo/quiz.json"
         }
       ],
       "concepts": [
@@ -9119,7 +9497,10 @@
           "next_topic": "Literature summarization and idea extraction",
           "lesson_markdown_path": "curriculum/week-19/day-01-what-agentic-ai-can-and-cannot-do-in-quant/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-19/day-01-what-agentic-ai-can-and-cannot-do-in-quant/lesson.pdf",
-          "notebook_path": "curriculum/week-19/notebooks/day-01-what-agentic-ai-can-and-cannot-do-in-quant.ipynb"
+          "notebook_path": "curriculum/week-19/notebooks/day-01-what-agentic-ai-can-and-cannot-do-in-quant.ipynb",
+          "quiz_markdown_path": "curriculum/week-19/day-01-what-agentic-ai-can-and-cannot-do-in-quant/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-19/day-01-what-agentic-ai-can-and-cannot-do-in-quant/quiz.pdf",
+          "quiz_json_path": "curriculum/week-19/day-01-what-agentic-ai-can-and-cannot-do-in-quant/quiz.json"
         },
         {
           "day": "Tue",
@@ -9183,7 +9564,10 @@
           "next_topic": "Feature brainstorming and hypothesis generation",
           "lesson_markdown_path": "curriculum/week-19/day-02-literature-summarization-and-idea-extraction/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-19/day-02-literature-summarization-and-idea-extraction/lesson.pdf",
-          "notebook_path": "curriculum/week-19/notebooks/day-02-literature-summarization-and-idea-extraction.ipynb"
+          "notebook_path": "curriculum/week-19/notebooks/day-02-literature-summarization-and-idea-extraction.ipynb",
+          "quiz_markdown_path": "curriculum/week-19/day-02-literature-summarization-and-idea-extraction/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-19/day-02-literature-summarization-and-idea-extraction/quiz.pdf",
+          "quiz_json_path": "curriculum/week-19/day-02-literature-summarization-and-idea-extraction/quiz.json"
         },
         {
           "day": "Wed",
@@ -9247,7 +9631,10 @@
           "next_topic": "Code review assistants and debugging workflow",
           "lesson_markdown_path": "curriculum/week-19/day-03-feature-brainstorming-and-hypothesis-generation/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-19/day-03-feature-brainstorming-and-hypothesis-generation/lesson.pdf",
-          "notebook_path": "curriculum/week-19/notebooks/day-03-feature-brainstorming-and-hypothesis-generation.ipynb"
+          "notebook_path": "curriculum/week-19/notebooks/day-03-feature-brainstorming-and-hypothesis-generation.ipynb",
+          "quiz_markdown_path": "curriculum/week-19/day-03-feature-brainstorming-and-hypothesis-generation/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-19/day-03-feature-brainstorming-and-hypothesis-generation/quiz.pdf",
+          "quiz_json_path": "curriculum/week-19/day-03-feature-brainstorming-and-hypothesis-generation/quiz.json"
         },
         {
           "day": "Thu",
@@ -9311,7 +9698,10 @@
           "next_topic": "Guardrails: hallucination, leakage, benchmark cheating",
           "lesson_markdown_path": "curriculum/week-19/day-04-code-review-assistants-and-debugging-workflow/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-19/day-04-code-review-assistants-and-debugging-workflow/lesson.pdf",
-          "notebook_path": "curriculum/week-19/notebooks/day-04-code-review-assistants-and-debugging-workflow.ipynb"
+          "notebook_path": "curriculum/week-19/notebooks/day-04-code-review-assistants-and-debugging-workflow.ipynb",
+          "quiz_markdown_path": "curriculum/week-19/day-04-code-review-assistants-and-debugging-workflow/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-19/day-04-code-review-assistants-and-debugging-workflow/quiz.pdf",
+          "quiz_json_path": "curriculum/week-19/day-04-code-review-assistants-and-debugging-workflow/quiz.json"
         },
         {
           "day": "Fri",
@@ -9375,7 +9765,10 @@
           "next_topic": "Mini lab: AI-assisted research memo",
           "lesson_markdown_path": "curriculum/week-19/day-05-guardrails-hallucination-leakage-benchmark-cheating/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-19/day-05-guardrails-hallucination-leakage-benchmark-cheating/lesson.pdf",
-          "notebook_path": "curriculum/week-19/notebooks/day-05-guardrails-hallucination-leakage-benchmark-cheating.ipynb"
+          "notebook_path": "curriculum/week-19/notebooks/day-05-guardrails-hallucination-leakage-benchmark-cheating.ipynb",
+          "quiz_markdown_path": "curriculum/week-19/day-05-guardrails-hallucination-leakage-benchmark-cheating/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-19/day-05-guardrails-hallucination-leakage-benchmark-cheating/quiz.pdf",
+          "quiz_json_path": "curriculum/week-19/day-05-guardrails-hallucination-leakage-benchmark-cheating/quiz.json"
         },
         {
           "day": "Sat",
@@ -9439,7 +9832,10 @@
           "next_topic": "Review and policy checklist",
           "lesson_markdown_path": "curriculum/week-19/day-06-mini-lab-ai-assisted-research-memo/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-19/day-06-mini-lab-ai-assisted-research-memo/lesson.pdf",
-          "notebook_path": "curriculum/week-19/notebooks/day-06-mini-lab-ai-assisted-research-memo.ipynb"
+          "notebook_path": "curriculum/week-19/notebooks/day-06-mini-lab-ai-assisted-research-memo.ipynb",
+          "quiz_markdown_path": "curriculum/week-19/day-06-mini-lab-ai-assisted-research-memo/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-19/day-06-mini-lab-ai-assisted-research-memo/quiz.pdf",
+          "quiz_json_path": "curriculum/week-19/day-06-mini-lab-ai-assisted-research-memo/quiz.json"
         },
         {
           "day": "Sun",
@@ -9503,7 +9899,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-19/day-07-review-and-policy-checklist/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-19/day-07-review-and-policy-checklist/lesson.pdf",
-          "notebook_path": "curriculum/week-19/notebooks/day-07-review-and-policy-checklist.ipynb"
+          "notebook_path": "curriculum/week-19/notebooks/day-07-review-and-policy-checklist.ipynb",
+          "quiz_markdown_path": "curriculum/week-19/day-07-review-and-policy-checklist/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-19/day-07-review-and-policy-checklist/quiz.pdf",
+          "quiz_json_path": "curriculum/week-19/day-07-review-and-policy-checklist/quiz.json"
         }
       ],
       "concepts": [
@@ -9619,7 +10018,10 @@
           "next_topic": "NLP and sentiment feature intuition",
           "lesson_markdown_path": "curriculum/week-20/day-01-alternative-data-and-when-it-is-useful/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-20/day-01-alternative-data-and-when-it-is-useful/lesson.pdf",
-          "notebook_path": "curriculum/week-20/notebooks/day-01-alternative-data-and-when-it-is-useful.ipynb"
+          "notebook_path": "curriculum/week-20/notebooks/day-01-alternative-data-and-when-it-is-useful.ipynb",
+          "quiz_markdown_path": "curriculum/week-20/day-01-alternative-data-and-when-it-is-useful/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-20/day-01-alternative-data-and-when-it-is-useful/quiz.pdf",
+          "quiz_json_path": "curriculum/week-20/day-01-alternative-data-and-when-it-is-useful/quiz.json"
         },
         {
           "day": "Tue",
@@ -9683,7 +10085,10 @@
           "next_topic": "Experiment tracking and reproducibility",
           "lesson_markdown_path": "curriculum/week-20/day-02-nlp-and-sentiment-feature-intuition/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-20/day-02-nlp-and-sentiment-feature-intuition/lesson.pdf",
-          "notebook_path": "curriculum/week-20/notebooks/day-02-nlp-and-sentiment-feature-intuition.ipynb"
+          "notebook_path": "curriculum/week-20/notebooks/day-02-nlp-and-sentiment-feature-intuition.ipynb",
+          "quiz_markdown_path": "curriculum/week-20/day-02-nlp-and-sentiment-feature-intuition/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-20/day-02-nlp-and-sentiment-feature-intuition/quiz.pdf",
+          "quiz_json_path": "curriculum/week-20/day-02-nlp-and-sentiment-feature-intuition/quiz.json"
         },
         {
           "day": "Wed",
@@ -9747,7 +10152,10 @@
           "next_topic": "Research report generation with AI support",
           "lesson_markdown_path": "curriculum/week-20/day-03-experiment-tracking-and-reproducibility/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-20/day-03-experiment-tracking-and-reproducibility/lesson.pdf",
-          "notebook_path": "curriculum/week-20/notebooks/day-03-experiment-tracking-and-reproducibility.ipynb"
+          "notebook_path": "curriculum/week-20/notebooks/day-03-experiment-tracking-and-reproducibility.ipynb",
+          "quiz_markdown_path": "curriculum/week-20/day-03-experiment-tracking-and-reproducibility/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-20/day-03-experiment-tracking-and-reproducibility/quiz.pdf",
+          "quiz_json_path": "curriculum/week-20/day-03-experiment-tracking-and-reproducibility/quiz.json"
         },
         {
           "day": "Thu",
@@ -9811,7 +10219,10 @@
           "next_topic": "Robustness checks and final validation",
           "lesson_markdown_path": "curriculum/week-20/day-04-research-report-generation-with-ai-support/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-20/day-04-research-report-generation-with-ai-support/lesson.pdf",
-          "notebook_path": "curriculum/week-20/notebooks/day-04-research-report-generation-with-ai-support.ipynb"
+          "notebook_path": "curriculum/week-20/notebooks/day-04-research-report-generation-with-ai-support.ipynb",
+          "quiz_markdown_path": "curriculum/week-20/day-04-research-report-generation-with-ai-support/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-20/day-04-research-report-generation-with-ai-support/quiz.pdf",
+          "quiz_json_path": "curriculum/week-20/day-04-research-report-generation-with-ai-support/quiz.json"
         },
         {
           "day": "Fri",
@@ -9875,7 +10286,10 @@
           "next_topic": "Capstone build day",
           "lesson_markdown_path": "curriculum/week-20/day-05-robustness-checks-and-final-validation/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-20/day-05-robustness-checks-and-final-validation/lesson.pdf",
-          "notebook_path": "curriculum/week-20/notebooks/day-05-robustness-checks-and-final-validation.ipynb"
+          "notebook_path": "curriculum/week-20/notebooks/day-05-robustness-checks-and-final-validation.ipynb",
+          "quiz_markdown_path": "curriculum/week-20/day-05-robustness-checks-and-final-validation/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-20/day-05-robustness-checks-and-final-validation/quiz.pdf",
+          "quiz_json_path": "curriculum/week-20/day-05-robustness-checks-and-final-validation/quiz.json"
         },
         {
           "day": "Sat",
@@ -9939,7 +10353,10 @@
           "next_topic": "Capstone review and write-up",
           "lesson_markdown_path": "curriculum/week-20/day-06-capstone-build-day/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-20/day-06-capstone-build-day/lesson.pdf",
-          "notebook_path": "curriculum/week-20/notebooks/day-06-capstone-build-day.ipynb"
+          "notebook_path": "curriculum/week-20/notebooks/day-06-capstone-build-day.ipynb",
+          "quiz_markdown_path": "curriculum/week-20/day-06-capstone-build-day/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-20/day-06-capstone-build-day/quiz.pdf",
+          "quiz_json_path": "curriculum/week-20/day-06-capstone-build-day/quiz.json"
         },
         {
           "day": "Sun",
@@ -10003,7 +10420,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-20/day-07-capstone-review-and-write-up/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-20/day-07-capstone-review-and-write-up/lesson.pdf",
-          "notebook_path": "curriculum/week-20/notebooks/day-07-capstone-review-and-write-up.ipynb"
+          "notebook_path": "curriculum/week-20/notebooks/day-07-capstone-review-and-write-up.ipynb",
+          "quiz_markdown_path": "curriculum/week-20/day-07-capstone-review-and-write-up/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-20/day-07-capstone-review-and-write-up/quiz.pdf",
+          "quiz_json_path": "curriculum/week-20/day-07-capstone-review-and-write-up/quiz.json"
         }
       ],
       "concepts": [
@@ -10125,7 +10545,10 @@
           "next_topic": "Scholarship matrix and funding logic",
           "lesson_markdown_path": "curriculum/week-21/day-01-program-tiers-and-fit-analysis/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-21/day-01-program-tiers-and-fit-analysis/lesson.pdf",
-          "notebook_path": "curriculum/week-21/notebooks/day-01-program-tiers-and-fit-analysis.ipynb"
+          "notebook_path": "curriculum/week-21/notebooks/day-01-program-tiers-and-fit-analysis.ipynb",
+          "quiz_markdown_path": "curriculum/week-21/day-01-program-tiers-and-fit-analysis/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-21/day-01-program-tiers-and-fit-analysis/quiz.pdf",
+          "quiz_json_path": "curriculum/week-21/day-01-program-tiers-and-fit-analysis/quiz.json"
         },
         {
           "day": "Tue",
@@ -10189,7 +10612,10 @@
           "next_topic": "SOP structure: past, pivot, proof, future",
           "lesson_markdown_path": "curriculum/week-21/day-02-scholarship-matrix-and-funding-logic/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-21/day-02-scholarship-matrix-and-funding-logic/lesson.pdf",
-          "notebook_path": "curriculum/week-21/notebooks/day-02-scholarship-matrix-and-funding-logic.ipynb"
+          "notebook_path": "curriculum/week-21/notebooks/day-02-scholarship-matrix-and-funding-logic.ipynb",
+          "quiz_markdown_path": "curriculum/week-21/day-02-scholarship-matrix-and-funding-logic/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-21/day-02-scholarship-matrix-and-funding-logic/quiz.pdf",
+          "quiz_json_path": "curriculum/week-21/day-02-scholarship-matrix-and-funding-logic/quiz.json"
         },
         {
           "day": "Wed",
@@ -10253,7 +10679,10 @@
           "next_topic": "Recommendation strategy and evidence package",
           "lesson_markdown_path": "curriculum/week-21/day-03-sop-structure-past-pivot-proof-future/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-21/day-03-sop-structure-past-pivot-proof-future/lesson.pdf",
-          "notebook_path": "curriculum/week-21/notebooks/day-03-sop-structure-past-pivot-proof-future.ipynb"
+          "notebook_path": "curriculum/week-21/notebooks/day-03-sop-structure-past-pivot-proof-future.ipynb",
+          "quiz_markdown_path": "curriculum/week-21/day-03-sop-structure-past-pivot-proof-future/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-21/day-03-sop-structure-past-pivot-proof-future/quiz.pdf",
+          "quiz_json_path": "curriculum/week-21/day-03-sop-structure-past-pivot-proof-future/quiz.json"
         },
         {
           "day": "Thu",
@@ -10317,7 +10746,10 @@
           "next_topic": "CV and project narrative refinement",
           "lesson_markdown_path": "curriculum/week-21/day-04-recommendation-strategy-and-evidence-package/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-21/day-04-recommendation-strategy-and-evidence-package/lesson.pdf",
-          "notebook_path": "curriculum/week-21/notebooks/day-04-recommendation-strategy-and-evidence-package.ipynb"
+          "notebook_path": "curriculum/week-21/notebooks/day-04-recommendation-strategy-and-evidence-package.ipynb",
+          "quiz_markdown_path": "curriculum/week-21/day-04-recommendation-strategy-and-evidence-package/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-21/day-04-recommendation-strategy-and-evidence-package/quiz.pdf",
+          "quiz_json_path": "curriculum/week-21/day-04-recommendation-strategy-and-evidence-package/quiz.json"
         },
         {
           "day": "Fri",
@@ -10381,7 +10813,10 @@
           "next_topic": "Mini lab: draft your application story",
           "lesson_markdown_path": "curriculum/week-21/day-05-cv-and-project-narrative-refinement/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-21/day-05-cv-and-project-narrative-refinement/lesson.pdf",
-          "notebook_path": "curriculum/week-21/notebooks/day-05-cv-and-project-narrative-refinement.ipynb"
+          "notebook_path": "curriculum/week-21/notebooks/day-05-cv-and-project-narrative-refinement.ipynb",
+          "quiz_markdown_path": "curriculum/week-21/day-05-cv-and-project-narrative-refinement/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-21/day-05-cv-and-project-narrative-refinement/quiz.pdf",
+          "quiz_json_path": "curriculum/week-21/day-05-cv-and-project-narrative-refinement/quiz.json"
         },
         {
           "day": "Sat",
@@ -10445,7 +10880,10 @@
           "next_topic": "Review and evidence gap check",
           "lesson_markdown_path": "curriculum/week-21/day-06-mini-lab-draft-your-application-story/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-21/day-06-mini-lab-draft-your-application-story/lesson.pdf",
-          "notebook_path": "curriculum/week-21/notebooks/day-06-mini-lab-draft-your-application-story.ipynb"
+          "notebook_path": "curriculum/week-21/notebooks/day-06-mini-lab-draft-your-application-story.ipynb",
+          "quiz_markdown_path": "curriculum/week-21/day-06-mini-lab-draft-your-application-story/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-21/day-06-mini-lab-draft-your-application-story/quiz.pdf",
+          "quiz_json_path": "curriculum/week-21/day-06-mini-lab-draft-your-application-story/quiz.json"
         },
         {
           "day": "Sun",
@@ -10509,7 +10947,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-21/day-07-review-and-evidence-gap-check/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-21/day-07-review-and-evidence-gap-check/lesson.pdf",
-          "notebook_path": "curriculum/week-21/notebooks/day-07-review-and-evidence-gap-check.ipynb"
+          "notebook_path": "curriculum/week-21/notebooks/day-07-review-and-evidence-gap-check.ipynb",
+          "quiz_markdown_path": "curriculum/week-21/day-07-review-and-evidence-gap-check/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-21/day-07-review-and-evidence-gap-check/quiz.pdf",
+          "quiz_json_path": "curriculum/week-21/day-07-review-and-evidence-gap-check/quiz.json"
         }
       ],
       "concepts": [
@@ -10625,7 +11066,10 @@
           "next_topic": "Statistics and regression drills",
           "lesson_markdown_path": "curriculum/week-22/day-01-probability-drills-and-expected-value/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-22/day-01-probability-drills-and-expected-value/lesson.pdf",
-          "notebook_path": "curriculum/week-22/notebooks/day-01-probability-drills-and-expected-value.ipynb"
+          "notebook_path": "curriculum/week-22/notebooks/day-01-probability-drills-and-expected-value.ipynb",
+          "quiz_markdown_path": "curriculum/week-22/day-01-probability-drills-and-expected-value/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-22/day-01-probability-drills-and-expected-value/quiz.pdf",
+          "quiz_json_path": "curriculum/week-22/day-01-probability-drills-and-expected-value/quiz.json"
         },
         {
           "day": "Tue",
@@ -10689,7 +11133,10 @@
           "next_topic": "Linear algebra and optimization drills",
           "lesson_markdown_path": "curriculum/week-22/day-02-statistics-and-regression-drills/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-22/day-02-statistics-and-regression-drills/lesson.pdf",
-          "notebook_path": "curriculum/week-22/notebooks/day-02-statistics-and-regression-drills.ipynb"
+          "notebook_path": "curriculum/week-22/notebooks/day-02-statistics-and-regression-drills.ipynb",
+          "quiz_markdown_path": "curriculum/week-22/day-02-statistics-and-regression-drills/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-22/day-02-statistics-and-regression-drills/quiz.pdf",
+          "quiz_json_path": "curriculum/week-22/day-02-statistics-and-regression-drills/quiz.json"
         },
         {
           "day": "Wed",
@@ -10753,7 +11200,10 @@
           "next_topic": "Python and NumPy drills",
           "lesson_markdown_path": "curriculum/week-22/day-03-linear-algebra-and-optimization-drills/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-22/day-03-linear-algebra-and-optimization-drills/lesson.pdf",
-          "notebook_path": "curriculum/week-22/notebooks/day-03-linear-algebra-and-optimization-drills.ipynb"
+          "notebook_path": "curriculum/week-22/notebooks/day-03-linear-algebra-and-optimization-drills.ipynb",
+          "quiz_markdown_path": "curriculum/week-22/day-03-linear-algebra-and-optimization-drills/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-22/day-03-linear-algebra-and-optimization-drills/quiz.pdf",
+          "quiz_json_path": "curriculum/week-22/day-03-linear-algebra-and-optimization-drills/quiz.json"
         },
         {
           "day": "Thu",
@@ -10817,7 +11267,10 @@
           "next_topic": "SQL and data reasoning drills",
           "lesson_markdown_path": "curriculum/week-22/day-04-python-and-numpy-drills/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-22/day-04-python-and-numpy-drills/lesson.pdf",
-          "notebook_path": "curriculum/week-22/notebooks/day-04-python-and-numpy-drills.ipynb"
+          "notebook_path": "curriculum/week-22/notebooks/day-04-python-and-numpy-drills.ipynb",
+          "quiz_markdown_path": "curriculum/week-22/day-04-python-and-numpy-drills/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-22/day-04-python-and-numpy-drills/quiz.pdf",
+          "quiz_json_path": "curriculum/week-22/day-04-python-and-numpy-drills/quiz.json"
         },
         {
           "day": "Fri",
@@ -10881,7 +11334,10 @@
           "next_topic": "Markets and finance discussion drills",
           "lesson_markdown_path": "curriculum/week-22/day-05-sql-and-data-reasoning-drills/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-22/day-05-sql-and-data-reasoning-drills/lesson.pdf",
-          "notebook_path": "curriculum/week-22/notebooks/day-05-sql-and-data-reasoning-drills.ipynb"
+          "notebook_path": "curriculum/week-22/notebooks/day-05-sql-and-data-reasoning-drills.ipynb",
+          "quiz_markdown_path": "curriculum/week-22/day-05-sql-and-data-reasoning-drills/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-22/day-05-sql-and-data-reasoning-drills/quiz.pdf",
+          "quiz_json_path": "curriculum/week-22/day-05-sql-and-data-reasoning-drills/quiz.json"
         },
         {
           "day": "Sat",
@@ -10945,7 +11401,10 @@
           "next_topic": "Mock interview day",
           "lesson_markdown_path": "curriculum/week-22/day-06-markets-and-finance-discussion-drills/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-22/day-06-markets-and-finance-discussion-drills/lesson.pdf",
-          "notebook_path": "curriculum/week-22/notebooks/day-06-markets-and-finance-discussion-drills.ipynb"
+          "notebook_path": "curriculum/week-22/notebooks/day-06-markets-and-finance-discussion-drills.ipynb",
+          "quiz_markdown_path": "curriculum/week-22/day-06-markets-and-finance-discussion-drills/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-22/day-06-markets-and-finance-discussion-drills/quiz.pdf",
+          "quiz_json_path": "curriculum/week-22/day-06-markets-and-finance-discussion-drills/quiz.json"
         },
         {
           "day": "Sun",
@@ -11009,7 +11468,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-22/day-07-mock-interview-day/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-22/day-07-mock-interview-day/lesson.pdf",
-          "notebook_path": "curriculum/week-22/notebooks/day-07-mock-interview-day.ipynb"
+          "notebook_path": "curriculum/week-22/notebooks/day-07-mock-interview-day.ipynb",
+          "quiz_markdown_path": "curriculum/week-22/day-07-mock-interview-day/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-22/day-07-mock-interview-day/quiz.pdf",
+          "quiz_json_path": "curriculum/week-22/day-07-mock-interview-day/quiz.json"
         }
       ],
       "concepts": [
@@ -11125,7 +11587,10 @@
           "next_topic": "Project README writing and visual clarity",
           "lesson_markdown_path": "curriculum/week-23/day-01-github-cleanup-and-repository-storytelling/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-23/day-01-github-cleanup-and-repository-storytelling/lesson.pdf",
-          "notebook_path": "curriculum/week-23/notebooks/day-01-github-cleanup-and-repository-storytelling.ipynb"
+          "notebook_path": "curriculum/week-23/notebooks/day-01-github-cleanup-and-repository-storytelling.ipynb",
+          "quiz_markdown_path": "curriculum/week-23/day-01-github-cleanup-and-repository-storytelling/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-23/day-01-github-cleanup-and-repository-storytelling/quiz.pdf",
+          "quiz_json_path": "curriculum/week-23/day-01-github-cleanup-and-repository-storytelling/quiz.json"
         },
         {
           "day": "Tue",
@@ -11189,7 +11654,10 @@
           "next_topic": "Networking and outreach messages",
           "lesson_markdown_path": "curriculum/week-23/day-02-project-readme-writing-and-visual-clarity/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-23/day-02-project-readme-writing-and-visual-clarity/lesson.pdf",
-          "notebook_path": "curriculum/week-23/notebooks/day-02-project-readme-writing-and-visual-clarity.ipynb"
+          "notebook_path": "curriculum/week-23/notebooks/day-02-project-readme-writing-and-visual-clarity.ipynb",
+          "quiz_markdown_path": "curriculum/week-23/day-02-project-readme-writing-and-visual-clarity/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-23/day-02-project-readme-writing-and-visual-clarity/quiz.pdf",
+          "quiz_json_path": "curriculum/week-23/day-02-project-readme-writing-and-visual-clarity/quiz.json"
         },
         {
           "day": "Wed",
@@ -11253,7 +11721,10 @@
           "next_topic": "Case-study presentation and limitations defense",
           "lesson_markdown_path": "curriculum/week-23/day-03-networking-and-outreach-messages/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-23/day-03-networking-and-outreach-messages/lesson.pdf",
-          "notebook_path": "curriculum/week-23/notebooks/day-03-networking-and-outreach-messages.ipynb"
+          "notebook_path": "curriculum/week-23/notebooks/day-03-networking-and-outreach-messages.ipynb",
+          "quiz_markdown_path": "curriculum/week-23/day-03-networking-and-outreach-messages/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-23/day-03-networking-and-outreach-messages/quiz.pdf",
+          "quiz_json_path": "curriculum/week-23/day-03-networking-and-outreach-messages/quiz.json"
         },
         {
           "day": "Thu",
@@ -11317,7 +11788,10 @@
           "next_topic": "Behavioral stories for finance roles",
           "lesson_markdown_path": "curriculum/week-23/day-04-case-study-presentation-and-limitations-defense/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-23/day-04-case-study-presentation-and-limitations-defense/lesson.pdf",
-          "notebook_path": "curriculum/week-23/notebooks/day-04-case-study-presentation-and-limitations-defense.ipynb"
+          "notebook_path": "curriculum/week-23/notebooks/day-04-case-study-presentation-and-limitations-defense.ipynb",
+          "quiz_markdown_path": "curriculum/week-23/day-04-case-study-presentation-and-limitations-defense/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-23/day-04-case-study-presentation-and-limitations-defense/quiz.pdf",
+          "quiz_json_path": "curriculum/week-23/day-04-case-study-presentation-and-limitations-defense/quiz.json"
         },
         {
           "day": "Fri",
@@ -11381,7 +11855,10 @@
           "next_topic": "Mock presentation day",
           "lesson_markdown_path": "curriculum/week-23/day-05-behavioral-stories-for-finance-roles/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-23/day-05-behavioral-stories-for-finance-roles/lesson.pdf",
-          "notebook_path": "curriculum/week-23/notebooks/day-05-behavioral-stories-for-finance-roles.ipynb"
+          "notebook_path": "curriculum/week-23/notebooks/day-05-behavioral-stories-for-finance-roles.ipynb",
+          "quiz_markdown_path": "curriculum/week-23/day-05-behavioral-stories-for-finance-roles/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-23/day-05-behavioral-stories-for-finance-roles/quiz.pdf",
+          "quiz_json_path": "curriculum/week-23/day-05-behavioral-stories-for-finance-roles/quiz.json"
         },
         {
           "day": "Sat",
@@ -11445,7 +11922,10 @@
           "next_topic": "Review and polish",
           "lesson_markdown_path": "curriculum/week-23/day-06-mock-presentation-day/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-23/day-06-mock-presentation-day/lesson.pdf",
-          "notebook_path": "curriculum/week-23/notebooks/day-06-mock-presentation-day.ipynb"
+          "notebook_path": "curriculum/week-23/notebooks/day-06-mock-presentation-day.ipynb",
+          "quiz_markdown_path": "curriculum/week-23/day-06-mock-presentation-day/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-23/day-06-mock-presentation-day/quiz.pdf",
+          "quiz_json_path": "curriculum/week-23/day-06-mock-presentation-day/quiz.json"
         },
         {
           "day": "Sun",
@@ -11509,7 +11989,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-23/day-07-review-and-polish/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-23/day-07-review-and-polish/lesson.pdf",
-          "notebook_path": "curriculum/week-23/notebooks/day-07-review-and-polish.ipynb"
+          "notebook_path": "curriculum/week-23/notebooks/day-07-review-and-polish.ipynb",
+          "quiz_markdown_path": "curriculum/week-23/day-07-review-and-polish/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-23/day-07-review-and-polish/quiz.pdf",
+          "quiz_json_path": "curriculum/week-23/day-07-review-and-polish/quiz.json"
         }
       ],
       "concepts": [
@@ -11625,7 +12108,10 @@
           "next_topic": "Implement pipeline and verify assumptions",
           "lesson_markdown_path": "curriculum/week-24/day-01-choose-final-capstone-question-and-scope/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-24/day-01-choose-final-capstone-question-and-scope/lesson.pdf",
-          "notebook_path": "curriculum/week-24/notebooks/day-01-choose-final-capstone-question-and-scope.ipynb"
+          "notebook_path": "curriculum/week-24/notebooks/day-01-choose-final-capstone-question-and-scope.ipynb",
+          "quiz_markdown_path": "curriculum/week-24/day-01-choose-final-capstone-question-and-scope/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-24/day-01-choose-final-capstone-question-and-scope/quiz.pdf",
+          "quiz_json_path": "curriculum/week-24/day-01-choose-final-capstone-question-and-scope/quiz.json"
         },
         {
           "day": "Tue",
@@ -11689,7 +12175,10 @@
           "next_topic": "Evaluate, stress test, and document limitations",
           "lesson_markdown_path": "curriculum/week-24/day-02-implement-pipeline-and-verify-assumptions/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-24/day-02-implement-pipeline-and-verify-assumptions/lesson.pdf",
-          "notebook_path": "curriculum/week-24/notebooks/day-02-implement-pipeline-and-verify-assumptions.ipynb"
+          "notebook_path": "curriculum/week-24/notebooks/day-02-implement-pipeline-and-verify-assumptions.ipynb",
+          "quiz_markdown_path": "curriculum/week-24/day-02-implement-pipeline-and-verify-assumptions/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-24/day-02-implement-pipeline-and-verify-assumptions/quiz.pdf",
+          "quiz_json_path": "curriculum/week-24/day-02-implement-pipeline-and-verify-assumptions/quiz.json"
         },
         {
           "day": "Wed",
@@ -11753,7 +12242,10 @@
           "next_topic": "Prepare final report and presentation",
           "lesson_markdown_path": "curriculum/week-24/day-03-evaluate-stress-test-and-document-limitations/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-24/day-03-evaluate-stress-test-and-document-limitations/lesson.pdf",
-          "notebook_path": "curriculum/week-24/notebooks/day-03-evaluate-stress-test-and-document-limitations.ipynb"
+          "notebook_path": "curriculum/week-24/notebooks/day-03-evaluate-stress-test-and-document-limitations.ipynb",
+          "quiz_markdown_path": "curriculum/week-24/day-03-evaluate-stress-test-and-document-limitations/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-24/day-03-evaluate-stress-test-and-document-limitations/quiz.pdf",
+          "quiz_json_path": "curriculum/week-24/day-03-evaluate-stress-test-and-document-limitations/quiz.json"
         },
         {
           "day": "Thu",
@@ -11817,7 +12309,10 @@
           "next_topic": "Final self-assessment and gap map",
           "lesson_markdown_path": "curriculum/week-24/day-04-prepare-final-report-and-presentation/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-24/day-04-prepare-final-report-and-presentation/lesson.pdf",
-          "notebook_path": "curriculum/week-24/notebooks/day-04-prepare-final-report-and-presentation.ipynb"
+          "notebook_path": "curriculum/week-24/notebooks/day-04-prepare-final-report-and-presentation.ipynb",
+          "quiz_markdown_path": "curriculum/week-24/day-04-prepare-final-report-and-presentation/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-24/day-04-prepare-final-report-and-presentation/quiz.pdf",
+          "quiz_json_path": "curriculum/week-24/day-04-prepare-final-report-and-presentation/quiz.json"
         },
         {
           "day": "Fri",
@@ -11881,7 +12376,10 @@
           "next_topic": "Capstone presentation day",
           "lesson_markdown_path": "curriculum/week-24/day-05-final-self-assessment-and-gap-map/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-24/day-05-final-self-assessment-and-gap-map/lesson.pdf",
-          "notebook_path": "curriculum/week-24/notebooks/day-05-final-self-assessment-and-gap-map.ipynb"
+          "notebook_path": "curriculum/week-24/notebooks/day-05-final-self-assessment-and-gap-map.ipynb",
+          "quiz_markdown_path": "curriculum/week-24/day-05-final-self-assessment-and-gap-map/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-24/day-05-final-self-assessment-and-gap-map/quiz.pdf",
+          "quiz_json_path": "curriculum/week-24/day-05-final-self-assessment-and-gap-map/quiz.json"
         },
         {
           "day": "Sat",
@@ -11945,7 +12443,10 @@
           "next_topic": "Transition roadmap for 2026-2027 applications",
           "lesson_markdown_path": "curriculum/week-24/day-06-capstone-presentation-day/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-24/day-06-capstone-presentation-day/lesson.pdf",
-          "notebook_path": "curriculum/week-24/notebooks/day-06-capstone-presentation-day.ipynb"
+          "notebook_path": "curriculum/week-24/notebooks/day-06-capstone-presentation-day.ipynb",
+          "quiz_markdown_path": "curriculum/week-24/day-06-capstone-presentation-day/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-24/day-06-capstone-presentation-day/quiz.pdf",
+          "quiz_json_path": "curriculum/week-24/day-06-capstone-presentation-day/quiz.json"
         },
         {
           "day": "Sun",
@@ -12009,7 +12510,10 @@
           "next_topic": "",
           "lesson_markdown_path": "curriculum/week-24/day-07-transition-roadmap-for-2026-2027-applications/lesson.md",
           "lesson_pdf_path": "curriculum/pdfs/week-24/day-07-transition-roadmap-for-2026-2027-applications/lesson.pdf",
-          "notebook_path": "curriculum/week-24/notebooks/day-07-transition-roadmap-for-2026-2027-applications.ipynb"
+          "notebook_path": "curriculum/week-24/notebooks/day-07-transition-roadmap-for-2026-2027-applications.ipynb",
+          "quiz_markdown_path": "curriculum/week-24/day-07-transition-roadmap-for-2026-2027-applications/quiz.md",
+          "quiz_pdf_path": "curriculum/pdfs/week-24/day-07-transition-roadmap-for-2026-2027-applications/quiz.pdf",
+          "quiz_json_path": "curriculum/week-24/day-07-transition-roadmap-for-2026-2027-applications/quiz.json"
         }
       ],
       "concepts": [

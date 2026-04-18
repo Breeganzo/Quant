@@ -1142,6 +1142,15 @@ def build_roadmap() -> list[dict]:
             day["notebook_path"] = (
                 f"curriculum/week-{blueprint['week']:02d}/notebooks/day-{index:02d}-{slug}.ipynb"
             )
+            day["quiz_markdown_path"] = (
+                f"curriculum/week-{blueprint['week']:02d}/day-{index:02d}-{slug}/quiz.md"
+            )
+            day["quiz_pdf_path"] = (
+                f"curriculum/pdfs/week-{blueprint['week']:02d}/day-{index:02d}-{slug}/quiz.pdf"
+            )
+            day["quiz_json_path"] = (
+                f"curriculum/week-{blueprint['week']:02d}/day-{index:02d}-{slug}/quiz.json"
+            )
         roadmap.append(
             {
                 "week": blueprint["week"],
@@ -1451,6 +1460,19 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             "- Compounding: W_t = W_0 * product(1 + r_t)",
             f"- Topic-specific formula: write one formula central to {day['topic'].lower()} and explain every symbol.",
             "",
+            "## Formula Organization Table",
+            "| Formula/Workflow | Meaning | Finance Use Case | Common Misread |",
+            "| --- | --- | --- | --- |",
+            "| Topic-specific formula | Core relationship for today's topic | Strategy/risk interpretation | Memorizing symbols without interpretation |",
+            "| Expected value | Probability-weighted average outcome | Comparing asymmetric payoff setups | Ignoring payoff magnitude |",
+            "| Volatility proxy | Dispersion of returns around average | Position sizing and risk budgeting | Treating low volatility as no risk |",
+            "",
+            "## Common Mistakes and Fixes",
+            "- Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.",
+            "- Mistake: reporting one number without context. Fix: compare to benchmark or alternate scenario.",
+            "- Mistake: reading model output as certainty. Fix: include one failure mode and one robustness check.",
+            "- Mistake: skipping assumptions. Fix: list assumptions before interpretation.",
+            "",
             "## Revision Sprint",
             "- Re-solve one earlier problem from memory before checking notes.",
             "- Review yesterday's weak point and state whether it is fixed.",
@@ -1479,6 +1501,123 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             "- I wrote one realistic finance use case in my own words.",
             "- I recorded at least one weak area in my error log.",
             "- I set the next review date using spaced repetition.",
+        ]
+    )
+
+    if day["day"] == "Sat":
+        lines.extend(
+            [
+                "",
+                "## Saturday Revision Protocol",
+                "1. Rebuild your week summary from memory before opening notes.",
+                "2. Rework two weak problems from your error log with corrected reasoning.",
+                "3. Refresh formula sheet entries and mark confidence 0-5 per formula.",
+                "4. Prepare one interview-style explanation for the week's hardest concept.",
+            ]
+        )
+
+    if day["day"] == "Sun":
+        lines.extend(
+            [
+                "",
+                "## Sunday Mini-Project Blueprint",
+                "1. Load real market data from `curriculum/datasets/real_market_prices.csv`.",
+                "2. Define a clear project question and one measurable output metric.",
+                "3. Build at least one baseline and one variation, then compare outcomes.",
+                "4. Write a short conclusion with one limitation and one next-step improvement.",
+            ]
+        )
+
+    return "\n".join(lines) + "\n"
+
+
+def daily_quiz_items(week_number: int, day_index: int, day: dict) -> list[dict[str, str]]:
+    topic = day["topic"]
+    topic_lower = topic.lower()
+    questions: list[dict[str, str]] = [
+        {
+            "id": "q1",
+            "difficulty": "basic",
+            "question": f"Explain the core intuition of {topic_lower} in plain language.",
+            "answer": f"A strong answer defines {topic_lower}, gives one concrete example, and links it to decision quality.",
+            "explanation": "This tests whether the concept is understood beyond memorized vocabulary.",
+        },
+        {
+            "id": "q2",
+            "difficulty": "intermediate",
+            "question": "Write one key formula or workflow from memory and define each symbol or step.",
+            "answer": "A strong answer includes the formula/workflow, variable definitions, units, and one implementation caveat.",
+            "explanation": "This checks mathematical fluency and operational clarity.",
+        },
+        {
+            "id": "q3",
+            "difficulty": "intermediate",
+            "question": "Give one realistic quant use case and one failure mode if the concept is misapplied.",
+            "answer": "A strong answer ties the concept to trading, portfolio, or risk decisions and includes one practical misuse risk.",
+            "explanation": "This evaluates transfer from theory to real workflow judgment.",
+        },
+        {
+            "id": "q4",
+            "difficulty": "advanced",
+            "question": "Using SPY/QQQ/TLT/GLD daily data, what quick diagnostic would you run before trusting conclusions?",
+            "answer": "Check data quality, missing values, return stability, and sensitivity of results to a stress period or alternate window.",
+            "explanation": "This tests robustness thinking with real market data.",
+        },
+    ]
+
+    if day["day"] == "Sat":
+        questions.append(
+            {
+                "id": "q5",
+                "difficulty": "advanced",
+                "question": "From your error log, pick one repeated mistake and describe the correction protocol for next week.",
+                "answer": "State the exact misconception, corrected rule, retrieval prompt, and next review schedule (1d/3d/7d/14d).",
+                "explanation": "Saturday should convert weak spots into an explicit revision mechanism.",
+            }
+        )
+
+    if day["day"] == "Sun":
+        questions.append(
+            {
+                "id": "q5",
+                "difficulty": "advanced",
+                "question": "What mini-project decision would you defend from this week and what evidence supports it?",
+                "answer": "Name the decision, show one metric/table/plot supporting it, and mention one limitation plus next-step test.",
+                "explanation": "Sunday focuses on project communication quality, not only calculations.",
+            }
+        )
+
+    return questions
+
+
+def daily_quiz_markdown(week_number: int, day_index: int, day: dict, quiz_items: list[dict[str, str]]) -> str:
+    lines = [
+        f"# Week {week_number:02d} Day {day_index:02d} Quiz: {day['topic']}",
+        "",
+        "## Instructions",
+        "- Attempt closed-book first.",
+        "- After answering, compare with the answer key and write one correction note.",
+        "- Target score: at least 4/5 confidence on every item before moving on.",
+        "",
+        "## Questions and Answer Key",
+    ]
+    for item in quiz_items:
+        lines.extend(
+            [
+                f"### {item['id'].upper()} ({item['difficulty']})",
+                f"Question: {item['question']}",
+                "",
+                f"Answer guide: {item['answer']}",
+                f"Why this matters: {item['explanation']}",
+                "",
+            ]
+        )
+    lines.extend(
+        [
+            "## Reflection",
+            "- Which item was weakest and why?",
+            "- What will you review before tomorrow?",
+            "- What evidence shows your answer quality improved versus last week?",
         ]
     )
     return "\n".join(lines) + "\n"
@@ -1765,6 +1904,61 @@ def four_hour_notebook_extension(day: dict) -> list:
         """
     ).strip()
 
+    weekend_extension_cells = []
+
+    if day["day"] == "Sat":
+        weekend_revision_markdown = "## Saturday Revision Engine"
+        weekend_revision_code = _nb_code(
+            """\
+            import pandas as pd
+
+            revision_board = pd.DataFrame(
+                [
+                    {"item": "weak_formula_1", "confidence_before": 0, "confidence_after": 0, "next_review": ""},
+                    {"item": "weak_concept_1", "confidence_before": 0, "confidence_after": 0, "next_review": ""},
+                    {"item": "interview_answer_1", "confidence_before": 0, "confidence_after": 0, "next_review": ""},
+                ]
+            )
+            print(revision_board)
+            """
+        )
+        weekend_extension_cells.extend(
+            [
+                nbf.v4.new_markdown_cell(weekend_revision_markdown),
+                nbf.v4.new_code_cell(weekend_revision_code),
+            ]
+        )
+
+    if day["day"] == "Sun":
+        weekend_project_markdown = "## Sunday Mini-Project Build"
+        weekend_project_code = _nb_code(
+            """\
+            from pathlib import Path
+            import pandas as pd
+
+            market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
+            panel = market.pivot(index="date", columns="symbol", values="close").dropna()
+            returns = panel.pct_change().dropna()
+
+            weights = pd.Series({"SPY": 0.4, "QQQ": 0.3, "TLT": 0.2, "GLD": 0.1})
+            portfolio = returns.mul(weights, axis=1).sum(axis=1)
+
+            report = {
+                "annualized_return": float(portfolio.mean() * 252),
+                "annualized_vol": float(portfolio.std() * (252 ** 0.5)),
+                "best_day": float(portfolio.max()),
+                "worst_day": float(portfolio.min()),
+            }
+            print({k: round(v, 6) for k, v in report.items()})
+            """
+        )
+        weekend_extension_cells.extend(
+            [
+                nbf.v4.new_markdown_cell(weekend_project_markdown),
+                nbf.v4.new_code_cell(weekend_project_code),
+            ]
+        )
+
     return [
         nbf.v4.new_markdown_cell(roadmap_markdown),
         nbf.v4.new_markdown_cell(formula_markdown),
@@ -1772,6 +1966,7 @@ def four_hour_notebook_extension(day: dict) -> list:
         nbf.v4.new_markdown_cell(real_data_markdown),
         nbf.v4.new_code_cell(real_data_code),
         nbf.v4.new_markdown_cell(real_data_takeaway_markdown),
+        *weekend_extension_cells,
         nbf.v4.new_markdown_cell(scenario_markdown),
         nbf.v4.new_code_cell(scenario_code),
         nbf.v4.new_markdown_cell(retrieval_markdown),
@@ -1787,11 +1982,12 @@ def generic_project_notebook_spec(week: dict) -> dict:
         f"""\
         # Week {week_number:02d} {project_type}: {week['title']}
 
-        Build a concise research artifact that:
+        Build a concise real-data research artifact that:
 
         - states the question clearly
-        - creates at least one measurable output
-        - compares alternatives transparently
+        - uses the local market dataset snapshot
+        - creates measurable risk/return outputs
+        - compares at least two configurations transparently
         - documents limitations honestly
         """
     ).strip()
@@ -1811,62 +2007,78 @@ def generic_project_notebook_spec(week: dict) -> dict:
         Use this closing structure:
 
         1. Problem definition and motivation.
-        2. Data and assumptions.
-        3. Result summary with one risk caveat.
+        2. Data scope and assumptions.
+        3. Result summary with one risk caveat and one robustness check.
         4. What you would improve next week.
         """
     ).strip()
     code_cells = [
         {
-            "markdown": "## Step 1: Create a toy score table",
+            "markdown": "## Step 1: Load real market dataset",
             "code": _nb_code(
                 """\
+                from pathlib import Path
                 import pandas as pd
 
-                candidates = pd.DataFrame(
+                market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
+                market = market.sort_values(["date", "symbol"])
+                print("Rows:", len(market))
+                print("Symbols:", sorted(market["symbol"].unique()))
+                print(market.head())
+                """
+            ),
+        },
+        {
+            "markdown": "## Step 2: Build return panel and baseline stats",
+            "code": _nb_code(
+                """\
+                prices = market.pivot(index="date", columns="symbol", values="close").dropna()
+                returns = prices.pct_change().dropna()
+
+                stats = pd.DataFrame(
                     {
-                        "strategy": ["baseline", "variant_a", "variant_b"],
-                        "expected_return": [0.010, 0.013, 0.009],
-                        "volatility": [0.020, 0.024, 0.015],
-                        "max_drawdown": [0.050, 0.070, 0.040],
+                        "ann_return": returns.mean() * 252,
+                        "ann_vol": returns.std() * (252 ** 0.5),
+                        "sharpe_proxy": (returns.mean() * 252) / (returns.std() * (252 ** 0.5)),
                     }
                 )
-                print(candidates)
+                print(stats.round(4))
                 """
             ),
         },
         {
-            "markdown": "## Step 2: Compute a simple quality score",
+            "markdown": "## Step 3: Compare two portfolio configurations",
             "code": _nb_code(
                 """\
-                candidates = candidates.assign(
-                    return_to_risk=candidates["expected_return"] / candidates["volatility"],
-                    penalty=candidates["max_drawdown"] * 2,
+                weights_a = pd.Series({"SPY": 0.4, "QQQ": 0.3, "TLT": 0.2, "GLD": 0.1})
+                weights_b = pd.Series({"SPY": 0.25, "QQQ": 0.25, "TLT": 0.25, "GLD": 0.25})
+
+                port_a = returns.mul(weights_a, axis=1).sum(axis=1)
+                port_b = returns.mul(weights_b, axis=1).sum(axis=1)
+
+                compare = pd.DataFrame(
+                    {
+                        "portfolio": ["tilted", "equal_weight"],
+                        "ann_return": [port_a.mean() * 252, port_b.mean() * 252],
+                        "ann_vol": [port_a.std() * (252 ** 0.5), port_b.std() * (252 ** 0.5)],
+                    }
                 )
-                candidates["quality_score"] = candidates["return_to_risk"] - candidates["penalty"]
-                print(candidates.round(4))
+                compare["sharpe_proxy"] = compare["ann_return"] / compare["ann_vol"]
+                print(compare.round(4))
                 """
             ),
         },
         {
-            "markdown": "## Step 3: Rank and interpret",
-            "code": _nb_code(
-                """\
-                ranked = candidates.sort_values("quality_score", ascending=False)
-                print(ranked[["strategy", "quality_score"]].round(4))
-                """
-            ),
-        },
-        {
-            "markdown": "## Step 4: Add decision notes",
+            "markdown": "## Step 4: Decision notes and limitation log",
             "code": _nb_code(
                 f"""\
                 decision_note = {{
                     "week": {week_number},
                     "theme": {week['title']!r},
-                    "best_candidate": ranked.iloc[0]["strategy"],
-                    "risk_note": "Document one fragility before trusting this result.",
-                    "next_iteration": "Define one concrete improvement for the next research cycle.",
+                    "preferred_configuration": "Choose tilted or equal_weight after comparing metrics.",
+                    "risk_note": "Document one fragility (sample period, regime change, concentration, etc.).",
+                    "robustness_check": "Re-run with a different date window or alternate weights.",
+                    "next_iteration": "Define one concrete improvement for the next cycle.",
                 }}
                 print(decision_note)
                 """
@@ -1878,6 +2090,45 @@ def generic_project_notebook_spec(week: dict) -> dict:
         "code_cells": code_cells,
         "closing_markdown": closing_markdown + "\n",
     }
+
+
+def project_real_data_extension_cells(week: dict) -> list:
+    extension_markdown = textwrap.dedent(
+        f"""\
+        ## Real-Data Extension (Required)
+
+        Use this block for the final pass of your Week {week['week']} project:
+
+        - Load `curriculum/datasets/real_market_prices.csv`.
+        - Compute one table and one chart that support your project decision.
+        - Record one limitation and one robustness check.
+        """
+    ).strip()
+
+    extension_code = _nb_code(
+        """\
+        from pathlib import Path
+        import pandas as pd
+
+        market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
+        prices = market.pivot(index="date", columns="symbol", values="close").dropna()
+        returns = prices.pct_change().dropna()
+
+        quick_diag = pd.DataFrame(
+            {
+                "ann_return": returns.mean() * 252,
+                "ann_vol": returns.std() * (252 ** 0.5),
+                "corr_to_spy": returns.corr().get("SPY", pd.Series(dtype=float)),
+            }
+        )
+        print(quick_diag.round(4))
+        """
+    )
+
+    return [
+        nbf.v4.new_markdown_cell(extension_markdown),
+        nbf.v4.new_code_cell(extension_code),
+    ]
 
 
 def templates() -> dict[str, str]:
@@ -2099,6 +2350,7 @@ def create_curriculum_notebooks(roadmap: list[dict]) -> None:
         for item in project_spec["code_cells"]:
             project_cells.append(nbf.v4.new_markdown_cell(item["markdown"]))
             project_cells.append(nbf.v4.new_code_cell(item["code"]))
+        project_cells.extend(project_real_data_extension_cells(week))
         project_cells.append(nbf.v4.new_markdown_cell(project_spec["closing_markdown"]))
         notebook_writer(notebooks_dir / project_name, project_cells)
 
@@ -2126,6 +2378,23 @@ def write_curriculum_files(roadmap: list[dict]) -> None:
                 )
             )
             (day_dir / "lesson.md").write_text(content, encoding="utf-8")
+
+            quiz_items = daily_quiz_items(week["week"], idx, day)
+            quiz_markdown = daily_quiz_markdown(week["week"], idx, day, quiz_items)
+            (day_dir / "quiz.md").write_text(quiz_markdown, encoding="utf-8")
+            (day_dir / "quiz.json").write_text(
+                json.dumps(
+                    {
+                        "week": week["week"],
+                        "day_index": idx,
+                        "day": day["day"],
+                        "topic": day["topic"],
+                        "questions": quiz_items,
+                    },
+                    indent=2,
+                ),
+                encoding="utf-8",
+            )
 
 
 def main() -> None:

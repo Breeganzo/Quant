@@ -54,6 +54,19 @@ Cross-sectional portfolio construction is part of real quant work inside signals
 - Compounding: W_t = W_0 * product(1 + r_t)
 - Topic-specific formula: write one formula central to cross-sectional portfolio construction and explain every symbol.
 
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
+| --- | --- | --- | --- |
+| Topic-specific formula | Core relationship for today's topic | Strategy/risk interpretation | Memorizing symbols without interpretation |
+| Expected value | Probability-weighted average outcome | Comparing asymmetric payoff setups | Ignoring payoff magnitude |
+| Volatility proxy | Dispersion of returns around average | Position sizing and risk budgeting | Treating low volatility as no risk |
+
+## Common Mistakes and Fixes
+- Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.
+- Mistake: reporting one number without context. Fix: compare to benchmark or alternate scenario.
+- Mistake: reading model output as certainty. Fix: include one failure mode and one robustness check.
+- Mistake: skipping assumptions. Fix: list assumptions before interpretation.
+
 ## Revision Sprint
 - Re-solve one earlier problem from memory before checking notes.
 - Review yesterday's weak point and state whether it is fixed.

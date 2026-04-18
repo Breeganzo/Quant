@@ -48,6 +48,16 @@ Answer: Because it is in the same scale as the original data, making it easier t
 ### Question: Why should a quant look at plots before modeling?
 Answer: Plots can reveal trends, outliers, missing values, and changing volatility that summary statistics alone may hide.
 
+## Daily Quiz (Closed-Book)
+1. State the main intuition in your own words without notes.
+2. Write one key formula/workflow from memory and define all symbols.
+3. Give one practical quant use case and one failure mode.
+
+## Formula Organization
+- Core formula: rewrite and annotate each symbol.
+- Related formula: connect it to variance/risk/return interpretation.
+- Implementation note: list one coding pitfall to avoid.
+
 ## Real-World Data Application
 - Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.
 - Compute daily returns and annualized volatility for each symbol.

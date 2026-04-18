@@ -54,6 +54,19 @@ Mini lab: draft your application story is part of real quant work inside admissi
 - Compounding: W_t = W_0 * product(1 + r_t)
 - Topic-specific formula: write one formula central to mini lab: draft your application story and explain every symbol.
 
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
+| --- | --- | --- | --- |
+| Topic-specific formula | Core relationship for today's topic | Strategy/risk interpretation | Memorizing symbols without interpretation |
+| Expected value | Probability-weighted average outcome | Comparing asymmetric payoff setups | Ignoring payoff magnitude |
+| Volatility proxy | Dispersion of returns around average | Position sizing and risk budgeting | Treating low volatility as no risk |
+
+## Common Mistakes and Fixes
+- Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.
+- Mistake: reporting one number without context. Fix: compare to benchmark or alternate scenario.
+- Mistake: reading model output as certainty. Fix: include one failure mode and one robustness check.
+- Mistake: skipping assumptions. Fix: list assumptions before interpretation.
+
 ## Revision Sprint
 - Re-solve one earlier problem from memory before checking notes.
 - Review yesterday's weak point and state whether it is fixed.
@@ -82,3 +95,9 @@ What from mini lab: draft your application story felt truly clear, and what stil
 - I wrote one realistic finance use case in my own words.
 - I recorded at least one weak area in my error log.
 - I set the next review date using spaced repetition.
+
+## Saturday Revision Protocol
+1. Rebuild your week summary from memory before opening notes.
+2. Rework two weak problems from your error log with corrected reasoning.
+3. Refresh formula sheet entries and mark confidence 0-5 per formula.
+4. Prepare one interview-style explanation for the week's hardest concept.

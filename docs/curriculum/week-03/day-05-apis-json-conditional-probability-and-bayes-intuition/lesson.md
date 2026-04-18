@@ -51,6 +51,16 @@ Answer: Because it teaches you to combine new evidence with prior uncertainty in
 ### Question: What is conditional probability in simple terms?
 Answer: It is the probability of one event after you already know another event has happened.
 
+## Daily Quiz (Closed-Book)
+1. Explain today's core intuition from memory.
+2. Write one formula/workflow and define all symbols/steps.
+3. Give one use case and one realistic failure mode.
+
+## Formula Organization
+- Core formula and meaning
+- Variable definitions and units
+- Practical implementation caveat
+
 ## Extended Study (to complete a full 4-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
 2. Add one extra worked example using different numbers or assumptions.

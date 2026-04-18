@@ -35,6 +35,16 @@ This weekend block keeps Week 2 practical. Instead of learning a large new topic
 ### Question: What is one sign you truly understand a data workflow?
 Answer: You can rebuild it cleanly from memory and explain why each step exists.
 
+## Daily Quiz (Closed-Book)
+1. Explain today's core intuition from memory.
+2. Write one formula/workflow and define all symbols/steps.
+3. Give one use case and one realistic failure mode.
+
+## Formula Organization
+- Core formula and meaning
+- Variable definitions and units
+- Practical implementation caveat
+
 ## Extended Study (to complete a full 4-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
 2. Add one extra worked example using different numbers or assumptions.
