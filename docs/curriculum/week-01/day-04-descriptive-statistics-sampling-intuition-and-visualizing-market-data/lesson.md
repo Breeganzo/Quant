@@ -48,6 +48,12 @@ Answer: Because it is in the same scale as the original data, making it easier t
 ### Question: Why should a quant look at plots before modeling?
 Answer: Plots can reveal trends, outliers, missing values, and changing volatility that summary statistics alone may hide.
 
+## Real-World Data Application
+- Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.
+- Compute daily returns and annualized volatility for each symbol.
+- Compare cumulative growth from a common starting value.
+- Write one risk-control takeaway you would use in a real portfolio conversation.
+
 ## Coding Task
 Create a pandas Series of 20 toy returns and calculate mean, median, standard deviation, min, max, and a histogram.
 

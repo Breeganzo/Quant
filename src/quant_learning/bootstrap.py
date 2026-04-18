@@ -1456,6 +1456,12 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             "- Review yesterday's weak point and state whether it is fixed.",
             "- Schedule the next spaced repetition date before ending the session.",
             "",
+            "## Real-World Data Lab",
+            "- Open the local market dataset at `curriculum/datasets/real_market_prices.csv`.",
+            "- Build a small panel for SPY, QQQ, TLT, and GLD and compute daily returns.",
+            "- Compare cumulative performance and volatility across symbols.",
+            "- Write one practical takeaway for position sizing or diversification.",
+            "",
             "## Coding Task",
             day["coding_task"],
             "",
@@ -1607,6 +1613,171 @@ def generic_day_notebook_spec(week_number: int, day: dict) -> dict:
         "interview_markdown": interview,
         "code_cells": code_cells,
     }
+
+
+def four_hour_notebook_extension(day: dict) -> list:
+    roadmap_markdown = textwrap.dedent(
+        f"""\
+        ## 4+ Hour Completion Roadmap
+
+        Use this minimum structure to turn today's notebook into a serious study session:
+
+        - Phase 1 (60 min): Read concept notes and rewrite the core idea from memory.
+        - Phase 2 (70 min): Complete and extend all code labs with at least one variation.
+        - Phase 3 (65 min): Do formula retrieval, scenario analysis, and error-log updates.
+        - Phase 4 (65 min): Write a mini memo and practice interview responses aloud.
+        """
+    ).strip()
+
+    formula_markdown = "## Formula Rewrite Drill"
+    formula_code = _nb_code(
+        f"""\
+        import pandas as pd
+
+        formula_drill = pd.DataFrame(
+            [
+                {{"formula": "E[X] = sum_i p_i x_i", "from_memory": "", "term_explanations": ""}},
+                {{"formula": "Var(X) = E[(X - E[X])^2]", "from_memory": "", "term_explanations": ""}},
+                {{"formula": "W_t = W_0 * product(1 + r_t)", "from_memory": "", "term_explanations": ""}},
+                {{"formula": "Topic formula for: {day['topic']}", "from_memory": "", "term_explanations": ""}},
+            ]
+        )
+        print(formula_drill)
+        """
+    )
+
+    scenario_markdown = "## Scenario Analysis Drill"
+    scenario_code = _nb_code(
+        f"""\
+        import pandas as pd
+
+        scenarios = pd.DataFrame(
+            [
+                {{"scenario": "base_case", "assumption": "", "expected_effect": ""}},
+                {{"scenario": "bull_case", "assumption": "", "expected_effect": ""}},
+                {{"scenario": "stress_case", "assumption": "", "expected_effect": ""}},
+            ]
+        )
+        print("Topic:", {day['topic']!r})
+        print(scenarios)
+        """
+    )
+
+    retrieval_markdown = "## Closed-Book Retrieval and Error Log"
+    retrieval_code = _nb_code(
+        """\
+        import pandas as pd
+
+        retrieval_scorecard = pd.DataFrame(
+            [
+                {"prompt": "Explain today's concept in 3 lines", "score_0_to_5": None, "notes": ""},
+                {"prompt": "Write one key formula without notes", "score_0_to_5": None, "notes": ""},
+                {"prompt": "Give one realistic failure mode", "score_0_to_5": None, "notes": ""},
+                {"prompt": "Connect to one trading/risk decision", "score_0_to_5": None, "notes": ""},
+            ]
+        )
+
+        error_log = pd.DataFrame(
+            [
+                {
+                    "concept": "",
+                    "mistake": "",
+                    "correction": "",
+                    "next_review_date": "",
+                }
+            ]
+        )
+        print("Retrieval scorecard template:")
+        print(retrieval_scorecard)
+        print("\\nError log template:")
+        print(error_log)
+        """
+    )
+
+    memo_markdown = textwrap.dedent(
+        f"""\
+        ## Final 30-Minute Deliverable
+
+        Write a short memo (150-250 words) with this structure:
+
+        1. Core idea of {day['topic']} in plain language.
+        2. One technical detail or formula and why it matters.
+        3. One practical quant use case.
+        4. One limitation or failure mode and how you would detect it.
+        """
+    ).strip()
+
+    real_data_markdown = textwrap.dedent(
+        """\
+        ## Real Market Data Lab (Useful From Day 1)
+
+        This section uses a local CSV snapshot of real market prices so the notebook remains reproducible.
+
+        Dataset: `curriculum/datasets/real_market_prices.csv`
+        Symbols: SPY, QQQ, TLT, GLD
+        """
+    ).strip()
+
+    real_data_code = _nb_code(
+        """\
+        from pathlib import Path
+        import pandas as pd
+        import matplotlib.pyplot as plt
+
+        data_path = Path("curriculum/datasets/real_market_prices.csv")
+        market = pd.read_csv(data_path, parse_dates=["date"]).sort_values(["date", "symbol"])
+
+        print("Rows:", len(market))
+        print("Date range:", market["date"].min().date(), "to", market["date"].max().date())
+        print("Symbols:", sorted(market["symbol"].unique()))
+        print(market.head())
+
+        prices = market.pivot(index="date", columns="symbol", values="close").dropna()
+        returns = prices.pct_change().dropna()
+
+        summary = pd.DataFrame(
+            {
+                "ann_return": returns.mean() * 252,
+                "ann_vol": returns.std() * (252 ** 0.5),
+                "max_drawdown": ((1 + returns).cumprod().div((1 + returns).cumprod().cummax()) - 1).min(),
+            }
+        ).sort_index()
+        print("\\nRisk/return summary:")
+        print(summary.round(4))
+
+        cum = (1 + returns).cumprod()
+        cum.plot(figsize=(10, 5), title="Cumulative growth (base 1.0)")
+        plt.ylabel("Growth of $1")
+        plt.tight_layout()
+        plt.show()
+        """
+    )
+
+    real_data_takeaway_markdown = textwrap.dedent(
+        f"""\
+        ## Real-World Takeaway Prompt
+
+        Write 5-8 lines for today's topic ({day['topic']}):
+
+        1. Which symbol looked most volatile and why that matters.
+        2. Which pair looked most diversifying.
+        3. One realistic portfolio/risk decision you could make from this table.
+        """
+    ).strip()
+
+    return [
+        nbf.v4.new_markdown_cell(roadmap_markdown),
+        nbf.v4.new_markdown_cell(formula_markdown),
+        nbf.v4.new_code_cell(formula_code),
+        nbf.v4.new_markdown_cell(real_data_markdown),
+        nbf.v4.new_code_cell(real_data_code),
+        nbf.v4.new_markdown_cell(real_data_takeaway_markdown),
+        nbf.v4.new_markdown_cell(scenario_markdown),
+        nbf.v4.new_code_cell(scenario_code),
+        nbf.v4.new_markdown_cell(retrieval_markdown),
+        nbf.v4.new_code_cell(retrieval_code),
+        nbf.v4.new_markdown_cell(memo_markdown),
+    ]
 
 
 def generic_project_notebook_spec(week: dict) -> dict:
@@ -1912,6 +2083,7 @@ def create_curriculum_notebooks(roadmap: list[dict]) -> None:
                 cells.append(nbf.v4.new_code_cell(item["code"]))
             cells.append(nbf.v4.new_markdown_cell(spec["practice_markdown"]))
             cells.append(nbf.v4.new_markdown_cell(spec["interview_markdown"]))
+            cells.extend(four_hour_notebook_extension(day))
             notebook_writer(notebooks_dir / f"day-{index:02d}-{slug}.ipynb", cells)
 
         if week["week"] == 1:

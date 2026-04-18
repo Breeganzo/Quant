@@ -1,12 +1,13 @@
 # Week 01 Sat: Revision, spaced repetition, and first market diary notebook
 
-**Estimated time:** 2 hours
+**Estimated time:** 4 hours
 
 ## Study Blocks
-- Block 1 (25 min): Active recall from memory.
-- Block 2 (35 min): Error log and spaced repetition system.
-- Block 3 (35 min): Market diary and short writing drill.
-- Block 4 (25 min): Interview recap and confidence scoring.
+- Block 1 (45 min): Active recall and formula rewrite from memory.
+- Block 2 (55 min): Error log deep clean and spaced repetition schedule update.
+- Block 3 (50 min): Market diary with one chart and one quantitative observation.
+- Block 4 (50 min): Code labs plus one extension variation on your own.
+- Block 5 (60 min): Interview recap, weak-point drill, and short written memo.
 
 ## Why It Matters In Quant
 Weekend revision is where short-term exposure becomes long-term memory.
@@ -42,6 +43,12 @@ Answer: It should contain the exact misconception, the corrected idea, and the n
 
 ### Question: Why is active recall stronger than re-reading?
 Answer: Because pulling an idea from memory reveals whether it is actually learned rather than merely familiar.
+
+## Real-World Data Application
+- Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.
+- Compute daily returns and annualized volatility for each symbol.
+- Compare cumulative growth from a common starting value.
+- Write one risk-control takeaway you would use in a real portfolio conversation.
 
 ## Coding Task
 Create a notebook section called 'market diary' and record one asset, one news item, one risk, and one numerical observation.

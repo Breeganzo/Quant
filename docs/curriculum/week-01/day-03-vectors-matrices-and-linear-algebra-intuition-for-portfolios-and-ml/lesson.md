@@ -48,6 +48,12 @@ Answer: Because many quantities are weighted sums: portfolio return, factor expo
 ### Question: Why does covariance show up naturally after matrices?
 Answer: Because once returns are organized in a matrix, covariance measures the pairwise co-movement across columns or assets.
 
+## Real-World Data Application
+- Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.
+- Compute daily returns and annualized volatility for each symbol.
+- Compare cumulative growth from a common starting value.
+- Write one risk-control takeaway you would use in a real portfolio conversation.
+
 ## Coding Task
 Use NumPy arrays to compute 3 portfolio returns from a matrix of asset returns and a vector of weights.
 

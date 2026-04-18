@@ -48,6 +48,12 @@ Answer: It represents a conditional action, such as buy if a signal exceeds a th
 ### Question: A setup has outcomes +4 with probability 0.25 and -1 with probability 0.75. What is expected value?
 Answer: 0.25 * 4 + 0.75 * (-1) = 0.25.
 
+## Real-World Data Application
+- Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.
+- Compute daily returns and annualized volatility for each symbol.
+- Compare cumulative growth from a common starting value.
+- Write one risk-control takeaway you would use in a real portfolio conversation.
+
 ## Coding Task
 Write a Python function for expected value of a discrete strategy and test it on 3 toy trading setups.
 

@@ -48,6 +48,12 @@ Answer: Interest rates and the shape of the yield curve are central drivers, alo
 ### Question: Why do transaction costs matter more in short-horizon strategies?
 Answer: Because frequent trading causes costs to accumulate and can easily overwhelm a small raw edge.
 
+## Real-World Data Application
+- Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.
+- Compute daily returns and annualized volatility for each symbol.
+- Compare cumulative growth from a common starting value.
+- Write one risk-control takeaway you would use in a real portfolio conversation.
+
 ## Coding Task
 Build a markdown table in a notebook comparing 5 asset classes, their return drivers, and their main risks.
 

@@ -1,12 +1,12 @@
 # Week 01 Sun: Week 1 quiz and mini project: build a simple return and risk dashboard
 
-**Estimated time:** 2 hours
+**Estimated time:** 4 hours
 
 ## Study Blocks
-- Block 1 (20 min): Closed-book quiz from memory.
-- Block 2 (55 min): Mini-project build.
-- Block 3 (20 min): Interpretation and short write-up.
-- Block 4 (25 min): Interview practice and weekly review.
+- Block 1 (45 min): Closed-book quiz and formula retrieval from memory.
+- Block 2 (70 min): Mini-project build and extension with one extra metric.
+- Block 3 (55 min): Interpretation write-up with failure-mode analysis.
+- Block 4 (50 min): Interview practice and weekly review.
 
 ## Why It Matters In Quant
 A quant portfolio grows through small finished artifacts, not only reading.
@@ -43,6 +43,12 @@ Answer: Correctness, reproducibility, and clear interpretation. Simplicity is fi
 
 ### Question: What should you include in a short project conclusion?
 Answer: The goal, what you computed, what the results suggest, and one limitation or next step.
+
+## Real-World Data Application
+- Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.
+- Compute daily returns and annualized volatility for each symbol.
+- Compare cumulative growth from a common starting value.
+- Write one risk-control takeaway you would use in a real portfolio conversation.
 
 ## Coding Task
 Finish the mini project notebook and write a 150-word conclusion aimed at a master's admissions reviewer.

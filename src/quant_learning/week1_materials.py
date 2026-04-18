@@ -545,12 +545,13 @@ WEEK1_DAY_DETAILS: dict[str, dict[str, Any]] = {
         ],
     },
     "Sat": {
-        "estimated_time": "2 hours",
+        "estimated_time": "4 hours",
         "study_blocks": [
-            ("Block 1", "25 min", "Active recall from memory."),
-            ("Block 2", "35 min", "Error log and spaced repetition system."),
-            ("Block 3", "35 min", "Market diary and short writing drill."),
-            ("Block 4", "25 min", "Interview recap and confidence scoring."),
+            ("Block 1", "45 min", "Active recall and formula rewrite from memory."),
+            ("Block 2", "55 min", "Error log deep clean and spaced repetition schedule update."),
+            ("Block 3", "50 min", "Market diary with one chart and one quantitative observation."),
+            ("Block 4", "50 min", "Code labs plus one extension variation on your own."),
+            ("Block 5", "60 min", "Interview recap, weak-point drill, and short written memo."),
         ],
         "overview": [
             "Weekend work should not feel like a weak leftover. It is where consolidation happens.",
@@ -638,12 +639,12 @@ WEEK1_DAY_DETAILS: dict[str, dict[str, Any]] = {
         ],
     },
     "Sun": {
-        "estimated_time": "2 hours",
+        "estimated_time": "4 hours",
         "study_blocks": [
-            ("Block 1", "20 min", "Closed-book quiz from memory."),
-            ("Block 2", "55 min", "Mini-project build."),
-            ("Block 3", "20 min", "Interpretation and short write-up."),
-            ("Block 4", "25 min", "Interview practice and weekly review."),
+            ("Block 1", "45 min", "Closed-book quiz and formula retrieval from memory."),
+            ("Block 2", "70 min", "Mini-project build and extension with one extra metric."),
+            ("Block 3", "55 min", "Interpretation write-up with failure-mode analysis."),
+            ("Block 4", "50 min", "Interview practice and weekly review."),
         ],
         "overview": [
             "The first weekend project is deliberately simple. The point is to prove that you can move from concept to code to interpretation in one clean artifact.",
@@ -796,6 +797,17 @@ def render_week1_day_markdown(day: dict[str, Any]) -> str:
                 "",
             ]
         )
+
+    lines.extend(
+        [
+            "## Real-World Data Application",
+            "- Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.",
+            "- Compute daily returns and annualized volatility for each symbol.",
+            "- Compare cumulative growth from a common starting value.",
+            "- Write one risk-control takeaway you would use in a real portfolio conversation.",
+            "",
+        ]
+    )
 
     lines.extend(["## Coding Task", day["coding_task"], "", "## Daily Interview Drill"])
     for qa in detail["interview_drill"]:

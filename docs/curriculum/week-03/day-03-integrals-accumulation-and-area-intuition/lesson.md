@@ -57,6 +57,12 @@ Answer: Finance often studies quantities that evolve continuously, so accumulati
 3. Explain one failure mode where this concept can be misapplied in trading or risk work.
 4. Add one short paragraph linking this concept to your weekly project objective.
 
+## Real-World Data Application
+1. Load `curriculum/datasets/real_market_prices.csv` for SPY, QQQ, TLT, and GLD.
+2. Compute daily returns and compare annualized volatility across symbols.
+3. Build one cumulative growth chart and one correlation table.
+4. Write one practical portfolio/risk insight from the data.
+
 ## Coding Task
 Implement one notebook cell or small script focused on: integrals, accumulation, and area intuition.
 

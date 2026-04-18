@@ -1918,6 +1918,12 @@ def render_detailed_day_markdown(week_number: int, day: dict[str, Any]) -> str:
             "3. Explain one failure mode where this concept can be misapplied in trading or risk work.",
             "4. Add one short paragraph linking this concept to your weekly project objective.",
             "",
+            "## Real-World Data Application",
+            "1. Load `curriculum/datasets/real_market_prices.csv` for SPY, QQQ, TLT, and GLD.",
+            "2. Compute daily returns and compare annualized volatility across symbols.",
+            "3. Build one cumulative growth chart and one correlation table.",
+            "4. Write one practical portfolio/risk insight from the data.",
+            "",
         ]
     )
     lines.extend(["## Coding Task", day["coding_task"], "", "## Daily Interview Drill"])
@@ -1971,6 +1977,9 @@ def detailed_day_notebook_spec(week_number: int, day: dict[str, Any]) -> dict[st
             "## Continuity prompt",
             "- What from yesterday's topic still needs reinforcement?",
             "- What should tomorrow build on from today?",
+            "",
+            "## Real-world dataset for today's labs",
+            "Use `curriculum/datasets/real_market_prices.csv` as your default market panel (SPY, QQQ, TLT, GLD).",
             "",
         ]
     )

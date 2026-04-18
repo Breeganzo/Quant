@@ -48,6 +48,12 @@ Answer: 2000 * 1.05 * 1.03 * 0.98 = 2119.32.
 ### Question: Why is a 30 percent loss harder to recover from than it first sounds?
 Answer: Because the required recovery is measured from the reduced base. After falling from 100 to 70, you need 30 / 70 = 42.86 percent to get back to 100.
 
+## Real-World Data Application
+- Open `curriculum/datasets/real_market_prices.csv` and filter SPY, QQQ, TLT, and GLD.
+- Compute daily returns and annualized volatility for each symbol.
+- Compare cumulative growth from a common starting value.
+- Write one risk-control takeaway you would use in a real portfolio conversation.
+
 ## Coding Task
 In Python, create a list of 5 prices, convert them into returns, and calculate final wealth from an initial capital of 1000.
 

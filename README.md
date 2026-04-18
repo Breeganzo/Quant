@@ -49,6 +49,23 @@ uv run quant-verify-notebooks --timeout 180
 
 This writes `exports/notebook-validation.json` with pass/fail results per notebook.
 
+## Where The Notebooks Are
+
+If you are browsing locally, notebooks are here:
+
+- `curriculum/week-01/notebooks/`
+- `curriculum/week-02/notebooks/`
+- ...
+- `curriculum/week-24/notebooks/`
+
+If you are browsing the deployed site, notebook assets are copied under:
+
+- `docs/curriculum/week-XX/notebooks/`
+
+Real-world dataset used by daily notebook labs:
+
+- `curriculum/datasets/real_market_prices.csv`
+
 ## Run Notebooks Properly (JupyterLab)
 
 Use the project environment so notebook packages are available:
@@ -195,6 +212,16 @@ npm run build
 4. Open the published URL.
 
 Important: GitHub Pages is static hosting. Progress is browser-local by default; cross-device persistence requires optional backend sync (for example, Supabase as shown above).
+
+## Why Daily Markdown Files Exist
+
+Day-level markdown files are required source content for:
+
+- PDF generation (`quant-export-pdfs`)
+- in-app day lesson rendering on the website
+- regeneration consistency when curriculum is rebuilt
+
+So daily markdown is not redundant, even if you mainly consume PDFs.
 
 ## Curriculum Coverage Status
 

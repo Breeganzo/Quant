@@ -59,6 +59,12 @@ Alternative data and when it is useful is part of real quant work inside agentic
 - Review yesterday's weak point and state whether it is fixed.
 - Schedule the next spaced repetition date before ending the session.
 
+## Real-World Data Lab
+- Open the local market dataset at `curriculum/datasets/real_market_prices.csv`.
+- Build a small panel for SPY, QQQ, TLT, and GLD and compute daily returns.
+- Compare cumulative performance and volatility across symbols.
+- Write one practical takeaway for position sizing or diversification.
+
 ## Coding Task
 Implement one notebook cell or small script focused on: alternative data and when it is useful.
 
