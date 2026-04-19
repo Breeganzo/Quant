@@ -52,18 +52,66 @@ function parseTimestamp(value) {
   return Number.isNaN(parsed) ? 0 : parsed;
 }
 
-function pickLatest(localEntry = {}, remoteEntry = {}) {
+function normalizeDayEntry(entry) {
+  const base = entry && typeof entry === "object" ? entry : {};
+  const status =
+    base.status === "done" || base.status === "in_progress"
+      ? base.status
+      : "not_started";
+  const updatedAt = typeof base.updatedAt === "string" ? base.updatedAt : "";
+  const completedAtRaw = typeof base.completedAt === "string" ? base.completedAt : "";
+  const completedAt =
+    status === "done"
+      ? (completedAtRaw || updatedAt || "")
+      : (completedAtRaw || null);
+
+  return {
+    ...base,
+    status,
+    confidence: Number.isFinite(base.confidence) ? base.confidence : 0,
+    notes: typeof base.notes === "string" ? base.notes : "",
+    updatedAt: updatedAt || (typeof completedAt === "string" ? completedAt : ""),
+    completedAt,
+  };
+}
+
+function pickLatestByUpdatedAt(localEntry = {}, remoteEntry = {}) {
   const localTs = parseTimestamp(localEntry.updatedAt);
   const remoteTs = parseTimestamp(remoteEntry.updatedAt);
   return remoteTs > localTs ? remoteEntry : localEntry;
+}
+
+function pickLatestDayEntry(localEntry = {}, remoteEntry = {}) {
+  const local = normalizeDayEntry(localEntry);
+  const remote = normalizeDayEntry(remoteEntry);
+
+  if (local.status === "done" && remote.status !== "done") {
+    return local;
+  }
+  if (remote.status === "done" && local.status !== "done") {
+    return remote;
+  }
+  if (local.status === "done" && remote.status === "done") {
+    const localDoneTs = parseTimestamp(local.completedAt || local.updatedAt);
+    const remoteDoneTs = parseTimestamp(remote.completedAt || remote.updatedAt);
+    return remoteDoneTs > localDoneTs ? remote : local;
+  }
+
+  return pickLatestByUpdatedAt(local, remote);
 }
 
 export function normalizeProgress(progress) {
   if (!progress || typeof progress !== "object") {
     return { ...DEFAULT_PROGRESS };
   }
+  const inputDays = progress.days && typeof progress.days === "object" ? progress.days : {};
+  const normalizedDays = {};
+  for (const [key, value] of Object.entries(inputDays)) {
+    normalizedDays[key] = normalizeDayEntry(value);
+  }
+
   return {
-    days: progress.days && typeof progress.days === "object" ? progress.days : {},
+    days: normalizedDays,
     weeklyReviews:
       progress.weeklyReviews && typeof progress.weeklyReviews === "object"
         ? progress.weeklyReviews
@@ -89,7 +137,7 @@ export function mergeProgress(localProgress, remoteProgress) {
   ]);
   const mergedDays = {};
   for (const key of dayKeys) {
-    mergedDays[key] = pickLatest(local.days[key], remote.days[key]);
+    mergedDays[key] = pickLatestDayEntry(local.days[key], remote.days[key]);
   }
 
   const reviewKeys = new Set([
@@ -106,7 +154,7 @@ export function mergeProgress(localProgress, remoteProgress) {
       remoteEntry &&
       typeof remoteEntry === "object"
     ) {
-      mergedReviews[key] = pickLatest(localEntry, remoteEntry);
+      mergedReviews[key] = pickLatestByUpdatedAt(localEntry, remoteEntry);
     } else {
       mergedReviews[key] = remoteEntry ?? localEntry;
     }

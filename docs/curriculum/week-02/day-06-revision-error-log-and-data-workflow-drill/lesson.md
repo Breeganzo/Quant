@@ -1,14 +1,20 @@
 # Week 02 Sat: Revision, error log, and data workflow drill
 
-**Estimated time:** 6 hours
+**Estimated time:** 10 hours
 
 ## Session Plan
 | Session | Duration | Focus |
 | --- | --- | --- |
-| Session 1 | 25 min | Week 2 recall from memory. |
-| Session 2 | 35 min | SQL and data-cleaning drill. |
-| Session 3 | 35 min | Error log and concept map. |
-| Session 4 | 25 min | Interview practice. |
+| Session 1 | 60 min | Closed-book retrieval and formula rewrite. |
+| Session 2 | 60 min | Weak-topic reteach with solved examples. |
+| Session 3 | 60 min | Data refresh and diagnostics rerun. |
+| Session 4 | 60 min | Notebook baseline pass. |
+| Session 5 | 60 min | Notebook extension and stress tests. |
+| Session 6 | 60 min | Project build increment. |
+| Session 7 | 60 min | Project risk caveat and robustness note. |
+| Session 8 | 60 min | Interview rehearsal under time limit. |
+| Session 9 | 60 min | Revision board confidence rescoring. |
+| Session 10 | 60 min | Weekly transition memo and gap plan. |
 
 ## Why It Matters In Quant
 Revision, error log, and data workflow drill is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
@@ -63,19 +69,23 @@ Notation check: Interpreting correlation as causation.
 | Covariance | Joint variation of two series around their means. | Diversification diagnostics before portfolio construction. | Ignoring missing-value alignment before computing covariance. |
 | Correlation | Scale-free co-movement measure in [-1, 1]. | Screen assets for complementary behavior. | Interpreting correlation as causation. |
 
-## Extended Study (to complete a full 6-hour day)
+## Extended Study (to complete a full 10-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
-2. Add one extra worked example using different numbers or assumptions.
+2. Add one extra solved case using different assumptions and compare outputs.
 3. Explain one failure mode where this concept can be misapplied in trading or risk work.
 4. Add one short paragraph linking this concept to your weekly project objective.
+5. Propose one follow-up experiment for tomorrow and define success/failure criteria.
 
 ## Real-World Data Application
-1. Pull SPY, QQQ, TLT, and GLD with yfinance when internet is available.
-2. If available, compare with a Robinhood-style export CSV for source consistency.
-3. Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.
-4. Compute log returns, annualized volatility, and Sharpe ratio across symbols.
-5. Build one cumulative growth chart and one correlation table.
-6. Write one practical portfolio/risk insight from the data.
+1. Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback market panel.
+2. Run one baseline analysis and one stressed-assumption variant.
+3. Document one risk caveat and one robustness check before finalizing conclusions.
+
+- Use yfinance first for SPY, QQQ, TLT, and GLD when internet is available.
+- If available, validate against a Robinhood-style export CSV for consistency checks.
+- Fall back to curriculum/datasets/real_market_prices.csv for reproducible runs.
+- Design one topic-specific analysis for revision, error log, and data workflow drill instead of reusing generic volatility-only metrics.
+- Document one implementation risk and one robustness check before finalizing conclusions.
 
 ## Coding Task
 Build a cleaned feature table for revision, error log, and data workflow drill and show one validation check that catches a data issue.

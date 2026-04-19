@@ -1,15 +1,20 @@
 # Week 04 Thu: Optimization basics and constrained thinking
 
-**Estimated time:** 6 hours
+**Estimated time:** 10 hours
 
 ## Session Plan
 | Session | Duration | Focus |
 | --- | --- | --- |
-| Session 1 | 45 min | Optimization intuition. |
-| Session 2 | 55 min | Objective functions and constraints. |
-| Session 3 | 55 min | Portfolio examples. |
-| Session 4 | 55 min | Code simple constrained search. |
-| Session 5 | 30 min | Interview recap. |
+| Session 1 | 60 min | Concept briefing and assumptions map. |
+| Session 2 | 60 min | Formula derivation and notation drills. |
+| Session 3 | 60 min | Solved real-world case walkthrough. |
+| Session 4 | 60 min | Data-quality checks and diagnostics. |
+| Session 5 | 60 min | Baseline notebook implementation with comments. |
+| Session 6 | 60 min | Extension coding and parameter variation. |
+| Session 7 | 60 min | Risk caveat and robustness analysis. |
+| Session 8 | 60 min | Interview-style quiz defense rehearsal. |
+| Session 9 | 60 min | Revision and error-log correction cycle. |
+| Session 10 | 60 min | Desk memo and next-day experiment plan. |
 
 ## Why It Matters In Quant
 Optimization basics and constrained thinking is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
@@ -79,19 +84,23 @@ Notation check: Stopping at numerical output without diagnostics.
 | Lagrangian | Constraint-aware objective transform. | Solve equality-constrained problems. | Not verifying KKT conditions post-solve. |
 | KKT Stationarity | Necessary optimality condition. | Audit optimization solution quality. | Stopping at numerical output without diagnostics. |
 
-## Extended Study (to complete a full 6-hour day)
+## Extended Study (to complete a full 10-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
-2. Add one extra worked example using different numbers or assumptions.
+2. Add one extra solved case using different assumptions and compare outputs.
 3. Explain one failure mode where this concept can be misapplied in trading or risk work.
 4. Add one short paragraph linking this concept to your weekly project objective.
+5. Propose one follow-up experiment for tomorrow and define success/failure criteria.
 
 ## Real-World Data Application
-1. Pull SPY, QQQ, TLT, and GLD with yfinance when internet is available.
-2. If available, compare with a Robinhood-style export CSV for source consistency.
-3. Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.
-4. Compute log returns, annualized volatility, and Sharpe ratio across symbols.
-5. Build one cumulative growth chart and one correlation table.
-6. Write one practical portfolio/risk insight from the data.
+1. Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback market panel.
+2. Run one baseline analysis and one stressed-assumption variant.
+3. Document one risk caveat and one robustness check before finalizing conclusions.
+
+- Use yfinance first for SPY, QQQ, TLT, and GLD when internet is available.
+- If available, validate against a Robinhood-style export CSV for consistency checks.
+- Fall back to curriculum/datasets/real_market_prices.csv for reproducible runs.
+- Design one topic-specific analysis for optimization basics and constrained thinking instead of reusing generic volatility-only metrics.
+- Document one implementation risk and one robustness check before finalizing conclusions.
 
 ## Coding Task
 Implement a small reproducible example for optimization basics and constrained thinking and explain one assumption that could fail in markets.

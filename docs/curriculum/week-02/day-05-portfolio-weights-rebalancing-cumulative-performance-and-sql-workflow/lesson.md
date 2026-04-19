@@ -1,15 +1,20 @@
 # Week 02 Fri: Portfolio weights, rebalancing, cumulative performance, and SQL workflow
 
-**Estimated time:** 6 hours
+**Estimated time:** 10 hours
 
 ## Session Plan
 | Session | Duration | Focus |
 | --- | --- | --- |
-| Session 1 | 45 min | Learn weight vectors and rebalancing intuition. |
-| Session 2 | 55 min | Understand cumulative performance tracking. |
-| Session 3 | 55 min | Learn where SQL fits in a quant workflow. |
-| Session 4 | 55 min | Run code labs on portfolio tables and SQL queries. |
-| Session 5 | 30 min | Interview recap. |
+| Session 1 | 60 min | Concept briefing and assumptions map. |
+| Session 2 | 60 min | Formula derivation and notation drills. |
+| Session 3 | 60 min | Solved real-world case walkthrough. |
+| Session 4 | 60 min | Data-quality checks and diagnostics. |
+| Session 5 | 60 min | Baseline notebook implementation with comments. |
+| Session 6 | 60 min | Extension coding and parameter variation. |
+| Session 7 | 60 min | Risk caveat and robustness analysis. |
+| Session 8 | 60 min | Interview-style quiz defense rehearsal. |
+| Session 9 | 60 min | Revision and error-log correction cycle. |
+| Session 10 | 60 min | Desk memo and next-day experiment plan. |
 
 ## Why It Matters In Quant
 Portfolio weights, rebalancing, cumulative performance, and SQL workflow is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
@@ -83,19 +88,23 @@ Notation check: Averaging returns instead of compounding.
 | Turnover | Rebalance trading requirement. | Estimate execution cost pressure. | Ignoring transaction costs in alpha claims. |
 | Cumulative Wealth | Compounded capital path. | Compare portfolio design trajectories. | Averaging returns instead of compounding. |
 
-## Extended Study (to complete a full 6-hour day)
+## Extended Study (to complete a full 10-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
-2. Add one extra worked example using different numbers or assumptions.
+2. Add one extra solved case using different assumptions and compare outputs.
 3. Explain one failure mode where this concept can be misapplied in trading or risk work.
 4. Add one short paragraph linking this concept to your weekly project objective.
+5. Propose one follow-up experiment for tomorrow and define success/failure criteria.
 
 ## Real-World Data Application
-1. Pull SPY, QQQ, TLT, and GLD with yfinance when internet is available.
-2. If available, compare with a Robinhood-style export CSV for source consistency.
-3. Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.
-4. Compute log returns, annualized volatility, and Sharpe ratio across symbols.
-5. Build one cumulative growth chart and one correlation table.
-6. Write one practical portfolio/risk insight from the data.
+1. Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback market panel.
+2. Run one baseline analysis and one stressed-assumption variant.
+3. Document one risk caveat and one robustness check before finalizing conclusions.
+
+- Use yfinance first for SPY, QQQ, TLT, and GLD when internet is available.
+- If available, validate against a Robinhood-style export CSV for consistency checks.
+- Fall back to curriculum/datasets/real_market_prices.csv for reproducible runs.
+- Design one topic-specific analysis for portfolio weights, rebalancing, cumulative performance, and sql workflow instead of reusing generic volatility-only metrics.
+- Document one implementation risk and one robustness check before finalizing conclusions.
 
 ## Coding Task
 Build a cleaned feature table for portfolio weights, rebalancing, cumulative performance, and sql workflow and show one validation check that catches a data issue.

@@ -1,13 +1,18 @@
 # Week 01 Fri: Market structure, asset classes, risk, return, and what quants actually do
 
-**Estimated time:** 6 hours
+**Estimated time:** 10 hours
 
 ## Study Blocks
-- Block 1 (45 min): Understand what markets are and who participates.
-- Block 2 (60 min): Learn major asset classes and return drivers.
-- Block 3 (45 min): Map core risk types and why implementation matters.
-- Block 4 (60 min): Clarify quant roles: buy-side, sell-side, risk, strats, and investment banking.
-- Block 5 (30 min): Code table-building and interview drill.
+- Block 1 (60 min): Concept briefing and key-assumption mapping.
+- Block 2 (60 min): Formula/workflow derivation and notation rewrite.
+- Block 3 (60 min): Solved real-world case walkthrough.
+- Block 4 (60 min): Data checks and exploratory diagnostics.
+- Block 5 (60 min): Core notebook implementation with comments.
+- Block 6 (60 min): Extension coding task and sensitivity variation.
+- Block 7 (60 min): Risk caveat and robustness scenario testing.
+- Block 8 (60 min): Interview-style quiz answers and defense drill.
+- Block 9 (60 min): Revision sprint and error-log updates.
+- Block 10 (60 min): Desk memo summary and tomorrow transition plan.
 
 ## Why It Matters In Quant
 You need a mental map of markets before learning pricing, forecasting, and strategy research.
@@ -37,6 +42,12 @@ The goal is not to master every asset class in one day. The goal is to build a c
 - Equity example: stock returns depend on earnings, valuation, macro sensitivity, and sentiment.
 - Bond example: price sensitivity to rates is linked to duration and convexity.
 - Transaction costs matter more in high-turnover strategies because gross edge is repeatedly eaten by spread and slippage.
+
+## Solved Real-World Flow
+- Define one concrete desk decision that this topic informs.
+- Use reproducible market data and state one data-quality check.
+- Apply one core formula/workflow and report one numerical output.
+- Add one risk caveat and one robustness check before trusting the conclusion.
 
 ## Practice Questions With Answers
 ### Question: Why is investment banking not the same as quant trading?
@@ -100,3 +111,4 @@ Which part of finance feels most interesting right now: markets, trading, risk, 
 - I finished the coding lab and checked the output.
 - I added at least one item to the error log if something was unclear.
 - I practiced at least one interview answer aloud.
+- I documented one actionable desk-style takeaway and one follow-up experiment.

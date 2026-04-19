@@ -9,7 +9,8 @@
       "difficulty": "basic",
       "question": "Explain capstone review and write-up in plain language for a trading or risk audience.",
       "answer": "A strong answer defines capstone review and write-up, gives one concrete workflow or market-facing decision example, and states one practical limitation that must be monitored.",
-      "explanation": "This tests communication quality, not just memorized definitions."
+      "explanation": "This tests communication quality, not just memorized definitions.",
+      "interview_structure": "Definition -> practical use case -> limitation/risk check."
     },
     {
       "id": "q2",
@@ -18,28 +19,48 @@
       "answer": "A strong answer includes Net Return exactly, explains each symbol, and states one caveat: Presenting gross-only metrics.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Compute lag autocorrelation and rolling mean/volatility diagnostics.",
-      "python_solution": "from pathlib import Path\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nspy = market[market[\"symbol\"] == \"SPY\"].sort_values(\"date\").set_index(\"date\")[\"close\"]\nret = spy.pct_change().dropna()\ndiag = pd.DataFrame(\n    {\n        \"ret\": ret,\n        \"lag1\": ret.shift(1),\n        \"roll_mean_20\": ret.rolling(20).mean(),\n        \"roll_vol_20\": ret.rolling(20).std(),\n    }\n).dropna()\nprint(\"Lag-1 autocorr:\", round(diag[\"ret\"].corr(diag[\"lag1\"]), 4))\nprint(diag.tail())\n"
+      "python_solution": "from pathlib import Path\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nspy = market[market[\"symbol\"] == \"SPY\"].sort_values(\"date\").set_index(\"date\")[\"close\"]\nret = spy.pct_change().dropna()\ndiag = pd.DataFrame(\n    {\n        \"ret\": ret,\n        \"lag1\": ret.shift(1),\n        \"roll_mean_20\": ret.rolling(20).mean(),\n        \"roll_vol_20\": ret.rolling(20).std(),\n    }\n).dropna()\nprint(\"Lag-1 autocorr:\", round(diag[\"ret\"].corr(diag[\"lag1\"]), 4))\nprint(diag.tail())\n",
+      "interview_structure": "State formula -> define symbols -> add caveat and context."
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
-      "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer uses one decision workflow such as: Final report realism.. Then it states one realistic failure mode: Presenting gross-only metrics., and one detection check.",
-      "explanation": "This evaluates transfer from theory to practical quant workflow."
+      "question": "Give one realistic use case, one implementation choice, and one failure mode if this concept is misapplied.",
+      "answer": "A strong answer uses one decision workflow such as: Final report realism.. Then it states one realistic failure mode: Presenting gross-only metrics., one detection check, and one mitigation action.",
+      "explanation": "This evaluates transfer from theory to practical quant workflow.",
+      "interview_structure": "Use case -> implementation choice -> failure mode -> mitigation."
     },
     {
       "id": "q4",
       "difficulty": "advanced",
-      "question": "How would you validate data quality and implementation assumptions before trusting conclusions?",
-      "answer": "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources.",
-      "explanation": "This tests robustness discipline and implementation realism."
+      "question": "How would you validate data quality and implementation assumptions before trusting conclusions in production?",
+      "answer": "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources, and set a threshold that triggers a review.",
+      "explanation": "This tests robustness discipline and implementation realism.",
+      "interview_structure": "Validation checklist -> stress check -> escalation threshold."
     },
     {
       "id": "q5",
       "difficulty": "advanced",
+      "question": "A PM asks for a decision in 30 seconds. What metric would you lead with and what caveat would you immediately include?",
+      "answer": "Lead with one actionable metric tied to objective (for example risk-adjusted return, hit rate under costs, or drawdown stability), then immediately state one caveat on sample dependence, costs, regime shift, or data quality.",
+      "explanation": "This tests concise decision communication under time pressure.",
+      "interview_structure": "Primary metric -> direct recommendation -> caveat."
+    },
+    {
+      "id": "q6",
+      "difficulty": "advanced",
+      "question": "What is one follow-up experiment you would run tomorrow to reduce uncertainty in today's conclusion?",
+      "answer": "Propose one focused experiment (alternate window, benchmark, transaction-cost assumption, or feature variation), state expected impact, and define what result would change your recommendation.",
+      "explanation": "This tests scientific thinking and iterative research discipline.",
+      "interview_structure": "Experiment design -> expected effect -> decision boundary."
+    },
+    {
+      "id": "q7",
+      "difficulty": "advanced",
       "question": "What mini-project decision would you defend from this week and what evidence supports it?",
       "answer": "Name the decision, show one metric/table/plot supporting it, and mention one limitation plus next-step test.",
-      "explanation": "Sunday focuses on project communication quality, not only calculations."
+      "explanation": "Sunday focuses on project communication quality, not only calculations.",
+      "interview_structure": "Decision -> evidence -> limitation -> next-step test."
     }
   ]
 }

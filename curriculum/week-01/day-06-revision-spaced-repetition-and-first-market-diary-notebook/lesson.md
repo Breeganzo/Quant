@@ -1,13 +1,18 @@
 # Week 01 Sat: Revision, spaced repetition, and first market diary notebook
 
-**Estimated time:** 6 hours
+**Estimated time:** 10 hours
 
 ## Study Blocks
-- Block 1 (45 min): Active recall and formula rewrite from memory.
-- Block 2 (55 min): Error log deep clean and spaced repetition schedule update.
-- Block 3 (50 min): Market diary with one chart and one quantitative observation.
-- Block 4 (50 min): Code labs plus one extension variation on your own.
-- Block 5 (60 min): Interview recap, weak-point drill, and short written memo.
+- Block 1 (60 min): Closed-book recall and formula rewrite.
+- Block 2 (60 min): Weak-topic reteach with solved examples.
+- Block 3 (60 min): Data refresh and diagnostics rerun.
+- Block 4 (60 min): Notebook baseline implementation.
+- Block 5 (60 min): Notebook extension and stress tests.
+- Block 6 (60 min): Mini-project build increment.
+- Block 7 (60 min): Mini-project risk caveat documentation.
+- Block 8 (60 min): Interview rehearsal with timed answers.
+- Block 9 (60 min): Revision board confidence rescoring.
+- Block 10 (60 min): Weekly memo and next-week bridge notes.
 
 ## Why It Matters In Quant
 Weekend revision is where short-term exposure becomes long-term memory.
@@ -36,6 +41,12 @@ Today is about building a repeatable revision system so weak points do not quiet
 ## Worked Examples
 - Weak concept: standard deviation vs variance. Mistake: confusing the squared unit issue. Correction: variance is squared deviation, standard deviation is the square root and easier to interpret.
 - Market diary entry: asset = S&P 500 ETF, driver = rate-sensitive growth sentiment, risk = macro surprise, numeric note = daily move and volume spike.
+
+## Solved Real-World Flow
+- Define one concrete desk decision that this topic informs.
+- Use reproducible market data and state one data-quality check.
+- Apply one core formula/workflow and report one numerical output.
+- Add one risk caveat and one robustness check before trusting the conclusion.
 
 ## Practice Questions With Answers
 ### Question: What should an error log entry contain besides the wrong answer?
@@ -93,3 +104,4 @@ What did I understand best this week, and what did I only feel like I understood
 - I finished the coding lab and checked the output.
 - I added at least one item to the error log if something was unclear.
 - I practiced at least one interview answer aloud.
+- I documented one actionable desk-style takeaway and one follow-up experiment.

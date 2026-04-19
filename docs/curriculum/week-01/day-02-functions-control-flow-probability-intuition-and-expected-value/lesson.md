@@ -1,13 +1,18 @@
 # Week 01 Tue: Functions, control flow, probability intuition, and expected value
 
-**Estimated time:** 6 hours
+**Estimated time:** 10 hours
 
 ## Study Blocks
-- Block 1 (45 min): Review Python functions and reusable finance logic.
-- Block 2 (60 min): Learn control flow and payoff rules.
-- Block 3 (60 min): Build probability intuition and expected value.
-- Block 4 (45 min): Connect payoff asymmetry to trading setups.
-- Block 5 (30 min): Code, reflect, and interview drill.
+- Block 1 (60 min): Concept briefing and key-assumption mapping.
+- Block 2 (60 min): Formula/workflow derivation and notation rewrite.
+- Block 3 (60 min): Solved real-world case walkthrough.
+- Block 4 (60 min): Data checks and exploratory diagnostics.
+- Block 5 (60 min): Core notebook implementation with comments.
+- Block 6 (60 min): Extension coding task and sensitivity variation.
+- Block 7 (60 min): Risk caveat and robustness scenario testing.
+- Block 8 (60 min): Interview-style quiz answers and defense drill.
+- Block 9 (60 min): Revision sprint and error-log updates.
+- Block 10 (60 min): Desk memo summary and tomorrow transition plan.
 
 ## Why It Matters In Quant
 Quant code is built from reusable functions, and quant decisions often reduce to expected value under uncertainty.
@@ -37,6 +42,12 @@ A quant is constantly turning a financial question into a function, a decision r
 - A trade with 60 percent chance of +2 and 40 percent chance of -1 has expected value 0.8.
 - A trade with 80 percent chance of +1 and 20 percent chance of -5 has expected value -0.2 despite a high win rate.
 - A function `simple_return(buy, sell)` is a reusable way to turn prices into decisions or labels.
+
+## Solved Real-World Flow
+- Define one concrete desk decision that this topic informs.
+- Use reproducible market data and state one data-quality check.
+- Apply one core formula/workflow and report one numerical output.
+- Add one risk caveat and one robustness check before trusting the conclusion.
 
 ## Practice Questions With Answers
 ### Question: Why might a strategy with many winning trades still have negative expected value?
@@ -100,3 +111,4 @@ Do I naturally ask what the average payoff is, or do I get distracted by single 
 - I finished the coding lab and checked the output.
 - I added at least one item to the error log if something was unclear.
 - I practiced at least one interview answer aloud.
+- I documented one actionable desk-style takeaway and one follow-up experiment.

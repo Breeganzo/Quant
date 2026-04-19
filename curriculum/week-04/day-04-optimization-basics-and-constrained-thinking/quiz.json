@@ -9,7 +9,8 @@
       "difficulty": "basic",
       "question": "Explain optimization basics and constrained thinking in plain language for a trading or risk audience.",
       "answer": "A strong answer defines optimization basics and constrained thinking, gives one concrete workflow or market-facing decision example, and states one practical limitation that must be monitored.",
-      "explanation": "This tests communication quality, not just memorized definitions."
+      "explanation": "This tests communication quality, not just memorized definitions.",
+      "interview_structure": "Definition -> practical use case -> limitation/risk check."
     },
     {
       "id": "q2",
@@ -18,21 +19,40 @@
       "answer": "A strong answer includes Constrained Objective exactly, explains each symbol, and states one caveat: Ignoring feasibility checks before solving.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Minimize portfolio variance with long-only weights that sum to one.",
-      "python_solution": "from pathlib import Path\nimport numpy as np\nimport pandas as pd\nfrom scipy.optimize import minimize\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nreturns = prices.pct_change().dropna().iloc[:, :4]\ncov = returns.cov().values\nn = cov.shape[0]\nx0 = np.ones(n) / n\nbounds = [(0, 1)] * n\ncons = ({\"type\": \"eq\", \"fun\": lambda w: w.sum() - 1},)\nobj = lambda w: float(w @ cov @ w)\nres = minimize(obj, x0=x0, bounds=bounds, constraints=cons)\nprint(\"success:\", res.success)\nprint(\"weights:\", np.round(res.x, 4))\nprint(\"variance:\", round(float(res.fun), 8))\n"
+      "python_solution": "from pathlib import Path\nimport numpy as np\nimport pandas as pd\nfrom scipy.optimize import minimize\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nreturns = prices.pct_change().dropna().iloc[:, :4]\ncov = returns.cov().values\nn = cov.shape[0]\nx0 = np.ones(n) / n\nbounds = [(0, 1)] * n\ncons = ({\"type\": \"eq\", \"fun\": lambda w: w.sum() - 1},)\nobj = lambda w: float(w @ cov @ w)\nres = minimize(obj, x0=x0, bounds=bounds, constraints=cons)\nprint(\"success:\", res.success)\nprint(\"weights:\", np.round(res.x, 4))\nprint(\"variance:\", round(float(res.fun), 8))\n",
+      "interview_structure": "State formula -> define symbols -> add caveat and context."
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
-      "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer uses one decision workflow such as: Portfolio optimization setup.. Then it states one realistic failure mode: Ignoring feasibility checks before solving., and one detection check.",
-      "explanation": "This evaluates transfer from theory to practical quant workflow."
+      "question": "Give one realistic use case, one implementation choice, and one failure mode if this concept is misapplied.",
+      "answer": "A strong answer uses one decision workflow such as: Portfolio optimization setup.. Then it states one realistic failure mode: Ignoring feasibility checks before solving., one detection check, and one mitigation action.",
+      "explanation": "This evaluates transfer from theory to practical quant workflow.",
+      "interview_structure": "Use case -> implementation choice -> failure mode -> mitigation."
     },
     {
       "id": "q4",
       "difficulty": "advanced",
-      "question": "How would you validate data quality and implementation assumptions before trusting conclusions?",
-      "answer": "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources.",
-      "explanation": "This tests robustness discipline and implementation realism."
+      "question": "How would you validate data quality and implementation assumptions before trusting conclusions in production?",
+      "answer": "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources, and set a threshold that triggers a review.",
+      "explanation": "This tests robustness discipline and implementation realism.",
+      "interview_structure": "Validation checklist -> stress check -> escalation threshold."
+    },
+    {
+      "id": "q5",
+      "difficulty": "advanced",
+      "question": "A PM asks for a decision in 30 seconds. What metric would you lead with and what caveat would you immediately include?",
+      "answer": "Lead with one actionable metric tied to objective (for example risk-adjusted return, hit rate under costs, or drawdown stability), then immediately state one caveat on sample dependence, costs, regime shift, or data quality.",
+      "explanation": "This tests concise decision communication under time pressure.",
+      "interview_structure": "Primary metric -> direct recommendation -> caveat."
+    },
+    {
+      "id": "q6",
+      "difficulty": "advanced",
+      "question": "What is one follow-up experiment you would run tomorrow to reduce uncertainty in today's conclusion?",
+      "answer": "Propose one focused experiment (alternate window, benchmark, transaction-cost assumption, or feature variation), state expected impact, and define what result would change your recommendation.",
+      "explanation": "This tests scientific thinking and iterative research discipline.",
+      "interview_structure": "Experiment design -> expected effect -> decision boundary."
     }
   ]
 }

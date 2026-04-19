@@ -27,12 +27,6 @@ function withBase(path) {
   return `${import.meta.env.BASE_URL}${path}`.replace(/([^:]\/)\/+/g, "$1");
 }
 
-function withNotebookViewer(path) {
-  if (!path) return "";
-  const normalized = path.replace(/^\/+/, "");
-  return `/notebook/${encodeURIComponent(normalized)}`;
-}
-
 function withVSCodeWeb(path) {
   if (!path) return "";
   const normalized = path.replace(/^\/+/, "");
@@ -69,6 +63,15 @@ function dayKey(week, dayIndex) {
 
 function monthLabel(week) {
   return `Month ${Math.ceil(week / 4)}`;
+}
+
+function formatReadableDate(value) {
+  return value.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 }
 
 function useCurriculum() {
@@ -441,7 +444,6 @@ function App() {
               />
             )}
           />
-          <Route path="/notebook/:encodedPath" element={<NotebookPage roadmap={roadmap} />} />
         </Routes>
       </main>
     </div>
@@ -488,16 +490,18 @@ function Sidebar({ roadmap, progress }) {
 function Hero({ data, roadmap, progress, fullTrackReady }) {
   const totalDays = roadmap.reduce((acc, week) => acc + week.daily_schedule.length, 0);
   const completedDays = Object.values(progress.days ?? {}).filter((item) => item.status === "done").length;
+  const today = formatReadableDate(new Date());
 
   return (
     <section className="hero">
       <div>
         <div className="hero-chip">2026 Fresh Build</div>
+        <div className="hero-date">Today: {today}</div>
         <h2>Train like a quant desk, not a passive course.</h2>
         <p>
-          The full 24-week roadmap now runs as a true 6-hour daily loop: concept brief, formula intuition,
-          executable notebook work, practical lab blocks, and interview-style quiz checkpoints. Every week
-          ships with a clear project direction so your portfolio compounds while you study.
+          The full 24-week roadmap now runs as a true 10-hour daily loop: concept brief, formula intuition,
+          solved real-world cases, extended executable notebook work, practical lab blocks, and interview-style
+          quiz checkpoints. Every week ships with a clear project direction so your portfolio compounds while you study.
         </p>
       </div>
       <div className="hero-stats">
@@ -516,6 +520,28 @@ function StatCard({ label, value }) {
       <span>{label}</span>
       <strong>{value}</strong>
     </div>
+  );
+}
+
+function NotebookAccessMenu({ path, label = "Open Notebook", compact = false }) {
+  if (!path) {
+    return <span className={`secondary-button ${compact ? "compact" : ""} disabled-button`}>Notebook Unavailable</span>;
+  }
+
+  return (
+    <details className={`notebook-menu ${compact ? "compact" : ""}`}>
+      <summary className={`secondary-button ${compact ? "compact" : ""}`}>
+        {label}
+      </summary>
+      <div className="notebook-menu-dropdown">
+        <a className="notebook-menu-item" href={withVSCodeWeb(path)} target="_blank" rel="noreferrer">
+          Open in VS Code
+        </a>
+        <a className="notebook-menu-item" href={withGitHubBlob(path)} target="_blank" rel="noreferrer">
+          Open in GitHub
+        </a>
+      </div>
+    </details>
   );
 }
 
@@ -753,19 +779,7 @@ function WeekPage({ roadmap, progress, setProgress }) {
             <a className="secondary-button" href={withBase(week.weekly_plan_pdf_path)} target="_blank" rel="noreferrer">
               Weekly PDF
             </a>
-            {week.weekly_project_notebook_path ? (
-              <>
-                <Link className="secondary-button" to={withNotebookViewer(week.weekly_project_notebook_path)}>
-                  Project Notebook
-                </Link>
-                <a className="secondary-button" href={withVSCodeWeb(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
-                  Open in VS Code
-                </a>
-                <a className="secondary-button" href={withGitHubBlob(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
-                  Open in GitHub
-                </a>
-              </>
-            ) : null}
+            <NotebookAccessMenu path={week.weekly_project_notebook_path} label="Project Notebook" />
           </div>
         </div>
 
@@ -825,11 +839,7 @@ function WeekPage({ roadmap, progress, setProgress }) {
                       PDF
                     </a>
                   ) : null}
-                  {day.notebook_path ? (
-                    <Link className="secondary-button compact" to={withNotebookViewer(day.notebook_path)}>
-                      Notebook
-                    </Link>
-                  ) : null}
+                  <NotebookAccessMenu path={day.notebook_path} label="Notebook" compact />
                 </div>
               </div>
             );
@@ -861,15 +871,32 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
   const day = week?.daily_schedule.find((item) => item.day_index === Number(dayIndex));
 
   const key = week && day ? dayKey(week.week, day.day_index) : "";
-  const saved = key ? progress.days?.[key] ?? { status: "not_started", confidence: 0, notes: "" } : null;
+  const saved = key
+    ? progress.days?.[key] ?? { status: "not_started", confidence: 0, notes: "", completedAt: null }
+    : null;
   const { content, status } = useMarkdown(day?.lesson_markdown_path);
   const previousDay = week?.daily_schedule.find((item) => item.day_index === Number(dayIndex) - 1);
   const nextDay = week?.daily_schedule.find((item) => item.day_index === Number(dayIndex) + 1);
 
   if (!week || !day || !saved) return <div className="panel"><p>Lesson not found.</p></div>;
   const detailedDayAvailable = Boolean(day.lesson_markdown_path);
+  const today = formatReadableDate(new Date());
 
   function updateDay(patch) {
+    const nowIso = new Date().toISOString();
+    const currentStatus = saved.status || "not_started";
+    const requestedStatus = patch.status ?? currentStatus;
+
+    if (currentStatus === "done" && requestedStatus !== "done") {
+      return;
+    }
+
+    const isCompleting = currentStatus !== "done" && requestedStatus === "done";
+    const resolvedStatus = currentStatus === "done" ? "done" : requestedStatus;
+    const completedAt = isCompleting
+      ? nowIso
+      : (saved.completedAt || (resolvedStatus === "done" ? saved.updatedAt || nowIso : null));
+
     const next = {
       ...progress,
       days: {
@@ -877,7 +904,9 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
         [key]: {
           ...saved,
           ...patch,
-          updatedAt: new Date().toISOString(),
+          status: resolvedStatus,
+          completedAt,
+          updatedAt: nowIso,
         },
       },
     };
@@ -890,6 +919,7 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
         <div className="panel-head">
           <div>
             <span className="eyebrow">{location.pathname.replace("/week/", "Week ").replace("/day/", " · Day ")}</span>
+            <div className="hero-date">{today}</div>
             <h3>{day.topic}</h3>
           </div>
           <StatusPill status={saved.status || "not_started"} />
@@ -921,8 +951,8 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
               <label>
                 Status
                 <select value={saved.status || "not_started"} onChange={(e) => updateDay({ status: e.target.value })}>
-                  <option value="not_started">Not started</option>
-                  <option value="in_progress">In progress</option>
+                  <option value="not_started" disabled={saved.status === "done"}>Not started</option>
+                  <option value="in_progress" disabled={saved.status === "done"}>In progress</option>
                   <option value="done">Done</option>
                 </select>
               </label>
@@ -949,7 +979,8 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
                 />
               </label>
               <p className="panel-copy">
-                Progress autosaves locally. {saved.updatedAt ? `Last saved: ${new Date(saved.updatedAt).toLocaleString()}` : "Update any field to create the first save point."}
+                Progress autosaves locally. {saved.completedAt ? `Completed on: ${new Date(saved.completedAt).toLocaleString()}. ` : ""}
+                {saved.updatedAt ? `Last saved: ${new Date(saved.updatedAt).toLocaleString()}` : "Update any field to create the first save point."}
               </p>
               {remoteSync?.enabled ? (
                 <p className="panel-copy">
@@ -962,21 +993,18 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
           <div className="sub-panel">
             <h4>Daily Study Actions</h4>
             <p className="panel-copy">
-              Use these actions in order: read the lesson, review the theory PDF, answer the quiz, work through the notebook, then review additional references.
+              Use these actions in order: open the theory PDF, answer the quiz PDF, open notebook in VS Code or GitHub, then review additional references.
             </p>
             <div className="daily-action-grid">
               {detailedDayAvailable ? (
                 <>
-                  <a className="secondary-button" href="#daily-content">
-                    Read Daily Content
-                  </a>
                   <a className="secondary-button" href={withBase(day.lesson_pdf_path)} target="_blank" rel="noreferrer">
                     Open Theory PDF
                   </a>
-                  {day.quiz_markdown_path || day.quiz_pdf_path ? (
+                  {day.quiz_pdf_path || day.quiz_markdown_path ? (
                     <a
                       className="secondary-button"
-                      href={withBase(day.quiz_markdown_path || day.quiz_pdf_path)}
+                      href={withBase(day.quiz_pdf_path || day.quiz_markdown_path)}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -985,15 +1013,7 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
                   ) : (
                     <span className="secondary-button disabled-button">Daily Quiz Unavailable</span>
                   )}
-                  <Link className="secondary-button" to={withNotebookViewer(day.notebook_path)}>
-                    Open Daily Notebook
-                  </Link>
-                  <a className="secondary-button" href={withVSCodeWeb(day.notebook_path)} target="_blank" rel="noreferrer">
-                    Open Notebook in VS Code
-                  </a>
-                  <a className="secondary-button" href={withGitHubBlob(day.notebook_path)} target="_blank" rel="noreferrer">
-                    Open Notebook in GitHub
-                  </a>
+                  <NotebookAccessMenu path={day.notebook_path} label="Open Daily Notebook" />
                   <a className="secondary-button" href={withAdditionalReading(week.week)} target="_blank" rel="noreferrer">
                     Additional Reading
                   </a>

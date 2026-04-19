@@ -41,11 +41,11 @@ What this does:
 - `quant-smoke-check`: verifies 24-week integrity and key artifacts (including Months 2-6)
 - `npm run build`: syncs content and builds static site to `docs/`
 
-Optional deep validation (runs every generated notebook):
+Optional deep validation (runs every generated notebook and writes outputs):
 
 ```bash
 cd "/Users/anto/Quant Learning"
-uv run quant-verify-notebooks --timeout 180
+uv run quant-verify-notebooks --timeout 180 --write-executed
 ```
 
 This writes `exports/notebook-validation.json` with pass/fail results per notebook.
@@ -71,8 +71,8 @@ Real-world dataset used by daily notebook labs:
 
 Website behavior:
 
-- Notebook buttons in the site open an in-app notebook viewer by default.
-- The viewer is read-only for study; use the download action or VS Code web when you want to edit.
+- Notebook actions in the site present two direct options: **Open in VS Code** and **Open in GitHub**.
+- Study flow is PDF/quiz-first, with notebook editing/running done in VS Code or GitHub.
 
 Notebook source locations:
 
@@ -98,7 +98,7 @@ Open this URL in your browser:
 Notes:
 
 - Day pages render lesson content directly in the app.
-- Notebook buttons open in-app notebook viewer by default, with optional VS Code action.
+- Notebook actions open a menu with VS Code and GitHub targets.
 - Progress updates autosave in browser storage.
 
 ## Preview Production Build Locally
@@ -261,7 +261,7 @@ Every day (all 168 days) is generated with:
 
 ## Suggested Weekly Time Budget
 
-- Monday-Friday: `8 hours/day`
-- Saturday: `8 hours`
-- Sunday: `8 hours`
-- Total: about `56 hours/week`
+- Monday-Friday: `10 hours/day`
+- Saturday: `10 hours`
+- Sunday: `10 hours`
+- Total: about `70 hours/week`

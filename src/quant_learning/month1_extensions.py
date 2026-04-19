@@ -13,6 +13,35 @@ def _md(text: str) -> str:
     return textwrap.dedent(text).strip() + "\n"
 
 
+def _ten_hour_study_blocks(day_label: str) -> list[tuple[str, str, str]]:
+    if day_label in {"Mon", "Tue", "Wed", "Thu", "Fri"}:
+        return [
+            ("Session 1", "60 min", "Concept briefing and assumptions map."),
+            ("Session 2", "60 min", "Formula derivation and notation drills."),
+            ("Session 3", "60 min", "Solved real-world case walkthrough."),
+            ("Session 4", "60 min", "Data-quality checks and diagnostics."),
+            ("Session 5", "60 min", "Baseline notebook implementation with comments."),
+            ("Session 6", "60 min", "Extension coding and parameter variation."),
+            ("Session 7", "60 min", "Risk caveat and robustness analysis."),
+            ("Session 8", "60 min", "Interview-style quiz defense rehearsal."),
+            ("Session 9", "60 min", "Revision and error-log correction cycle."),
+            ("Session 10", "60 min", "Desk memo and next-day experiment plan."),
+        ]
+
+    return [
+        ("Session 1", "60 min", "Closed-book retrieval and formula rewrite."),
+        ("Session 2", "60 min", "Weak-topic reteach with solved examples."),
+        ("Session 3", "60 min", "Data refresh and diagnostics rerun."),
+        ("Session 4", "60 min", "Notebook baseline pass."),
+        ("Session 5", "60 min", "Notebook extension and stress tests."),
+        ("Session 6", "60 min", "Project build increment."),
+        ("Session 7", "60 min", "Project risk caveat and robustness note."),
+        ("Session 8", "60 min", "Interview rehearsal under time limit."),
+        ("Session 9", "60 min", "Revision board confidence rescoring."),
+        ("Session 10", "60 min", "Weekly transition memo and gap plan."),
+    ]
+
+
 MONTH1_EXTRA_DAY_DETAILS: dict[int, dict[str, dict[str, Any]]] = {
     2: {
         "Mon": {
@@ -1877,16 +1906,17 @@ def render_detailed_day_markdown(week_number: int, day: dict[str, Any]) -> str:
     detail = MONTH1_EXTRA_DAY_DETAILS[week_number][day["day"]]
     formula_entries = formula_entries_for_week(week_number, day["topic"])
     lab_lines = real_world_lab_lines_for_week(week_number, day["topic"])
+    study_blocks = _ten_hour_study_blocks(day["day"])
     lines: list[str] = [
         f"# Week {week_number:02d} {day['day']}: {day['topic']}",
         "",
-        f"**Estimated time:** {detail['estimated_time']}",
+        "**Estimated time:** 10 hours",
         "",
         "## Session Plan",
         "| Session | Duration | Focus |",
         "| --- | --- | --- |",
     ]
-    for index, (_, duration, focus) in enumerate(detail["study_blocks"], start=1):
+    for index, (_, duration, focus) in enumerate(study_blocks, start=1):
         lines.append(f"| Session {index} | {duration} | {focus} |")
     lines.extend(["", "## Why It Matters In Quant", day["why"], "", "## Learning Overview"])
     for paragraph in detail["overview"]:
@@ -1952,22 +1982,23 @@ def render_detailed_day_markdown(week_number: int, day: dict[str, Any]) -> str:
     lines.append("")
     lines.extend(
         [
-            "## Extended Study (to complete a full 6-hour day)",
+            "## Extended Study (to complete a full 10-hour day)",
             "1. Rewrite each core concept in your own words without looking at notes.",
-            "2. Add one extra worked example using different numbers or assumptions.",
+            "2. Add one extra solved case using different assumptions and compare outputs.",
             "3. Explain one failure mode where this concept can be misapplied in trading or risk work.",
             "4. Add one short paragraph linking this concept to your weekly project objective.",
+            "5. Propose one follow-up experiment for tomorrow and define success/failure criteria.",
             "",
             "## Real-World Data Application",
-            "1. Pull SPY, QQQ, TLT, and GLD with yfinance when internet is available.",
-            "2. If available, compare with a Robinhood-style export CSV for source consistency.",
-            "3. Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.",
-            "4. Compute log returns, annualized volatility, and Sharpe ratio across symbols.",
-            "5. Build one cumulative growth chart and one correlation table.",
-            "6. Write one practical portfolio/risk insight from the data.",
+            "1. Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback market panel.",
+            "2. Run one baseline analysis and one stressed-assumption variant.",
+            "3. Document one risk caveat and one robustness check before finalizing conclusions.",
             "",
         ]
     )
+    for item in lab_lines:
+        lines.append(f"- {item}")
+    lines.append("")
     lines.extend(["## Coding Task", day["coding_task"], "", "## Daily Interview Drill"])
     for qa in detail["interview_drill"]:
         lines.extend([f"### Q: {qa['question']}", f"A: {qa['answer']}", ""])
@@ -1989,17 +2020,18 @@ def render_detailed_day_markdown(week_number: int, day: dict[str, Any]) -> str:
 
 def detailed_day_notebook_spec(week_number: int, day: dict[str, Any]) -> dict[str, Any]:
     detail = MONTH1_EXTRA_DAY_DETAILS[week_number][day["day"]]
+    study_blocks = _ten_hour_study_blocks(day["day"])
     intro = [
         f"# Week {week_number} {day['day']}: {day['topic']}",
         "",
-        f"Estimated time: {detail['estimated_time']}",
+        "Estimated time: 10 hours",
         "",
         "## Why this matters",
         day["why"],
         "",
         "## Session plan",
     ]
-    for index, (_, duration, focus) in enumerate(detail["study_blocks"], start=1):
+    for index, (_, duration, focus) in enumerate(study_blocks, start=1):
         intro.append(f"- Session {index} ({duration}): {focus}")
     intro.extend(["", "## Concept notes"])
     for concept in detail["concepts"]:

@@ -120,6 +120,13 @@ a {
   color: var(--teal);
 }
 
+.hero-date {
+  margin-top: 0.22rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
 .brand-block h1,
 .hero h2,
 .panel-head h3 {
@@ -301,12 +308,66 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.85rem;
+  flex-wrap: wrap;
 }
 
 .button-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.58rem;
+}
+
+.notebook-menu {
+  position: relative;
+  display: inline-flex;
+}
+
+.notebook-menu summary {
+  list-style: none;
+}
+
+.notebook-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.notebook-menu summary::after {
+  content: " ▾";
+  font-size: 0.8em;
+}
+
+.notebook-menu-dropdown {
+  position: absolute;
+  top: calc(100% + 0.42rem);
+  left: 0;
+  min-width: 205px;
+  z-index: 30;
+  border-radius: 14px;
+  border: 1px solid rgba(21, 36, 55, 0.14);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 30px rgba(21, 36, 55, 0.12);
+  padding: 0.35rem;
+  display: none;
+}
+
+.notebook-menu:hover .notebook-menu-dropdown,
+.notebook-menu:focus-within .notebook-menu-dropdown,
+.notebook-menu[open] .notebook-menu-dropdown {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.notebook-menu-item {
+  border-radius: 10px;
+  padding: 0.56rem 0.66rem;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.notebook-menu-item:hover {
+  border-color: rgba(13, 109, 116, 0.28);
+  background: var(--teal-soft);
 }
 
 .compact {
@@ -466,12 +527,17 @@ button.secondary-button,
 
 .daily-action-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.62rem;
 }
 
 .daily-action-grid .secondary-button {
   text-align: center;
+}
+
+.daily-action-grid .notebook-menu,
+.daily-action-grid .notebook-menu summary {
+  width: 100%;
 }
 
 .cloud-input {
@@ -807,6 +873,16 @@ button.secondary-button,
 
   .daily-action-grid {
     grid-template-columns: 1fr;
+  }
+
+  .notebook-menu {
+    width: 100%;
+  }
+
+  .notebook-menu-dropdown {
+    width: 100%;
+    position: static;
+    margin-top: 0.35rem;
   }
 
   .button-row {

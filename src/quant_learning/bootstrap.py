@@ -53,20 +53,28 @@ def weekly_project_notebook_name(week_number: int) -> str:
 def daily_session_plan(day_label: str) -> list[tuple[str, str, str]]:
     if day_label in {"Mon", "Tue", "Wed", "Thu", "Fri"}:
         return [
-            ("Session 1", "60 min", "Theory deep dive: definitions, intuition, and assumptions."),
-            ("Session 2", "60 min", "Formula and workflow lab with topic-specific derivations."),
-            ("Session 3", "60 min", "Worked examples with interpretation and failure-mode checks."),
-            ("Session 4", "60 min", "Notebook implementation and output interpretation."),
-            ("Session 5", "60 min", "Interview-style quiz and closed-book retrieval."),
-            ("Session 6", "60 min", "Revision sprint, error-log update, and summary memo."),
+            ("Session 1", "60 min", "Concept briefing: definitions, intuition, and assumptions."),
+            ("Session 2", "60 min", "Formula derivation and notation fluency practice."),
+            ("Session 3", "60 min", "Solved real-world case study with step-by-step reasoning."),
+            ("Session 4", "60 min", "Data quality checks and exploratory diagnostics."),
+            ("Session 5", "60 min", "Core notebook implementation and baseline output analysis."),
+            ("Session 6", "60 min", "Extended coding challenge with variations and sensitivity checks."),
+            ("Session 7", "60 min", "Risk/failure-mode simulation and robustness interpretation."),
+            ("Session 8", "60 min", "Interview quiz: answer structure and technical defense drills."),
+            ("Session 9", "60 min", "Revision sprint and error-log corrections from weak points."),
+            ("Session 10", "60 min", "Desk-style summary memo and next-session action plan."),
         ]
     return [
         ("Session 1", "60 min", "Closed-book recall and formula rewrite."),
-        ("Session 2", "60 min", "High-value concept reinforcement with worked examples."),
-        ("Session 3", "60 min", "Notebook review and focused extension task."),
-        ("Session 4", "60 min", "Weekly mini-project or capstone build increment."),
-        ("Session 5", "60 min", "Interview rehearsal and technical defense."),
-        ("Session 6", "60 min", "Reflection, error-log cleanup, and next-step planning."),
+        ("Session 2", "60 min", "Weak-topic reteach with solved examples."),
+        ("Session 3", "60 min", "Data refresh and exploratory diagnostics rerun."),
+        ("Session 4", "60 min", "Notebook baseline implementation pass."),
+        ("Session 5", "60 min", "Notebook extension challenge and parameter stress tests."),
+        ("Session 6", "60 min", "Weekly mini-project or capstone build increment."),
+        ("Session 7", "60 min", "Mini-project review and risk caveat documentation."),
+        ("Session 8", "60 min", "Interview rehearsal with timed answer structure."),
+        ("Session 9", "60 min", "Revision board updates and confidence rescoring."),
+        ("Session 10", "60 min", "Weekly wrap memo and next-week transition planning."),
     ]
 
 
@@ -74,7 +82,7 @@ def make_generic_day(week_number: int, day: str, topic: str, week_title: str) ->
     return {
         "day": day,
         "topic": topic,
-        "estimated_time": "6 hours",
+        "estimated_time": "10 hours",
         "why": f"{topic} is part of real quant work inside {week_title.lower()} research, trading, or risk workflows.",
         "core_explanation": (
             f"Build {topic.lower()} from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment."
@@ -1131,7 +1139,7 @@ def build_roadmap() -> list[dict]:
                 )
         for index, day in enumerate(days, start=1):
             day["day_index"] = index
-            day["estimated_time"] = "6 hours"
+            day["estimated_time"] = "10 hours"
             day["session_plan"] = day.get("session_plan", daily_session_plan(day["day"]))
             day["week_theme"] = blueprint["title"]
             day["previous_topic"] = days[index - 2]["topic"] if index > 1 else ""
@@ -1224,15 +1232,15 @@ def write_json(roadmap: list[dict]) -> None:
         },
         "assumptions": [
             "You are restarting math almost from zero and need simple explanations before formal treatment.",
-            "You can sustain about 42 hours per week for an intensive mastery track.",
+            "You can sustain about 70 hours per week for an intensive mastery track.",
             "You want a scholarship-aware master's preparation track in parallel with technical training.",
             "You prefer practical portfolio-building over purely theoretical study.",
         ],
         "weekly_time_budget": {
-            "Mon-Fri": "6 hours/day",
-            "Sat": "6 hours",
-            "Sun": "6 hours",
-            "Total": "About 42 hours/week",
+            "Mon-Fri": "10 hours/day",
+            "Sat": "10 hours",
+            "Sun": "10 hours",
+            "Total": "About 70 hours/week",
         },
         "roadmap": roadmap,
     }
@@ -1247,7 +1255,7 @@ def roadmap_markdown(roadmap: list[dict]) -> str:
         "- Math is being rebuilt almost from zero, so each lesson starts with intuition and then adds technical language.",
         "- Coding is good enough to move quickly once finance and math are tied back to practice.",
         "- The 24-week plan runs from 2026-04-20 to 2026-10-04 if you start on the next Monday after this build.",
-        "- Weekly workload is sized for about 42 hours (6 hours/day intensive track).",
+        "- Weekly workload is sized for about 70 hours (10 hours/day intensive track).",
         "",
         "## 24-Week Roadmap Table",
         "| Week | Dates | Theme | Key Outcome |",
@@ -1442,6 +1450,20 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             f"3. Market interpretation: {formula_primary['use_case']}. {day['worked_example']}",
             f"4. Failure mode check: {formula_primary['pitfall']}",
             "",
+            "## Real-World Solved Case (Step-by-Step)",
+            f"- Step 1 (Problem framing): Define the desk decision and why {day['topic'].lower()} is relevant.",
+            f"- Step 2 (Data and assumptions): Use `curriculum/datasets/real_market_prices.csv`, state one data-quality assumption and one regime-risk assumption.",
+            f"- Step 3 (Method): Apply {formula_primary['name']} or a directly related workflow on a reproducible sample.",
+            f"- Step 4 (Result): Report one quantitative output and one practical interpretation for research, trading, or risk.",
+            f"- Step 5 (Caveat): Document one failure mode: {formula_primary['pitfall']}",
+            "- Step 6 (Robustness): Re-run with one alternate window, parameter, or benchmark and compare conclusions.",
+            "",
+            "## Deep Study Prompts (10-Hour Track)",
+            "- What assumption is easiest to violate in live markets and how would you detect that early?",
+            "- Which output would you show a PM or risk manager first, and why?",
+            "- Which alternate explanation could produce similar numbers but imply a different action?",
+            "- What metric could improve while hidden risk still worsens?",
+            "",
             "## Practice Problems",
         ]
     )
@@ -1453,11 +1475,12 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
     lines.extend(
         [
             "",
-            "## 6-Hour Deliverables",
-            "- Produce one page of notes with intuition, formulas, and one market example in your own words.",
-            "- Complete all notebook cells and annotate each output with what it means financially.",
-            "- Add one error-log entry with a scheduled review date.",
-            "- Record a 60-90 second spoken explanation of the concept as interview practice.",
+            "## 10-Hour Deliverables",
+            "- Produce 2-3 pages of notes with intuition, formal definitions, formulas, and one solved real-world case.",
+            "- Complete all notebook labs plus one extension experiment with changed assumptions or parameters.",
+            "- Add at least two error-log entries with specific correction rules and review dates.",
+            "- Record a 2-minute spoken explanation and a 1-minute risk caveat explanation for interview practice.",
+            "- Write a short desk memo: decision, evidence, risk caveat, and next test.",
             "",
             "## Daily Quiz (Closed-Book)",
             f"1. What is the core intuition behind {day['topic'].lower()}?",
@@ -1517,6 +1540,10 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             "",
             "## Coding Task",
             day["coding_task"],
+            "- Add comments that explain the intent of each major transformation and why it matters for quant decisions.",
+            "- Print one table and one metric summary that could be shown in a desk review.",
+            "- Add one stress or sensitivity variation and compare baseline versus stressed output.",
+            "- End with a one-paragraph interpretation describing actionability and limitations.",
             "",
             "## Interview Drill",
             f"- Q1: Explain {day['topic'].lower()} to a non-technical stakeholder in 3 sentences.",
@@ -1579,6 +1606,7 @@ def daily_quiz_items(week_number: int, day_index: int, day: dict) -> list[dict[s
                 "and states one practical limitation that must be monitored."
             ),
             "explanation": "This tests communication quality, not just memorized definitions.",
+            "interview_structure": "Definition -> practical use case -> limitation/risk check.",
         },
         {
             "id": "q2",
@@ -1591,48 +1619,75 @@ def daily_quiz_items(week_number: int, day_index: int, day: dict) -> list[dict[s
             "explanation": "This checks mathematical fluency and operational reliability.",
             "python_task": drill["task"],
             "python_solution": drill["solution"],
+            "interview_structure": "State formula -> define symbols -> add caveat and context.",
         },
         {
             "id": "q3",
             "difficulty": "intermediate",
-            "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
+            "question": "Give one realistic use case, one implementation choice, and one failure mode if this concept is misapplied.",
             "answer": (
                 f"A strong answer uses one decision workflow such as: {formula_primary['use_case']}. "
-                f"Then it states one realistic failure mode: {formula_primary['pitfall']}, and one detection check."
+                f"Then it states one realistic failure mode: {formula_primary['pitfall']}, one detection check, and one mitigation action."
             ),
             "explanation": "This evaluates transfer from theory to practical quant workflow.",
+            "interview_structure": "Use case -> implementation choice -> failure mode -> mitigation.",
         },
         {
             "id": "q4",
             "difficulty": "advanced",
-            "question": "How would you validate data quality and implementation assumptions before trusting conclusions?",
+            "question": "How would you validate data quality and implementation assumptions before trusting conclusions in production?",
             "answer": (
                 "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. "
-                "Then compare one metric across alternate assumptions or data sources."
+                "Then compare one metric across alternate assumptions or data sources, and set a threshold that triggers a review."
             ),
             "explanation": "This tests robustness discipline and implementation realism.",
+            "interview_structure": "Validation checklist -> stress check -> escalation threshold.",
+        },
+        {
+            "id": "q5",
+            "difficulty": "advanced",
+            "question": "A PM asks for a decision in 30 seconds. What metric would you lead with and what caveat would you immediately include?",
+            "answer": (
+                "Lead with one actionable metric tied to objective (for example risk-adjusted return, hit rate under costs, or drawdown stability), "
+                "then immediately state one caveat on sample dependence, costs, regime shift, or data quality."
+            ),
+            "explanation": "This tests concise decision communication under time pressure.",
+            "interview_structure": "Primary metric -> direct recommendation -> caveat.",
+        },
+        {
+            "id": "q6",
+            "difficulty": "advanced",
+            "question": "What is one follow-up experiment you would run tomorrow to reduce uncertainty in today's conclusion?",
+            "answer": (
+                "Propose one focused experiment (alternate window, benchmark, transaction-cost assumption, or feature variation), "
+                "state expected impact, and define what result would change your recommendation."
+            ),
+            "explanation": "This tests scientific thinking and iterative research discipline.",
+            "interview_structure": "Experiment design -> expected effect -> decision boundary.",
         },
     ]
 
     if day["day"] == "Sat":
         questions.append(
             {
-                "id": "q5",
+                "id": "q7",
                 "difficulty": "advanced",
                 "question": "From your error log, pick one repeated mistake and describe the correction protocol for next week.",
                 "answer": "State the exact misconception, corrected rule, retrieval prompt, and next review schedule (1d/3d/7d/14d).",
                 "explanation": "Saturday should convert weak spots into an explicit revision mechanism.",
+                "interview_structure": "Mistake -> correction rule -> retrieval plan -> review cadence.",
             }
         )
 
     if day["day"] == "Sun":
         questions.append(
             {
-                "id": "q5",
+                "id": "q7",
                 "difficulty": "advanced",
                 "question": "What mini-project decision would you defend from this week and what evidence supports it?",
                 "answer": "Name the decision, show one metric/table/plot supporting it, and mention one limitation plus next-step test.",
                 "explanation": "Sunday focuses on project communication quality, not only calculations.",
+                "interview_structure": "Decision -> evidence -> limitation -> next-step test.",
             }
         )
 
@@ -1648,6 +1703,7 @@ def daily_quiz_markdown(week_number: int, day_index: int, day: dict, quiz_items:
         "- After answering, compare with the answer key and write one correction note.",
         "- Treat each question as a short trading interview prompt.",
         "- For each item, complete the Python drill using real data and interpret the output.",
+        "- Use a structured answer style: direct answer, evidence, caveat, and follow-up check.",
         "- Target score: at least 4/5 confidence on every item before moving on.",
         "",
         "## Trading Interview Questions, Answers, and Python Drills",
@@ -1659,6 +1715,7 @@ def daily_quiz_markdown(week_number: int, day_index: int, day: dict, quiz_items:
                 f"Interview question: {item['question']}",
                 "",
                 f"Model answer: {item['answer']}",
+                f"How to answer in a live interview: {item.get('interview_structure', 'Direct answer -> evidence -> caveat.')}",
                 f"Why this matters: {item['explanation']}",
                 "",
             ]
@@ -1681,6 +1738,7 @@ def daily_quiz_markdown(week_number: int, day_index: int, day: dict, quiz_items:
             "- What would you improve before saying this answer in a live interview?",
             "- What will you review before tomorrow?",
             "- What evidence shows your answer quality improved versus last week?",
+            "- If a PM challenged your conclusion, what single additional test would you run first?",
         ]
     )
     return "\n".join(lines) + "\n"
@@ -1751,16 +1809,20 @@ def six_hour_notebook_extension(week_number: int, day: dict) -> list:
 
     roadmap_markdown = textwrap.dedent(
         f"""\
-        ## 6-Hour Completion Roadmap
+        ## 10-Hour Completion Roadmap
 
         Use this minimum structure to turn today's notebook into a serious study session:
 
         - Phase 1 (60 min): Read concept notes and rewrite the core idea from memory.
-        - Phase 2 (60 min): Complete and extend all code labs with at least one variation.
-        - Phase 3 (60 min): Do formula retrieval, scenario analysis, and error-log updates.
-        - Phase 4 (60 min): Practice interview responses aloud.
-        - Phase 5 (60 min): Implement one robustness check.
-        - Phase 6 (60 min): Write a concise memo with limitations and next steps.
+        - Phase 2 (60 min): Rewrite formulas/workflows and define each term.
+        - Phase 3 (60 min): Complete baseline code labs with comments.
+        - Phase 4 (60 min): Build one real-data extension and compare outputs.
+        - Phase 5 (60 min): Add stress/sensitivity checks and interpret shifts.
+        - Phase 6 (60 min): Run scenario analysis and identify fragile assumptions.
+        - Phase 7 (60 min): Complete interview-style Python drill with explanation.
+        - Phase 8 (60 min): Do closed-book retrieval and update error log.
+        - Phase 9 (60 min): Write one desk memo with recommendation and caveat.
+        - Phase 10 (60 min): Define next-session experiment plan and confidence score.
         """
     ).strip()
 
@@ -1895,6 +1957,35 @@ def six_hour_notebook_extension(week_number: int, day: dict) -> list:
         + drill["solution"]
     )
 
+    extended_challenge_markdown = textwrap.dedent(
+        f"""\
+        ## Extended 10-Hour Coding Challenge
+
+        Build one additional variant for today's topic ({day['topic']}):
+
+        1. Change one key assumption or parameter.
+        2. Re-run the pipeline and compare baseline vs variant.
+        3. Comment each major step in code so another analyst can audit your logic.
+        4. State whether the recommendation changed and why.
+        """
+    ).strip()
+
+    extended_challenge_code = _nb_code(
+        """\
+        import pandas as pd
+
+        baseline_vs_variant = pd.DataFrame(
+            [
+                {"run": "baseline", "key_assumption": "", "headline_metric": None, "decision": ""},
+                {"run": "variant", "key_assumption": "", "headline_metric": None, "decision": ""},
+            ]
+        )
+
+        # Fill this table after running your variant so the comparison is explicit.
+        print(baseline_vs_variant)
+        """
+    )
+
     weekend_extension_cells = []
 
     if day["day"] == "Sat":
@@ -1959,6 +2050,8 @@ def six_hour_notebook_extension(week_number: int, day: dict) -> list:
         nbf.v4.new_markdown_cell(real_data_takeaway_markdown),
         nbf.v4.new_markdown_cell(interview_python_markdown),
         nbf.v4.new_code_cell(interview_python_code),
+        nbf.v4.new_markdown_cell(extended_challenge_markdown),
+        nbf.v4.new_code_cell(extended_challenge_code),
         *weekend_extension_cells,
         nbf.v4.new_markdown_cell(scenario_markdown),
         nbf.v4.new_code_cell(scenario_code),

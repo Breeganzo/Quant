@@ -9,7 +9,8 @@
       "difficulty": "basic",
       "question": "Explain bid-ask spread, liquidity, and adverse selection in plain language for a trading or risk audience.",
       "answer": "A strong answer defines bid-ask spread, liquidity, and adverse selection, gives one concrete workflow or market-facing decision example, and states one practical limitation that must be monitored.",
-      "explanation": "This tests communication quality, not just memorized definitions."
+      "explanation": "This tests communication quality, not just memorized definitions.",
+      "interview_structure": "Definition -> practical use case -> limitation/risk check."
     },
     {
       "id": "q2",
@@ -18,21 +19,40 @@
       "answer": "A strong answer includes Spread exactly, explains each symbol, and states one caveat: Using stale hedge ratio.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Estimate turnover and a simple cost proxy from a toy rebalance schedule.",
-      "python_solution": "import pandas as pd\n\nweights = pd.DataFrame(\n    {\n        \"SPY\": [0.40, 0.35, 0.30],\n        \"QQQ\": [0.30, 0.35, 0.35],\n        \"TLT\": [0.20, 0.20, 0.25],\n        \"GLD\": [0.10, 0.10, 0.10],\n    },\n    index=[\"t0\", \"t1\", \"t2\"],\n)\nturnover = 0.5 * weights.diff().abs().sum(axis=1).fillna(0.0)\ncost_bps = 8\nest_cost = turnover * (cost_bps / 10000)\nprint(pd.DataFrame({\"turnover\": turnover, \"estimated_cost\": est_cost}))\n"
+      "python_solution": "import pandas as pd\n\nweights = pd.DataFrame(\n    {\n        \"SPY\": [0.40, 0.35, 0.30],\n        \"QQQ\": [0.30, 0.35, 0.35],\n        \"TLT\": [0.20, 0.20, 0.25],\n        \"GLD\": [0.10, 0.10, 0.10],\n    },\n    index=[\"t0\", \"t1\", \"t2\"],\n)\nturnover = 0.5 * weights.diff().abs().sum(axis=1).fillna(0.0)\ncost_bps = 8\nest_cost = turnover * (cost_bps / 10000)\nprint(pd.DataFrame({\"turnover\": turnover, \"estimated_cost\": est_cost}))\n",
+      "interview_structure": "State formula -> define symbols -> add caveat and context."
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
-      "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer uses one decision workflow such as: Pairs and residual strategy setup.. Then it states one realistic failure mode: Using stale hedge ratio., and one detection check.",
-      "explanation": "This evaluates transfer from theory to practical quant workflow."
+      "question": "Give one realistic use case, one implementation choice, and one failure mode if this concept is misapplied.",
+      "answer": "A strong answer uses one decision workflow such as: Pairs and residual strategy setup.. Then it states one realistic failure mode: Using stale hedge ratio., one detection check, and one mitigation action.",
+      "explanation": "This evaluates transfer from theory to practical quant workflow.",
+      "interview_structure": "Use case -> implementation choice -> failure mode -> mitigation."
     },
     {
       "id": "q4",
       "difficulty": "advanced",
-      "question": "How would you validate data quality and implementation assumptions before trusting conclusions?",
-      "answer": "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources.",
-      "explanation": "This tests robustness discipline and implementation realism."
+      "question": "How would you validate data quality and implementation assumptions before trusting conclusions in production?",
+      "answer": "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources, and set a threshold that triggers a review.",
+      "explanation": "This tests robustness discipline and implementation realism.",
+      "interview_structure": "Validation checklist -> stress check -> escalation threshold."
+    },
+    {
+      "id": "q5",
+      "difficulty": "advanced",
+      "question": "A PM asks for a decision in 30 seconds. What metric would you lead with and what caveat would you immediately include?",
+      "answer": "Lead with one actionable metric tied to objective (for example risk-adjusted return, hit rate under costs, or drawdown stability), then immediately state one caveat on sample dependence, costs, regime shift, or data quality.",
+      "explanation": "This tests concise decision communication under time pressure.",
+      "interview_structure": "Primary metric -> direct recommendation -> caveat."
+    },
+    {
+      "id": "q6",
+      "difficulty": "advanced",
+      "question": "What is one follow-up experiment you would run tomorrow to reduce uncertainty in today's conclusion?",
+      "answer": "Propose one focused experiment (alternate window, benchmark, transaction-cost assumption, or feature variation), state expected impact, and define what result would change your recommendation.",
+      "explanation": "This tests scientific thinking and iterative research discipline.",
+      "interview_structure": "Experiment design -> expected effect -> decision boundary."
     }
   ]
 }

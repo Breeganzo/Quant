@@ -1,6 +1,6 @@
 # Week 22 Mon: Probability drills and expected value
 
-**Estimated time:** 6 hours
+**Estimated time:** 10 hours
 
 ## Daily Mission
 This day belongs to the week theme "Interview Prep I: probability, statistics, mental math, Python, SQL, and markets discussion". Your objective is to understand, apply, and communicate probability drills and expected value in a way a quant team would trust.
@@ -13,12 +13,16 @@ This day belongs to the week theme "Interview Prep I: probability, statistics, m
 ## Session Plan
 | Session | Duration | Focus |
 | --- | --- | --- |
-| Session 1 | 60 min | Theory deep dive: definitions, intuition, and assumptions. |
-| Session 2 | 60 min | Formula and workflow lab with topic-specific derivations. |
-| Session 3 | 60 min | Worked examples with interpretation and failure-mode checks. |
-| Session 4 | 60 min | Notebook implementation and output interpretation. |
-| Session 5 | 60 min | Interview-style quiz and closed-book retrieval. |
-| Session 6 | 60 min | Revision sprint, error-log update, and summary memo. |
+| Session 1 | 60 min | Concept briefing: definitions, intuition, and assumptions. |
+| Session 2 | 60 min | Formula derivation and notation fluency practice. |
+| Session 3 | 60 min | Solved real-world case study with step-by-step reasoning. |
+| Session 4 | 60 min | Data quality checks and exploratory diagnostics. |
+| Session 5 | 60 min | Core notebook implementation and baseline output analysis. |
+| Session 6 | 60 min | Extended coding challenge with variations and sensitivity checks. |
+| Session 7 | 60 min | Risk/failure-mode simulation and robustness interpretation. |
+| Session 8 | 60 min | Interview quiz: answer structure and technical defense drills. |
+| Session 9 | 60 min | Revision sprint and error-log corrections from weak points. |
+| Session 10 | 60 min | Desk-style summary memo and next-session action plan. |
 
 ## Why It Matters In Quant
 Probability drills and expected value is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
@@ -29,16 +33,31 @@ Probability drills and expected value is part of real quant work inside intervie
 3. Market interpretation: Filter positive-edge trading setups.. Run one compact, reproducible example for probability drills and expected value and explain both the signal and the main failure mode a quant team should watch.
 4. Failure mode check: Ignoring payoff asymmetry and tails.
 
+## Real-World Solved Case (Step-by-Step)
+- Step 1 (Problem framing): Define the desk decision and why probability drills and expected value is relevant.
+- Step 2 (Data and assumptions): Use `curriculum/datasets/real_market_prices.csv`, state one data-quality assumption and one regime-risk assumption.
+- Step 3 (Method): Apply Expected Value or a directly related workflow on a reproducible sample.
+- Step 4 (Result): Report one quantitative output and one practical interpretation for research, trading, or risk.
+- Step 5 (Caveat): Document one failure mode: Ignoring payoff asymmetry and tails.
+- Step 6 (Robustness): Re-run with one alternate window, parameter, or benchmark and compare conclusions.
+
+## Deep Study Prompts (10-Hour Track)
+- What assumption is easiest to violate in live markets and how would you detect that early?
+- Which output would you show a PM or risk manager first, and why?
+- Which alternate explanation could produce similar numbers but imply a different action?
+- What metric could improve while hidden risk still worsens?
+
 ## Practice Problems
 - Explain probability drills and expected value in one paragraph without jargon.
 - Write down one topic-specific formula or workflow for probability drills and expected value from memory.
 - Connect probability drills and expected value to one realistic trading, portfolio, risk, or research decision.
 
-## 6-Hour Deliverables
-- Produce one page of notes with intuition, formulas, and one market example in your own words.
-- Complete all notebook cells and annotate each output with what it means financially.
-- Add one error-log entry with a scheduled review date.
-- Record a 60-90 second spoken explanation of the concept as interview practice.
+## 10-Hour Deliverables
+- Produce 2-3 pages of notes with intuition, formal definitions, formulas, and one solved real-world case.
+- Complete all notebook labs plus one extension experiment with changed assumptions or parameters.
+- Add at least two error-log entries with specific correction rules and review dates.
+- Record a 2-minute spoken explanation and a 1-minute risk caveat explanation for interview practice.
+- Write a short desk memo: decision, evidence, risk caveat, and next test.
 
 ## Daily Quiz (Closed-Book)
 1. What is the core intuition behind probability drills and expected value?
@@ -86,6 +105,10 @@ Interview pitfall: Applying full Kelly under estimation error.
 
 ## Coding Task
 Solve one timed coding/math drill for probability drills and expected value and write a concise interview-quality explanation.
+- Add comments that explain the intent of each major transformation and why it matters for quant decisions.
+- Print one table and one metric summary that could be shown in a desk review.
+- Add one stress or sensitivity variation and compare baseline versus stressed output.
+- End with a one-paragraph interpretation describing actionability and limitations.
 
 ## Interview Drill
 - Q1: Explain probability drills and expected value to a non-technical stakeholder in 3 sentences.

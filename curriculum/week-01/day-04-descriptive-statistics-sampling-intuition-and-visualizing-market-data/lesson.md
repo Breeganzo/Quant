@@ -1,13 +1,18 @@
 # Week 01 Thu: Descriptive statistics, sampling intuition, and visualizing market data
 
-**Estimated time:** 6 hours
+**Estimated time:** 10 hours
 
 ## Study Blocks
-- Block 1 (45 min): Understand mean, median, variance, and standard deviation.
-- Block 2 (60 min): Relate volatility to risk and noise.
-- Block 3 (45 min): Study outliers, skew, and why averages can mislead.
-- Block 4 (60 min): Use pandas and plots for descriptive analysis.
-- Block 5 (30 min): Practice and interview drill.
+- Block 1 (60 min): Concept briefing and key-assumption mapping.
+- Block 2 (60 min): Formula/workflow derivation and notation rewrite.
+- Block 3 (60 min): Solved real-world case walkthrough.
+- Block 4 (60 min): Data checks and exploratory diagnostics.
+- Block 5 (60 min): Core notebook implementation with comments.
+- Block 6 (60 min): Extension coding task and sensitivity variation.
+- Block 7 (60 min): Risk caveat and robustness scenario testing.
+- Block 8 (60 min): Interview-style quiz answers and defense drill.
+- Block 9 (60 min): Revision sprint and error-log updates.
+- Block 10 (60 min): Desk memo summary and tomorrow transition plan.
 
 ## Why It Matters In Quant
 Before any model, a quant needs to understand the shape of the data: center, spread, skew, and outliers.
@@ -37,6 +42,12 @@ This day builds the habit of asking: where is the center, how wide is the spread
 - Returns [0.01, 0.02, -0.01, 0.00] have mean 0.005 and sample standard deviation about 0.0129.
 - One outlier return of -0.15 can change the sample mean materially even if the rest of the series is calm.
 - Histograms reveal clustering, skew, and tails better than a single average number.
+
+## Solved Real-World Flow
+- Define one concrete desk decision that this topic informs.
+- Use reproducible market data and state one data-quality check.
+- Apply one core formula/workflow and report one numerical output.
+- Add one risk caveat and one robustness check before trusting the conclusion.
 
 ## Practice Questions With Answers
 ### Question: Why can two assets with the same mean return still feel very different to hold?
@@ -100,3 +111,4 @@ When I look at a return series, do I immediately ask how noisy it is and whether
 - I finished the coding lab and checked the output.
 - I added at least one item to the error log if something was unclear.
 - I practiced at least one interview answer aloud.
+- I documented one actionable desk-style takeaway and one follow-up experiment.

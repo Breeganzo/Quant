@@ -1,13 +1,18 @@
 # Week 01 Mon: Reset your toolkit: numbers, variables, returns, and compounding
 
-**Estimated time:** 6 hours
+**Estimated time:** 10 hours
 
 ## Study Blocks
-- Block 1 (45 min): Reset notation: prices, returns, percentages, and variables.
-- Block 2 (60 min): Learn simple return, gross return, and compounding intuition.
-- Block 3 (45 min): Work through hand-calculated examples and common traps.
-- Block 4 (60 min): Implement returns and wealth paths in Python and pandas.
-- Block 5 (30 min): Practice, reflect, and do a short interview drill.
+- Block 1 (60 min): Concept briefing and key-assumption mapping.
+- Block 2 (60 min): Formula/workflow derivation and notation rewrite.
+- Block 3 (60 min): Solved real-world case walkthrough.
+- Block 4 (60 min): Data checks and exploratory diagnostics.
+- Block 5 (60 min): Core notebook implementation with comments.
+- Block 6 (60 min): Extension coding task and sensitivity variation.
+- Block 7 (60 min): Risk caveat and robustness scenario testing.
+- Block 8 (60 min): Interview-style quiz answers and defense drill.
+- Block 9 (60 min): Revision sprint and error-log updates.
+- Block 10 (60 min): Desk memo summary and tomorrow transition plan.
 
 ## Why It Matters In Quant
 Quants constantly translate market moves into numbers. If returns and compounding are shaky, every later topic like portfolio optimization, forecasting, and risk measurement becomes confusing.
@@ -37,6 +42,12 @@ The main habit to build is to stop thinking only in absolute price differences a
 - Asset A: 50 -> 55. Simple return = 10 percent.
 - Portfolio capital: 1000 -> after +10 percent becomes 1100 -> after -5 percent becomes 1045. Net return is not 5 percent; it is 4.5 percent.
 - Path dependency: +20 percent then -20 percent produces 96 from 100, not 100.
+
+## Solved Real-World Flow
+- Define one concrete desk decision that this topic informs.
+- Use reproducible market data and state one data-quality check.
+- Apply one core formula/workflow and report one numerical output.
+- Add one risk caveat and one robustness check before trusting the conclusion.
 
 ## Practice Questions With Answers
 ### Question: A stock moves from 80 to 92. What is the simple return?
@@ -100,3 +111,4 @@ Did I understand returns as changes in relative terms, or was I still thinking o
 - I finished the coding lab and checked the output.
 - I added at least one item to the error log if something was unclear.
 - I practiced at least one interview answer aloud.
+- I documented one actionable desk-style takeaway and one follow-up experiment.

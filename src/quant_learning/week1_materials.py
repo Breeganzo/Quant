@@ -13,6 +13,35 @@ def _md(text: str) -> str:
     return textwrap.dedent(text).strip() + "\n"
 
 
+def _ten_hour_study_blocks(day_label: str) -> list[tuple[str, str, str]]:
+    if day_label in {"Mon", "Tue", "Wed", "Thu", "Fri"}:
+        return [
+            ("Block 1", "60 min", "Concept briefing and key-assumption mapping."),
+            ("Block 2", "60 min", "Formula/workflow derivation and notation rewrite."),
+            ("Block 3", "60 min", "Solved real-world case walkthrough."),
+            ("Block 4", "60 min", "Data checks and exploratory diagnostics."),
+            ("Block 5", "60 min", "Core notebook implementation with comments."),
+            ("Block 6", "60 min", "Extension coding task and sensitivity variation."),
+            ("Block 7", "60 min", "Risk caveat and robustness scenario testing."),
+            ("Block 8", "60 min", "Interview-style quiz answers and defense drill."),
+            ("Block 9", "60 min", "Revision sprint and error-log updates."),
+            ("Block 10", "60 min", "Desk memo summary and tomorrow transition plan."),
+        ]
+
+    return [
+        ("Block 1", "60 min", "Closed-book recall and formula rewrite."),
+        ("Block 2", "60 min", "Weak-topic reteach with solved examples."),
+        ("Block 3", "60 min", "Data refresh and diagnostics rerun."),
+        ("Block 4", "60 min", "Notebook baseline implementation."),
+        ("Block 5", "60 min", "Notebook extension and stress tests."),
+        ("Block 6", "60 min", "Mini-project build increment."),
+        ("Block 7", "60 min", "Mini-project risk caveat documentation."),
+        ("Block 8", "60 min", "Interview rehearsal with timed answers."),
+        ("Block 9", "60 min", "Revision board confidence rescoring."),
+        ("Block 10", "60 min", "Weekly memo and next-week bridge notes."),
+    ]
+
+
 WEEK1_DAY_DETAILS: dict[str, dict[str, Any]] = {
     "Mon": {
         "estimated_time": "6 hours",
@@ -765,14 +794,15 @@ def render_week1_day_markdown(day: dict[str, Any]) -> str:
     detail = WEEK1_DAY_DETAILS[day["day"]]
     formula_entries = formula_entries_for_week(1, day["topic"])
     lab_lines = real_world_lab_lines_for_week(1, day["topic"])
+    study_blocks = _ten_hour_study_blocks(day["day"])
     lines: list[str] = [
         f"# Week 01 {day['day']}: {day['topic']}",
         "",
-        f"**Estimated time:** {detail['estimated_time']}",
+        "**Estimated time:** 10 hours",
         "",
         "## Study Blocks",
     ]
-    for label, duration, focus in detail["study_blocks"]:
+    for label, duration, focus in study_blocks:
         lines.append(f"- {label} ({duration}): {focus}")
 
     lines.extend(["", "## Why It Matters In Quant", day["why"], "", "## Learning Overview"])
@@ -794,6 +824,17 @@ def render_week1_day_markdown(day: dict[str, Any]) -> str:
     lines.extend(["## Worked Examples"])
     for example in detail["worked_examples"]:
         lines.append(f"- {example}")
+
+    lines.extend(
+        [
+            "",
+            "## Solved Real-World Flow",
+            "- Define one concrete desk decision that this topic informs.",
+            "- Use reproducible market data and state one data-quality check.",
+            "- Apply one core formula/workflow and report one numerical output.",
+            "- Add one risk caveat and one robustness check before trusting the conclusion.",
+        ]
+    )
 
     lines.extend(["", "## Practice Questions With Answers"])
     for item in detail["practice_with_answers"]:
@@ -865,6 +906,7 @@ def render_week1_day_markdown(day: dict[str, Any]) -> str:
             "- I finished the coding lab and checked the output.",
             "- I added at least one item to the error log if something was unclear.",
             "- I practiced at least one interview answer aloud.",
+            "- I documented one actionable desk-style takeaway and one follow-up experiment.",
         ]
     )
     return "\n".join(lines) + "\n"
@@ -872,17 +914,18 @@ def render_week1_day_markdown(day: dict[str, Any]) -> str:
 
 def week1_day_notebook_specs(day: dict[str, Any]) -> dict[str, Any]:
     detail = WEEK1_DAY_DETAILS[day["day"]]
+    study_blocks = _ten_hour_study_blocks(day["day"])
     intro = [
         f"# Week 1 {day['day']}: {day['topic']}",
         "",
-        f"Estimated time: {detail['estimated_time']}",
+        "Estimated time: 10 hours",
         "",
         "## Why this matters",
         day["why"],
         "",
         "## Study blocks",
     ]
-    for label, duration, focus in detail["study_blocks"]:
+    for label, duration, focus in study_blocks:
         intro.append(f"- {label} ({duration}): {focus}")
     intro.extend(["", "## Concept notes"])
     for concept in detail["concepts"]:

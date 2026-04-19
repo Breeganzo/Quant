@@ -1,12 +1,18 @@
 # Week 01 Sun: Week 1 quiz and mini project: build a simple return and risk dashboard
 
-**Estimated time:** 6 hours
+**Estimated time:** 10 hours
 
 ## Study Blocks
-- Block 1 (45 min): Closed-book quiz and formula retrieval from memory.
-- Block 2 (70 min): Mini-project build and extension with one extra metric.
-- Block 3 (55 min): Interpretation write-up with failure-mode analysis.
-- Block 4 (50 min): Interview practice and weekly review.
+- Block 1 (60 min): Closed-book recall and formula rewrite.
+- Block 2 (60 min): Weak-topic reteach with solved examples.
+- Block 3 (60 min): Data refresh and diagnostics rerun.
+- Block 4 (60 min): Notebook baseline implementation.
+- Block 5 (60 min): Notebook extension and stress tests.
+- Block 6 (60 min): Mini-project build increment.
+- Block 7 (60 min): Mini-project risk caveat documentation.
+- Block 8 (60 min): Interview rehearsal with timed answers.
+- Block 9 (60 min): Revision board confidence rescoring.
+- Block 10 (60 min): Weekly memo and next-week bridge notes.
 
 ## Why It Matters In Quant
 A quant portfolio grows through small finished artifacts, not only reading.
@@ -36,6 +42,12 @@ You are not being judged on complexity yet. You are building the habit of finish
 - Compute returns from a toy 30-day price series.
 - Summarize mean return, volatility, min, max, and final wealth from 100.
 - Write a short note on whether the series appears smooth, noisy, or regime-changing.
+
+## Solved Real-World Flow
+- Define one concrete desk decision that this topic informs.
+- Use reproducible market data and state one data-quality check.
+- Apply one core formula/workflow and report one numerical output.
+- Add one risk caveat and one robustness check before trusting the conclusion.
 
 ## Practice Questions With Answers
 ### Question: What makes a beginner quant project strong even if it is simple?
@@ -93,3 +105,4 @@ If I had to show one thing from this week to a recruiter, would I be comfortable
 - I finished the coding lab and checked the output.
 - I added at least one item to the error log if something was unclear.
 - I practiced at least one interview answer aloud.
+- I documented one actionable desk-style takeaway and one follow-up experiment.

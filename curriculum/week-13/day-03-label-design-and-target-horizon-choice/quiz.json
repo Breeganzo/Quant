@@ -9,7 +9,8 @@
       "difficulty": "basic",
       "question": "Explain label design and target horizon choice in plain language for a trading or risk audience.",
       "answer": "A strong answer defines label design and target horizon choice, gives one concrete workflow or market-facing decision example, and states one practical limitation that must be monitored.",
-      "explanation": "This tests communication quality, not just memorized definitions."
+      "explanation": "This tests communication quality, not just memorized definitions.",
+      "interview_structure": "Definition -> practical use case -> limitation/risk check."
     },
     {
       "id": "q2",
@@ -18,21 +19,40 @@
       "answer": "A strong answer includes Information Coefficient exactly, explains each symbol, and states one caveat: Ignoring IC stability over time.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Construct a simple signal and evaluate one risk-aware performance diagnostic.",
-      "python_solution": "from pathlib import Path\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nret = prices.pct_change().dropna()\nsignal = ret[\"SPY\"].rolling(20).mean().shift(1).dropna()\naligned = ret.loc[signal.index, \"SPY\"]\nstrat = aligned * signal.apply(lambda x: 1 if x > 0 else -1)\nann_ret = strat.mean() * 252\nann_vol = strat.std() * (252 ** 0.5)\nprint({\"ann_return\": round(float(ann_ret), 4), \"ann_vol\": round(float(ann_vol), 4)})\n"
+      "python_solution": "from pathlib import Path\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nret = prices.pct_change().dropna()\nsignal = ret[\"SPY\"].rolling(20).mean().shift(1).dropna()\naligned = ret.loc[signal.index, \"SPY\"]\nstrat = aligned * signal.apply(lambda x: 1 if x > 0 else -1)\nann_ret = strat.mean() * 252\nann_vol = strat.std() * (252 ** 0.5)\nprint({\"ann_return\": round(float(ann_ret), 4), \"ann_vol\": round(float(ann_vol), 4)})\n",
+      "interview_structure": "State formula -> define symbols -> add caveat and context."
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
-      "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer uses one decision workflow such as: Early hypothesis validation.. Then it states one realistic failure mode: Ignoring IC stability over time., and one detection check.",
-      "explanation": "This evaluates transfer from theory to practical quant workflow."
+      "question": "Give one realistic use case, one implementation choice, and one failure mode if this concept is misapplied.",
+      "answer": "A strong answer uses one decision workflow such as: Early hypothesis validation.. Then it states one realistic failure mode: Ignoring IC stability over time., one detection check, and one mitigation action.",
+      "explanation": "This evaluates transfer from theory to practical quant workflow.",
+      "interview_structure": "Use case -> implementation choice -> failure mode -> mitigation."
     },
     {
       "id": "q4",
       "difficulty": "advanced",
-      "question": "How would you validate data quality and implementation assumptions before trusting conclusions?",
-      "answer": "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources.",
-      "explanation": "This tests robustness discipline and implementation realism."
+      "question": "How would you validate data quality and implementation assumptions before trusting conclusions in production?",
+      "answer": "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources, and set a threshold that triggers a review.",
+      "explanation": "This tests robustness discipline and implementation realism.",
+      "interview_structure": "Validation checklist -> stress check -> escalation threshold."
+    },
+    {
+      "id": "q5",
+      "difficulty": "advanced",
+      "question": "A PM asks for a decision in 30 seconds. What metric would you lead with and what caveat would you immediately include?",
+      "answer": "Lead with one actionable metric tied to objective (for example risk-adjusted return, hit rate under costs, or drawdown stability), then immediately state one caveat on sample dependence, costs, regime shift, or data quality.",
+      "explanation": "This tests concise decision communication under time pressure.",
+      "interview_structure": "Primary metric -> direct recommendation -> caveat."
+    },
+    {
+      "id": "q6",
+      "difficulty": "advanced",
+      "question": "What is one follow-up experiment you would run tomorrow to reduce uncertainty in today's conclusion?",
+      "answer": "Propose one focused experiment (alternate window, benchmark, transaction-cost assumption, or feature variation), state expected impact, and define what result would change your recommendation.",
+      "explanation": "This tests scientific thinking and iterative research discipline.",
+      "interview_structure": "Experiment design -> expected effect -> decision boundary."
     }
   ]
 }
