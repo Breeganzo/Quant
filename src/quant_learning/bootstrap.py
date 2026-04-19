@@ -15,6 +15,13 @@ from quant_learning.month1_extensions import (
     project_notebook_spec,
     render_detailed_day_markdown,
 )
+from quant_learning.topic_specific_content import (
+    coding_task_for_topic,
+    formula_entries_for_week,
+    notebook_code_cells_for_week,
+    quiz_python_drill_for_week,
+    real_world_lab_lines_for_week,
+)
 from quant_learning.week1_materials import (
     render_week1_day_markdown,
     week1_day_notebook_specs,
@@ -46,44 +53,42 @@ def weekly_project_notebook_name(week_number: int) -> str:
 def daily_session_plan(day_label: str) -> list[tuple[str, str, str]]:
     if day_label in {"Mon", "Tue", "Wed", "Thu", "Fri"}:
         return [
-            ("Session 1", "75 min", "Theory deep dive: definitions, intuition, and assumptions."),
-            ("Session 2", "70 min", "Formula lab: derive, rewrite, and memorize key formulas from scratch."),
-            ("Session 3", "70 min", "Worked examples with finance interpretation and edge-case checks."),
-            ("Session 4", "70 min", "Notebook implementation and output interpretation."),
-            ("Session 5", "60 min", "Practice quiz and closed-book retrieval on formulas."),
-            ("Session 6", "50 min", "Mini-project increment and result write-up."),
-            ("Session 7", "45 min", "Revision sprint, spaced-repetition update, and error-log updates."),
-            ("Session 8", "40 min", "Interview drill and communication rehearsal."),
+            ("Session 1", "60 min", "Theory deep dive: definitions, intuition, and assumptions."),
+            ("Session 2", "60 min", "Formula and workflow lab with topic-specific derivations."),
+            ("Session 3", "60 min", "Worked examples with interpretation and failure-mode checks."),
+            ("Session 4", "60 min", "Notebook implementation and output interpretation."),
+            ("Session 5", "60 min", "Interview-style quiz and closed-book retrieval."),
+            ("Session 6", "60 min", "Revision sprint, error-log update, and summary memo."),
         ]
     return [
-        ("Session 1", "75 min", "Closed-book recall and formula rewrite."),
-        ("Session 2", "70 min", "High-value concept reinforcement with two worked examples."),
-        ("Session 3", "70 min", "Notebook review and focused extension task."),
-        ("Session 4", "70 min", "Weekly mini-project or capstone build increment."),
-        ("Session 5", "60 min", "Quiz and interview rehearsal."),
-        ("Session 6", "50 min", "Error-log cleanup and revision planning."),
-        ("Session 7", "45 min", "Write one learning memo for portfolio evidence."),
-        ("Session 8", "40 min", "Checkpoint reflection and next-day bridge."),
+        ("Session 1", "60 min", "Closed-book recall and formula rewrite."),
+        ("Session 2", "60 min", "High-value concept reinforcement with worked examples."),
+        ("Session 3", "60 min", "Notebook review and focused extension task."),
+        ("Session 4", "60 min", "Weekly mini-project or capstone build increment."),
+        ("Session 5", "60 min", "Interview rehearsal and technical defense."),
+        ("Session 6", "60 min", "Reflection, error-log cleanup, and next-step planning."),
     ]
 
 
-def make_generic_day(day: str, topic: str, week_title: str, coding_task: str, reflection: str) -> dict:
+def make_generic_day(week_number: int, day: str, topic: str, week_title: str) -> dict:
     return {
         "day": day,
         "topic": topic,
-        "estimated_time": "8 hours",
+        "estimated_time": "6 hours",
         "why": f"{topic} is part of real quant work inside {week_title.lower()} research, trading, or risk workflows.",
         "core_explanation": (
-            f"Start with intuition for {topic.lower()}, then restate it using the formal quantitative language used in finance and ML."
+            f"Build {topic.lower()} from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment."
         ),
-        "worked_example": f"Build one small finance example around {topic.lower()} and explain what the output would mean for a trader or risk analyst.",
+        "worked_example": f"Run one compact, reproducible example for {topic.lower()} and explain both the signal and the main failure mode a quant team should watch.",
         "practice_problems": [
             f"Explain {topic.lower()} in one paragraph without jargon.",
-            f"Write down the main formula or workflow for {topic.lower()} from memory.",
-            f"Connect {topic.lower()} to one trading, portfolio, or risk problem.",
+            f"Write down one topic-specific formula or workflow for {topic.lower()} from memory.",
+            f"Connect {topic.lower()} to one realistic trading, portfolio, risk, or research decision.",
         ],
-        "coding_task": coding_task,
-        "reflection": reflection,
+        "coding_task": coding_task_for_topic(week_number, topic),
+        "reflection": (
+            f"What from {topic.lower()} is now evidence-backed in your notes, and what still needs a focused retry?"
+        ),
         "session_plan": daily_session_plan(day),
     }
 
@@ -1118,16 +1123,15 @@ def build_roadmap() -> list[dict]:
             for day_label, topic in zip(day_labels, blueprint["day_topics"], strict=True):
                 days.append(
                     make_generic_day(
+                        blueprint["week"],
                         day_label,
                         topic,
                         blueprint["title"],
-                        coding_task=f"Implement one notebook cell or small script focused on: {topic.lower()}.",
-                        reflection=f"What from {topic.lower()} felt truly clear, and what still needs a slower revisit?",
                     )
                 )
         for index, day in enumerate(days, start=1):
             day["day_index"] = index
-            day["estimated_time"] = "8 hours"
+            day["estimated_time"] = "6 hours"
             day["session_plan"] = day.get("session_plan", daily_session_plan(day["day"]))
             day["week_theme"] = blueprint["title"]
             day["previous_topic"] = days[index - 2]["topic"] if index > 1 else ""
@@ -1220,15 +1224,15 @@ def write_json(roadmap: list[dict]) -> None:
         },
         "assumptions": [
             "You are restarting math almost from zero and need simple explanations before formal treatment.",
-            "You can sustain about 56 hours per week for an intensive mastery track.",
+            "You can sustain about 42 hours per week for an intensive mastery track.",
             "You want a scholarship-aware master's preparation track in parallel with technical training.",
             "You prefer practical portfolio-building over purely theoretical study.",
         ],
         "weekly_time_budget": {
-            "Mon-Fri": "8 hours/day",
-            "Sat": "8 hours",
-            "Sun": "8 hours",
-            "Total": "About 56 hours/week",
+            "Mon-Fri": "6 hours/day",
+            "Sat": "6 hours",
+            "Sun": "6 hours",
+            "Total": "About 42 hours/week",
         },
         "roadmap": roadmap,
     }
@@ -1243,7 +1247,7 @@ def roadmap_markdown(roadmap: list[dict]) -> str:
         "- Math is being rebuilt almost from zero, so each lesson starts with intuition and then adds technical language.",
         "- Coding is good enough to move quickly once finance and math are tied back to practice.",
         "- The 24-week plan runs from 2026-04-20 to 2026-10-04 if you start on the next Monday after this build.",
-        "- Weekly workload is sized for about 56 hours (8 hours/day intensive track).",
+        "- Weekly workload is sized for about 42 hours (6 hours/day intensive track).",
         "",
         "## 24-Week Roadmap Table",
         "| Week | Dates | Theme | Key Outcome |",
@@ -1439,10 +1443,14 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
     )
     for problem in day["practice_problems"]:
         lines.append(f"- {problem}")
+
+    formula_entries = formula_entries_for_week(week_number)
+    lab_lines = real_world_lab_lines_for_week(week_number, day["topic"])
+
     lines.extend(
         [
             "",
-            "## 8-Hour Deliverables",
+            "## 6-Hour Deliverables",
             "- Produce one page of notes with intuition, formulas, and one market example in your own words.",
             "- Complete all notebook cells and annotate each output with what it means financially.",
             "- Add one error-log entry with a scheduled review date.",
@@ -1454,37 +1462,34 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             "3. Give one practical quant use case and one failure mode.",
             "",
             "## Interview-Ready Formula Sheet",
-            "### Formula 1: Log Return",
-            "$$\\ell_t = \\ln\\left(\\frac{P_t}{P_{t-1}}\\right)$$",
-            "Plain-English interpretation: Additive return representation over time.",
-            "Notation check: Define each symbol and unit before coding.",
-            "",
-            "### Formula 2: Annualized Volatility",
-            "$$\\sigma_{ann} = \\sqrt{252} \\cdot \\mathrm{Std}(r_t)$$",
-            "Plain-English interpretation: Scales daily return uncertainty to annual horizon.",
-            "Notation check: Confirm return frequency matches annualization factor.",
-            "",
-            "### Formula 3: Sharpe Ratio",
-            "$$S = \\frac{R_{ann} - R_f}{\\sigma_{ann}}$$",
-            "Plain-English interpretation: Excess return earned per unit of risk.",
-            "Notation check: Use consistent annualized units for return, risk-free rate, and volatility.",
-            "",
-            "### Symbol Definitions",
-            "| Symbol | Meaning | Units | Example |",
-            "| --- | --- | --- | --- |",
-            "| $P_t$ | Price at time $t$ | USD/share | 110.50 |",
-            "| $r_t$ | Simple return | decimal | 0.012 |",
-            "| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |",
-            "| $\\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |",
-            "| $R_f$ | Risk-free rate | annualized decimal | 0.03 |",
-            "| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |",
-            "",
+        ]
+    )
+
+    for idx, entry in enumerate(formula_entries, start=1):
+        lines.extend(
+            [
+                f"### Formula {idx}: {entry['name']}",
+                f"$${entry['equation']}$$",
+                f"Plain-English interpretation: {entry['meaning']}",
+                f"Interview pitfall: {entry['pitfall']}",
+                "",
+            ]
+        )
+
+    lines.extend(
+        [
             "## Formula Organization Table",
             "| Formula/Workflow | Meaning | Finance Use Case | Common Misread |",
             "| --- | --- | --- | --- |",
-            "| Log return | Additive return representation | Multi-period analytics and model features | Mixing with simple return without context |",
-            "| Annualized volatility | Scaled daily uncertainty | Position sizing and risk budgeting | Annualizing from inconsistent data frequency |",
-            "| Sharpe ratio | Excess return per risk unit | Strategy comparison and portfolio review | Ignoring regime shifts and estimation error |",
+        ]
+    )
+    for entry in formula_entries:
+        lines.append(
+            f"| {entry['name']} | {entry['meaning']} | {entry['use_case']} | {entry['pitfall']} |"
+        )
+
+    lines.extend(
+        [
             "",
             "## Common Mistakes and Fixes",
             "- Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.",
@@ -1498,12 +1503,14 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             "- Schedule the next spaced repetition date before ending the session.",
             "",
             "## Real-World Data Lab",
-            "- Use yfinance first for SPY, QQQ, TLT, and GLD when internet is available.",
-            "- If available, validate against a Robinhood-style export CSV for consistency checks.",
-            "- Fall back to `curriculum/datasets/real_market_prices.csv` for reproducible runs.",
-            "- Build a small panel and compute log returns, annualized volatility, and Sharpe ratio.",
-            "- Compare cumulative performance across symbols and mark one stress-period observation.",
-            "- Write one practical takeaway for position sizing or diversification.",
+        ]
+    )
+
+    for item in lab_lines:
+        lines.append(f"- {item}")
+
+    lines.extend(
+        [
             "",
             "## Coding Task",
             day["coding_task"],
@@ -1511,7 +1518,7 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             "## Interview Drill",
             f"- Q1: Explain {day['topic'].lower()} to a non-technical stakeholder in 3 sentences.",
             "- Q2: Give one failure case where this concept can produce misleading confidence.",
-            "- Q3: Show one concrete link from this concept to trading, portfolio construction, or risk control.",
+            "- Q3: Show one concrete link from this concept to trading, portfolio construction, risk, or research quality.",
             "",
             "## Reflection Prompt",
             day["reflection"],
@@ -1519,7 +1526,7 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             "## Completion Checklist",
             "- I can explain the concept from memory without reading notes.",
             "- I completed at least one coding exercise tied to the day topic.",
-            "- I wrote one realistic finance use case in my own words.",
+            "- I wrote one realistic use case in my own words.",
             "- I recorded at least one weak area in my error log.",
             "- I set the next review date using spaced repetition.",
         ]
@@ -1555,75 +1562,52 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
 def daily_quiz_items(week_number: int, day_index: int, day: dict) -> list[dict[str, str]]:
     topic = day["topic"]
     topic_lower = topic.lower()
+    formulas = formula_entries_for_week(week_number)
+    formula_primary = formulas[0]
+    drill = quiz_python_drill_for_week(week_number, topic)
+
     questions: list[dict[str, str]] = [
         {
             "id": "q1",
             "difficulty": "basic",
             "question": f"Explain {topic_lower} in plain language for a trading or risk audience.",
             "answer": (
-                f"A strong answer defines {topic_lower}, gives one concrete market example, "
-                "and states why the concept improves decisions under uncertainty."
+                f"A strong answer defines {topic_lower}, gives one concrete workflow or market-facing decision example, "
+                "and states one practical limitation that must be monitored."
             ),
             "explanation": "This tests communication quality, not just memorized definitions.",
-            "python_task": "Compute log returns for SPY and QQQ daily closes and explain one volatile day.",
-            "python_solution": (
-                "import numpy as np\n"
-                "import pandas as pd\n"
-                "prices = market.pivot(index='date', columns='symbol', values='close')[['SPY','QQQ']].dropna()\n"
-                "log_ret = np.log(prices / prices.shift(1)).dropna()\n"
-                "print(log_ret.tail())"
-            ),
         },
         {
             "id": "q2",
             "difficulty": "intermediate",
-            "question": "Write one key formula/workflow and define every symbol with units.",
+            "question": f"Write the {formula_primary['name']} formula/workflow from memory and define each symbol.",
             "answer": (
-                "A strong answer includes formula meaning, variable units, and one implementation caveat "
-                "(for example, annualization assumptions or missing data handling)."
+                f"A strong answer includes {formula_primary['name']} exactly, explains each symbol, and states one caveat: "
+                f"{formula_primary['pitfall']}"
             ),
             "explanation": "This checks mathematical fluency and operational reliability.",
-            "python_task": "Estimate annualized volatility for SPY, QQQ, TLT, and GLD.",
-            "python_solution": (
-                "returns = prices.pct_change().dropna()\n"
-                "ann_vol = returns.std() * (252 ** 0.5)\n"
-                "print(ann_vol.sort_values(ascending=False).round(4))"
-            ),
+            "python_task": drill["task"],
+            "python_solution": drill["solution"],
         },
         {
             "id": "q3",
             "difficulty": "intermediate",
             "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
             "answer": (
-                "A strong answer ties the concept to signal design, portfolio sizing, or risk control, "
-                "then names one concrete failure mode and detection check."
+                "A strong answer ties the concept to one production decision, defines a measurable success metric, "
+                "and names one concrete failure mode plus detection check."
             ),
             "explanation": "This evaluates transfer from theory to practical quant workflow.",
-            "python_task": "Compute a simple Sharpe ratio proxy and explain one fragility.",
-            "python_solution": (
-                "rf = 0.03\n"
-                "ann_ret = returns.mean() * 252\n"
-                "ann_vol = returns.std() * (252 ** 0.5)\n"
-                "sharpe = (ann_ret - rf) / ann_vol\n"
-                "print(sharpe.round(3))"
-            ),
         },
         {
             "id": "q4",
             "difficulty": "advanced",
-            "question": "How would you validate real data from yfinance/Robinhood export/local CSV before trusting conclusions?",
+            "question": "How would you validate data quality and implementation assumptions before trusting conclusions?",
             "answer": (
-                "Check schema consistency, missing values, split/dividend handling, date alignment, and sensitivity to stress windows. "
-                "Then compare at least one metric across two data sources."
+                "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. "
+                "Then compare one metric across alternate assumptions or data sources."
             ),
-            "explanation": "This tests real-data robustness discipline and source reconciliation.",
-            "python_task": "Run a source-quality checklist before analysis.",
-            "python_solution": (
-                "print('rows:', len(market))\n"
-                "print('missing close:', market['close'].isna().sum())\n"
-                "print('duplicates:', market.duplicated(['date','symbol']).sum())\n"
-                "print('symbols:', sorted(market['symbol'].unique()))"
-            ),
+            "explanation": "This tests robustness discipline and implementation realism.",
         },
     ]
 
@@ -1748,80 +1732,7 @@ def generic_day_notebook_spec(week_number: int, day: dict) -> dict:
         - A: Discuss one realistic failure mode and how you would detect it.
         """
     ).strip()
-    code_cells = [
-        {
-            "markdown": "## Code Lab 1: Build a synthetic market panel",
-            "code": _nb_code(
-                """\
-                import numpy as np
-                import pandas as pd
-
-                rng = np.random.default_rng(42)
-                dates = pd.date_range("2026-01-01", periods=120, freq="D")
-                shock = rng.normal(0.0, 0.008, size=len(dates))
-                drift = 0.0005
-                returns = drift + shock
-                prices = 100 * np.cumprod(1 + returns)
-
-                panel = pd.DataFrame({"date": dates, "return": returns, "price": prices})
-                print(panel.head())
-                """
-            ),
-        },
-        {
-            "markdown": "## Code Lab 2: Core summary statistics and risk lens",
-            "code": _nb_code(
-                """\
-                summary = {
-                    "mean_return": panel["return"].mean(),
-                    "volatility": panel["return"].std(),
-                    "min_return": panel["return"].min(),
-                    "max_return": panel["return"].max(),
-                    "final_price": panel["price"].iloc[-1],
-                }
-
-                for k, v in summary.items():
-                    print(k, round(float(v), 6))
-                """
-            ),
-        },
-        {
-            "markdown": "## Code Lab 3: Scenario stress and interpretation",
-            "code": _nb_code(
-                """\
-                stressed = panel.copy()
-                stressed.loc[stressed.index[40:45], "return"] -= 0.02
-                stressed["price"] = 100 * (1 + stressed["return"]).cumprod()
-
-                baseline_final = panel["price"].iloc[-1]
-                stressed_final = stressed["price"].iloc[-1]
-                impact = stressed_final / baseline_final - 1
-
-                print("Baseline final price:", round(float(baseline_final), 2))
-                print("Stressed final price:", round(float(stressed_final), 2))
-                print("Stress impact:", round(float(impact), 4))
-                """
-            ),
-        },
-        {
-            "markdown": "## Code Lab 4: Study-note structure for revision",
-            "code": _nb_code(
-                f"""\
-                study_note = {{
-                    "topic": {day['topic']!r},
-                    "intuition": "Write this in your own words.",
-                    "formula_or_workflow": "Add one formula or step-by-step process.",
-                    "finance_use_case": "Add one real trading/risk use case.",
-                    "failure_mode": "Describe one pitfall.",
-                    "next_review": "Set a date for spaced repetition.",
-                }}
-
-                for key, value in study_note.items():
-                    print(f"{{key}}: {{value}}")
-                """
-            ),
-        },
-    ]
+    code_cells = notebook_code_cells_for_week(week_number, day["topic"])
     return {
         "title_markdown": intro,
         "practice_markdown": practice,
@@ -1830,35 +1741,44 @@ def generic_day_notebook_spec(week_number: int, day: dict) -> dict:
     }
 
 
-def four_hour_notebook_extension(day: dict) -> list:
+def six_hour_notebook_extension(week_number: int, day: dict) -> list:
+    formula_entries = formula_entries_for_week(week_number)
+    drill = quiz_python_drill_for_week(week_number, day["topic"])
+    lab_lines = real_world_lab_lines_for_week(week_number, day["topic"])
+
     roadmap_markdown = textwrap.dedent(
         f"""\
-        ## 4+ Hour Completion Roadmap
+        ## 6-Hour Completion Roadmap
 
         Use this minimum structure to turn today's notebook into a serious study session:
 
         - Phase 1 (60 min): Read concept notes and rewrite the core idea from memory.
-        - Phase 2 (70 min): Complete and extend all code labs with at least one variation.
-        - Phase 3 (65 min): Do formula retrieval, scenario analysis, and error-log updates.
-        - Phase 4 (65 min): Write a mini memo and practice interview responses aloud.
+        - Phase 2 (60 min): Complete and extend all code labs with at least one variation.
+        - Phase 3 (60 min): Do formula retrieval, scenario analysis, and error-log updates.
+        - Phase 4 (60 min): Practice interview responses aloud.
+        - Phase 5 (60 min): Implement one robustness check.
+        - Phase 6 (60 min): Write a concise memo with limitations and next steps.
         """
     ).strip()
 
     formula_markdown = "## Formula Rewrite Drill"
     formula_code = _nb_code(
-        f"""\
+        """\
         import pandas as pd
 
         formula_drill = pd.DataFrame(
-            [
-                {{"formula": "E[X] = sum_i p_i x_i", "from_memory": "", "term_explanations": ""}},
-                {{"formula": "Var(X) = E[(X - E[X])^2]", "from_memory": "", "term_explanations": ""}},
-                {{"formula": "W_t = W_0 * product(1 + r_t)", "from_memory": "", "term_explanations": ""}},
-                {{"formula": "Topic formula for: {day['topic']}", "from_memory": "", "term_explanations": ""}},
-            ]
+            FORMULA_ROWS
         )
         print(formula_drill)
         """
+    ).replace(
+        "FORMULA_ROWS",
+        repr(
+            [
+                {"formula": entry["equation"], "from_memory": "", "term_explanations": ""}
+                for entry in formula_entries
+            ]
+        ),
     )
 
     scenario_markdown = "## Scenario Analysis Drill"
@@ -1923,49 +1843,19 @@ def four_hour_notebook_extension(day: dict) -> list:
     ).strip()
 
     real_data_markdown = textwrap.dedent(
-        """\
-        ## Real Market Data Lab (Useful From Day 1)
+        f"""\
+        ## Real Market Data Lab (Topic-Aligned)
 
-        This section uses a local CSV snapshot of real market prices so the notebook remains reproducible.
+        Use today's topic ({day['topic']}) with one concrete dataset and one measurable output.
 
-        Dataset: `curriculum/datasets/real_market_prices.csv`
-        Symbols: SPY, QQQ, TLT, GLD
+        {chr(10).join(f"- {item}" for item in lab_lines)}
         """
     ).strip()
 
     real_data_code = _nb_code(
-        """\
-        from pathlib import Path
-        import pandas as pd
-        import matplotlib.pyplot as plt
-
-        data_path = Path("curriculum/datasets/real_market_prices.csv")
-        market = pd.read_csv(data_path, parse_dates=["date"]).sort_values(["date", "symbol"])
-
-        print("Rows:", len(market))
-        print("Date range:", market["date"].min().date(), "to", market["date"].max().date())
-        print("Symbols:", sorted(market["symbol"].unique()))
-        print(market.head())
-
-        prices = market.pivot(index="date", columns="symbol", values="close").dropna()
-        returns = prices.pct_change().dropna()
-
-        summary = pd.DataFrame(
-            {
-                "ann_return": returns.mean() * 252,
-                "ann_vol": returns.std() * (252 ** 0.5),
-                "max_drawdown": ((1 + returns).cumprod().div((1 + returns).cumprod().cummax()) - 1).min(),
-            }
-        ).sort_index()
-        print("\\nRisk/return summary:")
-        print(summary.round(4))
-
-        cum = (1 + returns).cumprod()
-        cum.plot(figsize=(10, 5), title="Cumulative growth (base 1.0)")
-        plt.ylabel("Growth of $1")
-        plt.tight_layout()
-        plt.show()
-        """
+        "TASK = " + repr(drill["task"]) + "\n"
+        + "print('Lab task:', TASK)\n\n"
+        + drill["solution"]
     )
 
     real_data_takeaway_markdown = textwrap.dedent(
@@ -1981,88 +1871,25 @@ def four_hour_notebook_extension(day: dict) -> list:
     ).strip()
 
     interview_python_markdown = textwrap.dedent(
-        """\
+        f"""\
         ## Interview Question + Python Solution Drill
 
         Use this format for interview preparation:
 
         1. State the question clearly.
         2. Explain your approach in plain language.
-        3. Write Python code on real market data.
+        3. Write Python code on relevant data.
         4. Interpret one risk caveat in words.
 
-        **Suggested data-source ladder**
-        - Source 1: yfinance pull (fresh market data)
-        - Source 2: Robinhood-style CSV export (if available locally)
-        - Source 3: local snapshot `curriculum/datasets/real_market_prices.csv` (reproducible fallback)
+        **Drill prompt**
+        - {drill['task']}
         """
     ).strip()
 
     interview_python_code = _nb_code(
-        """\
-        from pathlib import Path
-        import numpy as np
-        import pandas as pd
-
-        prices = None
-        source_used = ""
-        USE_YFINANCE = False  # set True when you want a live market pull
-
-        try:
-            import yfinance as yf
-        except ImportError:
-            yf = None
-
-        if USE_YFINANCE and yf is not None:
-            downloaded = yf.download(
-                ["SPY", "QQQ", "TLT", "GLD"],
-                period="2y",
-                interval="1d",
-                auto_adjust=True,
-                progress=False,
-            )
-            if not downloaded.empty:
-                if isinstance(downloaded.columns, pd.MultiIndex):
-                    if "Close" in downloaded.columns.get_level_values(0):
-                        prices = downloaded["Close"].copy()
-                    elif "Adj Close" in downloaded.columns.get_level_values(0):
-                        prices = downloaded["Adj Close"].copy()
-                else:
-                    prices = downloaded.rename(columns=str.upper)
-                source_used = "yfinance"
-
-        robinhood_export = Path("curriculum/datasets/robinhood_export.csv")
-        if prices is None and robinhood_export.exists():
-            rh = pd.read_csv(robinhood_export, parse_dates=["date"])
-            prices = rh.pivot(index="date", columns="symbol", values="close").sort_index()
-            source_used = "robinhood_export_csv"
-
-        if prices is None:
-            local = pd.read_csv(
-                Path("curriculum/datasets/real_market_prices.csv"),
-                parse_dates=["date"],
-            )
-            prices = local.pivot(index="date", columns="symbol", values="close").sort_index()
-            source_used = "local_snapshot_csv"
-
-        prices = prices.dropna(how="all").ffill().dropna()
-        returns = prices.pct_change().dropna()
-        log_returns = np.log(prices / prices.shift(1)).dropna()
-
-        annualized_return = returns.mean() * 252
-        annualized_vol = returns.std() * np.sqrt(252)
-        sharpe_proxy = (annualized_return - 0.03) / annualized_vol
-
-        print("Source used:", source_used)
-        print("\\nAnnualized return:")
-        print(annualized_return.round(4))
-        print("\\nAnnualized volatility:")
-        print(annualized_vol.round(4))
-        print("\\nSharpe proxy (rf=3%):")
-        print(sharpe_proxy.round(3))
-        print("\\nRecent log returns:")
-        print(log_returns.tail().round(4))
-        """
+        "TASK = " + repr(drill["task"]) + "\n"
+        + "print('Interview drill task:', TASK)\n\n"
+        + drill["solution"]
     )
 
     weekend_extension_cells = []
@@ -2497,7 +2324,7 @@ def create_curriculum_notebooks(roadmap: list[dict]) -> None:
                 cells.append(nbf.v4.new_code_cell(item["code"]))
             cells.append(nbf.v4.new_markdown_cell(spec["practice_markdown"]))
             cells.append(nbf.v4.new_markdown_cell(spec["interview_markdown"]))
-            cells.extend(four_hour_notebook_extension(day))
+            cells.extend(six_hour_notebook_extension(week["week"], day))
             notebook_writer(notebooks_dir / f"day-{index:02d}-{slug}.ipynb", cells)
 
         if week["week"] == 1:

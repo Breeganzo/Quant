@@ -442,8 +442,8 @@ function Sidebar({ roadmap, progress }) {
     <aside className="sidebar">
       <div className="brand-block">
         <div className="brand-kicker">Quant Learning</div>
-        <h1>Scholarship-to-Quant Roadmap</h1>
-        <p>Hosted-ready study system with local progress memory.</p>
+        <h1>Quant Sprint Studio</h1>
+        <p>Six-month execution system with daily theory, code, and interview drills.</p>
       </div>
       <nav className="week-nav">
         <NavLink to="/" className="nav-home">
@@ -481,12 +481,12 @@ function Hero({ data, roadmap, progress, fullTrackReady }) {
   return (
     <section className="hero">
       <div>
-        <div className="hero-chip">GitHub Pages Ready</div>
-        <h2>Build a real quant profile, week by week.</h2>
+        <div className="hero-chip">2026 Fresh Build</div>
+        <h2>Train like a quant desk, not a passive course.</h2>
         <p>
-          All six months now include daily lesson pages, PDFs, and notebook paths across the full 24-week
-          roadmap. Month 1 remains the most deeply expanded set, and Months 2-6 are now fully structured
-          so you can run the entire sequence without blocked days.
+          The full 24-week roadmap now runs as a true 6-hour daily loop: concept brief, formula intuition,
+          executable notebook work, practical lab blocks, and interview-style quiz checkpoints. Every week
+          ships with a clear project direction so your portfolio compounds while you study.
         </p>
       </div>
       <div className="hero-stats">

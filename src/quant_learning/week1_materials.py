@@ -10,7 +10,7 @@ def _md(text: str) -> str:
 
 WEEK1_DAY_DETAILS: dict[str, dict[str, Any]] = {
     "Mon": {
-        "estimated_time": "4 hours",
+        "estimated_time": "6 hours",
         "study_blocks": [
             ("Block 1", "45 min", "Reset notation: prices, returns, percentages, and variables."),
             ("Block 2", "60 min", "Learn simple return, gross return, and compounding intuition."),
@@ -115,7 +115,7 @@ WEEK1_DAY_DETAILS: dict[str, dict[str, Any]] = {
         ],
     },
     "Tue": {
-        "estimated_time": "4 hours",
+        "estimated_time": "6 hours",
         "study_blocks": [
             ("Block 1", "45 min", "Review Python functions and reusable finance logic."),
             ("Block 2", "60 min", "Learn control flow and payoff rules."),
@@ -228,7 +228,7 @@ WEEK1_DAY_DETAILS: dict[str, dict[str, Any]] = {
         ],
     },
     "Wed": {
-        "estimated_time": "4 hours",
+        "estimated_time": "6 hours",
         "study_blocks": [
             ("Block 1", "45 min", "Learn scalars, vectors, and matrices through finance objects."),
             ("Block 2", "60 min", "Understand the dot product as portfolio return."),
@@ -335,7 +335,7 @@ WEEK1_DAY_DETAILS: dict[str, dict[str, Any]] = {
         ],
     },
     "Thu": {
-        "estimated_time": "4 hours",
+        "estimated_time": "6 hours",
         "study_blocks": [
             ("Block 1", "45 min", "Understand mean, median, variance, and standard deviation."),
             ("Block 2", "60 min", "Relate volatility to risk and noise."),
@@ -435,7 +435,7 @@ WEEK1_DAY_DETAILS: dict[str, dict[str, Any]] = {
         ],
     },
     "Fri": {
-        "estimated_time": "4 hours",
+        "estimated_time": "6 hours",
         "study_blocks": [
             ("Block 1", "45 min", "Understand what markets are and who participates."),
             ("Block 2", "60 min", "Learn major asset classes and return drivers."),
@@ -545,7 +545,7 @@ WEEK1_DAY_DETAILS: dict[str, dict[str, Any]] = {
         ],
     },
     "Sat": {
-        "estimated_time": "4 hours",
+        "estimated_time": "6 hours",
         "study_blocks": [
             ("Block 1", "45 min", "Active recall and formula rewrite from memory."),
             ("Block 2", "55 min", "Error log deep clean and spaced repetition schedule update."),
@@ -639,7 +639,7 @@ WEEK1_DAY_DETAILS: dict[str, dict[str, Any]] = {
         ],
     },
     "Sun": {
-        "estimated_time": "4 hours",
+        "estimated_time": "6 hours",
         "study_blocks": [
             ("Block 1", "45 min", "Closed-book quiz and formula retrieval from memory."),
             ("Block 2", "70 min", "Mini-project build and extension with one extra metric."),
