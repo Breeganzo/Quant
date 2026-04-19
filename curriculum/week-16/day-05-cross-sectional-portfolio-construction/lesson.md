@@ -24,10 +24,10 @@ This day belongs to the week theme "Signals II: factor models, statistical arbit
 Cross-sectional portfolio construction is part of real quant work inside signals ii: factor models, statistical arbitrage intuition, cointegration, and regime shifts research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe cross-sectional portfolio construction in plain language before touching formulas.
-2. Technical frame: Build cross-sectional portfolio construction from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for cross-sectional portfolio construction and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Relative value residual after hedge ratio adjustment.
+2. Technical frame: Build cross-sectional portfolio construction from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Spread, Spread z-Score, Half-Life).
+3. Market interpretation: Pairs trading mean-reversion setup.. Run one compact, reproducible example for cross-sectional portfolio construction and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Skipping hedge-ratio estimation stability checks.
 
 ## Practice Problems
 - Explain cross-sectional portfolio construction in one paragraph without jargon.

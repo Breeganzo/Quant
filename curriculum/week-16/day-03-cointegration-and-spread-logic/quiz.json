@@ -15,7 +15,7 @@
       "id": "q2",
       "difficulty": "intermediate",
       "question": "Write the Spread formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Spread exactly, explains each symbol, and states one caveat: Skipping hedge-ratio estimation stability checks.",
+      "answer": "A strong answer includes Spread exactly, explains each symbol, and states one caveat: Using stale hedge ratio.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Construct a simple signal and evaluate one risk-aware performance diagnostic.",
       "python_solution": "from pathlib import Path\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nret = prices.pct_change().dropna()\nsignal = ret[\"SPY\"].rolling(20).mean().shift(1).dropna()\naligned = ret.loc[signal.index, \"SPY\"]\nstrat = aligned * signal.apply(lambda x: 1 if x > 0 else -1)\nann_ret = strat.mean() * 252\nann_vol = strat.std() * (252 ** 0.5)\nprint({\"ann_return\": round(float(ann_ret), 4), \"ann_vol\": round(float(ann_vol), 4)})\n"
@@ -24,7 +24,7 @@
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Pairs and residual strategy setup.. Then it states one realistic failure mode: Using stale hedge ratio., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

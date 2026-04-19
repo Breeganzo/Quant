@@ -2,7 +2,7 @@ import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 
 function normalizeBasePath(input) {
-  const raw = (input || "").trim() || "/Quant_Practise/";
+  const raw = (input || "").trim() || "/Quant/";
   const withLeadingSlash = raw.startsWith("/") ? raw : `/${raw}`;
   return withLeadingSlash.endsWith("/") ? withLeadingSlash : `${withLeadingSlash}/`;
 }

@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core IV: derivatives, options, Greek
 Calls, puts, and payoff diagrams is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe calls, puts, and payoff diagrams in plain language before touching formulas.
-2. Technical frame: Build calls, puts, and payoff diagrams from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for calls, puts, and payoff diagrams and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Upside-only terminal payoff.
+2. Technical frame: Build calls, puts, and payoff diagrams from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Call Payoff, Put Payoff, Put-Call Parity).
+3. Market interpretation: Directional convex exposures.. Run one compact, reproducible example for calls, puts, and payoff diagrams and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Confusing payoff with net profit.
 
 ## Practice Problems
 - Explain calls, puts, and payoff diagrams in one paragraph without jargon.
@@ -47,26 +47,26 @@ Calls, puts, and payoff diagrams is part of real quant work inside finance core 
 
 ## Interview-Ready Formula Sheet
 ### Formula 1: Call Payoff
-$$\mathrm{Payoff}_{call}=\max(S_T-K,0)$$
-Plain-English interpretation: Upside above strike with limited downside (premium aside).
-Interview pitfall: Confusing payoff with profit (ignoring premium).
+$$\max(S_T-K,0)$$
+Plain-English interpretation: Upside-only terminal payoff.
+Interview pitfall: Confusing payoff with net profit.
 
 ### Formula 2: Put Payoff
-$$\mathrm{Payoff}_{put}=\max(K-S_T,0)$$
-Plain-English interpretation: Downside protection structure at maturity.
-Interview pitfall: Ignoring time decay before maturity.
+$$\max(K-S_T,0)$$
+Plain-English interpretation: Downside-protection terminal payoff.
+Interview pitfall: Ignoring premium/time decay.
 
-### Formula 3: Delta
-$$\Delta=\frac{\partial V}{\partial S}$$
-Plain-English interpretation: First-order option value sensitivity to underlying.
-Interview pitfall: Assuming delta is constant across moves and time.
+### Formula 3: Put-Call Parity
+$$C-P=S_0-Ke^{-rT}$$
+Plain-English interpretation: No-arbitrage relation across vanilla options.
+Interview pitfall: Applying parity with mismatched maturities.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Call Payoff | Upside above strike with limited downside (premium aside). | Directional convex exposure design. | Confusing payoff with profit (ignoring premium). |
-| Put Payoff | Downside protection structure at maturity. | Hedging drawdown risk. | Ignoring time decay before maturity. |
-| Delta | First-order option value sensitivity to underlying. | Hedge ratio sizing. | Assuming delta is constant across moves and time. |
+| Call Payoff | Upside-only terminal payoff. | Directional convex exposures. | Confusing payoff with net profit. |
+| Put Payoff | Downside-protection terminal payoff. | Tail-risk hedge intuition. | Ignoring premium/time decay. |
+| Put-Call Parity | No-arbitrage relation across vanilla options. | Consistency checks in pricing surfaces. | Applying parity with mismatched maturities. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

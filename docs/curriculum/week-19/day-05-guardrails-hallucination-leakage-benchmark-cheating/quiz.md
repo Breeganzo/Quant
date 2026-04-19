@@ -17,7 +17,7 @@ Why this matters: This tests communication quality, not just memorized definitio
 ### Q2 (intermediate)
 Interview question: Write the Precision formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Precision exactly, explains each symbol, and states one caveat: High precision with very low coverage.
+Model answer: A strong answer includes Precision exactly, explains each symbol, and states one caveat: High precision with tiny coverage.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Score a small AI-generated memo for citation support and hallucination risk.
@@ -41,7 +41,7 @@ print("Hallucination rate:", round(float(hallucination_rate), 3))
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Quality control for AI outputs.. Then it states one realistic failure mode: High precision with tiny coverage., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

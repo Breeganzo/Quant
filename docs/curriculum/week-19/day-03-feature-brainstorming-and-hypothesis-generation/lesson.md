@@ -24,10 +24,10 @@ This day belongs to the week theme "Agentic AI for Quant I: research automation,
 Feature brainstorming and hypothesis generation is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe feature brainstorming and hypothesis generation in plain language before touching formulas.
-2. Technical frame: Build feature brainstorming and hypothesis generation from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for feature brainstorming and hypothesis generation and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Signal-next-return association.
+2. Technical frame: Build feature brainstorming and hypothesis generation from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Information Coefficient, Hit Rate, Label Horizon).
+3. Market interpretation: Early hypothesis validation.. Run one compact, reproducible example for feature brainstorming and hypothesis generation and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring IC stability over time.
 
 ## Practice Problems
 - Explain feature brainstorming and hypothesis generation in one paragraph without jargon.
@@ -46,27 +46,27 @@ Feature brainstorming and hypothesis generation is part of real quant work insid
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Precision
-$$\mathrm{Precision}=\frac{TP}{TP+FP}$$
-Plain-English interpretation: How often flagged items are truly correct.
-Interview pitfall: High precision with very low coverage.
+### Formula 1: Information Coefficient
+$$IC=Corr(signal_t,r_{t+1})$$
+Plain-English interpretation: Signal-next-return association.
+Interview pitfall: Ignoring IC stability over time.
 
-### Formula 2: Recall
-$$\mathrm{Recall}=\frac{TP}{TP+FN}$$
-Plain-English interpretation: How many true items are captured.
-Interview pitfall: High recall with noisy false positives.
+### Formula 2: Hit Rate
+$$HR=\frac{\#(sign(\hat r)=sign(r))}{N}$$
+Plain-English interpretation: Directional correctness ratio.
+Interview pitfall: High hit-rate with poor payoff asymmetry.
 
-### Formula 3: Hallucination Rate
-$$HR=\frac{\#\text{unsupported claims}}{\#\text{total claims}}$$
-Plain-English interpretation: Share of generated statements lacking evidence.
-Interview pitfall: No citation checks in production research notes.
+### Formula 3: Label Horizon
+$$y_t=sign(P_{t+h}-P_t)$$
+Plain-English interpretation: Future target definition at horizon h.
+Interview pitfall: Choosing h without turnover/cost implications.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Precision | How often flagged items are truly correct. | Quality control of extracted insights. | High precision with very low coverage. |
-| Recall | How many true items are captured. | Guardrail calibration for missed risks. | High recall with noisy false positives. |
-| Hallucination Rate | Share of generated statements lacking evidence. | LLM workflow safety monitoring. | No citation checks in production research notes. |
+| Information Coefficient | Signal-next-return association. | Early hypothesis validation. | Ignoring IC stability over time. |
+| Hit Rate | Directional correctness ratio. | Quick directional predictive quality check. | High hit-rate with poor payoff asymmetry. |
+| Label Horizon | Future target definition at horizon h. | Align prediction objective with holding period. | Choosing h without turnover/cost implications. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

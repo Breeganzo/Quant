@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core I: market microstructure, execu
 Bid-ask spread, liquidity, and adverse selection is part of real quant work inside finance core i: market microstructure, execution, slippage, and transaction costs research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe bid-ask spread, liquidity, and adverse selection in plain language before touching formulas.
-2. Technical frame: Build bid-ask spread, liquidity, and adverse selection from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for bid-ask spread, liquidity, and adverse selection and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Hedged relative-value residual.
+2. Technical frame: Build bid-ask spread, liquidity, and adverse selection from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Spread, Half-Life, Factor Model).
+3. Market interpretation: Pairs and residual strategy setup.. Run one compact, reproducible example for bid-ask spread, liquidity, and adverse selection and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Using stale hedge ratio.
 
 ## Practice Problems
 - Explain bid-ask spread, liquidity, and adverse selection in one paragraph without jargon.
@@ -46,27 +46,27 @@ Bid-ask spread, liquidity, and adverse selection is part of real quant work insi
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Mid Price
-$$m_t=\frac{\mathrm{bid}_t+\mathrm{ask}_t}{2}$$
-Plain-English interpretation: Reference price between best bid and ask.
-Interview pitfall: Comparing fills to stale mid prices.
+### Formula 1: Spread
+$$s_t=y_t-\beta x_t$$
+Plain-English interpretation: Hedged relative-value residual.
+Interview pitfall: Using stale hedge ratio.
 
-### Formula 2: Effective Spread
-$$\mathrm{EffSpread}_t=2\cdot\left|\frac{p_t^{exec}-m_t}{m_t}\right|$$
-Plain-English interpretation: Realized transaction cost proxy.
-Interview pitfall: Ignoring direction and sign conventions.
+### Formula 2: Half-Life
+$$HL=-\frac{\ln 2}{\ln \phi}$$
+Plain-English interpretation: Mean-reversion speed estimate.
+Interview pitfall: Estimating phi on nonstationary series.
 
-### Formula 3: Turnover
-$$\mathrm{TO}_t=\frac{1}{2}\sum_i|w_{i,t}-w_{i,t-1}|$$
-Plain-English interpretation: Fraction of portfolio traded on rebalance.
-Interview pitfall: Reporting gross turnover without cost translation.
+### Formula 3: Factor Model
+$$r_t=\alpha+\beta^Tf_t+\epsilon_t$$
+Plain-English interpretation: Return decomposition into factor exposures.
+Interview pitfall: Assuming static betas across regimes.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Mid Price | Reference price between best bid and ask. | Execution quality benchmarking. | Comparing fills to stale mid prices. |
-| Effective Spread | Realized transaction cost proxy. | Estimate execution drag in backtests. | Ignoring direction and sign conventions. |
-| Turnover | Fraction of portfolio traded on rebalance. | Capacity and cost control. | Reporting gross turnover without cost translation. |
+| Spread | Hedged relative-value residual. | Pairs and residual strategy setup. | Using stale hedge ratio. |
+| Half-Life | Mean-reversion speed estimate. | Holding-period sanity checks. | Estimating phi on nonstationary series. |
+| Factor Model | Return decomposition into factor exposures. | Risk decomposition and attribution. | Assuming static betas across regimes. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

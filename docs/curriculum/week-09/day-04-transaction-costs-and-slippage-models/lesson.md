@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core I: market microstructure, execu
 Transaction costs and slippage models is part of real quant work inside finance core i: market microstructure, execution, slippage, and transaction costs research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe transaction costs and slippage models in plain language before touching formulas.
-2. Technical frame: Build transaction costs and slippage models from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for transaction costs and slippage models and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Post-cost strategy return.
+2. Technical frame: Build transaction costs and slippage models from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Net Strategy Return, Turnover, Max Drawdown).
+3. Market interpretation: Realistic backtest reporting.. Run one compact, reproducible example for transaction costs and slippage models and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Publishing gross-only performance.
 
 ## Practice Problems
 - Explain transaction costs and slippage models in one paragraph without jargon.
@@ -46,27 +46,27 @@ Transaction costs and slippage models is part of real quant work inside finance 
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Mid Price
-$$m_t=\frac{\mathrm{bid}_t+\mathrm{ask}_t}{2}$$
-Plain-English interpretation: Reference price between best bid and ask.
-Interview pitfall: Comparing fills to stale mid prices.
+### Formula 1: Net Strategy Return
+$$r_t^{net}=w_{t-1}^Tr_t-c_t$$
+Plain-English interpretation: Post-cost strategy return.
+Interview pitfall: Publishing gross-only performance.
 
-### Formula 2: Effective Spread
-$$\mathrm{EffSpread}_t=2\cdot\left|\frac{p_t^{exec}-m_t}{m_t}\right|$$
-Plain-English interpretation: Realized transaction cost proxy.
-Interview pitfall: Ignoring direction and sign conventions.
+### Formula 2: Turnover
+$$TO_t=\frac{1}{2}\sum_i|w_{i,t}-w_{i,t-1}|$$
+Plain-English interpretation: Trade intensity proxy.
+Interview pitfall: Ignoring turnover in deployment sizing.
 
-### Formula 3: Turnover
-$$\mathrm{TO}_t=\frac{1}{2}\sum_i|w_{i,t}-w_{i,t-1}|$$
-Plain-English interpretation: Fraction of portfolio traded on rebalance.
-Interview pitfall: Reporting gross turnover without cost translation.
+### Formula 3: Max Drawdown
+$$MDD=\min_t\left(\frac{W_t}{\max_{s\le t}W_s}-1\right)$$
+Plain-English interpretation: Worst peak-to-trough decline.
+Interview pitfall: Relying on Sharpe without path risk.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Mid Price | Reference price between best bid and ask. | Execution quality benchmarking. | Comparing fills to stale mid prices. |
-| Effective Spread | Realized transaction cost proxy. | Estimate execution drag in backtests. | Ignoring direction and sign conventions. |
-| Turnover | Fraction of portfolio traded on rebalance. | Capacity and cost control. | Reporting gross turnover without cost translation. |
+| Net Strategy Return | Post-cost strategy return. | Realistic backtest reporting. | Publishing gross-only performance. |
+| Turnover | Trade intensity proxy. | Cost and capacity constraints. | Ignoring turnover in deployment sizing. |
+| Max Drawdown | Worst peak-to-trough decline. | Risk narrative and kill-switch design. | Relying on Sharpe without path risk. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

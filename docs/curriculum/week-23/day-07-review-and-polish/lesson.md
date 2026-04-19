@@ -24,10 +24,10 @@ This day belongs to the week theme "Interview Prep II: portfolio polish, GitHub 
 Review and polish is part of real quant work inside interview prep ii: portfolio polish, github presentation, networking, and mock case defense research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe review and polish in plain language before touching formulas.
-2. Technical frame: Build review and polish from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for review and polish and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Share of statements supported by data or outputs.
+2. Technical frame: Build review and polish from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Evidence Coverage, Clarity Ratio, Limitation Disclosure Rate).
+3. Market interpretation: Case-study defense quality.. Run one compact, reproducible example for review and polish and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Narrative claims without references.
 
 ## Practice Problems
 - Explain review and polish in one paragraph without jargon.

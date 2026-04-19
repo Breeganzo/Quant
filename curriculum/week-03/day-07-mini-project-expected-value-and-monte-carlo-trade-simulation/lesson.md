@@ -41,30 +41,27 @@ Answer: Because it makes uncertainty concrete and shows the distribution of poss
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Expected Value
+$$\mathbb{E}[X]=\sum_i p_i x_i$$
+Plain-English interpretation: Probability-weighted average payoff.
+Notation check: Ignoring payoff asymmetry and tails.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Variance
+$$\mathrm{Var}(X)=\mathbb{E}[(X-\mu)^2]$$
+Plain-English interpretation: Spread around expected payoff.
+Notation check: Using only mean without uncertainty.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: Kelly Fraction (Binary)
+$$f^*=\frac{bp-q}{b}$$
+Plain-English interpretation: Theoretical growth-optimal bet size.
+Notation check: Applying full Kelly under estimation error.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Expected Value | Probability-weighted average payoff. | Filter positive-edge trading setups. | Ignoring payoff asymmetry and tails. |
+| Variance | Spread around expected payoff. | Risk-adjusted strategy comparison. | Using only mean without uncertainty. |
+| Kelly Fraction (Binary) | Theoretical growth-optimal bet size. | Position-sizing intuition. | Applying full Kelly under estimation error. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.

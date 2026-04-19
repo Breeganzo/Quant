@@ -24,10 +24,10 @@ This day belongs to the week theme "Time Series I: stationarity, AR/MA/ARIMA int
 Walk-forward validation and forecast error metrics is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe walk-forward validation and forecast error metrics in plain language before touching formulas.
-2. Technical frame: Build walk-forward validation and forecast error metrics from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for walk-forward validation and forecast error metrics and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Time-respecting evaluation.
+2. Technical frame: Build walk-forward validation and forecast error metrics from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Walk-Forward Split, RMSE, MAPE).
+3. Market interpretation: Avoid look-ahead leakage.. Run one compact, reproducible example for walk-forward validation and forecast error metrics and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Using random shuffle on time series.
 
 ## Practice Problems
 - Explain walk-forward validation and forecast error metrics in one paragraph without jargon.
@@ -46,27 +46,27 @@ Walk-forward validation and forecast error metrics is part of real quant work in
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: AR(1)
-$$x_t=c+\phi x_{t-1}+\epsilon_t$$
-Plain-English interpretation: Current value depends on one lag plus noise.
-Interview pitfall: Ignoring non-stationarity before fitting AR models.
+### Formula 1: Walk-Forward Split
+$$Train_{1:t}\rightarrow Test_{t+1:t+h}$$
+Plain-English interpretation: Time-respecting evaluation.
+Interview pitfall: Using random shuffle on time series.
 
-### Formula 2: EWMA Variance
-$$\sigma_t^2=\lambda\sigma_{t-1}^2+(1-\lambda)r_{t-1}^2$$
-Plain-English interpretation: Recency-weighted volatility estimate.
-Interview pitfall: Choosing decay factor without validation.
+### Formula 2: RMSE
+$$RMSE=\sqrt{\frac{1}{n}\sum_i(\hat y_i-y_i)^2}$$
+Plain-English interpretation: Quadratic forecast error magnitude.
+Interview pitfall: Comparing RMSE on different scales.
 
-### Formula 3: RMSE
-$$\mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat y_i-y_i)^2}$$
-Plain-English interpretation: Average forecast error magnitude in original units.
-Interview pitfall: Comparing RMSE across differently scaled targets.
+### Formula 3: MAPE
+$$MAPE=\frac{100}{n}\sum_i\left|\frac{y_i-\hat y_i}{y_i}\right|$$
+Plain-English interpretation: Relative forecast error percentage.
+Interview pitfall: Undefined behavior near zero targets.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| AR(1) | Current value depends on one lag plus noise. | Baseline dependence and mean-reversion diagnostics. | Ignoring non-stationarity before fitting AR models. |
-| EWMA Variance | Recency-weighted volatility estimate. | Adaptive risk forecasting. | Choosing decay factor without validation. |
-| RMSE | Average forecast error magnitude in original units. | Compare forecasting pipelines. | Comparing RMSE across differently scaled targets. |
+| Walk-Forward Split | Time-respecting evaluation. | Avoid look-ahead leakage. | Using random shuffle on time series. |
+| RMSE | Quadratic forecast error magnitude. | Compare forecast pipelines. | Comparing RMSE on different scales. |
+| MAPE | Relative forecast error percentage. | Interpretability for stakeholders. | Undefined behavior near zero targets. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

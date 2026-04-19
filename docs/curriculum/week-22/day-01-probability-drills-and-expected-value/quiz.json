@@ -15,7 +15,7 @@
       "id": "q2",
       "difficulty": "intermediate",
       "question": "Write the Expected Value formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Expected Value exactly, explains each symbol, and states one caveat: Forgetting payoff asymmetry.",
+      "answer": "A strong answer includes Expected Value exactly, explains each symbol, and states one caveat: Ignoring payoff asymmetry and tails.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Run a short timed drill set and compute accuracy by topic category.",
       "python_solution": "import pandas as pd\n\ndrills = pd.DataFrame(\n    {\n        \"topic\": [\"probability\", \"stats\", \"python\", \"sql\", \"markets\"],\n        \"correct\": [1, 0, 1, 1, 0],\n        \"minutes\": [6, 8, 7, 5, 9],\n    }\n)\nprint(drills)\nprint(\"Accuracy:\", round(float(drills[\"correct\"].mean()), 3))\nprint(\"Mean minutes:\", round(float(drills[\"minutes\"].mean()), 2))\n"
@@ -24,7 +24,7 @@
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Filter positive-edge trading setups.. Then it states one realistic failure mode: Ignoring payoff asymmetry and tails., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

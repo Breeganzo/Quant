@@ -24,10 +24,10 @@ This day belongs to the week theme "Agentic AI for Quant II: alternative data, N
 Capstone review and write-up is part of real quant work inside agentic ai for quant ii: alternative data, nlp, experiment tracking, and robust research delivery research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe capstone review and write-up in plain language before touching formulas.
-2. Technical frame: Build capstone review and write-up from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for capstone review and write-up and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Performance after implementation frictions.
+2. Technical frame: Build capstone review and write-up from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Net Return, Out-of-Sample RMSE, Max Drawdown).
+3. Market interpretation: Final report realism.. Run one compact, reproducible example for capstone review and write-up and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Presenting gross-only metrics.
 
 ## Practice Problems
 - Explain capstone review and write-up in one paragraph without jargon.
@@ -46,27 +46,27 @@ Capstone review and write-up is part of real quant work inside agentic ai for qu
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Precision
-$$\mathrm{Precision}=\frac{TP}{TP+FP}$$
-Plain-English interpretation: How often flagged items are truly correct.
-Interview pitfall: High precision with very low coverage.
+### Formula 1: Net Return
+$$r_t^{net}=r_t^{gross}-cost_t$$
+Plain-English interpretation: Performance after implementation frictions.
+Interview pitfall: Presenting gross-only metrics.
 
-### Formula 2: Recall
-$$\mathrm{Recall}=\frac{TP}{TP+FN}$$
-Plain-English interpretation: How many true items are captured.
-Interview pitfall: High recall with noisy false positives.
+### Formula 2: Out-of-Sample RMSE
+$$RMSE_{OOS}=\sqrt{\frac{1}{n}\sum_i(\hat y_i-y_i)^2}$$
+Plain-English interpretation: Forecast quality on unseen data.
+Interview pitfall: Leaking test data into tuning.
 
-### Formula 3: Hallucination Rate
-$$HR=\frac{\#\text{unsupported claims}}{\#\text{total claims}}$$
-Plain-English interpretation: Share of generated statements lacking evidence.
-Interview pitfall: No citation checks in production research notes.
+### Formula 3: Max Drawdown
+$$MDD=\min_t\left(\frac{W_t}{\max_{s\le t}W_s}-1\right)$$
+Plain-English interpretation: Worst path-dependent loss.
+Interview pitfall: Reporting return with no drawdown context.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Precision | How often flagged items are truly correct. | Quality control of extracted insights. | High precision with very low coverage. |
-| Recall | How many true items are captured. | Guardrail calibration for missed risks. | High recall with noisy false positives. |
-| Hallucination Rate | Share of generated statements lacking evidence. | LLM workflow safety monitoring. | No citation checks in production research notes. |
+| Net Return | Performance after implementation frictions. | Final report realism. | Presenting gross-only metrics. |
+| Out-of-Sample RMSE | Forecast quality on unseen data. | Capstone model comparison. | Leaking test data into tuning. |
+| Max Drawdown | Worst path-dependent loss. | Risk defense in presentations. | Reporting return with no drawdown context. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

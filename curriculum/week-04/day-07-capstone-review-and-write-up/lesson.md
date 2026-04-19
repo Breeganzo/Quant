@@ -40,30 +40,27 @@ Answer: The question, method, main result, and at least one limitation or next s
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Net Return
+$$r_t^{net}=r_t^{gross}-cost_t$$
+Plain-English interpretation: Performance after implementation frictions.
+Notation check: Presenting gross-only metrics.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Out-of-Sample RMSE
+$$RMSE_{OOS}=\sqrt{\frac{1}{n}\sum_i(\hat y_i-y_i)^2}$$
+Plain-English interpretation: Forecast quality on unseen data.
+Notation check: Leaking test data into tuning.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: Max Drawdown
+$$MDD=\min_t\left(\frac{W_t}{\max_{s\le t}W_s}-1\right)$$
+Plain-English interpretation: Worst path-dependent loss.
+Notation check: Reporting return with no drawdown context.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Net Return | Performance after implementation frictions. | Final report realism. | Presenting gross-only metrics. |
+| Out-of-Sample RMSE | Forecast quality on unseen data. | Capstone model comparison. | Leaking test data into tuning. |
+| Max Drawdown | Worst path-dependent loss. | Risk defense in presentations. | Reporting return with no drawdown context. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.

@@ -15,7 +15,7 @@
       "id": "q2",
       "difficulty": "intermediate",
       "question": "Write the Program Fit Score formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Program Fit Score exactly, explains each symbol, and states one caveat: Ignoring downside constraints like debt burden.",
+      "answer": "A strong answer includes Program Fit Score exactly, explains each symbol, and states one caveat: Using arbitrary weights without rationale.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Build a program-fit and cost matrix and rank options by weighted score.",
       "python_solution": "import pandas as pd\n\noptions = pd.DataFrame(\n    {\n        \"program\": [\"A\", \"B\", \"C\"],\n        \"curriculum_fit\": [0.9, 0.8, 0.7],\n        \"career_fit\": [0.8, 0.9, 0.7],\n        \"cost_score\": [0.6, 0.4, 0.9],\n    }\n)\nw = {\"curriculum_fit\": 0.45, \"career_fit\": 0.35, \"cost_score\": 0.20}\noptions[\"fit_score\"] = (\n    options[\"curriculum_fit\"] * w[\"curriculum_fit\"]\n    + options[\"career_fit\"] * w[\"career_fit\"]\n    + options[\"cost_score\"] * w[\"cost_score\"]\n)\nprint(options.sort_values(\"fit_score\", ascending=False))\n"
@@ -24,7 +24,7 @@
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Rank schools by evidence-based criteria.. Then it states one realistic failure mode: Using arbitrary weights without rationale., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

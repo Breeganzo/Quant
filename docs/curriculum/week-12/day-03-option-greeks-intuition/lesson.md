@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core IV: derivatives, options, Greek
 Option Greeks intuition is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe option greeks intuition in plain language before touching formulas.
-2. Technical frame: Build option greeks intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for option greeks intuition and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Price sensitivity to underlying.
+2. Technical frame: Build option greeks intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Delta, Gamma, Vega).
+3. Market interpretation: Hedge-ratio baseline.. Run one compact, reproducible example for option greeks intuition and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Treating delta as constant.
 
 ## Practice Problems
 - Explain option greeks intuition in one paragraph without jargon.
@@ -46,27 +46,27 @@ Option Greeks intuition is part of real quant work inside finance core iv: deriv
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Call Payoff
-$$\mathrm{Payoff}_{call}=\max(S_T-K,0)$$
-Plain-English interpretation: Upside above strike with limited downside (premium aside).
-Interview pitfall: Confusing payoff with profit (ignoring premium).
-
-### Formula 2: Put Payoff
-$$\mathrm{Payoff}_{put}=\max(K-S_T,0)$$
-Plain-English interpretation: Downside protection structure at maturity.
-Interview pitfall: Ignoring time decay before maturity.
-
-### Formula 3: Delta
+### Formula 1: Delta
 $$\Delta=\frac{\partial V}{\partial S}$$
-Plain-English interpretation: First-order option value sensitivity to underlying.
-Interview pitfall: Assuming delta is constant across moves and time.
+Plain-English interpretation: Price sensitivity to underlying.
+Interview pitfall: Treating delta as constant.
+
+### Formula 2: Gamma
+$$\Gamma=\frac{\partial^2 V}{\partial S^2}$$
+Plain-English interpretation: Delta curvature sensitivity.
+Interview pitfall: Ignoring gamma in large spot moves.
+
+### Formula 3: Vega
+$$Vega=\frac{\partial V}{\partial \sigma}$$
+Plain-English interpretation: Sensitivity to implied volatility.
+Interview pitfall: Ignoring vol-regime shifts.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Call Payoff | Upside above strike with limited downside (premium aside). | Directional convex exposure design. | Confusing payoff with profit (ignoring premium). |
-| Put Payoff | Downside protection structure at maturity. | Hedging drawdown risk. | Ignoring time decay before maturity. |
-| Delta | First-order option value sensitivity to underlying. | Hedge ratio sizing. | Assuming delta is constant across moves and time. |
+| Delta | Price sensitivity to underlying. | Hedge-ratio baseline. | Treating delta as constant. |
+| Gamma | Delta curvature sensitivity. | Re-hedging frequency intuition. | Ignoring gamma in large spot moves. |
+| Vega | Sensitivity to implied volatility. | Volatility-risk exposure sizing. | Ignoring vol-regime shifts. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

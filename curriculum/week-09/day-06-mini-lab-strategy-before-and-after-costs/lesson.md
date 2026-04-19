@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core I: market microstructure, execu
 Mini lab: strategy before and after costs is part of real quant work inside finance core i: market microstructure, execution, slippage, and transaction costs research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe mini lab: strategy before and after costs in plain language before touching formulas.
-2. Technical frame: Build mini lab: strategy before and after costs from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for mini lab: strategy before and after costs and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Reference price between best bid and ask.
+2. Technical frame: Build mini lab: strategy before and after costs from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Mid Price, Effective Spread, Turnover).
+3. Market interpretation: Execution quality benchmarking.. Run one compact, reproducible example for mini lab: strategy before and after costs and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Comparing fills to stale mid prices.
 
 ## Practice Problems
 - Explain mini lab: strategy before and after costs in one paragraph without jargon.

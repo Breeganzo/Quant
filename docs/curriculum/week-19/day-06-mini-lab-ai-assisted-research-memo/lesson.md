@@ -24,10 +24,10 @@ This day belongs to the week theme "Agentic AI for Quant I: research automation,
 Mini lab: AI-assisted research memo is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe mini lab: ai-assisted research memo in plain language before touching formulas.
-2. Technical frame: Build mini lab: ai-assisted research memo from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for mini lab: ai-assisted research memo and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: How often flagged items are truly correct.
+2. Technical frame: Build mini lab: ai-assisted research memo from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Precision, Recall, Hallucination Rate).
+3. Market interpretation: Quality control of extracted insights.. Run one compact, reproducible example for mini lab: ai-assisted research memo and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: High precision with very low coverage.
 
 ## Practice Problems
 - Explain mini lab: ai-assisted research memo in one paragraph without jargon.

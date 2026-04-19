@@ -24,10 +24,10 @@ This day belongs to the week theme "Interview Prep I: probability, statistics, m
 Linear algebra and optimization drills is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe linear algebra and optimization drills in plain language before touching formulas.
-2. Technical frame: Build linear algebra and optimization drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for linear algebra and optimization drills and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Weight-return dot product.
+2. Technical frame: Build linear algebra and optimization drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Portfolio Return, Portfolio Variance, Covariance Matrix).
+3. Market interpretation: Fast multi-asset return aggregation.. Run one compact, reproducible example for linear algebra and optimization drills and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Misaligned weight and return ordering.
 
 ## Practice Problems
 - Explain linear algebra and optimization drills in one paragraph without jargon.
@@ -46,27 +46,27 @@ Linear algebra and optimization drills is part of real quant work inside intervi
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Expected Value
-$$\mathbb{E}[X]=\sum_i p_i x_i$$
-Plain-English interpretation: Core quantitative interview staple.
-Interview pitfall: Forgetting payoff asymmetry.
+### Formula 1: Portfolio Return
+$$r_p=w^Tr$$
+Plain-English interpretation: Weight-return dot product.
+Interview pitfall: Misaligned weight and return ordering.
 
-### Formula 2: z-Score
-$$z=\frac{x-\mu}{\sigma}$$
-Plain-English interpretation: Standardized distance from mean.
-Interview pitfall: Using unstable sigma estimates.
+### Formula 2: Portfolio Variance
+$$\sigma_p^2=w^T\Sigma w$$
+Plain-English interpretation: Total covariance-weighted risk.
+Interview pitfall: Using unstable covariance without checks.
 
-### Formula 3: OLS Beta
-$$\hat\beta=(X^TX)^{-1}X^Ty$$
-Plain-English interpretation: Closed-form linear estimate.
-Interview pitfall: Ignoring multicollinearity and conditioning.
+### Formula 3: Covariance Matrix
+$$\Sigma=\mathbb{E}[(r-\mu)(r-\mu)^T]$$
+Plain-English interpretation: Cross-asset co-movement structure.
+Interview pitfall: Treating covariance as static across regimes.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Expected Value | Core quantitative interview staple. | Fast probability reasoning under pressure. | Forgetting payoff asymmetry. |
-| z-Score | Standardized distance from mean. | Outlier checks in data screens. | Using unstable sigma estimates. |
-| OLS Beta | Closed-form linear estimate. | Regression interview derivation drills. | Ignoring multicollinearity and conditioning. |
+| Portfolio Return | Weight-return dot product. | Fast multi-asset return aggregation. | Misaligned weight and return ordering. |
+| Portfolio Variance | Total covariance-weighted risk. | Diversification and sizing decisions. | Using unstable covariance without checks. |
+| Covariance Matrix | Cross-asset co-movement structure. | Risk model construction. | Treating covariance as static across regimes. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

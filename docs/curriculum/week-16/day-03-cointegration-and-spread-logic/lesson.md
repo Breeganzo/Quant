@@ -24,10 +24,10 @@ This day belongs to the week theme "Signals II: factor models, statistical arbit
 Cointegration and spread logic is part of real quant work inside signals ii: factor models, statistical arbitrage intuition, cointegration, and regime shifts research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe cointegration and spread logic in plain language before touching formulas.
-2. Technical frame: Build cointegration and spread logic from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for cointegration and spread logic and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Hedged relative-value residual.
+2. Technical frame: Build cointegration and spread logic from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Spread, Half-Life, Factor Model).
+3. Market interpretation: Pairs and residual strategy setup.. Run one compact, reproducible example for cointegration and spread logic and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Using stale hedge ratio.
 
 ## Practice Problems
 - Explain cointegration and spread logic in one paragraph without jargon.
@@ -48,25 +48,25 @@ Cointegration and spread logic is part of real quant work inside signals ii: fac
 ## Interview-Ready Formula Sheet
 ### Formula 1: Spread
 $$s_t=y_t-\beta x_t$$
-Plain-English interpretation: Relative value residual after hedge ratio adjustment.
-Interview pitfall: Skipping hedge-ratio estimation stability checks.
+Plain-English interpretation: Hedged relative-value residual.
+Interview pitfall: Using stale hedge ratio.
 
-### Formula 2: Spread z-Score
-$$z_t=\frac{s_t-\mu_s}{\sigma_s}$$
-Plain-English interpretation: Normalized spread deviation signal.
-Interview pitfall: Using static moments in regime shifts.
+### Formula 2: Half-Life
+$$HL=-\frac{\ln 2}{\ln \phi}$$
+Plain-English interpretation: Mean-reversion speed estimate.
+Interview pitfall: Estimating phi on nonstationary series.
 
-### Formula 3: Half-Life
-$$\mathrm{HL}= -\frac{\ln 2}{\ln \phi}$$
-Plain-English interpretation: Expected mean-reversion speed from AR(1) phi.
-Interview pitfall: Estimating phi on non-stationary spread.
+### Formula 3: Factor Model
+$$r_t=\alpha+\beta^Tf_t+\epsilon_t$$
+Plain-English interpretation: Return decomposition into factor exposures.
+Interview pitfall: Assuming static betas across regimes.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Spread | Relative value residual after hedge ratio adjustment. | Pairs trading mean-reversion setup. | Skipping hedge-ratio estimation stability checks. |
-| Spread z-Score | Normalized spread deviation signal. | Rule-based entry and exit bands. | Using static moments in regime shifts. |
-| Half-Life | Expected mean-reversion speed from AR(1) phi. | Set holding horizon expectations. | Estimating phi on non-stationary spread. |
+| Spread | Hedged relative-value residual. | Pairs and residual strategy setup. | Using stale hedge ratio. |
+| Half-Life | Mean-reversion speed estimate. | Holding-period sanity checks. | Estimating phi on nonstationary series. |
+| Factor Model | Return decomposition into factor exposures. | Risk decomposition and attribution. | Assuming static betas across regimes. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

@@ -24,10 +24,10 @@ This day belongs to the week theme "Final Integration: end-to-end capstone, fina
 Evaluate, stress test, and document limitations is part of real quant work inside final integration: end-to-end capstone, final assessments, and application transition plan research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe evaluate, stress test, and document limitations in plain language before touching formulas.
-2. Technical frame: Build evaluate, stress test, and document limitations from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for evaluate, stress test, and document limitations and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Loss quantile under distribution assumptions.
+2. Technical frame: Build evaluate, stress test, and document limitations from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Parametric VaR, Expected Shortfall, Stress Loss).
+3. Market interpretation: Daily risk-limit reporting.. Run one compact, reproducible example for evaluate, stress test, and document limitations and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Assuming normal tails in crisis regimes.
 
 ## Practice Problems
 - Explain evaluate, stress test, and document limitations in one paragraph without jargon.
@@ -46,27 +46,27 @@ Evaluate, stress test, and document limitations is part of real quant work insid
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Net Strategy Return
-$$r_t^{net}=r_t^{gross}-cost_t$$
-Plain-English interpretation: Performance after implementation assumptions.
-Interview pitfall: Reporting only gross backtest outcomes.
+### Formula 1: Parametric VaR
+$$VaR_{\alpha}=\mu+z_{\alpha}\sigma$$
+Plain-English interpretation: Loss quantile under distribution assumptions.
+Interview pitfall: Assuming normal tails in crisis regimes.
 
-### Formula 2: Out-of-Sample RMSE
-$$RMSE_{OOS}=\sqrt{\frac{1}{n}\sum(\hat y_i-y_i)^2}$$
-Plain-English interpretation: Forecast quality on unseen evaluation window.
-Interview pitfall: Tuning decisions leaked from test set.
+### Formula 2: Expected Shortfall
+$$ES_{\alpha}=\mathbb{E}[L\mid L>VaR_{\alpha}]$$
+Plain-English interpretation: Average loss beyond VaR threshold.
+Interview pitfall: Relying on short history for ES.
 
-### Formula 3: Max Drawdown
-$$MDD=\min_t\left(\frac{W_t}{\max_{s\le t}W_s}-1\right)$$
-Plain-English interpretation: Worst capital drop in deployment-like simulation.
-Interview pitfall: Ignoring path dependency in risk narrative.
+### Formula 3: Stress Loss
+$$L_{stress}=w^T r_{scenario}$$
+Plain-English interpretation: Portfolio loss under explicit scenario vector.
+Interview pitfall: Using stress vectors not tied to plausible regimes.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Net Strategy Return | Performance after implementation assumptions. | Final capstone realism checks. | Reporting only gross backtest outcomes. |
-| Out-of-Sample RMSE | Forecast quality on unseen evaluation window. | Model comparison in final report. | Tuning decisions leaked from test set. |
-| Max Drawdown | Worst capital drop in deployment-like simulation. | Risk section of capstone defense. | Ignoring path dependency in risk narrative. |
+| Parametric VaR | Loss quantile under distribution assumptions. | Daily risk-limit reporting. | Assuming normal tails in crisis regimes. |
+| Expected Shortfall | Average loss beyond VaR threshold. | Tail-risk governance. | Relying on short history for ES. |
+| Stress Loss | Portfolio loss under explicit scenario vector. | Scenario-based resilience checks. | Using stress vectors not tied to plausible regimes. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

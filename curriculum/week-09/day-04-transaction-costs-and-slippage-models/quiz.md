@@ -15,9 +15,9 @@ Model answer: A strong answer defines transaction costs and slippage models, giv
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Mid Price formula/workflow from memory and define each symbol.
+Interview question: Write the Net Strategy Return formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Mid Price exactly, explains each symbol, and states one caveat: Comparing fills to stale mid prices.
+Model answer: A strong answer includes Net Strategy Return exactly, explains each symbol, and states one caveat: Publishing gross-only performance.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Estimate turnover and a simple cost proxy from a toy rebalance schedule.
@@ -44,7 +44,7 @@ print(pd.DataFrame({"turnover": turnover, "estimated_cost": est_cost}))
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Realistic backtest reporting.. Then it states one realistic failure mode: Publishing gross-only performance., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

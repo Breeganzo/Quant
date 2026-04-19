@@ -24,10 +24,10 @@ This day belongs to the week theme "Time Series I: stationarity, AR/MA/ARIMA int
 Autocorrelation, partial autocorrelation, and lag structure is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe autocorrelation, partial autocorrelation, and lag structure in plain language before touching formulas.
-2. Technical frame: Build autocorrelation, partial autocorrelation, and lag structure from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for autocorrelation, partial autocorrelation, and lag structure and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Joint variation around means.
+2. Technical frame: Build autocorrelation, partial autocorrelation, and lag structure from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Covariance, Correlation, 2-Asset Variance).
+3. Market interpretation: Diversification diagnostics.. Run one compact, reproducible example for autocorrelation, partial autocorrelation, and lag structure and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Miscaligned timestamps inflate noise.
 
 ## Practice Problems
 - Explain autocorrelation, partial autocorrelation, and lag structure in one paragraph without jargon.
@@ -46,27 +46,27 @@ Autocorrelation, partial autocorrelation, and lag structure is part of real quan
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: AR(1)
-$$x_t=c+\phi x_{t-1}+\epsilon_t$$
-Plain-English interpretation: Current value depends on one lag plus noise.
-Interview pitfall: Ignoring non-stationarity before fitting AR models.
+### Formula 1: Covariance
+$$\mathrm{Cov}(X,Y)=\frac{1}{n-1}\sum_i(x_i-\bar x)(y_i-\bar y)$$
+Plain-English interpretation: Joint variation around means.
+Interview pitfall: Miscaligned timestamps inflate noise.
 
-### Formula 2: EWMA Variance
-$$\sigma_t^2=\lambda\sigma_{t-1}^2+(1-\lambda)r_{t-1}^2$$
-Plain-English interpretation: Recency-weighted volatility estimate.
-Interview pitfall: Choosing decay factor without validation.
+### Formula 2: Correlation
+$$\rho_{XY}=\frac{\mathrm{Cov}(X,Y)}{\sigma_X\sigma_Y}$$
+Plain-English interpretation: Scale-free co-movement in [-1,1].
+Interview pitfall: Confusing correlation with causation.
 
-### Formula 3: RMSE
-$$\mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat y_i-y_i)^2}$$
-Plain-English interpretation: Average forecast error magnitude in original units.
-Interview pitfall: Comparing RMSE across differently scaled targets.
+### Formula 3: 2-Asset Variance
+$$\sigma_p^2=w_1^2\sigma_1^2+w_2^2\sigma_2^2+2w_1w_2\rho_{12}\sigma_1\sigma_2$$
+Plain-English interpretation: Risk decomposition for two-asset mix.
+Interview pitfall: Ignoring correlation regime shifts.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| AR(1) | Current value depends on one lag plus noise. | Baseline dependence and mean-reversion diagnostics. | Ignoring non-stationarity before fitting AR models. |
-| EWMA Variance | Recency-weighted volatility estimate. | Adaptive risk forecasting. | Choosing decay factor without validation. |
-| RMSE | Average forecast error magnitude in original units. | Compare forecasting pipelines. | Comparing RMSE across differently scaled targets. |
+| Covariance | Joint variation around means. | Diversification diagnostics. | Miscaligned timestamps inflate noise. |
+| Correlation | Scale-free co-movement in [-1,1]. | Asset clustering and hedging checks. | Confusing correlation with causation. |
+| 2-Asset Variance | Risk decomposition for two-asset mix. | Show diversification impact directly. | Ignoring correlation regime shifts. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

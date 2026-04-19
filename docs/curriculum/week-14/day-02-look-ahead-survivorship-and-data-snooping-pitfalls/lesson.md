@@ -24,10 +24,10 @@ This day belongs to the week theme "Quant Workflow II: backtesting architecture,
 Look-ahead, survivorship, and data snooping pitfalls is part of real quant work inside quant workflow ii: backtesting architecture, position sizing, and performance attribution research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe look-ahead, survivorship, and data snooping pitfalls in plain language before touching formulas.
-2. Technical frame: Build look-ahead, survivorship, and data snooping pitfalls from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for look-ahead, survivorship, and data snooping pitfalls and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Temporal-causality violation indicator.
+2. Technical frame: Build look-ahead, survivorship, and data snooping pitfalls from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Leakage Flag, Coverage Ratio, Survivorship Gap).
+3. Market interpretation: Pipeline data audit.. Run one compact, reproducible example for look-ahead, survivorship, and data snooping pitfalls and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Using post-event data in training.
 
 ## Practice Problems
 - Explain look-ahead, survivorship, and data snooping pitfalls in one paragraph without jargon.
@@ -46,27 +46,27 @@ Look-ahead, survivorship, and data snooping pitfalls is part of real quant work 
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Strategy Return with Costs
-$$r_t^{strat}=w_{t-1}^Tr_t-c_t$$
-Plain-English interpretation: Net return after implementation frictions.
-Interview pitfall: Ignoring costs in reported performance.
+### Formula 1: Leakage Flag
+$$Leakage=\mathbb{1}(t_{feature}>t_{label})$$
+Plain-English interpretation: Temporal-causality violation indicator.
+Interview pitfall: Using post-event data in training.
 
-### Formula 2: Max Drawdown
-$$MDD=\min_t\left(\frac{W_t}{\max_{s\le t}W_s}-1\right)$$
-Plain-English interpretation: Worst peak-to-trough capital decline.
-Interview pitfall: Reporting Sharpe without drawdown context.
+### Formula 2: Coverage Ratio
+$$Coverage=\frac{N_{usable}}{N_{raw}}$$
+Plain-English interpretation: Share of valid observations after cleaning.
+Interview pitfall: Dropping rows without bias review.
 
-### Formula 3: Turnover
-$$\mathrm{TO}_t=\frac{1}{2}\sum_i|w_{i,t}-w_{i,t-1}|$$
-Plain-English interpretation: Trading intensity proxy for cost pressure.
-Interview pitfall: High-turnover alpha that vanishes net of costs.
+### Formula 3: Survivorship Gap
+$$SG=\bar r_{survivors}-\bar r_{full\ universe}$$
+Plain-English interpretation: Return distortion from missing dead assets.
+Interview pitfall: Backtests on survivor-only symbols.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Strategy Return with Costs | Net return after implementation frictions. | Realistic backtest evaluation. | Ignoring costs in reported performance. |
-| Max Drawdown | Worst peak-to-trough capital decline. | Risk limit calibration. | Reporting Sharpe without drawdown context. |
-| Turnover | Trading intensity proxy for cost pressure. | Capacity and slippage monitoring. | High-turnover alpha that vanishes net of costs. |
+| Leakage Flag | Temporal-causality violation indicator. | Pipeline data audit. | Using post-event data in training. |
+| Coverage Ratio | Share of valid observations after cleaning. | Track data attrition risk. | Dropping rows without bias review. |
+| Survivorship Gap | Return distortion from missing dead assets. | Universe construction sanity checks. | Backtests on survivor-only symbols. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

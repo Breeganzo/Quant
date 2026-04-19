@@ -15,34 +15,33 @@ Model answer: A strong answer defines forwards, futures, and option payoffs, giv
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Call Payoff formula/workflow from memory and define each symbol.
+Interview question: Write the Forward Price formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Call Payoff exactly, explains each symbol, and states one caveat: Confusing payoff with profit (ignoring premium).
+Model answer: A strong answer includes Forward Price exactly, explains each symbol, and states one caveat: Ignoring funding/storage/dividend assumptions.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Build option payoff vectors and estimate delta numerically at one point.
+Python drill: Build option payoff vectors and approximate delta around the strike.
 Suggested Python solution:
 ```python
 import numpy as np
 
 k = 100
-s_grid = np.linspace(70, 130, 13)
-call = np.maximum(s_grid - k, 0)
-put = np.maximum(k - s_grid, 0)
-s0 = 101
-eps = 0.5
-call_price = lambda s: max(s - k, 0)
-delta = (call_price(s0 + eps) - call_price(s0 - eps)) / (2 * eps)
-print("Call payoff:", call)
-print("Put payoff:", put)
-print("Delta estimate near S=101:", round(float(delta), 4))
+s = np.linspace(70, 130, 13)
+call = np.maximum(s - k, 0)
+put = np.maximum(k - s, 0)
+eps = 1.0
+s0 = 100
+delta = (max(s0 + eps - k, 0) - max(s0 - eps - k, 0)) / (2 * eps)
+print("call:", call)
+print("put:", put)
+print("delta near strike:", round(float(delta), 4))
 
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Cash-and-carry checks.. Then it states one realistic failure mode: Ignoring funding/storage/dividend assumptions., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

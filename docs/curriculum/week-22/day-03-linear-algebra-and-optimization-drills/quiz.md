@@ -15,33 +15,34 @@ Model answer: A strong answer defines linear algebra and optimization drills, gi
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Expected Value formula/workflow from memory and define each symbol.
+Interview question: Write the Portfolio Return formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Expected Value exactly, explains each symbol, and states one caveat: Forgetting payoff asymmetry.
+Model answer: A strong answer includes Portfolio Return exactly, explains each symbol, and states one caveat: Misaligned weight and return ordering.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Run a short timed drill set and compute accuracy by topic category.
+Python drill: Compute portfolio return and variance from a return matrix and covariance estimate.
 Suggested Python solution:
 ```python
+from pathlib import Path
+import numpy as np
 import pandas as pd
 
-drills = pd.DataFrame(
-    {
-        "topic": ["probability", "stats", "python", "sql", "markets"],
-        "correct": [1, 0, 1, 1, 0],
-        "minutes": [6, 8, 7, 5, 9],
-    }
-)
-print(drills)
-print("Accuracy:", round(float(drills["correct"].mean()), 3))
-print("Mean minutes:", round(float(drills["minutes"].mean()), 2))
+market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
+prices = market.pivot(index="date", columns="symbol", values="close").dropna()
+returns = prices.pct_change().dropna()
+w = np.array([0.4, 0.3, 0.2, 0.1])
+mu = returns.mean().values
+cov = returns.cov().values
+exp_ret = float(w @ mu)
+var = float(w @ cov @ w)
+print({"expected_daily_return": round(exp_ret, 6), "daily_variance": round(var, 8)})
 
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Fast multi-asset return aggregation.. Then it states one realistic failure mode: Misaligned weight and return ordering., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

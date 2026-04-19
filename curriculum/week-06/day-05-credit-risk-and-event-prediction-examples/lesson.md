@@ -24,10 +24,10 @@ This day belongs to the week theme "ML Foundations II: classification, metrics, 
 Credit risk and event prediction examples is part of real quant work inside ml foundations ii: classification, metrics, imbalance, validation, and risk use cases research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe credit risk and event prediction examples in plain language before touching formulas.
-2. Technical frame: Build credit risk and event prediction examples from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for credit risk and event prediction examples and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Probability mapping from linear score.
+2. Technical frame: Build credit risk and event prediction examples from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Logistic Link, Precision, Recall).
+3. Market interpretation: Binary event prediction.. Run one compact, reproducible example for credit risk and event prediction examples and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Thresholding without business-cost calibration.
 
 ## Practice Problems
 - Explain credit risk and event prediction examples in one paragraph without jargon.
@@ -47,26 +47,26 @@ Credit risk and event prediction examples is part of real quant work inside ml f
 
 ## Interview-Ready Formula Sheet
 ### Formula 1: Logistic Link
-$$p(y=1\mid x)=\frac{1}{1+e^{-z}},\ z=w^Tx+b$$
-Plain-English interpretation: Maps linear score to class probability.
-Interview pitfall: Treating probability as certainty near threshold.
+$$p(y=1|x)=\frac{1}{1+e^{-z}}$$
+Plain-English interpretation: Probability mapping from linear score.
+Interview pitfall: Thresholding without business-cost calibration.
 
-### Formula 2: Cross-Entropy Loss
-$$L=-\frac{1}{n}\sum_{i=1}^n [y_i\log p_i + (1-y_i)\log(1-p_i)]$$
-Plain-English interpretation: Penalizes confident wrong classifications strongly.
-Interview pitfall: Evaluating only loss without class-balance diagnostics.
+### Formula 2: Precision
+$$Precision=\frac{TP}{TP+FP}$$
+Plain-English interpretation: Correctness among predicted positives.
+Interview pitfall: Optimizing precision alone under imbalance.
 
-### Formula 3: F1 Score
-$$F1=2\cdot\frac{\mathrm{Precision}\cdot\mathrm{Recall}}{\mathrm{Precision}+\mathrm{Recall}}$$
-Plain-English interpretation: Balances false-positive and false-negative tradeoff.
-Interview pitfall: Using accuracy alone on imbalanced labels.
+### Formula 3: Recall
+$$Recall=\frac{TP}{TP+FN}$$
+Plain-English interpretation: Coverage of true positives.
+Interview pitfall: Ignoring precision-recall tradeoff.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Logistic Link | Maps linear score to class probability. | Probability of positive next-period return event. | Treating probability as certainty near threshold. |
-| Cross-Entropy Loss | Penalizes confident wrong classifications strongly. | Train classification baselines for risk events. | Evaluating only loss without class-balance diagnostics. |
-| F1 Score | Balances false-positive and false-negative tradeoff. | Model selection under class imbalance. | Using accuracy alone on imbalanced labels. |
+| Logistic Link | Probability mapping from linear score. | Binary event prediction. | Thresholding without business-cost calibration. |
+| Precision | Correctness among predicted positives. | False-alarm control. | Optimizing precision alone under imbalance. |
+| Recall | Coverage of true positives. | Miss-risk control. | Ignoring precision-recall tradeoff. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

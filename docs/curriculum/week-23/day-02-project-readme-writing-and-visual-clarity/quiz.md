@@ -17,31 +17,31 @@ Why this matters: This tests communication quality, not just memorized definitio
 ### Q2 (intermediate)
 Interview question: Write the Evidence Coverage formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Evidence Coverage exactly, explains each symbol, and states one caveat: Narrative claims without references.
+Model answer: A strong answer includes Evidence Coverage exactly, explains each symbol, and states one caveat: Narrative-heavy artifacts without proof.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Convert a project summary into a claim-evidence table and compute evidence coverage.
+Python drill: Create a claim-evidence table for a portfolio story and compute evidence coverage.
 Suggested Python solution:
 ```python
 import pandas as pd
 
-table = pd.DataFrame(
+story = pd.DataFrame(
     [
-        {"claim": "Model improves net return", "evidence": "backtest_table", "supported": 1},
+        {"claim": "Signal improves net return", "evidence": "backtest table", "supported": 1},
         {"claim": "Robust in all regimes", "evidence": "none", "supported": 0},
-        {"claim": "Costs are manageable", "evidence": "turnover_cost_chart", "supported": 1},
+        {"claim": "Risk is controlled", "evidence": "drawdown chart", "supported": 1},
     ]
 )
-coverage = table["supported"].mean()
-print(table)
-print("Evidence coverage:", round(float(coverage), 3))
+coverage = float(story["supported"].mean())
+print(story)
+print("evidence_coverage:", round(coverage, 3))
 
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Portfolio and presentation quality.. Then it states one realistic failure mode: Narrative-heavy artifacts without proof., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

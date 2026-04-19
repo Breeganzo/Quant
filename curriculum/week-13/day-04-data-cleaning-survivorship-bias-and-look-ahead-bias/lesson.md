@@ -24,10 +24,10 @@ This day belongs to the week theme "Quant Workflow I: idea generation, research 
 Data cleaning, survivorship bias, and look-ahead bias is part of real quant work inside quant workflow i: idea generation, research logs, labels, and data hygiene research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe data cleaning, survivorship bias, and look-ahead bias in plain language before touching formulas.
-2. Technical frame: Build data cleaning, survivorship bias, and look-ahead bias from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for data cleaning, survivorship bias, and look-ahead bias and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Temporal-causality violation indicator.
+2. Technical frame: Build data cleaning, survivorship bias, and look-ahead bias from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Leakage Flag, Coverage Ratio, Survivorship Gap).
+3. Market interpretation: Pipeline data audit.. Run one compact, reproducible example for data cleaning, survivorship bias, and look-ahead bias and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Using post-event data in training.
 
 ## Practice Problems
 - Explain data cleaning, survivorship bias, and look-ahead bias in one paragraph without jargon.
@@ -46,27 +46,27 @@ Data cleaning, survivorship bias, and look-ahead bias is part of real quant work
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Information Coefficient
-$$IC=\mathrm{Corr}(signal_t, r_{t+1})$$
-Plain-English interpretation: Association between signal and future return.
-Interview pitfall: Treating a single-period IC as stable edge.
+### Formula 1: Leakage Flag
+$$Leakage=\mathbb{1}(t_{feature}>t_{label})$$
+Plain-English interpretation: Temporal-causality violation indicator.
+Interview pitfall: Using post-event data in training.
 
-### Formula 2: t-Statistic
-$$t=\frac{\hat\alpha}{SE(\hat\alpha)}$$
-Plain-English interpretation: Effect size scaled by estimation uncertainty.
-Interview pitfall: Ignoring multiple-testing inflation.
+### Formula 2: Coverage Ratio
+$$Coverage=\frac{N_{usable}}{N_{raw}}$$
+Plain-English interpretation: Share of valid observations after cleaning.
+Interview pitfall: Dropping rows without bias review.
 
-### Formula 3: Hit Rate
-$$\mathrm{HitRate}=\frac{\#(sign(\hat r_t)=sign(r_t))}{N}$$
-Plain-English interpretation: Directional correctness frequency.
-Interview pitfall: High hit rate with poor payoff asymmetry.
+### Formula 3: Survivorship Gap
+$$SG=\bar r_{survivors}-\bar r_{full\ universe}$$
+Plain-English interpretation: Return distortion from missing dead assets.
+Interview pitfall: Backtests on survivor-only symbols.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Information Coefficient | Association between signal and future return. | Early alpha hypothesis screening. | Treating a single-period IC as stable edge. |
-| t-Statistic | Effect size scaled by estimation uncertainty. | Assess hypothesis significance. | Ignoring multiple-testing inflation. |
-| Hit Rate | Directional correctness frequency. | Classify forecast usefulness. | High hit rate with poor payoff asymmetry. |
+| Leakage Flag | Temporal-causality violation indicator. | Pipeline data audit. | Using post-event data in training. |
+| Coverage Ratio | Share of valid observations after cleaning. | Track data attrition risk. | Dropping rows without bias review. |
+| Survivorship Gap | Return distortion from missing dead assets. | Universe construction sanity checks. | Backtests on survivor-only symbols. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

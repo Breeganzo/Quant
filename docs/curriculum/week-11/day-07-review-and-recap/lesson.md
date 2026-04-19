@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core III: fixed income, yield curves
 Review and recap is part of real quant work inside finance core iii: fixed income, yield curves, duration, convexity, and credit basics research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe review and recap in plain language before touching formulas.
-2. Technical frame: Build review and recap from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for review and recap and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Present value of discounted cash flows.
+2. Technical frame: Build review and recap from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Bond Price, Modified Duration, Convexity).
+3. Market interpretation: Mark-to-model pricing for plain-vanilla bonds.. Run one compact, reproducible example for review and recap and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Mixing compounding conventions.
 
 ## Practice Problems
 - Explain review and recap in one paragraph without jargon.

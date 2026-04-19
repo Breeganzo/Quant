@@ -24,10 +24,10 @@ This day belongs to the week theme "Interview Prep I: probability, statistics, m
 Markets and finance discussion drills is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe markets and finance discussion drills in plain language before touching formulas.
-2. Technical frame: Build markets and finance discussion drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for markets and finance discussion drills and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Core quantitative interview staple.
+2. Technical frame: Build markets and finance discussion drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Expected Value, z-Score, OLS Beta).
+3. Market interpretation: Fast probability reasoning under pressure.. Run one compact, reproducible example for markets and finance discussion drills and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Forgetting payoff asymmetry.
 
 ## Practice Problems
 - Explain markets and finance discussion drills in one paragraph without jargon.

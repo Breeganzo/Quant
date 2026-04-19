@@ -24,10 +24,10 @@ This day belongs to the week theme "Agentic AI for Quant II: alternative data, N
 Alternative data and when it is useful is part of real quant work inside agentic ai for quant ii: alternative data, nlp, experiment tracking, and robust research delivery research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe alternative data and when it is useful in plain language before touching formulas.
-2. Technical frame: Build alternative data and when it is useful from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for alternative data and when it is useful and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Usable fraction of alternative-data records.
+2. Technical frame: Build alternative data and when it is useful from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Coverage, F1 Score, Run Reproducibility Rate).
+3. Market interpretation: Data source triage.. Run one compact, reproducible example for alternative data and when it is useful and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Using sparse data without coverage diagnostics.
 
 ## Practice Problems
 - Explain alternative data and when it is useful in one paragraph without jargon.
@@ -46,27 +46,27 @@ Alternative data and when it is useful is part of real quant work inside agentic
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Precision
-$$\mathrm{Precision}=\frac{TP}{TP+FP}$$
-Plain-English interpretation: How often flagged items are truly correct.
-Interview pitfall: High precision with very low coverage.
+### Formula 1: Coverage
+$$Coverage=\frac{N_{usable}}{N_{total}}$$
+Plain-English interpretation: Usable fraction of alternative-data records.
+Interview pitfall: Using sparse data without coverage diagnostics.
 
-### Formula 2: Recall
-$$\mathrm{Recall}=\frac{TP}{TP+FN}$$
-Plain-English interpretation: How many true items are captured.
-Interview pitfall: High recall with noisy false positives.
+### Formula 2: F1 Score
+$$F1=2\cdot\frac{Precision\cdot Recall}{Precision+Recall}$$
+Plain-English interpretation: Balanced NLP classification metric.
+Interview pitfall: Optimizing one metric without calibration checks.
 
-### Formula 3: Hallucination Rate
-$$HR=\frac{\#\text{unsupported claims}}{\#\text{total claims}}$$
-Plain-English interpretation: Share of generated statements lacking evidence.
-Interview pitfall: No citation checks in production research notes.
+### Formula 3: Run Reproducibility Rate
+$$RRR=\frac{\#reproducible\ runs}{\#total\ runs}$$
+Plain-English interpretation: Experiment repeatability health metric.
+Interview pitfall: No fixed seeds/data-version tagging.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Precision | How often flagged items are truly correct. | Quality control of extracted insights. | High precision with very low coverage. |
-| Recall | How many true items are captured. | Guardrail calibration for missed risks. | High recall with noisy false positives. |
-| Hallucination Rate | Share of generated statements lacking evidence. | LLM workflow safety monitoring. | No citation checks in production research notes. |
+| Coverage | Usable fraction of alternative-data records. | Data source triage. | Using sparse data without coverage diagnostics. |
+| F1 Score | Balanced NLP classification metric. | Sentiment model evaluation. | Optimizing one metric without calibration checks. |
+| Run Reproducibility Rate | Experiment repeatability health metric. | ML ops governance in research. | No fixed seeds/data-version tagging. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

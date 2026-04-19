@@ -54,37 +54,32 @@ Answer: Plots can reveal trends, outliers, missing values, and changing volatili
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Sample Mean
+$$\bar x=\frac{1}{n}\sum_{i=1}^n x_i$$
+Plain-English interpretation: Average observed value.
+Notation check: Assuming mean is robust to outliers.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Sample Standard Deviation
+$$s=\sqrt{\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar x)^2}$$
+Plain-English interpretation: Observed variability estimate.
+Notation check: Comparing volatility across mismatched windows.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: z-Score
+$$z=\frac{x-\mu}{\sigma}$$
+Plain-English interpretation: Distance from mean in sigma units.
+Notation check: Using unstable rolling moments.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Sample Mean | Average observed value. | Return-level baseline estimate. | Assuming mean is robust to outliers. |
+| Sample Standard Deviation | Observed variability estimate. | Volatility proxy from sample returns. | Comparing volatility across mismatched windows. |
+| z-Score | Distance from mean in sigma units. | Outlier and regime diagnostics. | Using unstable rolling moments. |
 
 ## Real-World Data Application
-- Start with yfinance (SPY, QQQ, TLT, GLD) when internet is available.
-- If available, load a Robinhood-style export CSV and compare to your yfinance pull.
-- Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.
-- Compute log returns, annualized volatility, and Sharpe ratio for each symbol.
-- Write one risk-control takeaway you would use in a real portfolio conversation.
+- Use curriculum/datasets/real_market_prices.csv as reproducible fallback data.
+- Build one table and one chart supporting a decision.
+- Document one limitation and one robustness check.
 
 ## Coding Task
 Create a pandas Series of 20 toy returns and calculate mean, median, standard deviation, min, max, and a histogram.

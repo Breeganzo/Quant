@@ -15,30 +15,34 @@ Model answer: A strong answer defines vectors, matrices, and linear algebra intu
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Log Return formula/workflow from memory and define each symbol.
+Interview question: Write the Portfolio Return formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Log Return exactly, explains each symbol, and states one caveat: Mixing with simple returns without context.
+Model answer: A strong answer includes Portfolio Return exactly, explains each symbol, and states one caveat: Misaligned weight and return ordering.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Compute log returns and summarize annualized return/risk with one caveat.
+Python drill: Compute portfolio return and variance from a return matrix and covariance estimate.
 Suggested Python solution:
 ```python
 from pathlib import Path
+import numpy as np
 import pandas as pd
 
 market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
 prices = market.pivot(index="date", columns="symbol", values="close").dropna()
-ret = prices.pct_change().dropna()
-ann_ret = ret.mean() * 252
-ann_vol = ret.std() * (252 ** 0.5)
-print(pd.DataFrame({"ann_return": ann_ret, "ann_vol": ann_vol}).round(4))
+returns = prices.pct_change().dropna()
+w = np.array([0.4, 0.3, 0.2, 0.1])
+mu = returns.mean().values
+cov = returns.cov().values
+exp_ret = float(w @ mu)
+var = float(w @ cov @ w)
+print({"expected_daily_return": round(exp_ret, 6), "daily_variance": round(var, 8)})
 
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Fast multi-asset return aggregation.. Then it states one realistic failure mode: Misaligned weight and return ordering., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

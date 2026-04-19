@@ -24,10 +24,10 @@ This day belongs to the week theme "ML for Quant II: volatility, EWMA, GARCH int
 Volatility clustering and stylized facts is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe volatility clustering and stylized facts in plain language before touching formulas.
-2. Technical frame: Build volatility clustering and stylized facts from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for volatility clustering and stylized facts and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Within-cluster dispersion minimization.
+2. Technical frame: Build volatility clustering and stylized facts from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: K-Means Objective, Silhouette Score, Distance Metric).
+3. Market interpretation: Group assets by behavior.. Run one compact, reproducible example for volatility clustering and stylized facts and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring scale normalization before clustering.
 
 ## Practice Problems
 - Explain volatility clustering and stylized facts in one paragraph without jargon.
@@ -46,27 +46,27 @@ Volatility clustering and stylized facts is part of real quant work inside ml fo
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Realized Volatility
-$$\sigma_{ann}=\sqrt{252}\cdot\mathrm{Std}(r_t)$$
-Plain-English interpretation: Sample-based annualized risk estimate.
-Interview pitfall: Ignoring clustering and regime changes.
+### Formula 1: K-Means Objective
+$$\min_{C}\sum_{k}\sum_{x_i\in C_k}||x_i-\mu_k||^2$$
+Plain-English interpretation: Within-cluster dispersion minimization.
+Interview pitfall: Ignoring scale normalization before clustering.
 
-### Formula 2: EWMA Volatility
-$$\sigma_t^2=\lambda\sigma_{t-1}^2+(1-\lambda)r_{t-1}^2$$
-Plain-English interpretation: Recency-weighted volatility forecasting.
-Interview pitfall: Decay hyperparameter not validated out-of-sample.
+### Formula 2: Silhouette Score
+$$s_i=\frac{b_i-a_i}{\max(a_i,b_i)}$$
+Plain-English interpretation: Cluster separation/compactness measure.
+Interview pitfall: Using one metric as definitive truth.
 
-### Formula 3: GARCH(1,1)
-$$\sigma_t^2=\omega+\alpha r_{t-1}^2+\beta\sigma_{t-1}^2$$
-Plain-English interpretation: Conditional variance with persistence and shocks.
-Interview pitfall: Assuming model stability across crises.
+### Formula 3: Distance Metric
+$$d(x,y)=\sqrt{\sum_j(x_j-y_j)^2}$$
+Plain-English interpretation: Similarity proxy in feature space.
+Interview pitfall: Choosing metric inconsistent with data geometry.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Realized Volatility | Sample-based annualized risk estimate. | Position sizing and stress planning. | Ignoring clustering and regime changes. |
-| EWMA Volatility | Recency-weighted volatility forecasting. | Adaptive VaR pipelines. | Decay hyperparameter not validated out-of-sample. |
-| GARCH(1,1) | Conditional variance with persistence and shocks. | Risk forecast under volatility clustering. | Assuming model stability across crises. |
+| K-Means Objective | Within-cluster dispersion minimization. | Group assets by behavior. | Ignoring scale normalization before clustering. |
+| Silhouette Score | Cluster separation/compactness measure. | Choose cluster count. | Using one metric as definitive truth. |
+| Distance Metric | Similarity proxy in feature space. | Asset regime grouping. | Choosing metric inconsistent with data geometry. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

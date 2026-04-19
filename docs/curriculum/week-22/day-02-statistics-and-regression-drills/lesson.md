@@ -24,10 +24,10 @@ This day belongs to the week theme "Interview Prep I: probability, statistics, m
 Statistics and regression drills is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe statistics and regression drills in plain language before touching formulas.
-2. Technical frame: Build statistics and regression drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for statistics and regression drills and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Probability-weighted expected outcome.
+2. Technical frame: Build statistics and regression drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Expected Value, z-Score, OLS Beta).
+3. Market interpretation: Fast interview math checks.. Run one compact, reproducible example for statistics and regression drills and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring payoff asymmetry.
 
 ## Practice Problems
 - Explain statistics and regression drills in one paragraph without jargon.
@@ -48,25 +48,25 @@ Statistics and regression drills is part of real quant work inside interview pre
 ## Interview-Ready Formula Sheet
 ### Formula 1: Expected Value
 $$\mathbb{E}[X]=\sum_i p_i x_i$$
-Plain-English interpretation: Core quantitative interview staple.
-Interview pitfall: Forgetting payoff asymmetry.
+Plain-English interpretation: Probability-weighted expected outcome.
+Interview pitfall: Ignoring payoff asymmetry.
 
 ### Formula 2: z-Score
 $$z=\frac{x-\mu}{\sigma}$$
-Plain-English interpretation: Standardized distance from mean.
-Interview pitfall: Using unstable sigma estimates.
+Plain-English interpretation: Standardized deviation metric.
+Interview pitfall: Using unstable sigma baseline.
 
 ### Formula 3: OLS Beta
 $$\hat\beta=(X^TX)^{-1}X^Ty$$
-Plain-English interpretation: Closed-form linear estimate.
-Interview pitfall: Ignoring multicollinearity and conditioning.
+Plain-English interpretation: Closed-form linear coefficient estimate.
+Interview pitfall: Forgetting conditioning and collinearity risk.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Expected Value | Core quantitative interview staple. | Fast probability reasoning under pressure. | Forgetting payoff asymmetry. |
-| z-Score | Standardized distance from mean. | Outlier checks in data screens. | Using unstable sigma estimates. |
-| OLS Beta | Closed-form linear estimate. | Regression interview derivation drills. | Ignoring multicollinearity and conditioning. |
+| Expected Value | Probability-weighted expected outcome. | Fast interview math checks. | Ignoring payoff asymmetry. |
+| z-Score | Standardized deviation metric. | Data sanity and outlier drills. | Using unstable sigma baseline. |
+| OLS Beta | Closed-form linear coefficient estimate. | Regression interview derivations. | Forgetting conditioning and collinearity risk. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

@@ -15,37 +15,33 @@ Model answer: A strong answer defines pca and variance decomposition, gives one 
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Logistic Link formula/workflow from memory and define each symbol.
+Interview question: Write the Covariance Matrix formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Logistic Link exactly, explains each symbol, and states one caveat: Treating probability as certainty near threshold.
+Model answer: A strong answer includes Covariance Matrix exactly, explains each symbol, and states one caveat: Failing to center features first.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Train a simple classification baseline and report precision/recall/F1.
+Python drill: Run PCA on standardized returns and report explained variance ratios.
 Suggested Python solution:
 ```python
 from pathlib import Path
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report
-from sklearn.model_selection import train_test_split
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
 
 market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
 prices = market.pivot(index="date", columns="symbol", values="close").dropna()
-returns = prices.pct_change().dropna()
-X = returns.shift(1).dropna()
-y = (returns["SPY"].loc[X.index] > 0).astype(int)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, shuffle=False)
-model = LogisticRegression(max_iter=500)
-model.fit(X_train, y_train)
-pred = model.predict(X_test)
-print(classification_report(y_test, pred, digits=3))
+ret = prices.pct_change().dropna()
+X = StandardScaler().fit_transform(ret)
+pca = PCA(n_components=min(3, X.shape[1]))
+pca.fit(X)
+print("Explained variance ratio:", [round(float(x), 4) for x in pca.explained_variance_ratio_])
 
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Basis for PCA decomposition.. Then it states one realistic failure mode: Failing to center features first., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

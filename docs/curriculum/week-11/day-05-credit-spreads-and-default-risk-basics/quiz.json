@@ -14,8 +14,8 @@
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write the Bond Price formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Bond Price exactly, explains each symbol, and states one caveat: Mixing compounding conventions.",
+      "question": "Write the Credit Spread formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes Credit Spread exactly, explains each symbol, and states one caveat: Ignoring liquidity premium component.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Price a simple fixed-coupon bond and compute duration approximation.",
       "python_solution": "import numpy as np\n\nface = 100\ncoupon = 0.04\ny = 0.035\nn = 5\ncashflows = np.array([face * coupon] * (n - 1) + [face * (1 + coupon)])\ntimes = np.arange(1, n + 1)\ndiscount = (1 + y) ** times\nprice = (cashflows / discount).sum()\nmacaulay = ((times * cashflows / discount).sum()) / price\nmod_duration = macaulay / (1 + y)\nprint(\"Price:\", round(float(price), 4))\nprint(\"Modified duration:\", round(float(mod_duration), 4))\n"
@@ -24,7 +24,7 @@
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Credit-risk pricing comparison.. Then it states one realistic failure mode: Ignoring liquidity premium component., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

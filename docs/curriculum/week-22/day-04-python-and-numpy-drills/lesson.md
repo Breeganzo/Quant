@@ -24,10 +24,10 @@ This day belongs to the week theme "Interview Prep I: probability, statistics, m
 Python and NumPy drills is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe python and numpy drills in plain language before touching formulas.
-2. Technical frame: Build python and numpy drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for python and numpy drills and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Batch return transform over arrays.
+2. Technical frame: Build python and numpy drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Vectorized Return, Dot Product, Broadcasting Rule).
+3. Market interpretation: Replace loop-heavy feature extraction.. Run one compact, reproducible example for python and numpy drills and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Off-by-one index mismatches.
 
 ## Practice Problems
 - Explain python and numpy drills in one paragraph without jargon.
@@ -46,27 +46,27 @@ Python and NumPy drills is part of real quant work inside interview prep i: prob
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Expected Value
-$$\mathbb{E}[X]=\sum_i p_i x_i$$
-Plain-English interpretation: Core quantitative interview staple.
-Interview pitfall: Forgetting payoff asymmetry.
+### Formula 1: Vectorized Return
+$$r=\frac{P_{1:}}{P_{:-1}}-1$$
+Plain-English interpretation: Batch return transform over arrays.
+Interview pitfall: Off-by-one index mismatches.
 
-### Formula 2: z-Score
-$$z=\frac{x-\mu}{\sigma}$$
-Plain-English interpretation: Standardized distance from mean.
-Interview pitfall: Using unstable sigma estimates.
+### Formula 2: Dot Product
+$$w\cdot r=\sum_i w_i r_i$$
+Plain-English interpretation: Linear weighted aggregation.
+Interview pitfall: Shape mismatch between vectors.
 
-### Formula 3: OLS Beta
-$$\hat\beta=(X^TX)^{-1}X^Ty$$
-Plain-English interpretation: Closed-form linear estimate.
-Interview pitfall: Ignoring multicollinearity and conditioning.
+### Formula 3: Broadcasting Rule
+$$(m\times n)\odot(n,)\rightarrow(m\times n)$$
+Plain-English interpretation: Dimension-safe elementwise scaling.
+Interview pitfall: Silent broadcast along wrong axis.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Expected Value | Core quantitative interview staple. | Fast probability reasoning under pressure. | Forgetting payoff asymmetry. |
-| z-Score | Standardized distance from mean. | Outlier checks in data screens. | Using unstable sigma estimates. |
-| OLS Beta | Closed-form linear estimate. | Regression interview derivation drills. | Ignoring multicollinearity and conditioning. |
+| Vectorized Return | Batch return transform over arrays. | Replace loop-heavy feature extraction. | Off-by-one index mismatches. |
+| Dot Product | Linear weighted aggregation. | Portfolio and factor combination. | Shape mismatch between vectors. |
+| Broadcasting Rule | Dimension-safe elementwise scaling. | Scale features by column constants. | Silent broadcast along wrong axis. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

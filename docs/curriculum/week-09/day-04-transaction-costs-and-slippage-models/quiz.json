@@ -14,8 +14,8 @@
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write the Mid Price formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Mid Price exactly, explains each symbol, and states one caveat: Comparing fills to stale mid prices.",
+      "question": "Write the Net Strategy Return formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes Net Strategy Return exactly, explains each symbol, and states one caveat: Publishing gross-only performance.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Estimate turnover and a simple cost proxy from a toy rebalance schedule.",
       "python_solution": "import pandas as pd\n\nweights = pd.DataFrame(\n    {\n        \"SPY\": [0.40, 0.35, 0.30],\n        \"QQQ\": [0.30, 0.35, 0.35],\n        \"TLT\": [0.20, 0.20, 0.25],\n        \"GLD\": [0.10, 0.10, 0.10],\n    },\n    index=[\"t0\", \"t1\", \"t2\"],\n)\nturnover = 0.5 * weights.diff().abs().sum(axis=1).fillna(0.0)\ncost_bps = 8\nest_cost = turnover * (cost_bps / 10000)\nprint(pd.DataFrame({\"turnover\": turnover, \"estimated_cost\": est_cost}))\n"
@@ -24,7 +24,7 @@
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Realistic backtest reporting.. Then it states one realistic failure mode: Publishing gross-only performance., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

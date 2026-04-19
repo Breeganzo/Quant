@@ -61,30 +61,27 @@ Answer: Because labeled indices and columns make transformations safer and easie
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Missingness Rate
+$$MR=\frac{\#\text{missing cells}}{\#\text{total cells}}$$
+Plain-English interpretation: Fraction of absent observations.
+Notation check: Forward-filling without documenting bias.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Join Cardinality
+$$Rows_{out}=Rows_A\bowtie Rows_B$$
+Plain-English interpretation: Row-growth behavior after merge.
+Notation check: Assuming one-to-one keys without checks.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: Coverage by Symbol
+$$Coverage_i=\frac{\#dates_i}{\#dates_{max}}$$
+Plain-English interpretation: Relative data history length per asset.
+Notation check: Comparing assets with unequal history.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Missingness Rate | Fraction of absent observations. | Data quality monitoring before modeling. | Forward-filling without documenting bias. |
+| Join Cardinality | Row-growth behavior after merge. | Prevent duplicate explosion in joins. | Assuming one-to-one keys without checks. |
+| Coverage by Symbol | Relative data history length per asset. | Universe eligibility filtering. | Comparing assets with unequal history. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.

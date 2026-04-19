@@ -41,30 +41,27 @@ Answer: You can rebuild it cleanly from memory and explain why each step exists.
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Simple Return
+$$r_t = \frac{P_t}{P_{t-1}} - 1$$
+Plain-English interpretation: Relative one-period price change used for comparable analytics.
+Notation check: Mixing simple and log returns in one pipeline.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Covariance
+$$\mathrm{Cov}(X,Y)=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar x)(y_i-\bar y)$$
+Plain-English interpretation: Joint variation of two series around their means.
+Notation check: Ignoring missing-value alignment before computing covariance.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: Correlation
+$$\rho_{XY}=\frac{\mathrm{Cov}(X,Y)}{\sigma_X\sigma_Y}$$
+Plain-English interpretation: Scale-free co-movement measure in [-1, 1].
+Notation check: Interpreting correlation as causation.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Simple Return | Relative one-period price change used for comparable analytics. | Build aligned return tables before joins and cleaning. | Mixing simple and log returns in one pipeline. |
+| Covariance | Joint variation of two series around their means. | Diversification diagnostics before portfolio construction. | Ignoring missing-value alignment before computing covariance. |
+| Correlation | Scale-free co-movement measure in [-1, 1]. | Screen assets for complementary behavior. | Interpreting correlation as causation. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.

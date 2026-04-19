@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core III: fixed income, yield curves
 Duration and interest rate sensitivity is part of real quant work inside finance core iii: fixed income, yield curves, duration, convexity, and credit basics research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe duration and interest rate sensitivity in plain language before touching formulas.
-2. Technical frame: Build duration and interest rate sensitivity from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for duration and interest rate sensitivity and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Cash-flow weighted timing measure.
+2. Technical frame: Build duration and interest rate sensitivity from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Macaulay Duration, Modified Duration, DV01).
+3. Market interpretation: Interest-rate sensitivity baseline.. Run one compact, reproducible example for duration and interest rate sensitivity and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Using duration for large non-linear shocks.
 
 ## Practice Problems
 - Explain duration and interest rate sensitivity in one paragraph without jargon.
@@ -46,27 +46,27 @@ Duration and interest rate sensitivity is part of real quant work inside finance
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Bond Price
-$$P=\sum_{t=1}^{T}\frac{CF_t}{(1+y)^t}$$
-Plain-English interpretation: Present value of discounted cash flows.
-Interview pitfall: Mixing compounding conventions.
+### Formula 1: Macaulay Duration
+$$D_{mac}=\frac{1}{P}\sum_t t\cdot\frac{CF_t}{(1+y)^t}$$
+Plain-English interpretation: Cash-flow weighted timing measure.
+Interview pitfall: Using duration for large non-linear shocks.
 
 ### Formula 2: Modified Duration
 $$D_{mod}=\frac{D_{mac}}{1+y}$$
-Plain-English interpretation: Approximate percentage price sensitivity to yield.
-Interview pitfall: Using duration alone for large yield moves.
+Plain-English interpretation: Approximate %-price change per yield unit.
+Interview pitfall: Ignoring convexity correction.
 
-### Formula 3: Convexity
-$$C=\frac{1}{P}\sum_{t=1}^{T}\frac{CF_t\,t(t+1)}{(1+y)^{t+2}}$$
-Plain-English interpretation: Second-order sensitivity adjustment to yield moves.
-Interview pitfall: Ignoring convexity in stressed scenarios.
+### Formula 3: DV01
+$$DV01=D_{mod}\cdot P\cdot 10^{-4}$$
+Plain-English interpretation: Dollar value change for 1bp move.
+Interview pitfall: Comparing DV01 without position scale context.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Bond Price | Present value of discounted cash flows. | Mark-to-model pricing for plain-vanilla bonds. | Mixing compounding conventions. |
-| Modified Duration | Approximate percentage price sensitivity to yield. | Rate-shock risk estimation. | Using duration alone for large yield moves. |
-| Convexity | Second-order sensitivity adjustment to yield moves. | Improve rate-shock approximation accuracy. | Ignoring convexity in stressed scenarios. |
+| Macaulay Duration | Cash-flow weighted timing measure. | Interest-rate sensitivity baseline. | Using duration for large non-linear shocks. |
+| Modified Duration | Approximate %-price change per yield unit. | DV01 and hedge sizing. | Ignoring convexity correction. |
+| DV01 | Dollar value change for 1bp move. | Rate-risk limit reporting. | Comparing DV01 without position scale context. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

@@ -24,10 +24,10 @@ This day belongs to the week theme "Time Series I: stationarity, AR/MA/ARIMA int
 What makes time series different from tabular data? is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe what makes time series different from tabular data? in plain language before touching formulas.
-2. Technical frame: Build what makes time series different from tabular data? from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for what makes time series different from tabular data? and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Current value depends on one lag plus noise.
+2. Technical frame: Build what makes time series different from tabular data? from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: AR(1), EWMA Variance, RMSE).
+3. Market interpretation: Baseline dependence and mean-reversion diagnostics.. Run one compact, reproducible example for what makes time series different from tabular data? and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring non-stationarity before fitting AR models.
 
 ## Practice Problems
 - Explain what makes time series different from tabular data? in one paragraph without jargon.

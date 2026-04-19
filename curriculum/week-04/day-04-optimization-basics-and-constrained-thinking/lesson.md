@@ -57,30 +57,27 @@ Answer: It is the score you are trying to make as good as possible.
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Constrained Objective
+$$\min_w f(w)\ 	ext{s.t.}\ Aw=b,\ w\ge0$$
+Plain-English interpretation: Target with feasibility constraints.
+Notation check: Ignoring feasibility checks before solving.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Lagrangian
+$$\mathcal{L}(w,\lambda)=f(w)+\lambda^T(Aw-b)$$
+Plain-English interpretation: Constraint-aware objective transform.
+Notation check: Not verifying KKT conditions post-solve.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: KKT Stationarity
+$$\nabla_w\mathcal{L}=0$$
+Plain-English interpretation: Necessary optimality condition.
+Notation check: Stopping at numerical output without diagnostics.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Constrained Objective | Target with feasibility constraints. | Portfolio optimization setup. | Ignoring feasibility checks before solving. |
+| Lagrangian | Constraint-aware objective transform. | Solve equality-constrained problems. | Not verifying KKT conditions post-solve. |
+| KKT Stationarity | Necessary optimality condition. | Audit optimization solution quality. | Stopping at numerical output without diagnostics. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.

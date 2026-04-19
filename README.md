@@ -93,7 +93,7 @@ npm run dev
 
 Open this URL in your browser:
 
-- `http://localhost:5173/Quant_Practise/`
+- `http://localhost:5173/Quant/`
 
 Notes:
 
@@ -108,7 +108,7 @@ cd site
 npm run preview
 ```
 
-Then open the URL printed by Vite (typically also under `/Quant_Practise/`).
+Then open the URL printed by Vite (typically also under `/Quant/`).
 
 ## Progress Persistence
 
@@ -138,7 +138,7 @@ cp .env.example .env.local
 2. Fill in:
 - `VITE_SUPABASE_URL`
 - `VITE_SUPABASE_ANON_KEY`
-- `VITE_SITE_BASE` (default: `/Quant_Practise/`)
+- `VITE_SITE_BASE` (default: `/Quant/`)
 
 3. Run dev server:
 
@@ -181,7 +181,7 @@ Behavior:
 ### Build Output
 
 - Production build output is written to `docs/`
-- Site base path is configured via `VITE_SITE_BASE` environment variable (defaults to `/Quant_Practise/`)
+- Site base path is configured via `VITE_SITE_BASE` environment variable (defaults to `/Quant/`)
 
 ### Automated Deployment with GitHub Actions
 

@@ -1393,6 +1393,10 @@ def week1_day_markdown(day: dict, week_number: int, index: int) -> str:
 
 
 def generic_day_markdown(week_number: int, day: dict) -> str:
+    formula_entries = formula_entries_for_week(week_number, day["topic"])
+    formula_primary = formula_entries[0]
+    formula_names = ", ".join(entry["name"] for entry in formula_entries)
+
     continuity_lines = ["## Continuity Map"]
     if day.get("previous_topic"):
         continuity_lines.append(f"- Previous day focus: {day['previous_topic']}")
@@ -1433,10 +1437,10 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
             day["why"],
             "",
             "## Concept Build (Intuition -> Technical -> Market Use)",
-            f"1. Intuition: describe {day['topic'].lower()} in plain language before touching formulas.",
-            f"2. Technical frame: {day['core_explanation']}",
-            f"3. Market interpretation: {day['worked_example']}",
-            "4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.",
+            f"1. Intuition: {formula_primary['meaning']}",
+            f"2. Technical frame: {day['core_explanation']} (key formulas/workflows: {formula_names}).",
+            f"3. Market interpretation: {formula_primary['use_case']}. {day['worked_example']}",
+            f"4. Failure mode check: {formula_primary['pitfall']}",
             "",
             "## Practice Problems",
         ]
@@ -1444,7 +1448,6 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
     for problem in day["practice_problems"]:
         lines.append(f"- {problem}")
 
-    formula_entries = formula_entries_for_week(week_number)
     lab_lines = real_world_lab_lines_for_week(week_number, day["topic"])
 
     lines.extend(
@@ -1562,7 +1565,7 @@ def generic_day_markdown(week_number: int, day: dict) -> str:
 def daily_quiz_items(week_number: int, day_index: int, day: dict) -> list[dict[str, str]]:
     topic = day["topic"]
     topic_lower = topic.lower()
-    formulas = formula_entries_for_week(week_number)
+    formulas = formula_entries_for_week(week_number, topic)
     formula_primary = formulas[0]
     drill = quiz_python_drill_for_week(week_number, topic)
 
@@ -1594,8 +1597,8 @@ def daily_quiz_items(week_number: int, day_index: int, day: dict) -> list[dict[s
             "difficulty": "intermediate",
             "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
             "answer": (
-                "A strong answer ties the concept to one production decision, defines a measurable success metric, "
-                "and names one concrete failure mode plus detection check."
+                f"A strong answer uses one decision workflow such as: {formula_primary['use_case']}. "
+                f"Then it states one realistic failure mode: {formula_primary['pitfall']}, and one detection check."
             ),
             "explanation": "This evaluates transfer from theory to practical quant workflow.",
         },
@@ -1742,7 +1745,7 @@ def generic_day_notebook_spec(week_number: int, day: dict) -> dict:
 
 
 def six_hour_notebook_extension(week_number: int, day: dict) -> list:
-    formula_entries = formula_entries_for_week(week_number)
+    formula_entries = formula_entries_for_week(week_number, day["topic"])
     drill = quiz_python_drill_for_week(week_number, day["topic"])
     lab_lines = real_world_lab_lines_for_week(week_number, day["topic"])
 

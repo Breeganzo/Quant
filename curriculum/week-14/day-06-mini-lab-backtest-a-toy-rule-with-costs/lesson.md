@@ -24,10 +24,10 @@ This day belongs to the week theme "Quant Workflow II: backtesting architecture,
 Mini lab: backtest a toy rule with costs is part of real quant work inside quant workflow ii: backtesting architecture, position sizing, and performance attribution research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe mini lab: backtest a toy rule with costs in plain language before touching formulas.
-2. Technical frame: Build mini lab: backtest a toy rule with costs from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for mini lab: backtest a toy rule with costs and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Net return after implementation frictions.
+2. Technical frame: Build mini lab: backtest a toy rule with costs from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Strategy Return with Costs, Max Drawdown, Turnover).
+3. Market interpretation: Realistic backtest evaluation.. Run one compact, reproducible example for mini lab: backtest a toy rule with costs and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring costs in reported performance.
 
 ## Practice Problems
 - Explain mini lab: backtest a toy rule with costs in one paragraph without jargon.

@@ -24,10 +24,10 @@ This day belongs to the week theme "ML for Quant II: volatility, EWMA, GARCH int
 Rolling volatility and EWMA is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe rolling volatility and ewma in plain language before touching formulas.
-2. Technical frame: Build rolling volatility and ewma from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for rolling volatility and ewma and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Sample annualized risk estimate.
+2. Technical frame: Build rolling volatility and ewma from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Realized Volatility, EWMA Volatility, GARCH(1,1)).
+3. Market interpretation: Position sizing.. Run one compact, reproducible example for rolling volatility and ewma and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Assuming homoskedasticity.
 
 ## Practice Problems
 - Explain rolling volatility and ewma in one paragraph without jargon.
@@ -47,26 +47,26 @@ Rolling volatility and EWMA is part of real quant work inside ml for quant ii: v
 
 ## Interview-Ready Formula Sheet
 ### Formula 1: Realized Volatility
-$$\sigma_{ann}=\sqrt{252}\cdot\mathrm{Std}(r_t)$$
-Plain-English interpretation: Sample-based annualized risk estimate.
-Interview pitfall: Ignoring clustering and regime changes.
+$$\sigma_{ann}=\sqrt{252}\cdot Std(r_t)$$
+Plain-English interpretation: Sample annualized risk estimate.
+Interview pitfall: Assuming homoskedasticity.
 
 ### Formula 2: EWMA Volatility
 $$\sigma_t^2=\lambda\sigma_{t-1}^2+(1-\lambda)r_{t-1}^2$$
-Plain-English interpretation: Recency-weighted volatility forecasting.
-Interview pitfall: Decay hyperparameter not validated out-of-sample.
+Plain-English interpretation: Recency-weighted risk forecast.
+Interview pitfall: Unvalidated lambda choice.
 
 ### Formula 3: GARCH(1,1)
 $$\sigma_t^2=\omega+\alpha r_{t-1}^2+\beta\sigma_{t-1}^2$$
-Plain-English interpretation: Conditional variance with persistence and shocks.
-Interview pitfall: Assuming model stability across crises.
+Plain-English interpretation: Shock and persistence volatility model.
+Interview pitfall: Ignoring structural breaks.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Realized Volatility | Sample-based annualized risk estimate. | Position sizing and stress planning. | Ignoring clustering and regime changes. |
-| EWMA Volatility | Recency-weighted volatility forecasting. | Adaptive VaR pipelines. | Decay hyperparameter not validated out-of-sample. |
-| GARCH(1,1) | Conditional variance with persistence and shocks. | Risk forecast under volatility clustering. | Assuming model stability across crises. |
+| Realized Volatility | Sample annualized risk estimate. | Position sizing. | Assuming homoskedasticity. |
+| EWMA Volatility | Recency-weighted risk forecast. | Adaptive risk control. | Unvalidated lambda choice. |
+| GARCH(1,1) | Shock and persistence volatility model. | Scenario-aware risk forecasting. | Ignoring structural breaks. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

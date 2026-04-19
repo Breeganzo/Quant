@@ -24,10 +24,10 @@ This day belongs to the week theme "ML for Quant I: trees, ensembles, nonlinear 
 Decision trees and rule-based splits is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe decision trees and rule-based splits in plain language before touching formulas.
-2. Technical frame: Build decision trees and rule-based splits from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for decision trees and rule-based splits and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Class-mix impurity at node.
+2. Technical frame: Build decision trees and rule-based splits from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Gini Impurity, Information Gain, Tree Depth).
+3. Market interpretation: Split quality scoring.. Run one compact, reproducible example for decision trees and rule-based splits and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Overfitting deep trees without pruning.
 
 ## Practice Problems
 - Explain decision trees and rule-based splits in one paragraph without jargon.
@@ -46,27 +46,27 @@ Decision trees and rule-based splits is part of real quant work inside ml for qu
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Logistic Link
-$$p(y=1\mid x)=\frac{1}{1+e^{-z}},\ z=w^Tx+b$$
-Plain-English interpretation: Maps linear score to class probability.
-Interview pitfall: Treating probability as certainty near threshold.
+### Formula 1: Gini Impurity
+$$G=1-\sum_k p_k^2$$
+Plain-English interpretation: Class-mix impurity at node.
+Interview pitfall: Overfitting deep trees without pruning.
 
-### Formula 2: Cross-Entropy Loss
-$$L=-\frac{1}{n}\sum_{i=1}^n [y_i\log p_i + (1-y_i)\log(1-p_i)]$$
-Plain-English interpretation: Penalizes confident wrong classifications strongly.
-Interview pitfall: Evaluating only loss without class-balance diagnostics.
+### Formula 2: Information Gain
+$$IG=H(parent)-\sum_j\frac{n_j}{n}H(child_j)$$
+Plain-English interpretation: Entropy reduction from split.
+Interview pitfall: Bias toward high-cardinality features.
 
-### Formula 3: F1 Score
-$$F1=2\cdot\frac{\mathrm{Precision}\cdot\mathrm{Recall}}{\mathrm{Precision}+\mathrm{Recall}}$$
-Plain-English interpretation: Balances false-positive and false-negative tradeoff.
-Interview pitfall: Using accuracy alone on imbalanced labels.
+### Formula 3: Tree Depth
+$$Depth=\max(path\ length)$$
+Plain-English interpretation: Model complexity measure.
+Interview pitfall: Letting depth grow without validation.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Logistic Link | Maps linear score to class probability. | Probability of positive next-period return event. | Treating probability as certainty near threshold. |
-| Cross-Entropy Loss | Penalizes confident wrong classifications strongly. | Train classification baselines for risk events. | Evaluating only loss without class-balance diagnostics. |
-| F1 Score | Balances false-positive and false-negative tradeoff. | Model selection under class imbalance. | Using accuracy alone on imbalanced labels. |
+| Gini Impurity | Class-mix impurity at node. | Split quality scoring. | Overfitting deep trees without pruning. |
+| Information Gain | Entropy reduction from split. | Feature split selection. | Bias toward high-cardinality features. |
+| Tree Depth | Model complexity measure. | Control variance and interpretability. | Letting depth grow without validation. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

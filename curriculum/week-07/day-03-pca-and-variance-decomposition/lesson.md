@@ -24,10 +24,10 @@ This day belongs to the week theme "Unsupervised Learning: clustering, PCA, late
 PCA and variance decomposition is part of real quant work inside unsupervised learning: clustering, pca, latent structure, and factor intuition research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe pca and variance decomposition in plain language before touching formulas.
-2. Technical frame: Build pca and variance decomposition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for pca and variance decomposition and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Feature co-movement matrix.
+2. Technical frame: Build pca and variance decomposition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Covariance Matrix, Eigen Decomposition, Explained Variance Ratio).
+3. Market interpretation: Basis for PCA decomposition.. Run one compact, reproducible example for pca and variance decomposition and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Failing to center features first.
 
 ## Practice Problems
 - Explain pca and variance decomposition in one paragraph without jargon.
@@ -46,27 +46,27 @@ PCA and variance decomposition is part of real quant work inside unsupervised le
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Logistic Link
-$$p(y=1\mid x)=\frac{1}{1+e^{-z}},\ z=w^Tx+b$$
-Plain-English interpretation: Maps linear score to class probability.
-Interview pitfall: Treating probability as certainty near threshold.
+### Formula 1: Covariance Matrix
+$$\Sigma=\frac{1}{n-1}X^TX$$
+Plain-English interpretation: Feature co-movement matrix.
+Interview pitfall: Failing to center features first.
 
-### Formula 2: Cross-Entropy Loss
-$$L=-\frac{1}{n}\sum_{i=1}^n [y_i\log p_i + (1-y_i)\log(1-p_i)]$$
-Plain-English interpretation: Penalizes confident wrong classifications strongly.
-Interview pitfall: Evaluating only loss without class-balance diagnostics.
+### Formula 2: Eigen Decomposition
+$$\Sigma v_j=\lambda_j v_j$$
+Plain-English interpretation: Principal direction/variance pair.
+Interview pitfall: Interpreting sign of eigenvectors as absolute truth.
 
-### Formula 3: F1 Score
-$$F1=2\cdot\frac{\mathrm{Precision}\cdot\mathrm{Recall}}{\mathrm{Precision}+\mathrm{Recall}}$$
-Plain-English interpretation: Balances false-positive and false-negative tradeoff.
-Interview pitfall: Using accuracy alone on imbalanced labels.
+### Formula 3: Explained Variance Ratio
+$$EVR_j=\frac{\lambda_j}{\sum_k\lambda_k}$$
+Plain-English interpretation: Share of variance per component.
+Interview pitfall: Keeping components without out-of-sample validation.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Logistic Link | Maps linear score to class probability. | Probability of positive next-period return event. | Treating probability as certainty near threshold. |
-| Cross-Entropy Loss | Penalizes confident wrong classifications strongly. | Train classification baselines for risk events. | Evaluating only loss without class-balance diagnostics. |
-| F1 Score | Balances false-positive and false-negative tradeoff. | Model selection under class imbalance. | Using accuracy alone on imbalanced labels. |
+| Covariance Matrix | Feature co-movement matrix. | Basis for PCA decomposition. | Failing to center features first. |
+| Eigen Decomposition | Principal direction/variance pair. | Identify dominant latent factors. | Interpreting sign of eigenvectors as absolute truth. |
+| Explained Variance Ratio | Share of variance per component. | Dimension reduction selection. | Keeping components without out-of-sample validation. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

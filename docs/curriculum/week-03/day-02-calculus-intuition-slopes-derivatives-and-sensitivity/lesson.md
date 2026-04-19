@@ -57,30 +57,27 @@ Answer: It means the function is locally increasing as the input rises.
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: First Derivative
+$$f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$$
+Plain-English interpretation: Instantaneous slope/sensitivity.
+Notation check: Treating finite difference as exact.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Second Derivative
+$$f''(x)=\frac{d^2 f}{dx^2}$$
+Plain-English interpretation: Curvature and local convexity.
+Notation check: Ignoring nonlinearity in stressed moves.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: Elasticity
+$$\epsilon=\frac{d y}{d x}\cdot\frac{x}{y}$$
+Plain-English interpretation: Percent sensitivity ratio.
+Notation check: Using at points where y\approx0.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| First Derivative | Instantaneous slope/sensitivity. | Rate sensitivity intuition for pricing. | Treating finite difference as exact. |
+| Second Derivative | Curvature and local convexity. | Risk asymmetry discussions. | Ignoring nonlinearity in stressed moves. |
+| Elasticity | Percent sensitivity ratio. | Compare sensitivities across scales. | Using at points where y\approx0. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.

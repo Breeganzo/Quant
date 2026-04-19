@@ -17,7 +17,7 @@ Why this matters: This tests communication quality, not just memorized definitio
 ### Q2 (intermediate)
 Interview question: Write the Spread formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Spread exactly, explains each symbol, and states one caveat: Skipping hedge-ratio estimation stability checks.
+Model answer: A strong answer includes Spread exactly, explains each symbol, and states one caveat: Using stale hedge ratio.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Construct a simple signal and evaluate one risk-aware performance diagnostic.
@@ -41,7 +41,7 @@ print({"ann_return": round(float(ann_ret), 4), "ann_vol": round(float(ann_vol), 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Pairs and residual strategy setup.. Then it states one realistic failure mode: Using stale hedge ratio., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

@@ -24,10 +24,10 @@ This day belongs to the week theme "Admissions Track I: target programs, scholar
 Review and evidence gap check is part of real quant work inside admissions track i: target programs, scholarships, sop structure, and recommendation strategy research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe review and evidence gap check in plain language before touching formulas.
-2. Technical frame: Build review and evidence gap check from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for review and evidence gap check and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Weighted ranking of degree options.
+2. Technical frame: Build review and evidence gap check from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Program Fit Score, Scholarship Ratio, Narrative Evidence Coverage).
+3. Market interpretation: Prioritize application targets.. Run one compact, reproducible example for review and evidence gap check and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring downside constraints like debt burden.
 
 ## Practice Problems
 - Explain review and evidence gap check in one paragraph without jargon.

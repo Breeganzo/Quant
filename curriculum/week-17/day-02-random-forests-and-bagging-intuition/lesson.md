@@ -24,10 +24,10 @@ This day belongs to the week theme "ML for Quant I: trees, ensembles, nonlinear 
 Random forests and bagging intuition is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe random forests and bagging intuition in plain language before touching formulas.
-2. Technical frame: Build random forests and bagging intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for random forests and bagging intuition and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Average over bootstrapped learners.
+2. Technical frame: Build random forests and bagging intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Bagging Predictor, Out-of-Bag Error, Feature Importance (MDI)).
+3. Market interpretation: Variance reduction.. Run one compact, reproducible example for random forests and bagging intuition and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Assuming bias also vanishes automatically.
 
 ## Practice Problems
 - Explain random forests and bagging intuition in one paragraph without jargon.
@@ -46,27 +46,27 @@ Random forests and bagging intuition is part of real quant work inside ml for qu
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Logistic Link
-$$p(y=1\mid x)=\frac{1}{1+e^{-z}},\ z=w^Tx+b$$
-Plain-English interpretation: Maps linear score to class probability.
-Interview pitfall: Treating probability as certainty near threshold.
+### Formula 1: Bagging Predictor
+$$\hat y=\frac{1}{B}\sum_{b=1}^{B}\hat y^{(b)}$$
+Plain-English interpretation: Average over bootstrapped learners.
+Interview pitfall: Assuming bias also vanishes automatically.
 
-### Formula 2: Cross-Entropy Loss
-$$L=-\frac{1}{n}\sum_{i=1}^n [y_i\log p_i + (1-y_i)\log(1-p_i)]$$
-Plain-English interpretation: Penalizes confident wrong classifications strongly.
-Interview pitfall: Evaluating only loss without class-balance diagnostics.
+### Formula 2: Out-of-Bag Error
+$$OOB=\frac{1}{n}\sum_i\mathbb{1}(\hat y^{OOB}_i\ne y_i)$$
+Plain-English interpretation: Internal validation estimate.
+Interview pitfall: Replacing proper temporal validation with OOB.
 
-### Formula 3: F1 Score
-$$F1=2\cdot\frac{\mathrm{Precision}\cdot\mathrm{Recall}}{\mathrm{Precision}+\mathrm{Recall}}$$
-Plain-English interpretation: Balances false-positive and false-negative tradeoff.
-Interview pitfall: Using accuracy alone on imbalanced labels.
+### Formula 3: Feature Importance (MDI)
+$$FI_j=\sum_{splits\ on\ j}\Delta impurity$$
+Plain-English interpretation: Aggregate split-gain attribution.
+Interview pitfall: Treating importance as causal effect.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Logistic Link | Maps linear score to class probability. | Probability of positive next-period return event. | Treating probability as certainty near threshold. |
-| Cross-Entropy Loss | Penalizes confident wrong classifications strongly. | Train classification baselines for risk events. | Evaluating only loss without class-balance diagnostics. |
-| F1 Score | Balances false-positive and false-negative tradeoff. | Model selection under class imbalance. | Using accuracy alone on imbalanced labels. |
+| Bagging Predictor | Average over bootstrapped learners. | Variance reduction. | Assuming bias also vanishes automatically. |
+| Out-of-Bag Error | Internal validation estimate. | Quick generalization monitoring. | Replacing proper temporal validation with OOB. |
+| Feature Importance (MDI) | Aggregate split-gain attribution. | Model interpretability screening. | Treating importance as causal effect. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

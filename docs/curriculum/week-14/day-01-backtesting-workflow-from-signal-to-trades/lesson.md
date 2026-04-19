@@ -24,10 +24,10 @@ This day belongs to the week theme "Quant Workflow II: backtesting architecture,
 Backtesting workflow from signal to trades is part of real quant work inside quant workflow ii: backtesting architecture, position sizing, and performance attribution research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe backtesting workflow from signal to trades in plain language before touching formulas.
-2. Technical frame: Build backtesting workflow from signal to trades from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for backtesting workflow from signal to trades and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Post-cost strategy return.
+2. Technical frame: Build backtesting workflow from signal to trades from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Net Strategy Return, Turnover, Max Drawdown).
+3. Market interpretation: Realistic backtest reporting.. Run one compact, reproducible example for backtesting workflow from signal to trades and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Publishing gross-only performance.
 
 ## Practice Problems
 - Explain backtesting workflow from signal to trades in one paragraph without jargon.
@@ -46,27 +46,27 @@ Backtesting workflow from signal to trades is part of real quant work inside qua
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Strategy Return with Costs
-$$r_t^{strat}=w_{t-1}^Tr_t-c_t$$
-Plain-English interpretation: Net return after implementation frictions.
-Interview pitfall: Ignoring costs in reported performance.
+### Formula 1: Net Strategy Return
+$$r_t^{net}=w_{t-1}^Tr_t-c_t$$
+Plain-English interpretation: Post-cost strategy return.
+Interview pitfall: Publishing gross-only performance.
 
-### Formula 2: Max Drawdown
+### Formula 2: Turnover
+$$TO_t=\frac{1}{2}\sum_i|w_{i,t}-w_{i,t-1}|$$
+Plain-English interpretation: Trade intensity proxy.
+Interview pitfall: Ignoring turnover in deployment sizing.
+
+### Formula 3: Max Drawdown
 $$MDD=\min_t\left(\frac{W_t}{\max_{s\le t}W_s}-1\right)$$
-Plain-English interpretation: Worst peak-to-trough capital decline.
-Interview pitfall: Reporting Sharpe without drawdown context.
-
-### Formula 3: Turnover
-$$\mathrm{TO}_t=\frac{1}{2}\sum_i|w_{i,t}-w_{i,t-1}|$$
-Plain-English interpretation: Trading intensity proxy for cost pressure.
-Interview pitfall: High-turnover alpha that vanishes net of costs.
+Plain-English interpretation: Worst peak-to-trough decline.
+Interview pitfall: Relying on Sharpe without path risk.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Strategy Return with Costs | Net return after implementation frictions. | Realistic backtest evaluation. | Ignoring costs in reported performance. |
-| Max Drawdown | Worst peak-to-trough capital decline. | Risk limit calibration. | Reporting Sharpe without drawdown context. |
-| Turnover | Trading intensity proxy for cost pressure. | Capacity and slippage monitoring. | High-turnover alpha that vanishes net of costs. |
+| Net Strategy Return | Post-cost strategy return. | Realistic backtest reporting. | Publishing gross-only performance. |
+| Turnover | Trade intensity proxy. | Cost and capacity constraints. | Ignoring turnover in deployment sizing. |
+| Max Drawdown | Worst peak-to-trough decline. | Risk narrative and kill-switch design. | Relying on Sharpe without path risk. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

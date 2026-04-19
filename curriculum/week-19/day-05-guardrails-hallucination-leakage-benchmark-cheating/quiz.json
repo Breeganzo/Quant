@@ -15,7 +15,7 @@
       "id": "q2",
       "difficulty": "intermediate",
       "question": "Write the Precision formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Precision exactly, explains each symbol, and states one caveat: High precision with very low coverage.",
+      "answer": "A strong answer includes Precision exactly, explains each symbol, and states one caveat: High precision with tiny coverage.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Score a small AI-generated memo for citation support and hallucination risk.",
       "python_solution": "import pandas as pd\n\nmemo = pd.DataFrame(\n    [\n        {\"claim\": \"Signal improved Sharpe by 20%\", \"supported\": 1},\n        {\"claim\": \"Model generalizes across all regimes\", \"supported\": 0},\n        {\"claim\": \"Turnover fell after constraints\", \"supported\": 1},\n    ]\n)\nhallucination_rate = 1 - memo[\"supported\"].mean()\nprint(memo)\nprint(\"Hallucination rate:\", round(float(hallucination_rate), 3))\n"
@@ -24,7 +24,7 @@
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Quality control for AI outputs.. Then it states one realistic failure mode: High precision with tiny coverage., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

@@ -40,30 +40,27 @@ Answer: You can restate the idea in plain English, do a simple calculation, and 
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Expected Value
+$$\mathbb{E}[X]=\sum_i p_i x_i$$
+Plain-English interpretation: Probability-weighted average outcome across scenarios.
+Notation check: Ignoring tail risk while focusing only on mean payoff.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Bayes Rule
+$$P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}$$
+Plain-English interpretation: Posterior update from prior belief and evidence likelihood.
+Notation check: Neglecting base rates.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: OLS Slope
+$$\hat\beta=\frac{\sum (x_i-\bar x)(y_i-\bar y)}{\sum (x_i-\bar x)^2}$$
+Plain-English interpretation: Best linear sensitivity estimate under squared-error loss.
+Notation check: Assuming stability without checking residual behavior.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Expected Value | Probability-weighted average outcome across scenarios. | Evaluate expected payoff of a repeated decision rule. | Ignoring tail risk while focusing only on mean payoff. |
+| Bayes Rule | Posterior update from prior belief and evidence likelihood. | Revise signal confidence after new market evidence. | Neglecting base rates. |
+| OLS Slope | Best linear sensitivity estimate under squared-error loss. | Estimate directional relation between factor and return. | Assuming stability without checking residual behavior. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.

@@ -39,6 +39,17 @@ function withVSCodeWeb(path) {
   return `https://vscode.dev/github/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${normalized}`;
 }
 
+function withGitHubBlob(path) {
+  if (!path) return "";
+  const normalized = path.replace(/^\/+/, "");
+  return `https://github.com/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${normalized}`;
+}
+
+function withAdditionalReading(weekNumber) {
+  const readingPath = withBase("references/additional-reading.md");
+  return `${readingPath}#week-${String(weekNumber).padStart(2, "0")}`;
+}
+
 function loadProgress() {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
@@ -750,6 +761,9 @@ function WeekPage({ roadmap, progress, setProgress }) {
                 <a className="secondary-button" href={withVSCodeWeb(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
                   Open in VS Code
                 </a>
+                <a className="secondary-button" href={withGitHubBlob(week.weekly_project_notebook_path)} target="_blank" rel="noreferrer">
+                  Open in GitHub
+                </a>
               </>
             ) : null}
           </div>
@@ -948,7 +962,7 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
           <div className="sub-panel">
             <h4>Daily Study Actions</h4>
             <p className="panel-copy">
-              Use these four actions in order: read the lesson, review the theory PDF, answer the quiz, then complete the daily notebook.
+              Use these actions in order: read the lesson, review the theory PDF, answer the quiz, work through the notebook, then review additional references.
             </p>
             <div className="daily-action-grid">
               {detailedDayAvailable ? (
@@ -974,6 +988,15 @@ function DayPage({ roadmap, progress, setProgress, remoteSync }) {
                   <Link className="secondary-button" to={withNotebookViewer(day.notebook_path)}>
                     Open Daily Notebook
                   </Link>
+                  <a className="secondary-button" href={withVSCodeWeb(day.notebook_path)} target="_blank" rel="noreferrer">
+                    Open Notebook in VS Code
+                  </a>
+                  <a className="secondary-button" href={withGitHubBlob(day.notebook_path)} target="_blank" rel="noreferrer">
+                    Open Notebook in GitHub
+                  </a>
+                  <a className="secondary-button" href={withAdditionalReading(week.week)} target="_blank" rel="noreferrer">
+                    Additional Reading
+                  </a>
                 </>
               ) : (
                 <span className="secondary-button disabled-button">Detailed daily lesson coming next phase</span>
@@ -1060,6 +1083,9 @@ function NotebookPage({ roadmap }) {
             </a>
             <a className="secondary-button" href={withVSCodeWeb(decodedPath)} target="_blank" rel="noreferrer">
               Open in VS Code
+            </a>
+            <a className="secondary-button" href={withGitHubBlob(decodedPath)} target="_blank" rel="noreferrer">
+              Open in GitHub
             </a>
             <Link className="secondary-button" to="/">
               Dashboard

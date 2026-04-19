@@ -15,9 +15,9 @@ Model answer: A strong answer defines reset your toolkit: numbers, variables, re
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Log Return formula/workflow from memory and define each symbol.
+Interview question: Write the Simple Return formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Log Return exactly, explains each symbol, and states one caveat: Mixing with simple returns without context.
+Model answer: A strong answer includes Simple Return exactly, explains each symbol, and states one caveat: Comparing assets without handling frequency or missing days.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Compute log returns and summarize annualized return/risk with one caveat.
@@ -38,7 +38,7 @@ print(pd.DataFrame({"ann_return": ann_ret, "ann_vol": ann_vol}).round(4))
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Baseline daily performance attribution.. Then it states one realistic failure mode: Comparing assets without handling frequency or missing days., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

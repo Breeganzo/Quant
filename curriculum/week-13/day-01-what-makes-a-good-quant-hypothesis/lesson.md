@@ -24,10 +24,10 @@ This day belongs to the week theme "Quant Workflow I: idea generation, research 
 What makes a good quant hypothesis? is part of real quant work inside quant workflow i: idea generation, research logs, labels, and data hygiene research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe what makes a good quant hypothesis? in plain language before touching formulas.
-2. Technical frame: Build what makes a good quant hypothesis? from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for what makes a good quant hypothesis? and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Signal-next-return association.
+2. Technical frame: Build what makes a good quant hypothesis? from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Information Coefficient, Hit Rate, Label Horizon).
+3. Market interpretation: Early hypothesis validation.. Run one compact, reproducible example for what makes a good quant hypothesis? and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring IC stability over time.
 
 ## Practice Problems
 - Explain what makes a good quant hypothesis? in one paragraph without jargon.
@@ -47,26 +47,26 @@ What makes a good quant hypothesis? is part of real quant work inside quant work
 
 ## Interview-Ready Formula Sheet
 ### Formula 1: Information Coefficient
-$$IC=\mathrm{Corr}(signal_t, r_{t+1})$$
-Plain-English interpretation: Association between signal and future return.
-Interview pitfall: Treating a single-period IC as stable edge.
+$$IC=Corr(signal_t,r_{t+1})$$
+Plain-English interpretation: Signal-next-return association.
+Interview pitfall: Ignoring IC stability over time.
 
-### Formula 2: t-Statistic
-$$t=\frac{\hat\alpha}{SE(\hat\alpha)}$$
-Plain-English interpretation: Effect size scaled by estimation uncertainty.
-Interview pitfall: Ignoring multiple-testing inflation.
+### Formula 2: Hit Rate
+$$HR=\frac{\#(sign(\hat r)=sign(r))}{N}$$
+Plain-English interpretation: Directional correctness ratio.
+Interview pitfall: High hit-rate with poor payoff asymmetry.
 
-### Formula 3: Hit Rate
-$$\mathrm{HitRate}=\frac{\#(sign(\hat r_t)=sign(r_t))}{N}$$
-Plain-English interpretation: Directional correctness frequency.
-Interview pitfall: High hit rate with poor payoff asymmetry.
+### Formula 3: Label Horizon
+$$y_t=sign(P_{t+h}-P_t)$$
+Plain-English interpretation: Future target definition at horizon h.
+Interview pitfall: Choosing h without turnover/cost implications.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Information Coefficient | Association between signal and future return. | Early alpha hypothesis screening. | Treating a single-period IC as stable edge. |
-| t-Statistic | Effect size scaled by estimation uncertainty. | Assess hypothesis significance. | Ignoring multiple-testing inflation. |
-| Hit Rate | Directional correctness frequency. | Classify forecast usefulness. | High hit rate with poor payoff asymmetry. |
+| Information Coefficient | Signal-next-return association. | Early hypothesis validation. | Ignoring IC stability over time. |
+| Hit Rate | Directional correctness ratio. | Quick directional predictive quality check. | High hit-rate with poor payoff asymmetry. |
+| Label Horizon | Future target definition at horizon h. | Align prediction objective with holding period. | Choosing h without turnover/cost implications. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

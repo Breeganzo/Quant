@@ -15,37 +15,33 @@ Model answer: A strong answer defines capstone presentation day, gives one concr
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Net Strategy Return formula/workflow from memory and define each symbol.
+Interview question: Write the Evidence Coverage formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Net Strategy Return exactly, explains each symbol, and states one caveat: Reporting only gross backtest outcomes.
+Model answer: A strong answer includes Evidence Coverage exactly, explains each symbol, and states one caveat: Narrative-heavy artifacts without proof.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Train a simple out-of-sample baseline and report RMSE with one risk caveat.
+Python drill: Create a claim-evidence table for a portfolio story and compute evidence coverage.
 Suggested Python solution:
 ```python
-from pathlib import Path
 import pandas as pd
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error
 
-market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
-prices = market.pivot(index="date", columns="symbol", values="close").dropna()
-ret = prices.pct_change().dropna()
-X = ret.shift(1).dropna()
-y = ret["SPY"].loc[X.index]
-split = int(len(X) * 0.7)
-model = LinearRegression()
-model.fit(X.iloc[:split], y.iloc[:split])
-pred = model.predict(X.iloc[split:])
-rmse = mean_squared_error(y.iloc[split:], pred) ** 0.5
-print("Out-of-sample RMSE:", round(float(rmse), 6))
+story = pd.DataFrame(
+    [
+        {"claim": "Signal improves net return", "evidence": "backtest table", "supported": 1},
+        {"claim": "Robust in all regimes", "evidence": "none", "supported": 0},
+        {"claim": "Risk is controlled", "evidence": "drawdown chart", "supported": 1},
+    ]
+)
+coverage = float(story["supported"].mean())
+print(story)
+print("evidence_coverage:", round(coverage, 3))
 
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Portfolio and presentation quality.. Then it states one realistic failure mode: Narrative-heavy artifacts without proof., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

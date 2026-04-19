@@ -15,9 +15,9 @@ Model answer: A strong answer defines numpy arrays, vectorization, and speed int
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Simple Return formula/workflow from memory and define each symbol.
+Interview question: Write the Vectorized Return formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Simple Return exactly, explains each symbol, and states one caveat: Mixing simple and log returns in one pipeline.
+Model answer: A strong answer includes Vectorized Return exactly, explains each symbol, and states one caveat: Off-by-one index mismatches.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Load market data and compute a correlation/covariance diagnostic tied to today's topic.
@@ -38,7 +38,7 @@ print(returns.cov().round(6))
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Replace loop-heavy feature extraction.. Then it states one realistic failure mode: Off-by-one index mismatches., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

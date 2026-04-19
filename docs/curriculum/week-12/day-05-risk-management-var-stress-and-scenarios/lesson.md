@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core IV: derivatives, options, Greek
 Risk management: VaR, stress, and scenarios is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe risk management: var, stress, and scenarios in plain language before touching formulas.
-2. Technical frame: Build risk management: var, stress, and scenarios from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for risk management: var, stress, and scenarios and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Loss quantile under distribution assumptions.
+2. Technical frame: Build risk management: var, stress, and scenarios from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Parametric VaR, Expected Shortfall, Stress Loss).
+3. Market interpretation: Daily risk-limit reporting.. Run one compact, reproducible example for risk management: var, stress, and scenarios and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Assuming normal tails in crisis regimes.
 
 ## Practice Problems
 - Explain risk management: var, stress, and scenarios in one paragraph without jargon.
@@ -46,27 +46,27 @@ Risk management: VaR, stress, and scenarios is part of real quant work inside fi
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Call Payoff
-$$\mathrm{Payoff}_{call}=\max(S_T-K,0)$$
-Plain-English interpretation: Upside above strike with limited downside (premium aside).
-Interview pitfall: Confusing payoff with profit (ignoring premium).
+### Formula 1: Parametric VaR
+$$VaR_{\alpha}=\mu+z_{\alpha}\sigma$$
+Plain-English interpretation: Loss quantile under distribution assumptions.
+Interview pitfall: Assuming normal tails in crisis regimes.
 
-### Formula 2: Put Payoff
-$$\mathrm{Payoff}_{put}=\max(K-S_T,0)$$
-Plain-English interpretation: Downside protection structure at maturity.
-Interview pitfall: Ignoring time decay before maturity.
+### Formula 2: Expected Shortfall
+$$ES_{\alpha}=\mathbb{E}[L\mid L>VaR_{\alpha}]$$
+Plain-English interpretation: Average loss beyond VaR threshold.
+Interview pitfall: Relying on short history for ES.
 
-### Formula 3: Delta
-$$\Delta=\frac{\partial V}{\partial S}$$
-Plain-English interpretation: First-order option value sensitivity to underlying.
-Interview pitfall: Assuming delta is constant across moves and time.
+### Formula 3: Stress Loss
+$$L_{stress}=w^T r_{scenario}$$
+Plain-English interpretation: Portfolio loss under explicit scenario vector.
+Interview pitfall: Using stress vectors not tied to plausible regimes.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Call Payoff | Upside above strike with limited downside (premium aside). | Directional convex exposure design. | Confusing payoff with profit (ignoring premium). |
-| Put Payoff | Downside protection structure at maturity. | Hedging drawdown risk. | Ignoring time decay before maturity. |
-| Delta | First-order option value sensitivity to underlying. | Hedge ratio sizing. | Assuming delta is constant across moves and time. |
+| Parametric VaR | Loss quantile under distribution assumptions. | Daily risk-limit reporting. | Assuming normal tails in crisis regimes. |
+| Expected Shortfall | Average loss beyond VaR threshold. | Tail-risk governance. | Relying on short history for ES. |
+| Stress Loss | Portfolio loss under explicit scenario vector. | Scenario-based resilience checks. | Using stress vectors not tied to plausible regimes. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

@@ -44,7 +44,7 @@ print(pd.DataFrame({"turnover": turnover, "estimated_cost": est_cost}))
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Execution quality benchmarking.. Then it states one realistic failure mode: Comparing fills to stale mid prices., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

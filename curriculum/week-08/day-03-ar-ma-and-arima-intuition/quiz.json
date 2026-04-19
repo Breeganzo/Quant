@@ -14,17 +14,17 @@
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write the AR(1) formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes AR(1) exactly, explains each symbol, and states one caveat: Ignoring non-stationarity before fitting AR models.",
+      "question": "Write the ARIMA Model formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes ARIMA Model exactly, explains each symbol, and states one caveat: Choosing orders without diagnostics.",
       "explanation": "This checks mathematical fluency and operational reliability.",
-      "python_task": "Compute lag autocorrelation and rolling mean/volatility diagnostics.",
-      "python_solution": "from pathlib import Path\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nspy = market[market[\"symbol\"] == \"SPY\"].sort_values(\"date\").set_index(\"date\")[\"close\"]\nret = spy.pct_change().dropna()\ndiag = pd.DataFrame(\n    {\n        \"ret\": ret,\n        \"lag1\": ret.shift(1),\n        \"roll_mean_20\": ret.rolling(20).mean(),\n        \"roll_vol_20\": ret.rolling(20).std(),\n    }\n).dropna()\nprint(\"Lag-1 autocorr:\", round(diag[\"ret\"].corr(diag[\"lag1\"]), 4))\nprint(diag.tail())\n"
+      "python_task": "Build a lag-based forecast baseline and compute RMSE on the last 30 observations.",
+      "python_solution": "from pathlib import Path\nimport numpy as np\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nspy = market[market[\"symbol\"] == \"SPY\"].sort_values(\"date\").set_index(\"date\")[\"close\"]\nr = spy.pct_change().dropna()\nlag1 = r.shift(1).dropna()\ny = r.loc[lag1.index]\nsplit = max(30, int(len(y) * 0.8))\npred = lag1.iloc[split:]\ntruth = y.iloc[split:]\nrmse = float(np.sqrt(((pred - truth) ** 2).mean()))\nprint({\"rmse\": round(rmse, 6), \"test_points\": len(truth)})\n"
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Baseline univariate forecasting.. Then it states one realistic failure mode: Choosing orders without diagnostics., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

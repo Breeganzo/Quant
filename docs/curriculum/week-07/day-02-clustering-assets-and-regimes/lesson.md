@@ -24,10 +24,10 @@ This day belongs to the week theme "Unsupervised Learning: clustering, PCA, late
 Clustering assets and regimes is part of real quant work inside unsupervised learning: clustering, pca, latent structure, and factor intuition research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe clustering assets and regimes in plain language before touching formulas.
-2. Technical frame: Build clustering assets and regimes from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for clustering assets and regimes and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Within-cluster dispersion minimization.
+2. Technical frame: Build clustering assets and regimes from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: K-Means Objective, Silhouette Score, Distance Metric).
+3. Market interpretation: Group assets by behavior.. Run one compact, reproducible example for clustering assets and regimes and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring scale normalization before clustering.
 
 ## Practice Problems
 - Explain clustering assets and regimes in one paragraph without jargon.
@@ -46,27 +46,27 @@ Clustering assets and regimes is part of real quant work inside unsupervised lea
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Logistic Link
-$$p(y=1\mid x)=\frac{1}{1+e^{-z}},\ z=w^Tx+b$$
-Plain-English interpretation: Maps linear score to class probability.
-Interview pitfall: Treating probability as certainty near threshold.
+### Formula 1: K-Means Objective
+$$\min_{C}\sum_{k}\sum_{x_i\in C_k}||x_i-\mu_k||^2$$
+Plain-English interpretation: Within-cluster dispersion minimization.
+Interview pitfall: Ignoring scale normalization before clustering.
 
-### Formula 2: Cross-Entropy Loss
-$$L=-\frac{1}{n}\sum_{i=1}^n [y_i\log p_i + (1-y_i)\log(1-p_i)]$$
-Plain-English interpretation: Penalizes confident wrong classifications strongly.
-Interview pitfall: Evaluating only loss without class-balance diagnostics.
+### Formula 2: Silhouette Score
+$$s_i=\frac{b_i-a_i}{\max(a_i,b_i)}$$
+Plain-English interpretation: Cluster separation/compactness measure.
+Interview pitfall: Using one metric as definitive truth.
 
-### Formula 3: F1 Score
-$$F1=2\cdot\frac{\mathrm{Precision}\cdot\mathrm{Recall}}{\mathrm{Precision}+\mathrm{Recall}}$$
-Plain-English interpretation: Balances false-positive and false-negative tradeoff.
-Interview pitfall: Using accuracy alone on imbalanced labels.
+### Formula 3: Distance Metric
+$$d(x,y)=\sqrt{\sum_j(x_j-y_j)^2}$$
+Plain-English interpretation: Similarity proxy in feature space.
+Interview pitfall: Choosing metric inconsistent with data geometry.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Logistic Link | Maps linear score to class probability. | Probability of positive next-period return event. | Treating probability as certainty near threshold. |
-| Cross-Entropy Loss | Penalizes confident wrong classifications strongly. | Train classification baselines for risk events. | Evaluating only loss without class-balance diagnostics. |
-| F1 Score | Balances false-positive and false-negative tradeoff. | Model selection under class imbalance. | Using accuracy alone on imbalanced labels. |
+| K-Means Objective | Within-cluster dispersion minimization. | Group assets by behavior. | Ignoring scale normalization before clustering. |
+| Silhouette Score | Cluster separation/compactness measure. | Choose cluster count. | Using one metric as definitive truth. |
+| Distance Metric | Similarity proxy in feature space. | Asset regime grouping. | Choosing metric inconsistent with data geometry. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

@@ -3,6 +3,11 @@ from __future__ import annotations
 import textwrap
 from typing import Any
 
+from quant_learning.topic_specific_content import (
+    formula_entries_for_week,
+    real_world_lab_lines_for_week,
+)
+
 
 def _md(text: str) -> str:
     return textwrap.dedent(text).strip() + "\n"
@@ -758,6 +763,8 @@ def week1_interview_pack() -> list[dict[str, str]]:
 
 def render_week1_day_markdown(day: dict[str, Any]) -> str:
     detail = WEEK1_DAY_DETAILS[day["day"]]
+    formula_entries = formula_entries_for_week(1, day["topic"])
+    lab_lines = real_world_lab_lines_for_week(1, day["topic"])
     lines: list[str] = [
         f"# Week 01 {day['day']}: {day['topic']}",
         "",
@@ -806,45 +813,36 @@ def render_week1_day_markdown(day: dict[str, Any]) -> str:
             "3. Give one practical quant use case and one failure mode.",
             "",
             "## Interview-Ready Formula Sheet",
-            "### Formula 1: Log Return",
-            "$$\\ell_t = \\ln\\left(\\frac{P_t}{P_{t-1}}\\right)$$",
-            "Plain-English interpretation: Additive return representation over time.",
-            "Notation check: Define each symbol and unit before coding.",
-            "",
-            "### Formula 2: Annualized Volatility",
-            "$$\\sigma_{ann} = \\sqrt{252} \\cdot \\mathrm{Std}(r_t)$$",
-            "Plain-English interpretation: Scales daily return uncertainty to annual horizon.",
-            "Notation check: Confirm return frequency matches annualization factor.",
-            "",
-            "### Formula 3: Sharpe Ratio",
-            "$$S = \\frac{R_{ann} - R_f}{\\sigma_{ann}}$$",
-            "Plain-English interpretation: Excess return earned per unit of risk.",
-            "Notation check: Use consistent annualized units for return, risk-free rate, and volatility.",
-            "",
-            "### Symbol Definitions",
-            "| Symbol | Meaning | Units | Example |",
-            "| --- | --- | --- | --- |",
-            "| $P_t$ | Price at time $t$ | USD/share | 110.50 |",
-            "| $r_t$ | Simple return | decimal | 0.012 |",
-            "| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |",
-            "| $\\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |",
-            "| $R_f$ | Risk-free rate | annualized decimal | 0.03 |",
-            "| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |",
-            "",
         ]
     )
 
+    for idx, entry in enumerate(formula_entries, start=1):
+        lines.extend(
+            [
+                f"### Formula {idx}: {entry['name']}",
+                f"$${entry['equation']}$$",
+                f"Plain-English interpretation: {entry['meaning']}",
+                f"Notation check: {entry['pitfall']}",
+                "",
+            ]
+        )
+
     lines.extend(
         [
-            "## Real-World Data Application",
-            "- Start with yfinance (SPY, QQQ, TLT, GLD) when internet is available.",
-            "- If available, load a Robinhood-style export CSV and compare to your yfinance pull.",
-            "- Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.",
-            "- Compute log returns, annualized volatility, and Sharpe ratio for each symbol.",
-            "- Write one risk-control takeaway you would use in a real portfolio conversation.",
-            "",
+            "## Formula Organization Table",
+            "| Formula/Workflow | Meaning | Finance Use Case | Common Misread |",
+            "| --- | --- | --- | --- |",
         ]
     )
+    for entry in formula_entries:
+        lines.append(
+            f"| {entry['name']} | {entry['meaning']} | {entry['use_case']} | {entry['pitfall']} |"
+        )
+
+    lines.extend(["", "## Real-World Data Application"])
+    for item in lab_lines:
+        lines.append(f"- {item}")
+    lines.append("")
 
     lines.extend(["## Coding Task", day["coding_task"], "", "## Daily Interview Drill"])
     for qa in detail["interview_drill"]:

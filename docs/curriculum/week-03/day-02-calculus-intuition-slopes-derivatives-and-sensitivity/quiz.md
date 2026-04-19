@@ -15,9 +15,9 @@ Model answer: A strong answer defines calculus intuition: slopes, derivatives, a
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Expected Value formula/workflow from memory and define each symbol.
+Interview question: Write the First Derivative formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Expected Value exactly, explains each symbol, and states one caveat: Ignoring tail risk while focusing only on mean payoff.
+Model answer: A strong answer includes First Derivative exactly, explains each symbol, and states one caveat: Treating finite difference as exact.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Load market data and compute a correlation/covariance diagnostic tied to today's topic.
@@ -38,7 +38,7 @@ print(returns.cov().round(6))
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Rate sensitivity intuition for pricing.. Then it states one realistic failure mode: Treating finite difference as exact., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

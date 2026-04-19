@@ -14,8 +14,8 @@
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write the Realized Volatility formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Realized Volatility exactly, explains each symbol, and states one caveat: Ignoring clustering and regime changes.",
+      "question": "Write the Parametric VaR formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes Parametric VaR exactly, explains each symbol, and states one caveat: Assuming normal tails in crisis regimes.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Compare rolling volatility and EWMA volatility estimates.",
       "python_solution": "from pathlib import Path\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nspy = market[market[\"symbol\"] == \"SPY\"].sort_values(\"date\").set_index(\"date\")[\"close\"]\nret = spy.pct_change().dropna()\nroll = ret.rolling(20).std()\newma = ret.pow(2).ewm(alpha=0.06, adjust=False).mean().pow(0.5)\nout = pd.DataFrame({\"roll20\": roll, \"ewma\": ewma}).dropna()\nprint(out.tail())\n"
@@ -24,7 +24,7 @@
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Daily risk-limit reporting.. Then it states one realistic failure mode: Assuming normal tails in crisis regimes., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

@@ -54,37 +54,32 @@ Answer: Because frequent trading causes costs to accumulate and can easily overw
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Bid-Ask Spread
+$$\mathrm{Spread}=Ask-Bid$$
+Plain-English interpretation: Execution friction at top of book.
+Notation check: Ignoring spread impact in high-turnover rules.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Turnover
+$$\mathrm{TO}_t=\frac{1}{2}\sum_i|w_{i,t}-w_{i,t-1}|$$
+Plain-English interpretation: Portfolio trading intensity.
+Notation check: Reporting gross alpha without turnover context.
 
 ### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+$$S=\frac{R_{ann}-R_f}{\sigma_{ann}}$$
+Plain-English interpretation: Excess return per volatility unit.
+Notation check: Comparing Sharpe without drawdown context.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Bid-Ask Spread | Execution friction at top of book. | Liquidity-aware strategy design. | Ignoring spread impact in high-turnover rules. |
+| Turnover | Portfolio trading intensity. | Capacity and cost budgeting. | Reporting gross alpha without turnover context. |
+| Sharpe Ratio | Excess return per volatility unit. | Risk-adjusted cross-asset comparison. | Comparing Sharpe without drawdown context. |
 
 ## Real-World Data Application
-- Start with yfinance (SPY, QQQ, TLT, GLD) when internet is available.
-- If available, load a Robinhood-style export CSV and compare to your yfinance pull.
-- Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.
-- Compute log returns, annualized volatility, and Sharpe ratio for each symbol.
-- Write one risk-control takeaway you would use in a real portfolio conversation.
+- Use curriculum/datasets/real_market_prices.csv as reproducible fallback data.
+- Build one table and one chart supporting a decision.
+- Document one limitation and one robustness check.
 
 ## Coding Task
 Build a markdown table in a notebook comparing 5 asset classes, their return drivers, and their main risks.

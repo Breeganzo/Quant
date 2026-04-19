@@ -24,10 +24,10 @@ This day belongs to the week theme "Agentic AI for Quant I: research automation,
 Guardrails: hallucination, leakage, benchmark cheating is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe guardrails: hallucination, leakage, benchmark cheating in plain language before touching formulas.
-2. Technical frame: Build guardrails: hallucination, leakage, benchmark cheating from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for guardrails: hallucination, leakage, benchmark cheating and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Correctness of generated claims.
+2. Technical frame: Build guardrails: hallucination, leakage, benchmark cheating from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Precision, Recall, Hallucination Rate).
+3. Market interpretation: Quality control for AI outputs.. Run one compact, reproducible example for guardrails: hallucination, leakage, benchmark cheating and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: High precision with tiny coverage.
 
 ## Practice Problems
 - Explain guardrails: hallucination, leakage, benchmark cheating in one paragraph without jargon.
@@ -47,26 +47,26 @@ Guardrails: hallucination, leakage, benchmark cheating is part of real quant wor
 
 ## Interview-Ready Formula Sheet
 ### Formula 1: Precision
-$$\mathrm{Precision}=\frac{TP}{TP+FP}$$
-Plain-English interpretation: How often flagged items are truly correct.
-Interview pitfall: High precision with very low coverage.
+$$Precision=\frac{TP}{TP+FP}$$
+Plain-English interpretation: Correctness of generated claims.
+Interview pitfall: High precision with tiny coverage.
 
 ### Formula 2: Recall
-$$\mathrm{Recall}=\frac{TP}{TP+FN}$$
-Plain-English interpretation: How many true items are captured.
-Interview pitfall: High recall with noisy false positives.
+$$Recall=\frac{TP}{TP+FN}$$
+Plain-English interpretation: Coverage of relevant claims.
+Interview pitfall: High recall with high hallucination.
 
 ### Formula 3: Hallucination Rate
-$$HR=\frac{\#\text{unsupported claims}}{\#\text{total claims}}$$
-Plain-English interpretation: Share of generated statements lacking evidence.
-Interview pitfall: No citation checks in production research notes.
+$$HR=\frac{\#unsupported\ claims}{\#total\ claims}$$
+Plain-English interpretation: Unsupported-statement share.
+Interview pitfall: No citation-verification pipeline.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Precision | How often flagged items are truly correct. | Quality control of extracted insights. | High precision with very low coverage. |
-| Recall | How many true items are captured. | Guardrail calibration for missed risks. | High recall with noisy false positives. |
-| Hallucination Rate | Share of generated statements lacking evidence. | LLM workflow safety monitoring. | No citation checks in production research notes. |
+| Precision | Correctness of generated claims. | Quality control for AI outputs. | High precision with tiny coverage. |
+| Recall | Coverage of relevant claims. | Avoid missed critical evidence. | High recall with high hallucination. |
+| Hallucination Rate | Unsupported-statement share. | Governance of AI-assisted research. | No citation-verification pipeline. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

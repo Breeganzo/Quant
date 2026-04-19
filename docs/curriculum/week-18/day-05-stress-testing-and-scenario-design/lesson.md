@@ -24,10 +24,10 @@ This day belongs to the week theme "ML for Quant II: volatility, EWMA, GARCH int
 Stress testing and scenario design is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe stress testing and scenario design in plain language before touching formulas.
-2. Technical frame: Build stress testing and scenario design from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for stress testing and scenario design and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Loss quantile under distribution assumptions.
+2. Technical frame: Build stress testing and scenario design from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Parametric VaR, Expected Shortfall, Stress Loss).
+3. Market interpretation: Daily risk-limit reporting.. Run one compact, reproducible example for stress testing and scenario design and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Assuming normal tails in crisis regimes.
 
 ## Practice Problems
 - Explain stress testing and scenario design in one paragraph without jargon.
@@ -46,27 +46,27 @@ Stress testing and scenario design is part of real quant work inside ml for quan
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Realized Volatility
-$$\sigma_{ann}=\sqrt{252}\cdot\mathrm{Std}(r_t)$$
-Plain-English interpretation: Sample-based annualized risk estimate.
-Interview pitfall: Ignoring clustering and regime changes.
+### Formula 1: Parametric VaR
+$$VaR_{\alpha}=\mu+z_{\alpha}\sigma$$
+Plain-English interpretation: Loss quantile under distribution assumptions.
+Interview pitfall: Assuming normal tails in crisis regimes.
 
-### Formula 2: EWMA Volatility
-$$\sigma_t^2=\lambda\sigma_{t-1}^2+(1-\lambda)r_{t-1}^2$$
-Plain-English interpretation: Recency-weighted volatility forecasting.
-Interview pitfall: Decay hyperparameter not validated out-of-sample.
+### Formula 2: Expected Shortfall
+$$ES_{\alpha}=\mathbb{E}[L\mid L>VaR_{\alpha}]$$
+Plain-English interpretation: Average loss beyond VaR threshold.
+Interview pitfall: Relying on short history for ES.
 
-### Formula 3: GARCH(1,1)
-$$\sigma_t^2=\omega+\alpha r_{t-1}^2+\beta\sigma_{t-1}^2$$
-Plain-English interpretation: Conditional variance with persistence and shocks.
-Interview pitfall: Assuming model stability across crises.
+### Formula 3: Stress Loss
+$$L_{stress}=w^T r_{scenario}$$
+Plain-English interpretation: Portfolio loss under explicit scenario vector.
+Interview pitfall: Using stress vectors not tied to plausible regimes.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Realized Volatility | Sample-based annualized risk estimate. | Position sizing and stress planning. | Ignoring clustering and regime changes. |
-| EWMA Volatility | Recency-weighted volatility forecasting. | Adaptive VaR pipelines. | Decay hyperparameter not validated out-of-sample. |
-| GARCH(1,1) | Conditional variance with persistence and shocks. | Risk forecast under volatility clustering. | Assuming model stability across crises. |
+| Parametric VaR | Loss quantile under distribution assumptions. | Daily risk-limit reporting. | Assuming normal tails in crisis regimes. |
+| Expected Shortfall | Average loss beyond VaR threshold. | Tail-risk governance. | Relying on short history for ES. |
+| Stress Loss | Portfolio loss under explicit scenario vector. | Scenario-based resilience checks. | Using stress vectors not tied to plausible regimes. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

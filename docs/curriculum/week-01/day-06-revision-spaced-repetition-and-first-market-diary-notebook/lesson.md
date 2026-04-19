@@ -51,36 +51,31 @@ Answer: Because pulling an idea from memory reveals whether it is actually learn
 
 ## Interview-Ready Formula Sheet
 ### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+$$\ell_t=\ln\left(\frac{P_t}{P_{t-1}}\right)$$
+Plain-English interpretation: Additive return representation across time.
+Notation check: Mixing with simple returns without context.
 
 ### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+$$\sigma_{ann}=\sqrt{252}\cdot\mathrm{Std}(r_t)$$
+Plain-English interpretation: Daily uncertainty scaled to annual horizon.
+Notation check: Mismatched frequency assumptions.
 
 ### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+$$S=\frac{R_{ann}-R_f}{\sigma_{ann}}$$
+Plain-English interpretation: Excess return per risk unit.
+Notation check: Ignoring regime instability.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Log Return | Additive return representation across time. | Multi-period analytics. | Mixing with simple returns without context. |
+| Annualized Volatility | Daily uncertainty scaled to annual horizon. | Risk budgeting. | Mismatched frequency assumptions. |
+| Sharpe Ratio | Excess return per risk unit. | Strategy comparison. | Ignoring regime instability. |
 
 ## Real-World Data Application
-- Start with yfinance (SPY, QQQ, TLT, GLD) when internet is available.
-- If available, load a Robinhood-style export CSV and compare to your yfinance pull.
-- Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.
-- Compute log returns, annualized volatility, and Sharpe ratio for each symbol.
-- Write one risk-control takeaway you would use in a real portfolio conversation.
+- Use curriculum/datasets/real_market_prices.csv as reproducible fallback data.
+- Build one table and one chart supporting a decision.
+- Document one limitation and one robustness check.
 
 ## Coding Task
 Create a notebook section called 'market diary' and record one asset, one news item, one risk, and one numerical observation.

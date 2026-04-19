@@ -54,37 +54,32 @@ Answer: Because once returns are organized in a matrix, covariance measures the 
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Portfolio Return
+$$r_p=w^Tr$$
+Plain-English interpretation: Weight-return dot product.
+Notation check: Misaligned weight and return ordering.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Portfolio Variance
+$$\sigma_p^2=w^T\Sigma w$$
+Plain-English interpretation: Total covariance-weighted risk.
+Notation check: Using unstable covariance without checks.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: Covariance Matrix
+$$\Sigma=\mathbb{E}[(r-\mu)(r-\mu)^T]$$
+Plain-English interpretation: Cross-asset co-movement structure.
+Notation check: Treating covariance as static across regimes.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Portfolio Return | Weight-return dot product. | Fast multi-asset return aggregation. | Misaligned weight and return ordering. |
+| Portfolio Variance | Total covariance-weighted risk. | Diversification and sizing decisions. | Using unstable covariance without checks. |
+| Covariance Matrix | Cross-asset co-movement structure. | Risk model construction. | Treating covariance as static across regimes. |
 
 ## Real-World Data Application
-- Start with yfinance (SPY, QQQ, TLT, GLD) when internet is available.
-- If available, load a Robinhood-style export CSV and compare to your yfinance pull.
-- Use `curriculum/datasets/real_market_prices.csv` as reproducible fallback.
-- Compute log returns, annualized volatility, and Sharpe ratio for each symbol.
-- Write one risk-control takeaway you would use in a real portfolio conversation.
+- Use curriculum/datasets/real_market_prices.csv as reproducible fallback data.
+- Build one table and one chart supporting a decision.
+- Document one limitation and one robustness check.
 
 ## Coding Task
 Use NumPy arrays to compute 3 portfolio returns from a matrix of asset returns and a vector of weights.

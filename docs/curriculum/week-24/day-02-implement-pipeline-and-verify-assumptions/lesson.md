@@ -24,10 +24,10 @@ This day belongs to the week theme "Final Integration: end-to-end capstone, fina
 Implement pipeline and verify assumptions is part of real quant work inside final integration: end-to-end capstone, final assessments, and application transition plan research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe implement pipeline and verify assumptions in plain language before touching formulas.
-2. Technical frame: Build implement pipeline and verify assumptions from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for implement pipeline and verify assumptions and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Performance after implementation assumptions.
+2. Technical frame: Build implement pipeline and verify assumptions from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Net Strategy Return, Out-of-Sample RMSE, Max Drawdown).
+3. Market interpretation: Final capstone realism checks.. Run one compact, reproducible example for implement pipeline and verify assumptions and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Reporting only gross backtest outcomes.
 
 ## Practice Problems
 - Explain implement pipeline and verify assumptions in one paragraph without jargon.

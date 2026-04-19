@@ -61,30 +61,27 @@ Answer: Because a mismatched operation may silently produce the wrong result, wh
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Vectorized Return
+$$r=\frac{P_{1:}}{P_{:-1}}-1$$
+Plain-English interpretation: Batch return transform over arrays.
+Notation check: Off-by-one index mismatches.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Dot Product
+$$w\cdot r=\sum_i w_i r_i$$
+Plain-English interpretation: Linear weighted aggregation.
+Notation check: Shape mismatch between vectors.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: Broadcasting Rule
+$$(m\times n)\odot(n,)\rightarrow(m\times n)$$
+Plain-English interpretation: Dimension-safe elementwise scaling.
+Notation check: Silent broadcast along wrong axis.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Vectorized Return | Batch return transform over arrays. | Replace loop-heavy feature extraction. | Off-by-one index mismatches. |
+| Dot Product | Linear weighted aggregation. | Portfolio and factor combination. | Shape mismatch between vectors. |
+| Broadcasting Rule | Dimension-safe elementwise scaling. | Scale features by column constants. | Silent broadcast along wrong axis. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.

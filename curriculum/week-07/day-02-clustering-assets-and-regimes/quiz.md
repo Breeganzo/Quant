@@ -15,37 +15,32 @@ Model answer: A strong answer defines clustering assets and regimes, gives one c
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Logistic Link formula/workflow from memory and define each symbol.
+Interview question: Write the K-Means Objective formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Logistic Link exactly, explains each symbol, and states one caveat: Treating probability as certainty near threshold.
+Model answer: A strong answer includes K-Means Objective exactly, explains each symbol, and states one caveat: Ignoring scale normalization before clustering.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Train a simple classification baseline and report precision/recall/F1.
+Python drill: Cluster symbols by return and volatility features using k-means and report labels.
 Suggested Python solution:
 ```python
 from pathlib import Path
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report
-from sklearn.model_selection import train_test_split
+from sklearn.cluster import KMeans
 
 market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
 prices = market.pivot(index="date", columns="symbol", values="close").dropna()
-returns = prices.pct_change().dropna()
-X = returns.shift(1).dropna()
-y = (returns["SPY"].loc[X.index] > 0).astype(int)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, shuffle=False)
-model = LogisticRegression(max_iter=500)
-model.fit(X_train, y_train)
-pred = model.predict(X_test)
-print(classification_report(y_test, pred, digits=3))
+ret = prices.pct_change().dropna()
+feats = pd.DataFrame({"mean": ret.mean(), "vol": ret.std()})
+model = KMeans(n_clusters=2, random_state=7, n_init=10)
+feats["cluster"] = model.fit_predict(feats)
+print(feats)
 
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Group assets by behavior.. Then it states one realistic failure mode: Ignoring scale normalization before clustering., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

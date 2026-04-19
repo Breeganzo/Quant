@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core IV: derivatives, options, Greek
 Capstone build day is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe capstone build day in plain language before touching formulas.
-2. Technical frame: Build capstone build day from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for capstone build day and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Performance after implementation frictions.
+2. Technical frame: Build capstone build day from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Net Return, Out-of-Sample RMSE, Max Drawdown).
+3. Market interpretation: Final report realism.. Run one compact, reproducible example for capstone build day and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Presenting gross-only metrics.
 
 ## Practice Problems
 - Explain capstone build day in one paragraph without jargon.
@@ -46,27 +46,27 @@ Capstone build day is part of real quant work inside finance core iv: derivative
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Call Payoff
-$$\mathrm{Payoff}_{call}=\max(S_T-K,0)$$
-Plain-English interpretation: Upside above strike with limited downside (premium aside).
-Interview pitfall: Confusing payoff with profit (ignoring premium).
+### Formula 1: Net Return
+$$r_t^{net}=r_t^{gross}-cost_t$$
+Plain-English interpretation: Performance after implementation frictions.
+Interview pitfall: Presenting gross-only metrics.
 
-### Formula 2: Put Payoff
-$$\mathrm{Payoff}_{put}=\max(K-S_T,0)$$
-Plain-English interpretation: Downside protection structure at maturity.
-Interview pitfall: Ignoring time decay before maturity.
+### Formula 2: Out-of-Sample RMSE
+$$RMSE_{OOS}=\sqrt{\frac{1}{n}\sum_i(\hat y_i-y_i)^2}$$
+Plain-English interpretation: Forecast quality on unseen data.
+Interview pitfall: Leaking test data into tuning.
 
-### Formula 3: Delta
-$$\Delta=\frac{\partial V}{\partial S}$$
-Plain-English interpretation: First-order option value sensitivity to underlying.
-Interview pitfall: Assuming delta is constant across moves and time.
+### Formula 3: Max Drawdown
+$$MDD=\min_t\left(\frac{W_t}{\max_{s\le t}W_s}-1\right)$$
+Plain-English interpretation: Worst path-dependent loss.
+Interview pitfall: Reporting return with no drawdown context.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Call Payoff | Upside above strike with limited downside (premium aside). | Directional convex exposure design. | Confusing payoff with profit (ignoring premium). |
-| Put Payoff | Downside protection structure at maturity. | Hedging drawdown risk. | Ignoring time decay before maturity. |
-| Delta | First-order option value sensitivity to underlying. | Hedge ratio sizing. | Assuming delta is constant across moves and time. |
+| Net Return | Performance after implementation frictions. | Final report realism. | Presenting gross-only metrics. |
+| Out-of-Sample RMSE | Forecast quality on unseen data. | Capstone model comparison. | Leaking test data into tuning. |
+| Max Drawdown | Worst path-dependent loss. | Risk defense in presentations. | Reporting return with no drawdown context. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

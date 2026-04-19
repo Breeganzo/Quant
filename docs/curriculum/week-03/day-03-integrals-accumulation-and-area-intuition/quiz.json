@@ -14,8 +14,8 @@
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write the Expected Value formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Expected Value exactly, explains each symbol, and states one caveat: Ignoring tail risk while focusing only on mean payoff.",
+      "question": "Write the Definite Integral formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes Definite Integral exactly, explains each symbol, and states one caveat: Forgetting integration bounds context.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Load market data and compute a correlation/covariance diagnostic tied to today's topic.",
       "python_solution": "from pathlib import Path\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nreturns = prices.pct_change().dropna()\nprint(returns.corr().round(3))\nprint(\"\\nCovariance:\")\nprint(returns.cov().round(6))\n"
@@ -24,7 +24,7 @@
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Cumulative signal/flow interpretation.. Then it states one realistic failure mode: Forgetting integration bounds context., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

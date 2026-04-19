@@ -57,30 +57,27 @@ Answer: It suggests high uncertainty about the true parameter given the sample a
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Confidence Interval (Mean)
+$$\bar x \pm t_{n-1,\alpha/2}\cdot\frac{s}{\sqrt{n}}$$
+Plain-English interpretation: Range of plausible mean values.
+Notation check: Treating interval as probability for fixed parameter.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: t-Statistic
+$$t=\frac{\bar x-\mu_0}{s/\sqrt{n}}$$
+Plain-English interpretation: Signal-to-noise vs null mean.
+Notation check: Ignoring dependence/autocorrelation.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: p-Value
+$$p=P(T\ge |t_{obs}|\mid H_0)$$
+Plain-English interpretation: Extremeness under null model.
+Notation check: Confusing p with effect size.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Confidence Interval (Mean) | Range of plausible mean values. | Uncertainty-aware return estimates. | Treating interval as probability for fixed parameter. |
+| t-Statistic | Signal-to-noise vs null mean. | Edge significance checks. | Ignoring dependence/autocorrelation. |
+| p-Value | Extremeness under null model. | Reject/retain null decision support. | Confusing p with effect size. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.

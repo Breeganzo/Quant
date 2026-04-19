@@ -61,30 +61,27 @@ Answer: It is the compounded value of starting capital after applying each perio
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Portfolio Return
+$$r_{p,t}=\sum_i w_{i,t-1}r_{i,t}$$
+Plain-English interpretation: Weighted one-step return.
+Notation check: Using contemporaneous (leaky) weights.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Turnover
+$$\mathrm{TO}_t=\frac{1}{2}\sum_i|w_{i,t}-w_{i,t-1}|$$
+Plain-English interpretation: Rebalance trading requirement.
+Notation check: Ignoring transaction costs in alpha claims.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: Cumulative Wealth
+$$W_t=W_0\prod_{j=1}^{t}(1+r_{p,j})$$
+Plain-English interpretation: Compounded capital path.
+Notation check: Averaging returns instead of compounding.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Portfolio Return | Weighted one-step return. | Portfolio backtest baseline. | Using contemporaneous (leaky) weights. |
+| Turnover | Rebalance trading requirement. | Estimate execution cost pressure. | Ignoring transaction costs in alpha claims. |
+| Cumulative Wealth | Compounded capital path. | Compare portfolio design trajectories. | Averaging returns instead of compounding. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.

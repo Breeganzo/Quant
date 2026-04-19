@@ -15,7 +15,7 @@
       "id": "q2",
       "difficulty": "intermediate",
       "question": "Write the Call Payoff formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Call Payoff exactly, explains each symbol, and states one caveat: Confusing payoff with profit (ignoring premium).",
+      "answer": "A strong answer includes Call Payoff exactly, explains each symbol, and states one caveat: Confusing payoff with net profit.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Build option payoff vectors and estimate delta numerically at one point.",
       "python_solution": "import numpy as np\n\nk = 100\ns_grid = np.linspace(70, 130, 13)\ncall = np.maximum(s_grid - k, 0)\nput = np.maximum(k - s_grid, 0)\ns0 = 101\neps = 0.5\ncall_price = lambda s: max(s - k, 0)\ndelta = (call_price(s0 + eps) - call_price(s0 - eps)) / (2 * eps)\nprint(\"Call payoff:\", call)\nprint(\"Put payoff:\", put)\nprint(\"Delta estimate near S=101:\", round(float(delta), 4))\n"
@@ -24,7 +24,7 @@
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Directional convex exposures.. Then it states one realistic failure mode: Confusing payoff with net profit., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

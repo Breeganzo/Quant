@@ -24,10 +24,10 @@ This day belongs to the week theme "Signals I: momentum, mean reversion, cross-s
 Mini lab: compare momentum versus mean reversion rule is part of real quant work inside signals i: momentum, mean reversion, cross-sectional signals, and attribution research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe mini lab: compare momentum versus mean reversion rule in plain language before touching formulas.
-2. Technical frame: Build mini lab: compare momentum versus mean reversion rule from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for mini lab: compare momentum versus mean reversion rule and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Trend strength over lookback.
+2. Technical frame: Build mini lab: compare momentum versus mean reversion rule from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Momentum Signal, Reversion z-Score, Signal Blend).
+3. Market interpretation: Cross-sectional ranking inputs.. Run one compact, reproducible example for mini lab: compare momentum versus mean reversion rule and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring regime-dependent crash risk.
 
 ## Practice Problems
 - Explain mini lab: compare momentum versus mean reversion rule in one paragraph without jargon.
@@ -48,25 +48,25 @@ Mini lab: compare momentum versus mean reversion rule is part of real quant work
 ## Interview-Ready Formula Sheet
 ### Formula 1: Momentum Signal
 $$m_t=\frac{P_t}{P_{t-k}}-1$$
-Plain-English interpretation: Past trend strength over lookback k.
-Interview pitfall: Ignoring crash risk in reversals.
+Plain-English interpretation: Trend strength over lookback.
+Interview pitfall: Ignoring regime-dependent crash risk.
 
-### Formula 2: Mean-Reversion z-Score
+### Formula 2: Reversion z-Score
 $$z_t=\frac{x_t-\mu_t}{\sigma_t}$$
-Plain-English interpretation: Deviation from local mean in standard units.
-Interview pitfall: Using unstable rolling windows.
+Plain-English interpretation: Deviation from local equilibrium.
+Interview pitfall: Using unstable rolling moments.
 
-### Formula 3: Alpha Attribution
-$$\alpha_t=r_t^{strat}-\beta_t r_t^{mkt}$$
-Plain-English interpretation: Residual performance after market exposure.
-Interview pitfall: Assuming constant beta through regimes.
+### Formula 3: Signal Blend
+$$s_t=\sum_j\omega_j s_{j,t}$$
+Plain-English interpretation: Weighted multi-signal aggregate.
+Interview pitfall: Blending without normalization.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Momentum Signal | Past trend strength over lookback k. | Cross-sectional ranking strategies. | Ignoring crash risk in reversals. |
-| Mean-Reversion z-Score | Deviation from local mean in standard units. | Entry/exit bands for reversal trades. | Using unstable rolling windows. |
-| Alpha Attribution | Residual performance after market exposure. | Diagnose true signal contribution. | Assuming constant beta through regimes. |
+| Momentum Signal | Trend strength over lookback. | Cross-sectional ranking inputs. | Ignoring regime-dependent crash risk. |
+| Reversion z-Score | Deviation from local equilibrium. | Entry/exit threshold rules. | Using unstable rolling moments. |
+| Signal Blend | Weighted multi-signal aggregate. | Diversify alpha sources. | Blending without normalization. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

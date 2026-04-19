@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core II: portfolio theory, CAPM, fac
 Review and checkpoint is part of real quant work inside finance core ii: portfolio theory, capm, factor investing, and optimization research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe review and checkpoint in plain language before touching formulas.
-2. Technical frame: Build review and checkpoint from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for review and checkpoint and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Total risk from weights and covariance matrix.
+2. Technical frame: Build review and checkpoint from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Portfolio Variance, CAPM Expected Return, Marginal Risk Contribution).
+3. Market interpretation: Optimize risk-aware allocations.. Run one compact, reproducible example for review and checkpoint and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Using unstable covariance estimates without shrinkage.
 
 ## Practice Problems
 - Explain review and checkpoint in one paragraph without jargon.

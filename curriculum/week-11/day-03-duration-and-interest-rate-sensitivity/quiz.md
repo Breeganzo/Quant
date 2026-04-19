@@ -15,35 +15,34 @@ Model answer: A strong answer defines duration and interest rate sensitivity, gi
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Bond Price formula/workflow from memory and define each symbol.
+Interview question: Write the Macaulay Duration formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Bond Price exactly, explains each symbol, and states one caveat: Mixing compounding conventions.
+Model answer: A strong answer includes Macaulay Duration exactly, explains each symbol, and states one caveat: Using duration for large non-linear shocks.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Price a simple fixed-coupon bond and compute duration approximation.
+Python drill: Price a simple bond and compute modified duration under a yield assumption.
 Suggested Python solution:
 ```python
 import numpy as np
 
 face = 100
-coupon = 0.04
-y = 0.035
+coupon = 0.05
+y = 0.04
 n = 5
-cashflows = np.array([face * coupon] * (n - 1) + [face * (1 + coupon)])
-times = np.arange(1, n + 1)
-discount = (1 + y) ** times
-price = (cashflows / discount).sum()
-macaulay = ((times * cashflows / discount).sum()) / price
-mod_duration = macaulay / (1 + y)
-print("Price:", round(float(price), 4))
-print("Modified duration:", round(float(mod_duration), 4))
+cf = np.array([face * coupon] * (n - 1) + [face * (1 + coupon)])
+t = np.arange(1, n + 1)
+disc = (1 + y) ** t
+price = float((cf / disc).sum())
+d_mac = float((t * cf / disc).sum() / price)
+d_mod = d_mac / (1 + y)
+print({"price": round(price, 4), "mod_duration": round(d_mod, 4)})
 
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Interest-rate sensitivity baseline.. Then it states one realistic failure mode: Using duration for large non-linear shocks., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

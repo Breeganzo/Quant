@@ -14,17 +14,17 @@
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write the Logistic Link formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Logistic Link exactly, explains each symbol, and states one caveat: Treating probability as certainty near threshold.",
+      "question": "Write the Gini Impurity formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes Gini Impurity exactly, explains each symbol, and states one caveat: Overfitting deep trees without pruning.",
       "explanation": "This checks mathematical fluency and operational reliability.",
-      "python_task": "Train a simple classification baseline and report precision/recall/F1.",
-      "python_solution": "from pathlib import Path\nimport pandas as pd\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.metrics import classification_report\nfrom sklearn.model_selection import train_test_split\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nreturns = prices.pct_change().dropna()\nX = returns.shift(1).dropna()\ny = (returns[\"SPY\"].loc[X.index] > 0).astype(int)\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, shuffle=False)\nmodel = LogisticRegression(max_iter=500)\nmodel.fit(X_train, y_train)\npred = model.predict(X_test)\nprint(classification_report(y_test, pred, digits=3))\n"
+      "python_task": "Train a decision tree classifier on lagged ETF returns and print depth and accuracy.",
+      "python_solution": "from pathlib import Path\nimport pandas as pd\nfrom sklearn.metrics import accuracy_score\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import DecisionTreeClassifier\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nreturns = prices.pct_change().dropna()\nX = returns.shift(1).dropna()\ny = (returns.loc[X.index, \"SPY\"] > 0).astype(int)\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, shuffle=False)\nmodel = DecisionTreeClassifier(max_depth=4, random_state=7)\nmodel.fit(X_train, y_train)\npred = model.predict(X_test)\nprint({\"depth\": model.get_depth(), \"accuracy\": round(float(accuracy_score(y_test, pred)), 4)})\n"
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Split quality scoring.. Then it states one realistic failure mode: Overfitting deep trees without pruning., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

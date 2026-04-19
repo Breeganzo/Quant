@@ -24,10 +24,10 @@ This day belongs to the week theme "ML for Quant I: trees, ensembles, nonlinear 
 Gradient boosting intuition is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe gradient boosting intuition in plain language before touching formulas.
-2. Technical frame: Build gradient boosting intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for gradient boosting intuition and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Sequential residual correction.
+2. Technical frame: Build gradient boosting intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Additive Model, Pseudo-Residual, Shrinkage).
+3. Market interpretation: Capture nonlinear structure gradually.. Run one compact, reproducible example for gradient boosting intuition and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Using too high learning rate.
 
 ## Practice Problems
 - Explain gradient boosting intuition in one paragraph without jargon.
@@ -46,27 +46,27 @@ Gradient boosting intuition is part of real quant work inside ml for quant i: tr
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Logistic Link
-$$p(y=1\mid x)=\frac{1}{1+e^{-z}},\ z=w^Tx+b$$
-Plain-English interpretation: Maps linear score to class probability.
-Interview pitfall: Treating probability as certainty near threshold.
+### Formula 1: Additive Model
+$$F_m(x)=F_{m-1}(x)+\eta h_m(x)$$
+Plain-English interpretation: Sequential residual correction.
+Interview pitfall: Using too high learning rate.
 
-### Formula 2: Cross-Entropy Loss
-$$L=-\frac{1}{n}\sum_{i=1}^n [y_i\log p_i + (1-y_i)\log(1-p_i)]$$
-Plain-English interpretation: Penalizes confident wrong classifications strongly.
-Interview pitfall: Evaluating only loss without class-balance diagnostics.
+### Formula 2: Pseudo-Residual
+$$r_{im}=-\left[\frac{\partial L(y_i,F(x_i))}{\partial F(x_i)}\right]_{F=F_{m-1}}$$
+Plain-English interpretation: Gradient signal for next learner.
+Interview pitfall: Ignoring loss-function mismatch to objective.
 
-### Formula 3: F1 Score
-$$F1=2\cdot\frac{\mathrm{Precision}\cdot\mathrm{Recall}}{\mathrm{Precision}+\mathrm{Recall}}$$
-Plain-English interpretation: Balances false-positive and false-negative tradeoff.
-Interview pitfall: Using accuracy alone on imbalanced labels.
+### Formula 3: Shrinkage
+$$\eta\in(0,1)$$
+Plain-English interpretation: Step-size regularization in boosting.
+Interview pitfall: Compensating tiny eta with too few trees.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Logistic Link | Maps linear score to class probability. | Probability of positive next-period return event. | Treating probability as certainty near threshold. |
-| Cross-Entropy Loss | Penalizes confident wrong classifications strongly. | Train classification baselines for risk events. | Evaluating only loss without class-balance diagnostics. |
-| F1 Score | Balances false-positive and false-negative tradeoff. | Model selection under class imbalance. | Using accuracy alone on imbalanced labels. |
+| Additive Model | Sequential residual correction. | Capture nonlinear structure gradually. | Using too high learning rate. |
+| Pseudo-Residual | Gradient signal for next learner. | Optimize generic differentiable losses. | Ignoring loss-function mismatch to objective. |
+| Shrinkage | Step-size regularization in boosting. | Stability vs training speed control. | Compensating tiny eta with too few trees. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

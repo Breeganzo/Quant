@@ -15,30 +15,36 @@ Model answer: A strong answer defines confidence intervals and hypothesis testin
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Expected Value formula/workflow from memory and define each symbol.
+Interview question: Write the Confidence Interval (Mean) formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Expected Value exactly, explains each symbol, and states one caveat: Ignoring tail risk while focusing only on mean payoff.
+Model answer: A strong answer includes Confidence Interval (Mean) exactly, explains each symbol, and states one caveat: Treating interval as probability for fixed parameter.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Load market data and compute a correlation/covariance diagnostic tied to today's topic.
+Python drill: Compute a 95% confidence interval for SPY daily returns and report the t-statistic vs zero.
 Suggested Python solution:
 ```python
 from pathlib import Path
+import numpy as np
 import pandas as pd
+from scipy import stats
 
 market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
-prices = market.pivot(index="date", columns="symbol", values="close").dropna()
-returns = prices.pct_change().dropna()
-print(returns.corr().round(3))
-print("\nCovariance:")
-print(returns.cov().round(6))
+spy = market[market["symbol"] == "SPY"].sort_values("date")["close"].pct_change().dropna()
+n = len(spy)
+mean = float(spy.mean())
+std = float(spy.std(ddof=1))
+se = std / np.sqrt(n)
+t_crit = stats.t.ppf(0.975, n - 1)
+ci = (mean - t_crit * se, mean + t_crit * se)
+t_stat = mean / se
+print({"mean": round(mean, 6), "ci_95": tuple(round(x, 6) for x in ci), "t_stat": round(float(t_stat), 4)})
 
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Uncertainty-aware return estimates.. Then it states one realistic failure mode: Treating interval as probability for fixed parameter., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

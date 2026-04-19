@@ -17,7 +17,7 @@ Why this matters: This tests communication quality, not just memorized definitio
 ### Q2 (intermediate)
 Interview question: Write the Expected Value formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Expected Value exactly, explains each symbol, and states one caveat: Forgetting payoff asymmetry.
+Model answer: A strong answer includes Expected Value exactly, explains each symbol, and states one caveat: Ignoring payoff asymmetry and tails.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Run a short timed drill set and compute accuracy by topic category.
@@ -41,7 +41,7 @@ print("Mean minutes:", round(float(drills["minutes"].mean()), 2))
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Filter positive-edge trading setups.. Then it states one realistic failure mode: Ignoring payoff asymmetry and tails., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

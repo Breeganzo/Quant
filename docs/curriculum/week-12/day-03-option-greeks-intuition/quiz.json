@@ -14,17 +14,17 @@
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write the Call Payoff formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Call Payoff exactly, explains each symbol, and states one caveat: Confusing payoff with profit (ignoring premium).",
+      "question": "Write the Delta formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes Delta exactly, explains each symbol, and states one caveat: Treating delta as constant.",
       "explanation": "This checks mathematical fluency and operational reliability.",
-      "python_task": "Build option payoff vectors and estimate delta numerically at one point.",
-      "python_solution": "import numpy as np\n\nk = 100\ns_grid = np.linspace(70, 130, 13)\ncall = np.maximum(s_grid - k, 0)\nput = np.maximum(k - s_grid, 0)\ns0 = 101\neps = 0.5\ncall_price = lambda s: max(s - k, 0)\ndelta = (call_price(s0 + eps) - call_price(s0 - eps)) / (2 * eps)\nprint(\"Call payoff:\", call)\nprint(\"Put payoff:\", put)\nprint(\"Delta estimate near S=101:\", round(float(delta), 4))\n"
+      "python_task": "Build option payoff vectors and approximate delta around the strike.",
+      "python_solution": "import numpy as np\n\nk = 100\ns = np.linspace(70, 130, 13)\ncall = np.maximum(s - k, 0)\nput = np.maximum(k - s, 0)\neps = 1.0\ns0 = 100\ndelta = (max(s0 + eps - k, 0) - max(s0 - eps - k, 0)) / (2 * eps)\nprint(\"call:\", call)\nprint(\"put:\", put)\nprint(\"delta near strike:\", round(float(delta), 4))\n"
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Hedge-ratio baseline.. Then it states one realistic failure mode: Treating delta as constant., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

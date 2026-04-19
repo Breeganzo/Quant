@@ -17,7 +17,7 @@ Why this matters: This tests communication quality, not just memorized definitio
 ### Q2 (intermediate)
 Interview question: Write the Call Payoff formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Call Payoff exactly, explains each symbol, and states one caveat: Confusing payoff with profit (ignoring premium).
+Model answer: A strong answer includes Call Payoff exactly, explains each symbol, and states one caveat: Confusing payoff with net profit.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Build option payoff vectors and estimate delta numerically at one point.
@@ -42,7 +42,7 @@ print("Delta estimate near S=101:", round(float(delta), 4))
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Directional convex exposures.. Then it states one realistic failure mode: Confusing payoff with net profit., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

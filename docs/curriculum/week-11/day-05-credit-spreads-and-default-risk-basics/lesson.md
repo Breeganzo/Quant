@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core III: fixed income, yield curves
 Credit spreads and default risk basics is part of real quant work inside finance core iii: fixed income, yield curves, duration, convexity, and credit basics research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe credit spreads and default risk basics in plain language before touching formulas.
-2. Technical frame: Build credit spreads and default risk basics from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for credit spreads and default risk basics and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Compensation over risk-free yield.
+2. Technical frame: Build credit spreads and default risk basics from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Credit Spread, Expected Loss, Hazard Approximation).
+3. Market interpretation: Credit-risk pricing comparison.. Run one compact, reproducible example for credit spreads and default risk basics and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring liquidity premium component.
 
 ## Practice Problems
 - Explain credit spreads and default risk basics in one paragraph without jargon.
@@ -46,27 +46,27 @@ Credit spreads and default risk basics is part of real quant work inside finance
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Bond Price
-$$P=\sum_{t=1}^{T}\frac{CF_t}{(1+y)^t}$$
-Plain-English interpretation: Present value of discounted cash flows.
-Interview pitfall: Mixing compounding conventions.
+### Formula 1: Credit Spread
+$$s_{credit}=y_{corp}-y_{gov}$$
+Plain-English interpretation: Compensation over risk-free yield.
+Interview pitfall: Ignoring liquidity premium component.
 
-### Formula 2: Modified Duration
-$$D_{mod}=\frac{D_{mac}}{1+y}$$
-Plain-English interpretation: Approximate percentage price sensitivity to yield.
-Interview pitfall: Using duration alone for large yield moves.
+### Formula 2: Expected Loss
+$$EL=PD\times LGD\times EAD$$
+Plain-English interpretation: Average credit loss estimate.
+Interview pitfall: Static PD/LGD assumptions across regimes.
 
-### Formula 3: Convexity
-$$C=\frac{1}{P}\sum_{t=1}^{T}\frac{CF_t\,t(t+1)}{(1+y)^{t+2}}$$
-Plain-English interpretation: Second-order sensitivity adjustment to yield moves.
-Interview pitfall: Ignoring convexity in stressed scenarios.
+### Formula 3: Hazard Approximation
+$$h\approx\frac{s_{credit}}{1-R}$$
+Plain-English interpretation: Spread-to-default intensity proxy.
+Interview pitfall: Using approximation outside assumptions.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Bond Price | Present value of discounted cash flows. | Mark-to-model pricing for plain-vanilla bonds. | Mixing compounding conventions. |
-| Modified Duration | Approximate percentage price sensitivity to yield. | Rate-shock risk estimation. | Using duration alone for large yield moves. |
-| Convexity | Second-order sensitivity adjustment to yield moves. | Improve rate-shock approximation accuracy. | Ignoring convexity in stressed scenarios. |
+| Credit Spread | Compensation over risk-free yield. | Credit-risk pricing comparison. | Ignoring liquidity premium component. |
+| Expected Loss | Average credit loss estimate. | Risk budgeting and scenario design. | Static PD/LGD assumptions across regimes. |
+| Hazard Approximation | Spread-to-default intensity proxy. | Quick sanity checks on spread levels. | Using approximation outside assumptions. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

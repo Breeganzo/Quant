@@ -24,10 +24,10 @@ This day belongs to the week theme "ML Foundations II: classification, metrics, 
 Mini lab: classify positive versus negative future returns is part of real quant work inside ml foundations ii: classification, metrics, imbalance, validation, and risk use cases research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe mini lab: classify positive versus negative future returns in plain language before touching formulas.
-2. Technical frame: Build mini lab: classify positive versus negative future returns from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for mini lab: classify positive versus negative future returns and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: One-period relative price change.
+2. Technical frame: Build mini lab: classify positive versus negative future returns from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Simple Return, Log Return, Compounded Wealth).
+3. Market interpretation: Baseline daily performance attribution.. Run one compact, reproducible example for mini lab: classify positive versus negative future returns and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Comparing assets without handling frequency or missing days.
 
 ## Practice Problems
 - Explain mini lab: classify positive versus negative future returns in one paragraph without jargon.
@@ -46,27 +46,27 @@ Mini lab: classify positive versus negative future returns is part of real quant
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Logistic Link
-$$p(y=1\mid x)=\frac{1}{1+e^{-z}},\ z=w^Tx+b$$
-Plain-English interpretation: Maps linear score to class probability.
-Interview pitfall: Treating probability as certainty near threshold.
+### Formula 1: Simple Return
+$$r_t=\frac{P_t}{P_{t-1}}-1$$
+Plain-English interpretation: One-period relative price change.
+Interview pitfall: Comparing assets without handling frequency or missing days.
 
-### Formula 2: Cross-Entropy Loss
-$$L=-\frac{1}{n}\sum_{i=1}^n [y_i\log p_i + (1-y_i)\log(1-p_i)]$$
-Plain-English interpretation: Penalizes confident wrong classifications strongly.
-Interview pitfall: Evaluating only loss without class-balance diagnostics.
+### Formula 2: Log Return
+$$\ell_t=\ln\left(\frac{P_t}{P_{t-1}}\right)$$
+Plain-English interpretation: Additive return representation across time.
+Interview pitfall: Mixing log and simple returns in one report.
 
-### Formula 3: F1 Score
-$$F1=2\cdot\frac{\mathrm{Precision}\cdot\mathrm{Recall}}{\mathrm{Precision}+\mathrm{Recall}}$$
-Plain-English interpretation: Balances false-positive and false-negative tradeoff.
-Interview pitfall: Using accuracy alone on imbalanced labels.
+### Formula 3: Compounded Wealth
+$$W_T=W_0\prod_{t=1}^{T}(1+r_t)$$
+Plain-English interpretation: Capital path under sequential returns.
+Interview pitfall: Averaging returns instead of compounding them.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Logistic Link | Maps linear score to class probability. | Probability of positive next-period return event. | Treating probability as certainty near threshold. |
-| Cross-Entropy Loss | Penalizes confident wrong classifications strongly. | Train classification baselines for risk events. | Evaluating only loss without class-balance diagnostics. |
-| F1 Score | Balances false-positive and false-negative tradeoff. | Model selection under class imbalance. | Using accuracy alone on imbalanced labels. |
+| Simple Return | One-period relative price change. | Baseline daily performance attribution. | Comparing assets without handling frequency or missing days. |
+| Log Return | Additive return representation across time. | Multi-period return decomposition. | Mixing log and simple returns in one report. |
+| Compounded Wealth | Capital path under sequential returns. | Backtest equity-curve reconstruction. | Averaging returns instead of compounding them. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

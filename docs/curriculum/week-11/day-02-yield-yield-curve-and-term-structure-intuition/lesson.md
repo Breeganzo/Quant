@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core III: fixed income, yield curves
 Yield, yield curve, and term structure intuition is part of real quant work inside finance core iii: fixed income, yield curves, duration, convexity, and credit basics research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe yield, yield curve, and term structure intuition in plain language before touching formulas.
-2. Technical frame: Build yield, yield curve, and term structure intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for yield, yield curve, and term structure intuition and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Present-value weight at maturity T.
+2. Technical frame: Build yield, yield curve, and term structure intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Discount Factor, Forward Rate, Term Spread).
+3. Market interpretation: Curve construction and pricing.. Run one compact, reproducible example for yield, yield curve, and term structure intuition and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Mixing compounding conventions.
 
 ## Practice Problems
 - Explain yield, yield curve, and term structure intuition in one paragraph without jargon.
@@ -46,27 +46,27 @@ Yield, yield curve, and term structure intuition is part of real quant work insi
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Bond Price
-$$P=\sum_{t=1}^{T}\frac{CF_t}{(1+y)^t}$$
-Plain-English interpretation: Present value of discounted cash flows.
+### Formula 1: Discount Factor
+$$DF(T)=\frac{1}{(1+s_T)^T}$$
+Plain-English interpretation: Present-value weight at maturity T.
 Interview pitfall: Mixing compounding conventions.
 
-### Formula 2: Modified Duration
-$$D_{mod}=\frac{D_{mac}}{1+y}$$
-Plain-English interpretation: Approximate percentage price sensitivity to yield.
-Interview pitfall: Using duration alone for large yield moves.
+### Formula 2: Forward Rate
+$$f_{t,t+1}=\frac{(1+s_{t+1})^{t+1}}{(1+s_t)^t}-1$$
+Plain-English interpretation: Implied future short rate.
+Interview pitfall: Interpreting forwards as unbiased forecasts.
 
-### Formula 3: Convexity
-$$C=\frac{1}{P}\sum_{t=1}^{T}\frac{CF_t\,t(t+1)}{(1+y)^{t+2}}$$
-Plain-English interpretation: Second-order sensitivity adjustment to yield moves.
-Interview pitfall: Ignoring convexity in stressed scenarios.
+### Formula 3: Term Spread
+$$TS=s_{10Y}-s_{2Y}$$
+Plain-English interpretation: Slope between long and short yields.
+Interview pitfall: Using one spread as complete macro model.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Bond Price | Present value of discounted cash flows. | Mark-to-model pricing for plain-vanilla bonds. | Mixing compounding conventions. |
-| Modified Duration | Approximate percentage price sensitivity to yield. | Rate-shock risk estimation. | Using duration alone for large yield moves. |
-| Convexity | Second-order sensitivity adjustment to yield moves. | Improve rate-shock approximation accuracy. | Ignoring convexity in stressed scenarios. |
+| Discount Factor | Present-value weight at maturity T. | Curve construction and pricing. | Mixing compounding conventions. |
+| Forward Rate | Implied future short rate. | Term-structure expectations analysis. | Interpreting forwards as unbiased forecasts. |
+| Term Spread | Slope between long and short yields. | Macro regime signal monitoring. | Using one spread as complete macro model. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

@@ -24,10 +24,10 @@ This day belongs to the week theme "Time Series I: stationarity, AR/MA/ARIMA int
 Stationarity, trends, seasonality, and differencing is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe stationarity, trends, seasonality, and differencing in plain language before touching formulas.
-2. Technical frame: Build stationarity, trends, seasonality, and differencing from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for stationarity, trends, seasonality, and differencing and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Removes level trends.
+2. Technical frame: Build stationarity, trends, seasonality, and differencing from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: First Difference, AR(1), ADF Regression).
+3. Market interpretation: Stabilize mean for modeling.. Run one compact, reproducible example for stationarity, trends, seasonality, and differencing and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Over-differencing useful signal away.
 
 ## Practice Problems
 - Explain stationarity, trends, seasonality, and differencing in one paragraph without jargon.
@@ -46,27 +46,27 @@ Stationarity, trends, seasonality, and differencing is part of real quant work i
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: AR(1)
+### Formula 1: First Difference
+$$\Delta x_t=x_t-x_{t-1}$$
+Plain-English interpretation: Removes level trends.
+Interview pitfall: Over-differencing useful signal away.
+
+### Formula 2: AR(1)
 $$x_t=c+\phi x_{t-1}+\epsilon_t$$
-Plain-English interpretation: Current value depends on one lag plus noise.
-Interview pitfall: Ignoring non-stationarity before fitting AR models.
+Plain-English interpretation: Lag dependence baseline.
+Interview pitfall: Assuming stationarity without tests.
 
-### Formula 2: EWMA Variance
-$$\sigma_t^2=\lambda\sigma_{t-1}^2+(1-\lambda)r_{t-1}^2$$
-Plain-English interpretation: Recency-weighted volatility estimate.
-Interview pitfall: Choosing decay factor without validation.
-
-### Formula 3: RMSE
-$$\mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat y_i-y_i)^2}$$
-Plain-English interpretation: Average forecast error magnitude in original units.
-Interview pitfall: Comparing RMSE across differently scaled targets.
+### Formula 3: ADF Regression
+$$\Delta x_t=\alpha+\beta x_{t-1}+\sum_i\gamma_i\Delta x_{t-i}+\epsilon_t$$
+Plain-English interpretation: Unit-root test setup.
+Interview pitfall: Ignoring low power on short samples.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| AR(1) | Current value depends on one lag plus noise. | Baseline dependence and mean-reversion diagnostics. | Ignoring non-stationarity before fitting AR models. |
-| EWMA Variance | Recency-weighted volatility estimate. | Adaptive risk forecasting. | Choosing decay factor without validation. |
-| RMSE | Average forecast error magnitude in original units. | Compare forecasting pipelines. | Comparing RMSE across differently scaled targets. |
+| First Difference | Removes level trends. | Stabilize mean for modeling. | Over-differencing useful signal away. |
+| AR(1) | Lag dependence baseline. | Mean-reversion diagnostics. | Assuming stationarity without tests. |
+| ADF Regression | Unit-root test setup. | Stationarity hypothesis check. | Ignoring low power on short samples. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

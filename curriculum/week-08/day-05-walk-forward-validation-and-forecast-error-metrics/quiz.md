@@ -15,37 +15,35 @@ Model answer: A strong answer defines walk-forward validation and forecast error
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the AR(1) formula/workflow from memory and define each symbol.
+Interview question: Write the Walk-Forward Split formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes AR(1) exactly, explains each symbol, and states one caveat: Ignoring non-stationarity before fitting AR models.
+Model answer: A strong answer includes Walk-Forward Split exactly, explains each symbol, and states one caveat: Using random shuffle on time series.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Compute lag autocorrelation and rolling mean/volatility diagnostics.
+Python drill: Build a lag-based forecast baseline and compute RMSE on the last 30 observations.
 Suggested Python solution:
 ```python
 from pathlib import Path
+import numpy as np
 import pandas as pd
 
 market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
 spy = market[market["symbol"] == "SPY"].sort_values("date").set_index("date")["close"]
-ret = spy.pct_change().dropna()
-diag = pd.DataFrame(
-    {
-        "ret": ret,
-        "lag1": ret.shift(1),
-        "roll_mean_20": ret.rolling(20).mean(),
-        "roll_vol_20": ret.rolling(20).std(),
-    }
-).dropna()
-print("Lag-1 autocorr:", round(diag["ret"].corr(diag["lag1"]), 4))
-print(diag.tail())
+r = spy.pct_change().dropna()
+lag1 = r.shift(1).dropna()
+y = r.loc[lag1.index]
+split = max(30, int(len(y) * 0.8))
+pred = lag1.iloc[split:]
+truth = y.iloc[split:]
+rmse = float(np.sqrt(((pred - truth) ** 2).mean()))
+print({"rmse": round(rmse, 6), "test_points": len(truth)})
 
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Avoid look-ahead leakage.. Then it states one realistic failure mode: Using random shuffle on time series., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

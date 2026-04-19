@@ -14,17 +14,17 @@
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write the Log Return formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Log Return exactly, explains each symbol, and states one caveat: Mixing with simple returns without context.",
+      "question": "Write the Portfolio Return formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes Portfolio Return exactly, explains each symbol, and states one caveat: Misaligned weight and return ordering.",
       "explanation": "This checks mathematical fluency and operational reliability.",
-      "python_task": "Compute log returns and summarize annualized return/risk with one caveat.",
-      "python_solution": "from pathlib import Path\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nret = prices.pct_change().dropna()\nann_ret = ret.mean() * 252\nann_vol = ret.std() * (252 ** 0.5)\nprint(pd.DataFrame({\"ann_return\": ann_ret, \"ann_vol\": ann_vol}).round(4))\n"
+      "python_task": "Compute portfolio return and variance from a return matrix and covariance estimate.",
+      "python_solution": "from pathlib import Path\nimport numpy as np\nimport pandas as pd\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nreturns = prices.pct_change().dropna()\nw = np.array([0.4, 0.3, 0.2, 0.1])\nmu = returns.mean().values\ncov = returns.cov().values\nexp_ret = float(w @ mu)\nvar = float(w @ cov @ w)\nprint({\"expected_daily_return\": round(exp_ret, 6), \"daily_variance\": round(var, 8)})\n"
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Fast multi-asset return aggregation.. Then it states one realistic failure mode: Misaligned weight and return ordering., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

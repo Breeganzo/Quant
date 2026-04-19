@@ -24,10 +24,10 @@ This day belongs to the week theme "Signals I: momentum, mean reversion, cross-s
 Review and critique is part of real quant work inside signals i: momentum, mean reversion, cross-sectional signals, and attribution research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe review and critique in plain language before touching formulas.
-2. Technical frame: Build review and critique from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for review and critique and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Past trend strength over lookback k.
+2. Technical frame: Build review and critique from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Momentum Signal, Mean-Reversion z-Score, Alpha Attribution).
+3. Market interpretation: Cross-sectional ranking strategies.. Run one compact, reproducible example for review and critique and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring crash risk in reversals.
 
 ## Practice Problems
 - Explain review and critique in one paragraph without jargon.

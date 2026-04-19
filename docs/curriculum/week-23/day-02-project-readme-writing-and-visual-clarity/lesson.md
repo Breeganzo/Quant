@@ -24,10 +24,10 @@ This day belongs to the week theme "Interview Prep II: portfolio polish, GitHub 
 Project README writing and visual clarity is part of real quant work inside interview prep ii: portfolio polish, github presentation, networking, and mock case defense research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe project readme writing and visual clarity in plain language before touching formulas.
-2. Technical frame: Build project readme writing and visual clarity from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for project readme writing and visual clarity and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Share of statements backed by outputs.
+2. Technical frame: Build project readme writing and visual clarity from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Evidence Coverage, Clarity Ratio, Limitation Disclosure Rate).
+3. Market interpretation: Portfolio and presentation quality.. Run one compact, reproducible example for project readme writing and visual clarity and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Narrative-heavy artifacts without proof.
 
 ## Practice Problems
 - Explain project readme writing and visual clarity in one paragraph without jargon.
@@ -48,25 +48,25 @@ Project README writing and visual clarity is part of real quant work inside inte
 ## Interview-Ready Formula Sheet
 ### Formula 1: Evidence Coverage
 $$EC=\frac{\#claims\ with\ evidence}{\#claims}$$
-Plain-English interpretation: Share of statements supported by data or outputs.
-Interview pitfall: Narrative claims without references.
+Plain-English interpretation: Share of statements backed by outputs.
+Interview pitfall: Narrative-heavy artifacts without proof.
 
 ### Formula 2: Clarity Ratio
-$$CR=\frac{\#clear\ action\ points}{\#total\ points}$$
-Plain-English interpretation: How actionable the communication is.
-Interview pitfall: Dense reports without decision guidance.
+$$CR=\frac{\#actionable\ points}{\#total\ points}$$
+Plain-English interpretation: Actionability density of communication.
+Interview pitfall: Overloaded slides/readmes with no decisions.
 
 ### Formula 3: Limitation Disclosure Rate
 $$LDR=\frac{\#explicit\ limitations}{\#major\ findings}$$
-Plain-English interpretation: Transparency level of model/report caveats.
-Interview pitfall: Overstating confidence by hiding caveats.
+Plain-English interpretation: Transparency metric for credibility.
+Interview pitfall: Over-claiming robustness.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Evidence Coverage | Share of statements supported by data or outputs. | Case-study defense quality. | Narrative claims without references. |
-| Clarity Ratio | How actionable the communication is. | Improve portfolio presentation readability. | Dense reports without decision guidance. |
-| Limitation Disclosure Rate | Transparency level of model/report caveats. | Credible interview and stakeholder communication. | Overstating confidence by hiding caveats. |
+| Evidence Coverage | Share of statements backed by outputs. | Portfolio and presentation quality. | Narrative-heavy artifacts without proof. |
+| Clarity Ratio | Actionability density of communication. | Improve recruiter/interviewer comprehension. | Overloaded slides/readmes with no decisions. |
+| Limitation Disclosure Rate | Transparency metric for credibility. | Defend project scope honestly. | Over-claiming robustness. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

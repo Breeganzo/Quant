@@ -24,10 +24,10 @@ This day belongs to the week theme "Quant Workflow I: idea generation, research 
 Review and refinement is part of real quant work inside quant workflow i: idea generation, research logs, labels, and data hygiene research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe review and refinement in plain language before touching formulas.
-2. Technical frame: Build review and refinement from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for review and refinement and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Association between signal and future return.
+2. Technical frame: Build review and refinement from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Information Coefficient, t-Statistic, Hit Rate).
+3. Market interpretation: Early alpha hypothesis screening.. Run one compact, reproducible example for review and refinement and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Treating a single-period IC as stable edge.
 
 ## Practice Problems
 - Explain review and refinement in one paragraph without jargon.

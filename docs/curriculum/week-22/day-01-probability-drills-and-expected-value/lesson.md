@@ -24,10 +24,10 @@ This day belongs to the week theme "Interview Prep I: probability, statistics, m
 Probability drills and expected value is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe probability drills and expected value in plain language before touching formulas.
-2. Technical frame: Build probability drills and expected value from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for probability drills and expected value and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Probability-weighted average payoff.
+2. Technical frame: Build probability drills and expected value from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Expected Value, Variance, Kelly Fraction (Binary)).
+3. Market interpretation: Filter positive-edge trading setups.. Run one compact, reproducible example for probability drills and expected value and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring payoff asymmetry and tails.
 
 ## Practice Problems
 - Explain probability drills and expected value in one paragraph without jargon.
@@ -48,25 +48,25 @@ Probability drills and expected value is part of real quant work inside intervie
 ## Interview-Ready Formula Sheet
 ### Formula 1: Expected Value
 $$\mathbb{E}[X]=\sum_i p_i x_i$$
-Plain-English interpretation: Core quantitative interview staple.
-Interview pitfall: Forgetting payoff asymmetry.
+Plain-English interpretation: Probability-weighted average payoff.
+Interview pitfall: Ignoring payoff asymmetry and tails.
 
-### Formula 2: z-Score
-$$z=\frac{x-\mu}{\sigma}$$
-Plain-English interpretation: Standardized distance from mean.
-Interview pitfall: Using unstable sigma estimates.
+### Formula 2: Variance
+$$\mathrm{Var}(X)=\mathbb{E}[(X-\mu)^2]$$
+Plain-English interpretation: Spread around expected payoff.
+Interview pitfall: Using only mean without uncertainty.
 
-### Formula 3: OLS Beta
-$$\hat\beta=(X^TX)^{-1}X^Ty$$
-Plain-English interpretation: Closed-form linear estimate.
-Interview pitfall: Ignoring multicollinearity and conditioning.
+### Formula 3: Kelly Fraction (Binary)
+$$f^*=\frac{bp-q}{b}$$
+Plain-English interpretation: Theoretical growth-optimal bet size.
+Interview pitfall: Applying full Kelly under estimation error.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Expected Value | Core quantitative interview staple. | Fast probability reasoning under pressure. | Forgetting payoff asymmetry. |
-| z-Score | Standardized distance from mean. | Outlier checks in data screens. | Using unstable sigma estimates. |
-| OLS Beta | Closed-form linear estimate. | Regression interview derivation drills. | Ignoring multicollinearity and conditioning. |
+| Expected Value | Probability-weighted average payoff. | Filter positive-edge trading setups. | Ignoring payoff asymmetry and tails. |
+| Variance | Spread around expected payoff. | Risk-adjusted strategy comparison. | Using only mean without uncertainty. |
+| Kelly Fraction (Binary) | Theoretical growth-optimal bet size. | Position-sizing intuition. | Applying full Kelly under estimation error. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

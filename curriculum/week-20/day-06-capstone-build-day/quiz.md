@@ -15,9 +15,9 @@ Model answer: A strong answer defines capstone build day, gives one concrete wor
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Precision formula/workflow from memory and define each symbol.
+Interview question: Write the Net Return formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Precision exactly, explains each symbol, and states one caveat: High precision with very low coverage.
+Model answer: A strong answer includes Net Return exactly, explains each symbol, and states one caveat: Presenting gross-only metrics.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Score a small AI-generated memo for citation support and hallucination risk.
@@ -41,7 +41,7 @@ print("Hallucination rate:", round(float(hallucination_rate), 3))
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Final report realism.. Then it states one realistic failure mode: Presenting gross-only metrics., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

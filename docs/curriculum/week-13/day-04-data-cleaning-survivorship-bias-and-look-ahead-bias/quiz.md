@@ -15,9 +15,9 @@ Model answer: A strong answer defines data cleaning, survivorship bias, and look
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Information Coefficient formula/workflow from memory and define each symbol.
+Interview question: Write the Leakage Flag formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Information Coefficient exactly, explains each symbol, and states one caveat: Treating a single-period IC as stable edge.
+Model answer: A strong answer includes Leakage Flag exactly, explains each symbol, and states one caveat: Using post-event data in training.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Construct a simple signal and evaluate one risk-aware performance diagnostic.
@@ -41,7 +41,7 @@ print({"ann_return": round(float(ann_ret), 4), "ann_vol": round(float(ann_vol), 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Pipeline data audit.. Then it states one realistic failure mode: Using post-event data in training., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

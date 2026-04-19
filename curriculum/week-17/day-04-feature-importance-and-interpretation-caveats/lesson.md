@@ -24,10 +24,10 @@ This day belongs to the week theme "ML for Quant I: trees, ensembles, nonlinear 
 Feature importance and interpretation caveats is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe feature importance and interpretation caveats in plain language before touching formulas.
-2. Technical frame: Build feature importance and interpretation caveats from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for feature importance and interpretation caveats and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Maps linear score to class probability.
+2. Technical frame: Build feature importance and interpretation caveats from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Logistic Link, Cross-Entropy Loss, F1 Score).
+3. Market interpretation: Probability of positive next-period return event.. Run one compact, reproducible example for feature importance and interpretation caveats and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Treating probability as certainty near threshold.
 
 ## Practice Problems
 - Explain feature importance and interpretation caveats in one paragraph without jargon.

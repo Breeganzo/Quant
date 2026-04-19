@@ -24,10 +24,10 @@ This day belongs to the week theme "Admissions Track I: target programs, scholar
 Scholarship matrix and funding logic is part of real quant work inside admissions track i: target programs, scholarships, sop structure, and recommendation strategy research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe scholarship matrix and funding logic in plain language before touching formulas.
-2. Technical frame: Build scholarship matrix and funding logic from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for scholarship matrix and funding logic and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Weighted application prioritization score.
+2. Technical frame: Build scholarship matrix and funding logic from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Program Fit Score, Scholarship Ratio, Narrative Evidence Coverage).
+3. Market interpretation: Rank schools by evidence-based criteria.. Run one compact, reproducible example for scholarship matrix and funding logic and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Using arbitrary weights without rationale.
 
 ## Practice Problems
 - Explain scholarship matrix and funding logic in one paragraph without jargon.
@@ -48,25 +48,25 @@ Scholarship matrix and funding logic is part of real quant work inside admission
 ## Interview-Ready Formula Sheet
 ### Formula 1: Program Fit Score
 $$Fit=w_1\cdot curriculum+w_2\cdot career+w_3\cdot cost$$
-Plain-English interpretation: Weighted ranking of degree options.
-Interview pitfall: Ignoring downside constraints like debt burden.
+Plain-English interpretation: Weighted application prioritization score.
+Interview pitfall: Using arbitrary weights without rationale.
 
 ### Formula 2: Scholarship Ratio
 $$SR=\frac{grant}{tuition+living}$$
 Plain-English interpretation: Funding share of full program cost.
-Interview pitfall: Comparing grants without total-cost normalization.
+Interview pitfall: Comparing grants without full-cost denominator.
 
 ### Formula 3: Narrative Evidence Coverage
-$$NEC=\frac{\#supported claims}{\#total claims}$$
-Plain-English interpretation: How much of SOP narrative is evidence-backed.
-Interview pitfall: Aspirational claims without portfolio evidence.
+$$NEC=\frac{\#supported\ claims}{\#total\ claims}$$
+Plain-English interpretation: Evidence density in SOP/CV story.
+Interview pitfall: Story claims without project proof.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Program Fit Score | Weighted ranking of degree options. | Prioritize application targets. | Ignoring downside constraints like debt burden. |
-| Scholarship Ratio | Funding share of full program cost. | Financial feasibility comparison. | Comparing grants without total-cost normalization. |
-| Narrative Evidence Coverage | How much of SOP narrative is evidence-backed. | Strengthen application credibility. | Aspirational claims without portfolio evidence. |
+| Program Fit Score | Weighted application prioritization score. | Rank schools by evidence-based criteria. | Using arbitrary weights without rationale. |
+| Scholarship Ratio | Funding share of full program cost. | Financial feasibility planning. | Comparing grants without full-cost denominator. |
+| Narrative Evidence Coverage | Evidence density in SOP/CV story. | Stronger application credibility. | Story claims without project proof. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

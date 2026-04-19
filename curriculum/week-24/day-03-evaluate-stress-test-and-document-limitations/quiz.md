@@ -15,9 +15,9 @@ Model answer: A strong answer defines evaluate, stress test, and document limita
 Why this matters: This tests communication quality, not just memorized definitions.
 
 ### Q2 (intermediate)
-Interview question: Write the Net Strategy Return formula/workflow from memory and define each symbol.
+Interview question: Write the Parametric VaR formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes Net Strategy Return exactly, explains each symbol, and states one caveat: Reporting only gross backtest outcomes.
+Model answer: A strong answer includes Parametric VaR exactly, explains each symbol, and states one caveat: Assuming normal tails in crisis regimes.
 Why this matters: This checks mathematical fluency and operational reliability.
 
 Python drill: Train a simple out-of-sample baseline and report RMSE with one risk caveat.
@@ -45,7 +45,7 @@ print("Out-of-sample RMSE:", round(float(rmse), 6))
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
+Model answer: A strong answer uses one decision workflow such as: Daily risk-limit reporting.. Then it states one realistic failure mode: Assuming normal tails in crisis regimes., and one detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
 ### Q4 (advanced)

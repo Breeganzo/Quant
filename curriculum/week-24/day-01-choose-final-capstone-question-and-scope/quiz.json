@@ -14,8 +14,8 @@
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write the Net Strategy Return formula/workflow from memory and define each symbol.",
-      "answer": "A strong answer includes Net Strategy Return exactly, explains each symbol, and states one caveat: Reporting only gross backtest outcomes.",
+      "question": "Write the Net Return formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes Net Return exactly, explains each symbol, and states one caveat: Presenting gross-only metrics.",
       "explanation": "This checks mathematical fluency and operational reliability.",
       "python_task": "Train a simple out-of-sample baseline and report RMSE with one risk caveat.",
       "python_solution": "from pathlib import Path\nimport pandas as pd\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nret = prices.pct_change().dropna()\nX = ret.shift(1).dropna()\ny = ret[\"SPY\"].loc[X.index]\nsplit = int(len(X) * 0.7)\nmodel = LinearRegression()\nmodel.fit(X.iloc[:split], y.iloc[:split])\npred = model.predict(X.iloc[split:])\nrmse = mean_squared_error(y.iloc[split:], pred) ** 0.5\nprint(\"Out-of-sample RMSE:\", round(float(rmse), 6))\n"
@@ -24,7 +24,7 @@
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "answer": "A strong answer uses one decision workflow such as: Final report realism.. Then it states one realistic failure mode: Presenting gross-only metrics., and one detection check.",
       "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {

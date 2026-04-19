@@ -24,10 +24,10 @@ This day belongs to the week theme "ML for Quant II: volatility, EWMA, GARCH int
 Forecast evaluation for risk models is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe forecast evaluation for risk models in plain language before touching formulas.
-2. Technical frame: Build forecast evaluation for risk models from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for forecast evaluation for risk models and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Sample-based annualized risk estimate.
+2. Technical frame: Build forecast evaluation for risk models from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Realized Volatility, EWMA Volatility, GARCH(1,1)).
+3. Market interpretation: Position sizing and stress planning.. Run one compact, reproducible example for forecast evaluation for risk models and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring clustering and regime changes.
 
 ## Practice Problems
 - Explain forecast evaluation for risk models in one paragraph without jargon.

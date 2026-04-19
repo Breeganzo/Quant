@@ -24,10 +24,10 @@ This day belongs to the week theme "Finance Core III: fixed income, yield curves
 Convexity and nonlinear bond behavior is part of real quant work inside finance core iii: fixed income, yield curves, duration, convexity, and credit basics research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe convexity and nonlinear bond behavior in plain language before touching formulas.
-2. Technical frame: Build convexity and nonlinear bond behavior from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for convexity and nonlinear bond behavior and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Second-order yield sensitivity.
+2. Technical frame: Build convexity and nonlinear bond behavior from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: Convexity, Price Change Approx, Curve Shock PnL).
+3. Market interpretation: Improve bond shock approximations.. Run one compact, reproducible example for convexity and nonlinear bond behavior and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Ignoring convexity in volatile rate regimes.
 
 ## Practice Problems
 - Explain convexity and nonlinear bond behavior in one paragraph without jargon.
@@ -46,27 +46,27 @@ Convexity and nonlinear bond behavior is part of real quant work inside finance 
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Bond Price
-$$P=\sum_{t=1}^{T}\frac{CF_t}{(1+y)^t}$$
-Plain-English interpretation: Present value of discounted cash flows.
-Interview pitfall: Mixing compounding conventions.
+### Formula 1: Convexity
+$$C=\frac{1}{P}\sum_t\frac{CF_t\,t(t+1)}{(1+y)^{t+2}}$$
+Plain-English interpretation: Second-order yield sensitivity.
+Interview pitfall: Ignoring convexity in volatile rate regimes.
 
-### Formula 2: Modified Duration
-$$D_{mod}=\frac{D_{mac}}{1+y}$$
-Plain-English interpretation: Approximate percentage price sensitivity to yield.
-Interview pitfall: Using duration alone for large yield moves.
+### Formula 2: Price Change Approx
+$$\frac{\Delta P}{P}\approx -D_{mod}\Delta y + \frac{1}{2}C(\Delta y)^2$$
+Plain-English interpretation: Duration-convexity Taylor approximation.
+Interview pitfall: Applying for very large non-local shifts.
 
-### Formula 3: Convexity
-$$C=\frac{1}{P}\sum_{t=1}^{T}\frac{CF_t\,t(t+1)}{(1+y)^{t+2}}$$
-Plain-English interpretation: Second-order sensitivity adjustment to yield moves.
-Interview pitfall: Ignoring convexity in stressed scenarios.
+### Formula 3: Curve Shock PnL
+$$PnL\approx -DV01\cdot\Delta bp + \frac{1}{2}C\cdot(\Delta y)^2P$$
+Plain-English interpretation: PnL estimate under rate shocks.
+Interview pitfall: Not separating parallel vs non-parallel moves.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Bond Price | Present value of discounted cash flows. | Mark-to-model pricing for plain-vanilla bonds. | Mixing compounding conventions. |
-| Modified Duration | Approximate percentage price sensitivity to yield. | Rate-shock risk estimation. | Using duration alone for large yield moves. |
-| Convexity | Second-order sensitivity adjustment to yield moves. | Improve rate-shock approximation accuracy. | Ignoring convexity in stressed scenarios. |
+| Convexity | Second-order yield sensitivity. | Improve bond shock approximations. | Ignoring convexity in volatile rate regimes. |
+| Price Change Approx | Duration-convexity Taylor approximation. | Scenario stress calculations. | Applying for very large non-local shifts. |
+| Curve Shock PnL | PnL estimate under rate shocks. | Risk reporting and hedge checks. | Not separating parallel vs non-parallel moves. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

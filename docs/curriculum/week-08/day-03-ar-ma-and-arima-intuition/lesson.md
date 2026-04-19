@@ -24,10 +24,10 @@ This day belongs to the week theme "Time Series I: stationarity, AR/MA/ARIMA int
 AR, MA, and ARIMA intuition is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe ar, ma, and arima intuition in plain language before touching formulas.
-2. Technical frame: Build ar, ma, and arima intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for ar, ma, and arima intuition and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Unified AR/MA with differencing.
+2. Technical frame: Build ar, ma, and arima intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: ARIMA Model, AIC, Forecast Error).
+3. Market interpretation: Baseline univariate forecasting.. Run one compact, reproducible example for ar, ma, and arima intuition and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Choosing orders without diagnostics.
 
 ## Practice Problems
 - Explain ar, ma, and arima intuition in one paragraph without jargon.
@@ -46,27 +46,27 @@ AR, MA, and ARIMA intuition is part of real quant work inside time series i: sta
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: AR(1)
-$$x_t=c+\phi x_{t-1}+\epsilon_t$$
-Plain-English interpretation: Current value depends on one lag plus noise.
-Interview pitfall: Ignoring non-stationarity before fitting AR models.
+### Formula 1: ARIMA Model
+$$\Phi(B)(1-B)^d x_t=\Theta(B)\epsilon_t$$
+Plain-English interpretation: Unified AR/MA with differencing.
+Interview pitfall: Choosing orders without diagnostics.
 
-### Formula 2: EWMA Variance
-$$\sigma_t^2=\lambda\sigma_{t-1}^2+(1-\lambda)r_{t-1}^2$$
-Plain-English interpretation: Recency-weighted volatility estimate.
-Interview pitfall: Choosing decay factor without validation.
+### Formula 2: AIC
+$$AIC=2k-2\ln(\hat L)$$
+Plain-English interpretation: Complexity-adjusted fit criterion.
+Interview pitfall: Treating AIC winner as deploy-ready.
 
-### Formula 3: RMSE
-$$\mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat y_i-y_i)^2}$$
-Plain-English interpretation: Average forecast error magnitude in original units.
-Interview pitfall: Comparing RMSE across differently scaled targets.
+### Formula 3: Forecast Error
+$$e_t=x_t-\hat x_t$$
+Plain-English interpretation: Realized minus predicted value.
+Interview pitfall: Ignoring autocorrelation in residuals.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| AR(1) | Current value depends on one lag plus noise. | Baseline dependence and mean-reversion diagnostics. | Ignoring non-stationarity before fitting AR models. |
-| EWMA Variance | Recency-weighted volatility estimate. | Adaptive risk forecasting. | Choosing decay factor without validation. |
-| RMSE | Average forecast error magnitude in original units. | Compare forecasting pipelines. | Comparing RMSE across differently scaled targets. |
+| ARIMA Model | Unified AR/MA with differencing. | Baseline univariate forecasting. | Choosing orders without diagnostics. |
+| AIC | Complexity-adjusted fit criterion. | Model order comparison. | Treating AIC winner as deploy-ready. |
+| Forecast Error | Realized minus predicted value. | Residual diagnostics and calibration. | Ignoring autocorrelation in residuals. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

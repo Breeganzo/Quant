@@ -24,10 +24,10 @@ This day belongs to the week theme "ML Foundations I: supervised learning, regre
 Linear regression as an ML baseline is part of real quant work inside ml foundations i: supervised learning, regression, features, and train-test discipline research, trading, or risk workflows.
 
 ## Concept Build (Intuition -> Technical -> Market Use)
-1. Intuition: describe linear regression as an ml baseline in plain language before touching formulas.
-2. Technical frame: Build linear regression as an ml baseline from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
-3. Market interpretation: Run one compact, reproducible example for linear regression as an ml baseline and explain both the signal and the main failure mode a quant team should watch.
-4. Failure mode check: identify one way this concept is commonly misused in research or trading discussion.
+1. Intuition: Least-squares linear parameter estimate.
+2. Technical frame: Build linear regression as an ml baseline from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment. (key formulas/workflows: OLS Coefficients, Residual, R-Squared).
+3. Market interpretation: Baseline factor/feature sensitivity model.. Run one compact, reproducible example for linear regression as an ml baseline and explain both the signal and the main failure mode a quant team should watch.
+4. Failure mode check: Unstable estimates under multicollinearity.
 
 ## Practice Problems
 - Explain linear regression as an ml baseline in one paragraph without jargon.
@@ -46,27 +46,27 @@ Linear regression as an ML baseline is part of real quant work inside ml foundat
 3. Give one practical quant use case and one failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Logistic Link
-$$p(y=1\mid x)=\frac{1}{1+e^{-z}},\ z=w^Tx+b$$
-Plain-English interpretation: Maps linear score to class probability.
-Interview pitfall: Treating probability as certainty near threshold.
+### Formula 1: OLS Coefficients
+$$\hat\beta=(X^TX)^{-1}X^Ty$$
+Plain-English interpretation: Least-squares linear parameter estimate.
+Interview pitfall: Unstable estimates under multicollinearity.
 
-### Formula 2: Cross-Entropy Loss
-$$L=-\frac{1}{n}\sum_{i=1}^n [y_i\log p_i + (1-y_i)\log(1-p_i)]$$
-Plain-English interpretation: Penalizes confident wrong classifications strongly.
-Interview pitfall: Evaluating only loss without class-balance diagnostics.
+### Formula 2: Residual
+$$e_i=y_i-\hat y_i$$
+Plain-English interpretation: Unexplained model component.
+Interview pitfall: Ignoring residual autocorrelation.
 
-### Formula 3: F1 Score
-$$F1=2\cdot\frac{\mathrm{Precision}\cdot\mathrm{Recall}}{\mathrm{Precision}+\mathrm{Recall}}$$
-Plain-English interpretation: Balances false-positive and false-negative tradeoff.
-Interview pitfall: Using accuracy alone on imbalanced labels.
+### Formula 3: R-Squared
+$$R^2=1-\frac{\sum e_i^2}{\sum (y_i-\bar y)^2}$$
+Plain-English interpretation: Variance explained fraction.
+Interview pitfall: Using R^2 alone for forecast model quality.
 
 ## Formula Organization Table
 | Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| Logistic Link | Maps linear score to class probability. | Probability of positive next-period return event. | Treating probability as certainty near threshold. |
-| Cross-Entropy Loss | Penalizes confident wrong classifications strongly. | Train classification baselines for risk events. | Evaluating only loss without class-balance diagnostics. |
-| F1 Score | Balances false-positive and false-negative tradeoff. | Model selection under class imbalance. | Using accuracy alone on imbalanced labels. |
+| OLS Coefficients | Least-squares linear parameter estimate. | Baseline factor/feature sensitivity model. | Unstable estimates under multicollinearity. |
+| Residual | Unexplained model component. | Model misspecification diagnostics. | Ignoring residual autocorrelation. |
+| R-Squared | Variance explained fraction. | Quick baseline fit summary. | Using R^2 alone for forecast model quality. |
 
 ## Common Mistakes and Fixes
 - Mistake: copying formulas without defining each symbol. Fix: annotate each term in plain language.

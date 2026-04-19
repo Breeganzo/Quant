@@ -57,30 +57,27 @@ Answer: Finance often studies quantities that evolve continuously, so accumulati
 3. Give one use case and one realistic failure mode.
 
 ## Interview-Ready Formula Sheet
-### Formula 1: Log Return
-$$\ell_t = \ln\left(\frac{P_t}{P_{t-1}}\right)$$
-Plain-English interpretation: Additive return representation over time.
-Notation check: Define each symbol and unit before coding.
+### Formula 1: Definite Integral
+$$\int_a^b f(x)dx$$
+Plain-English interpretation: Accumulated quantity over interval.
+Notation check: Forgetting integration bounds context.
 
-### Formula 2: Annualized Volatility
-$$\sigma_{ann} = \sqrt{252} \cdot \mathrm{Std}(r_t)$$
-Plain-English interpretation: Scales daily return uncertainty to annual horizon.
-Notation check: Confirm return frequency matches annualization factor.
+### Formula 2: Fundamental Theorem
+$$\frac{d}{dx}\int_a^x f(t)dt=f(x)$$
+Plain-English interpretation: Derivative-integral inverse link.
+Notation check: Mixing variable symbols and limits.
 
-### Formula 3: Sharpe Ratio
-$$S = \frac{R_{ann} - R_f}{\sigma_{ann}}$$
-Plain-English interpretation: Excess return earned per unit of risk.
-Notation check: Use consistent annualized units for return, risk-free rate, and volatility.
+### Formula 3: Cumulative Log Return
+$$\sum_t \ell_t = \ln\left(\frac{P_T}{P_0}\right)$$
+Plain-English interpretation: Log-return additivity across time.
+Notation check: Mixing with simple-return aggregation.
 
-### Symbol Definitions
-| Symbol | Meaning | Units | Example |
+## Formula Organization Table
+| Formula/Workflow | Meaning | Finance Use Case | Common Misread |
 | --- | --- | --- | --- |
-| $P_t$ | Price at time $t$ | USD/share | 110.50 |
-| $r_t$ | Simple return | decimal | 0.012 |
-| $R_{ann}$ | Annualized return | annualized decimal | 0.14 |
-| $\sigma_{ann}$ | Annualized volatility | annualized decimal | 0.18 |
-| $R_f$ | Risk-free rate | annualized decimal | 0.03 |
-| $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
+| Definite Integral | Accumulated quantity over interval. | Cumulative signal/flow interpretation. | Forgetting integration bounds context. |
+| Fundamental Theorem | Derivative-integral inverse link. | Map instantaneous vs accumulated effects. | Mixing variable symbols and limits. |
+| Cumulative Log Return | Log-return additivity across time. | Long-horizon growth decomposition. | Mixing with simple-return aggregation. |
 
 ## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
