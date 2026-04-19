@@ -8,37 +8,31 @@
       "id": "q1",
       "difficulty": "basic",
       "question": "Explain review and checkpoint in plain language for a trading or risk audience.",
-      "answer": "A strong answer defines review and checkpoint, gives one concrete market example, and states why the concept improves decisions under uncertainty.",
-      "explanation": "This tests communication quality, not just memorized definitions.",
-      "python_task": "Compute log returns for SPY and QQQ daily closes and explain one volatile day.",
-      "python_solution": "import numpy as np\nimport pandas as pd\nprices = market.pivot(index='date', columns='symbol', values='close')[['SPY','QQQ']].dropna()\nlog_ret = np.log(prices / prices.shift(1)).dropna()\nprint(log_ret.tail())"
+      "answer": "A strong answer defines review and checkpoint, gives one concrete workflow or market-facing decision example, and states one practical limitation that must be monitored.",
+      "explanation": "This tests communication quality, not just memorized definitions."
     },
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write one key formula/workflow and define every symbol with units.",
-      "answer": "A strong answer includes formula meaning, variable units, and one implementation caveat (for example, annualization assumptions or missing data handling).",
+      "question": "Write the Logistic Link formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes Logistic Link exactly, explains each symbol, and states one caveat: Treating probability as certainty near threshold.",
       "explanation": "This checks mathematical fluency and operational reliability.",
-      "python_task": "Estimate annualized volatility for SPY, QQQ, TLT, and GLD.",
-      "python_solution": "returns = prices.pct_change().dropna()\nann_vol = returns.std() * (252 ** 0.5)\nprint(ann_vol.sort_values(ascending=False).round(4))"
+      "python_task": "Train a simple classification baseline and report precision/recall/F1.",
+      "python_solution": "from pathlib import Path\nimport pandas as pd\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.metrics import classification_report\nfrom sklearn.model_selection import train_test_split\n\nmarket = pd.read_csv(Path(\"curriculum/datasets/real_market_prices.csv\"), parse_dates=[\"date\"])\nprices = market.pivot(index=\"date\", columns=\"symbol\", values=\"close\").dropna()\nreturns = prices.pct_change().dropna()\nX = returns.shift(1).dropna()\ny = (returns[\"SPY\"].loc[X.index] > 0).astype(int)\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, shuffle=False)\nmodel = LogisticRegression(max_iter=500)\nmodel.fit(X_train, y_train)\npred = model.predict(X_test)\nprint(classification_report(y_test, pred, digits=3))\n"
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to signal design, portfolio sizing, or risk control, then names one concrete failure mode and detection check.",
-      "explanation": "This evaluates transfer from theory to practical quant workflow.",
-      "python_task": "Compute a simple Sharpe ratio proxy and explain one fragility.",
-      "python_solution": "rf = 0.03\nann_ret = returns.mean() * 252\nann_vol = returns.std() * (252 ** 0.5)\nsharpe = (ann_ret - rf) / ann_vol\nprint(sharpe.round(3))"
+      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {
       "id": "q4",
       "difficulty": "advanced",
-      "question": "How would you validate real data from yfinance/Robinhood export/local CSV before trusting conclusions?",
-      "answer": "Check schema consistency, missing values, split/dividend handling, date alignment, and sensitivity to stress windows. Then compare at least one metric across two data sources.",
-      "explanation": "This tests real-data robustness discipline and source reconciliation.",
-      "python_task": "Run a source-quality checklist before analysis.",
-      "python_solution": "print('rows:', len(market))\nprint('missing close:', market['close'].isna().sum())\nprint('duplicates:', market.duplicated(['date','symbol']).sum())\nprint('symbols:', sorted(market['symbol'].unique()))"
+      "question": "How would you validate data quality and implementation assumptions before trusting conclusions?",
+      "answer": "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources.",
+      "explanation": "This tests robustness discipline and implementation realism."
     },
     {
       "id": "q5",

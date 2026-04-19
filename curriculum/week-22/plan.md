@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Probability drills and expected value
 - Why it matters in quant: Probability drills and expected value is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
-- Core explanation: Start with intuition for probability drills and expected value, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around probability drills and expected value and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build probability drills and expected value from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for probability drills and expected value and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain probability drills and expected value in one paragraph without jargon.
-- Write down the main formula or workflow for probability drills and expected value from memory.
-- Connect probability drills and expected value to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: probability drills and expected value.
-- Reflection: What from probability drills and expected value felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for probability drills and expected value from memory.
+- Connect probability drills and expected value to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Solve one timed coding/math drill for probability drills and expected value and write a concise interview-quality explanation.
+- Reflection: What from probability drills and expected value is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Statistics and regression drills
 - Why it matters in quant: Statistics and regression drills is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
-- Core explanation: Start with intuition for statistics and regression drills, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around statistics and regression drills and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build statistics and regression drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for statistics and regression drills and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain statistics and regression drills in one paragraph without jargon.
-- Write down the main formula or workflow for statistics and regression drills from memory.
-- Connect statistics and regression drills to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: statistics and regression drills.
-- Reflection: What from statistics and regression drills felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for statistics and regression drills from memory.
+- Connect statistics and regression drills to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Solve one timed coding/math drill for statistics and regression drills and write a concise interview-quality explanation.
+- Reflection: What from statistics and regression drills is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Linear algebra and optimization drills
 - Why it matters in quant: Linear algebra and optimization drills is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
-- Core explanation: Start with intuition for linear algebra and optimization drills, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around linear algebra and optimization drills and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build linear algebra and optimization drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for linear algebra and optimization drills and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain linear algebra and optimization drills in one paragraph without jargon.
-- Write down the main formula or workflow for linear algebra and optimization drills from memory.
-- Connect linear algebra and optimization drills to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: linear algebra and optimization drills.
-- Reflection: What from linear algebra and optimization drills felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for linear algebra and optimization drills from memory.
+- Connect linear algebra and optimization drills to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Solve one timed coding/math drill for linear algebra and optimization drills and write a concise interview-quality explanation.
+- Reflection: What from linear algebra and optimization drills is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Python and NumPy drills
 - Why it matters in quant: Python and NumPy drills is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
-- Core explanation: Start with intuition for python and numpy drills, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around python and numpy drills and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build python and numpy drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for python and numpy drills and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain python and numpy drills in one paragraph without jargon.
-- Write down the main formula or workflow for python and numpy drills from memory.
-- Connect python and numpy drills to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: python and numpy drills.
-- Reflection: What from python and numpy drills felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for python and numpy drills from memory.
+- Connect python and numpy drills to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Solve one timed coding/math drill for python and numpy drills and write a concise interview-quality explanation.
+- Reflection: What from python and numpy drills is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: SQL and data reasoning drills
 - Why it matters in quant: SQL and data reasoning drills is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
-- Core explanation: Start with intuition for sql and data reasoning drills, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around sql and data reasoning drills and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build sql and data reasoning drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for sql and data reasoning drills and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain sql and data reasoning drills in one paragraph without jargon.
-- Write down the main formula or workflow for sql and data reasoning drills from memory.
-- Connect sql and data reasoning drills to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: sql and data reasoning drills.
-- Reflection: What from sql and data reasoning drills felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for sql and data reasoning drills from memory.
+- Connect sql and data reasoning drills to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Solve one timed coding/math drill for sql and data reasoning drills and write a concise interview-quality explanation.
+- Reflection: What from sql and data reasoning drills is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Markets and finance discussion drills
 - Why it matters in quant: Markets and finance discussion drills is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
-- Core explanation: Start with intuition for markets and finance discussion drills, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around markets and finance discussion drills and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build markets and finance discussion drills from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for markets and finance discussion drills and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain markets and finance discussion drills in one paragraph without jargon.
-- Write down the main formula or workflow for markets and finance discussion drills from memory.
-- Connect markets and finance discussion drills to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: markets and finance discussion drills.
-- Reflection: What from markets and finance discussion drills felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for markets and finance discussion drills from memory.
+- Connect markets and finance discussion drills to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Solve one timed coding/math drill for markets and finance discussion drills and write a concise interview-quality explanation.
+- Reflection: What from markets and finance discussion drills is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Mock interview day
 - Why it matters in quant: Mock interview day is part of real quant work inside interview prep i: probability, statistics, mental math, python, sql, and markets discussion research, trading, or risk workflows.
-- Core explanation: Start with intuition for mock interview day, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mock interview day and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mock interview day from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mock interview day and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mock interview day in one paragraph without jargon.
-- Write down the main formula or workflow for mock interview day from memory.
-- Connect mock interview day to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mock interview day.
-- Reflection: What from mock interview day felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mock interview day from memory.
+- Connect mock interview day to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Solve one timed coding/math drill for mock interview day and write a concise interview-quality explanation.
+- Reflection: What from mock interview day is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Mental math

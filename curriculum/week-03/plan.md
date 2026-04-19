@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Algebra refresher: equations, fractions, exponents, and logs
 - Why it matters in quant: Algebra refresher: equations, fractions, exponents, and logs is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
-- Core explanation: Start with intuition for algebra refresher: equations, fractions, exponents, and logs, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around algebra refresher: equations, fractions, exponents, and logs and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build algebra refresher: equations, fractions, exponents, and logs from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for algebra refresher: equations, fractions, exponents, and logs and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain algebra refresher: equations, fractions, exponents, and logs in one paragraph without jargon.
-- Write down the main formula or workflow for algebra refresher: equations, fractions, exponents, and logs from memory.
-- Connect algebra refresher: equations, fractions, exponents, and logs to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: algebra refresher: equations, fractions, exponents, and logs.
-- Reflection: What from algebra refresher: equations, fractions, exponents, and logs felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for algebra refresher: equations, fractions, exponents, and logs from memory.
+- Connect algebra refresher: equations, fractions, exponents, and logs to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for algebra refresher: equations, fractions, exponents, and logs and explain one assumption that could fail in markets.
+- Reflection: What from algebra refresher: equations, fractions, exponents, and logs is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Calculus intuition: slopes, derivatives, and sensitivity
 - Why it matters in quant: Calculus intuition: slopes, derivatives, and sensitivity is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
-- Core explanation: Start with intuition for calculus intuition: slopes, derivatives, and sensitivity, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around calculus intuition: slopes, derivatives, and sensitivity and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build calculus intuition: slopes, derivatives, and sensitivity from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for calculus intuition: slopes, derivatives, and sensitivity and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain calculus intuition: slopes, derivatives, and sensitivity in one paragraph without jargon.
-- Write down the main formula or workflow for calculus intuition: slopes, derivatives, and sensitivity from memory.
-- Connect calculus intuition: slopes, derivatives, and sensitivity to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: calculus intuition: slopes, derivatives, and sensitivity.
-- Reflection: What from calculus intuition: slopes, derivatives, and sensitivity felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for calculus intuition: slopes, derivatives, and sensitivity from memory.
+- Connect calculus intuition: slopes, derivatives, and sensitivity to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for calculus intuition: slopes, derivatives, and sensitivity and explain one assumption that could fail in markets.
+- Reflection: What from calculus intuition: slopes, derivatives, and sensitivity is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Integrals, accumulation, and area intuition
 - Why it matters in quant: Integrals, accumulation, and area intuition is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
-- Core explanation: Start with intuition for integrals, accumulation, and area intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around integrals, accumulation, and area intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build integrals, accumulation, and area intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for integrals, accumulation, and area intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain integrals, accumulation, and area intuition in one paragraph without jargon.
-- Write down the main formula or workflow for integrals, accumulation, and area intuition from memory.
-- Connect integrals, accumulation, and area intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: integrals, accumulation, and area intuition.
-- Reflection: What from integrals, accumulation, and area intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for integrals, accumulation, and area intuition from memory.
+- Connect integrals, accumulation, and area intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for integrals, accumulation, and area intuition and explain one assumption that could fail in markets.
+- Reflection: What from integrals, accumulation, and area intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Probability rules, random variables, and distributions
 - Why it matters in quant: Probability rules, random variables, and distributions is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
-- Core explanation: Start with intuition for probability rules, random variables, and distributions, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around probability rules, random variables, and distributions and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build probability rules, random variables, and distributions from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for probability rules, random variables, and distributions and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain probability rules, random variables, and distributions in one paragraph without jargon.
-- Write down the main formula or workflow for probability rules, random variables, and distributions from memory.
-- Connect probability rules, random variables, and distributions to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: probability rules, random variables, and distributions.
-- Reflection: What from probability rules, random variables, and distributions felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for probability rules, random variables, and distributions from memory.
+- Connect probability rules, random variables, and distributions to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for probability rules, random variables, and distributions and explain one assumption that could fail in markets.
+- Reflection: What from probability rules, random variables, and distributions is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: APIs, JSON, conditional probability, and Bayes intuition
 - Why it matters in quant: APIs, JSON, conditional probability, and Bayes intuition is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
-- Core explanation: Start with intuition for apis, json, conditional probability, and bayes intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around apis, json, conditional probability, and bayes intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build apis, json, conditional probability, and bayes intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for apis, json, conditional probability, and bayes intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain apis, json, conditional probability, and bayes intuition in one paragraph without jargon.
-- Write down the main formula or workflow for apis, json, conditional probability, and bayes intuition from memory.
-- Connect apis, json, conditional probability, and bayes intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: apis, json, conditional probability, and bayes intuition.
-- Reflection: What from apis, json, conditional probability, and bayes intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for apis, json, conditional probability, and bayes intuition from memory.
+- Connect apis, json, conditional probability, and bayes intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for apis, json, conditional probability, and bayes intuition and explain one assumption that could fail in markets.
+- Reflection: What from apis, json, conditional probability, and bayes intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Revision, recall, and formula consolidation
 - Why it matters in quant: Revision, recall, and formula consolidation is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
-- Core explanation: Start with intuition for revision, recall, and formula consolidation, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around revision, recall, and formula consolidation and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build revision, recall, and formula consolidation from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for revision, recall, and formula consolidation and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain revision, recall, and formula consolidation in one paragraph without jargon.
-- Write down the main formula or workflow for revision, recall, and formula consolidation from memory.
-- Connect revision, recall, and formula consolidation to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: revision, recall, and formula consolidation.
-- Reflection: What from revision, recall, and formula consolidation felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for revision, recall, and formula consolidation from memory.
+- Connect revision, recall, and formula consolidation to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for revision, recall, and formula consolidation and explain one assumption that could fail in markets.
+- Reflection: What from revision, recall, and formula consolidation is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Mini project: expected value and Monte Carlo trade simulation
 - Why it matters in quant: Mini project: expected value and Monte Carlo trade simulation is part of real quant work inside math rebuild i: algebra, calculus intuition, probability rules, apis, and monte carlo thinking research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini project: expected value and monte carlo trade simulation, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini project: expected value and monte carlo trade simulation and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini project: expected value and monte carlo trade simulation from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini project: expected value and monte carlo trade simulation and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini project: expected value and monte carlo trade simulation in one paragraph without jargon.
-- Write down the main formula or workflow for mini project: expected value and monte carlo trade simulation from memory.
-- Connect mini project: expected value and monte carlo trade simulation to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini project: expected value and monte carlo trade simulation.
-- Reflection: What from mini project: expected value and monte carlo trade simulation felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini project: expected value and monte carlo trade simulation from memory.
+- Connect mini project: expected value and monte carlo trade simulation to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for mini project: expected value and monte carlo trade simulation and explain one assumption that could fail in markets.
+- Reflection: What from mini project: expected value and monte carlo trade simulation is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Exponents and logarithms

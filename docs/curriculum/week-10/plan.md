@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Markowitz portfolio intuition
 - Why it matters in quant: Markowitz portfolio intuition is part of real quant work inside finance core ii: portfolio theory, capm, factor investing, and optimization research, trading, or risk workflows.
-- Core explanation: Start with intuition for markowitz portfolio intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around markowitz portfolio intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build markowitz portfolio intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for markowitz portfolio intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain markowitz portfolio intuition in one paragraph without jargon.
-- Write down the main formula or workflow for markowitz portfolio intuition from memory.
-- Connect markowitz portfolio intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: markowitz portfolio intuition.
-- Reflection: What from markowitz portfolio intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for markowitz portfolio intuition from memory.
+- Connect markowitz portfolio intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compute a risk-aware allocation for markowitz portfolio intuition and explain one concentration risk from the resulting weights.
+- Reflection: What from markowitz portfolio intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Efficient frontier and Sharpe ratio
 - Why it matters in quant: Efficient frontier and Sharpe ratio is part of real quant work inside finance core ii: portfolio theory, capm, factor investing, and optimization research, trading, or risk workflows.
-- Core explanation: Start with intuition for efficient frontier and sharpe ratio, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around efficient frontier and sharpe ratio and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build efficient frontier and sharpe ratio from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for efficient frontier and sharpe ratio and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain efficient frontier and sharpe ratio in one paragraph without jargon.
-- Write down the main formula or workflow for efficient frontier and sharpe ratio from memory.
-- Connect efficient frontier and sharpe ratio to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: efficient frontier and sharpe ratio.
-- Reflection: What from efficient frontier and sharpe ratio felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for efficient frontier and sharpe ratio from memory.
+- Connect efficient frontier and sharpe ratio to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compute a risk-aware allocation for efficient frontier and sharpe ratio and explain one concentration risk from the resulting weights.
+- Reflection: What from efficient frontier and sharpe ratio is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: CAPM and beta intuition
 - Why it matters in quant: CAPM and beta intuition is part of real quant work inside finance core ii: portfolio theory, capm, factor investing, and optimization research, trading, or risk workflows.
-- Core explanation: Start with intuition for capm and beta intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capm and beta intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capm and beta intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capm and beta intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capm and beta intuition in one paragraph without jargon.
-- Write down the main formula or workflow for capm and beta intuition from memory.
-- Connect capm and beta intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capm and beta intuition.
-- Reflection: What from capm and beta intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capm and beta intuition from memory.
+- Connect capm and beta intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compute a risk-aware allocation for capm and beta intuition and explain one concentration risk from the resulting weights.
+- Reflection: What from capm and beta intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Factor investing basics
 - Why it matters in quant: Factor investing basics is part of real quant work inside finance core ii: portfolio theory, capm, factor investing, and optimization research, trading, or risk workflows.
-- Core explanation: Start with intuition for factor investing basics, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around factor investing basics and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build factor investing basics from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for factor investing basics and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain factor investing basics in one paragraph without jargon.
-- Write down the main formula or workflow for factor investing basics from memory.
-- Connect factor investing basics to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: factor investing basics.
-- Reflection: What from factor investing basics felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for factor investing basics from memory.
+- Connect factor investing basics to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compute a risk-aware allocation for factor investing basics and explain one concentration risk from the resulting weights.
+- Reflection: What from factor investing basics is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Risk budgeting and constraints
 - Why it matters in quant: Risk budgeting and constraints is part of real quant work inside finance core ii: portfolio theory, capm, factor investing, and optimization research, trading, or risk workflows.
-- Core explanation: Start with intuition for risk budgeting and constraints, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around risk budgeting and constraints and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build risk budgeting and constraints from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for risk budgeting and constraints and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain risk budgeting and constraints in one paragraph without jargon.
-- Write down the main formula or workflow for risk budgeting and constraints from memory.
-- Connect risk budgeting and constraints to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: risk budgeting and constraints.
-- Reflection: What from risk budgeting and constraints felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for risk budgeting and constraints from memory.
+- Connect risk budgeting and constraints to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compute a risk-aware allocation for risk budgeting and constraints and explain one concentration risk from the resulting weights.
+- Reflection: What from risk budgeting and constraints is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mini lab: factor exposure overview
 - Why it matters in quant: Mini lab: factor exposure overview is part of real quant work inside finance core ii: portfolio theory, capm, factor investing, and optimization research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini lab: factor exposure overview, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini lab: factor exposure overview and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini lab: factor exposure overview from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini lab: factor exposure overview and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini lab: factor exposure overview in one paragraph without jargon.
-- Write down the main formula or workflow for mini lab: factor exposure overview from memory.
-- Connect mini lab: factor exposure overview to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini lab: factor exposure overview.
-- Reflection: What from mini lab: factor exposure overview felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini lab: factor exposure overview from memory.
+- Connect mini lab: factor exposure overview to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compute a risk-aware allocation for mini lab: factor exposure overview and explain one concentration risk from the resulting weights.
+- Reflection: What from mini lab: factor exposure overview is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and checkpoint
 - Why it matters in quant: Review and checkpoint is part of real quant work inside finance core ii: portfolio theory, capm, factor investing, and optimization research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and checkpoint, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and checkpoint and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and checkpoint from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and checkpoint and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and checkpoint in one paragraph without jargon.
-- Write down the main formula or workflow for review and checkpoint from memory.
-- Connect review and checkpoint to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and checkpoint.
-- Reflection: What from review and checkpoint felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and checkpoint from memory.
+- Connect review and checkpoint to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compute a risk-aware allocation for review and checkpoint and explain one concentration risk from the resulting weights.
+- Reflection: What from review and checkpoint is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Mean-variance optimization

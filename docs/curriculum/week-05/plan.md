@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Prediction problems in finance: what are we forecasting?
 - Why it matters in quant: Prediction problems in finance: what are we forecasting? is part of real quant work inside ml foundations i: supervised learning, regression, features, and train-test discipline research, trading, or risk workflows.
-- Core explanation: Start with intuition for prediction problems in finance: what are we forecasting?, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around prediction problems in finance: what are we forecasting? and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build prediction problems in finance: what are we forecasting? from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for prediction problems in finance: what are we forecasting? and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain prediction problems in finance: what are we forecasting? in one paragraph without jargon.
-- Write down the main formula or workflow for prediction problems in finance: what are we forecasting? from memory.
-- Connect prediction problems in finance: what are we forecasting? to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: prediction problems in finance: what are we forecasting?.
-- Reflection: What from prediction problems in finance: what are we forecasting? felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for prediction problems in finance: what are we forecasting? from memory.
+- Connect prediction problems in finance: what are we forecasting? to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for prediction problems in finance: what are we forecasting? on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from prediction problems in finance: what are we forecasting? is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Linear regression as an ML baseline
 - Why it matters in quant: Linear regression as an ML baseline is part of real quant work inside ml foundations i: supervised learning, regression, features, and train-test discipline research, trading, or risk workflows.
-- Core explanation: Start with intuition for linear regression as an ml baseline, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around linear regression as an ml baseline and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build linear regression as an ml baseline from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for linear regression as an ml baseline and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain linear regression as an ml baseline in one paragraph without jargon.
-- Write down the main formula or workflow for linear regression as an ml baseline from memory.
-- Connect linear regression as an ml baseline to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: linear regression as an ml baseline.
-- Reflection: What from linear regression as an ml baseline felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for linear regression as an ml baseline from memory.
+- Connect linear regression as an ml baseline to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for linear regression as an ml baseline on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from linear regression as an ml baseline is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Feature engineering from price and volume data
 - Why it matters in quant: Feature engineering from price and volume data is part of real quant work inside ml foundations i: supervised learning, regression, features, and train-test discipline research, trading, or risk workflows.
-- Core explanation: Start with intuition for feature engineering from price and volume data, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around feature engineering from price and volume data and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build feature engineering from price and volume data from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for feature engineering from price and volume data and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain feature engineering from price and volume data in one paragraph without jargon.
-- Write down the main formula or workflow for feature engineering from price and volume data from memory.
-- Connect feature engineering from price and volume data to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: feature engineering from price and volume data.
-- Reflection: What from feature engineering from price and volume data felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for feature engineering from price and volume data from memory.
+- Connect feature engineering from price and volume data to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for feature engineering from price and volume data on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from feature engineering from price and volume data is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Train, validation, test split and leakage
 - Why it matters in quant: Train, validation, test split and leakage is part of real quant work inside ml foundations i: supervised learning, regression, features, and train-test discipline research, trading, or risk workflows.
-- Core explanation: Start with intuition for train, validation, test split and leakage, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around train, validation, test split and leakage and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build train, validation, test split and leakage from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for train, validation, test split and leakage and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain train, validation, test split and leakage in one paragraph without jargon.
-- Write down the main formula or workflow for train, validation, test split and leakage from memory.
-- Connect train, validation, test split and leakage to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: train, validation, test split and leakage.
-- Reflection: What from train, validation, test split and leakage felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for train, validation, test split and leakage from memory.
+- Connect train, validation, test split and leakage to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for train, validation, test split and leakage on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from train, validation, test split and leakage is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Regularization and overfitting intuition
 - Why it matters in quant: Regularization and overfitting intuition is part of real quant work inside ml foundations i: supervised learning, regression, features, and train-test discipline research, trading, or risk workflows.
-- Core explanation: Start with intuition for regularization and overfitting intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around regularization and overfitting intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build regularization and overfitting intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for regularization and overfitting intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain regularization and overfitting intuition in one paragraph without jargon.
-- Write down the main formula or workflow for regularization and overfitting intuition from memory.
-- Connect regularization and overfitting intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: regularization and overfitting intuition.
-- Reflection: What from regularization and overfitting intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for regularization and overfitting intuition from memory.
+- Connect regularization and overfitting intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for regularization and overfitting intuition on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from regularization and overfitting intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mini research lab on next-day return prediction
 - Why it matters in quant: Mini research lab on next-day return prediction is part of real quant work inside ml foundations i: supervised learning, regression, features, and train-test discipline research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini research lab on next-day return prediction, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini research lab on next-day return prediction and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini research lab on next-day return prediction from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini research lab on next-day return prediction and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini research lab on next-day return prediction in one paragraph without jargon.
-- Write down the main formula or workflow for mini research lab on next-day return prediction from memory.
-- Connect mini research lab on next-day return prediction to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini research lab on next-day return prediction.
-- Reflection: What from mini research lab on next-day return prediction felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini research lab on next-day return prediction from memory.
+- Connect mini research lab on next-day return prediction to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for mini research lab on next-day return prediction on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from mini research lab on next-day return prediction is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and checkpoint
 - Why it matters in quant: Review and checkpoint is part of real quant work inside ml foundations i: supervised learning, regression, features, and train-test discipline research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and checkpoint, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and checkpoint and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and checkpoint from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and checkpoint and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and checkpoint in one paragraph without jargon.
-- Write down the main formula or workflow for review and checkpoint from memory.
-- Connect review and checkpoint to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and checkpoint.
-- Reflection: What from review and checkpoint felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and checkpoint from memory.
+- Connect review and checkpoint to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for review and checkpoint on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from review and checkpoint is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Labels and features

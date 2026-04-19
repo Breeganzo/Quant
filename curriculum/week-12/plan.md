@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Forwards, futures, and option payoffs
 - Why it matters in quant: Forwards, futures, and option payoffs is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
-- Core explanation: Start with intuition for forwards, futures, and option payoffs, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around forwards, futures, and option payoffs and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build forwards, futures, and option payoffs from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for forwards, futures, and option payoffs and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain forwards, futures, and option payoffs in one paragraph without jargon.
-- Write down the main formula or workflow for forwards, futures, and option payoffs from memory.
-- Connect forwards, futures, and option payoffs to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: forwards, futures, and option payoffs.
-- Reflection: What from forwards, futures, and option payoffs felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for forwards, futures, and option payoffs from memory.
+- Connect forwards, futures, and option payoffs to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement payoff and sensitivity calculations for forwards, futures, and option payoffs and interpret one hedging implication.
+- Reflection: What from forwards, futures, and option payoffs is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Calls, puts, and payoff diagrams
 - Why it matters in quant: Calls, puts, and payoff diagrams is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
-- Core explanation: Start with intuition for calls, puts, and payoff diagrams, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around calls, puts, and payoff diagrams and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build calls, puts, and payoff diagrams from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for calls, puts, and payoff diagrams and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain calls, puts, and payoff diagrams in one paragraph without jargon.
-- Write down the main formula or workflow for calls, puts, and payoff diagrams from memory.
-- Connect calls, puts, and payoff diagrams to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: calls, puts, and payoff diagrams.
-- Reflection: What from calls, puts, and payoff diagrams felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for calls, puts, and payoff diagrams from memory.
+- Connect calls, puts, and payoff diagrams to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement payoff and sensitivity calculations for calls, puts, and payoff diagrams and interpret one hedging implication.
+- Reflection: What from calls, puts, and payoff diagrams is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Option Greeks intuition
 - Why it matters in quant: Option Greeks intuition is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
-- Core explanation: Start with intuition for option greeks intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around option greeks intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build option greeks intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for option greeks intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain option greeks intuition in one paragraph without jargon.
-- Write down the main formula or workflow for option greeks intuition from memory.
-- Connect option greeks intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: option greeks intuition.
-- Reflection: What from option greeks intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for option greeks intuition from memory.
+- Connect option greeks intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement payoff and sensitivity calculations for option greeks intuition and interpret one hedging implication.
+- Reflection: What from option greeks intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Volatility smile and pricing inputs
 - Why it matters in quant: Volatility smile and pricing inputs is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
-- Core explanation: Start with intuition for volatility smile and pricing inputs, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around volatility smile and pricing inputs and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build volatility smile and pricing inputs from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for volatility smile and pricing inputs and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain volatility smile and pricing inputs in one paragraph without jargon.
-- Write down the main formula or workflow for volatility smile and pricing inputs from memory.
-- Connect volatility smile and pricing inputs to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: volatility smile and pricing inputs.
-- Reflection: What from volatility smile and pricing inputs felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for volatility smile and pricing inputs from memory.
+- Connect volatility smile and pricing inputs to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement payoff and sensitivity calculations for volatility smile and pricing inputs and interpret one hedging implication.
+- Reflection: What from volatility smile and pricing inputs is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Risk management: VaR, stress, and scenarios
 - Why it matters in quant: Risk management: VaR, stress, and scenarios is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
-- Core explanation: Start with intuition for risk management: var, stress, and scenarios, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around risk management: var, stress, and scenarios and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build risk management: var, stress, and scenarios from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for risk management: var, stress, and scenarios and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain risk management: var, stress, and scenarios in one paragraph without jargon.
-- Write down the main formula or workflow for risk management: var, stress, and scenarios from memory.
-- Connect risk management: var, stress, and scenarios to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: risk management: var, stress, and scenarios.
-- Reflection: What from risk management: var, stress, and scenarios felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for risk management: var, stress, and scenarios from memory.
+- Connect risk management: var, stress, and scenarios to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement payoff and sensitivity calculations for risk management: var, stress, and scenarios and interpret one hedging implication.
+- Reflection: What from risk management: var, stress, and scenarios is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Capstone build day
 - Why it matters in quant: Capstone build day is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone build day, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone build day and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone build day from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone build day and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone build day in one paragraph without jargon.
-- Write down the main formula or workflow for capstone build day from memory.
-- Connect capstone build day to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone build day.
-- Reflection: What from capstone build day felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone build day from memory.
+- Connect capstone build day to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement payoff and sensitivity calculations for capstone build day and interpret one hedging implication.
+- Reflection: What from capstone build day is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Capstone review and write-up
 - Why it matters in quant: Capstone review and write-up is part of real quant work inside finance core iv: derivatives, options, greeks, hedging, and risk management research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone review and write-up, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone review and write-up and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone review and write-up from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone review and write-up and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone review and write-up in one paragraph without jargon.
-- Write down the main formula or workflow for capstone review and write-up from memory.
-- Connect capstone review and write-up to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone review and write-up.
-- Reflection: What from capstone review and write-up felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone review and write-up from memory.
+- Connect capstone review and write-up to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement payoff and sensitivity calculations for capstone review and write-up and interpret one hedging implication.
+- Reflection: What from capstone review and write-up is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Derivative contracts

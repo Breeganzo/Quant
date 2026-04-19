@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: What agentic AI can and cannot do in quant
 - Why it matters in quant: What agentic AI can and cannot do in quant is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
-- Core explanation: Start with intuition for what agentic ai can and cannot do in quant, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around what agentic ai can and cannot do in quant and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build what agentic ai can and cannot do in quant from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for what agentic ai can and cannot do in quant and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain what agentic ai can and cannot do in quant in one paragraph without jargon.
-- Write down the main formula or workflow for what agentic ai can and cannot do in quant from memory.
-- Connect what agentic ai can and cannot do in quant to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: what agentic ai can and cannot do in quant.
-- Reflection: What from what agentic ai can and cannot do in quant felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for what agentic ai can and cannot do in quant from memory.
+- Connect what agentic ai can and cannot do in quant to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for what agentic ai can and cannot do in quant with explicit citation and hallucination checks.
+- Reflection: What from what agentic ai can and cannot do in quant is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Literature summarization and idea extraction
 - Why it matters in quant: Literature summarization and idea extraction is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
-- Core explanation: Start with intuition for literature summarization and idea extraction, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around literature summarization and idea extraction and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build literature summarization and idea extraction from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for literature summarization and idea extraction and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain literature summarization and idea extraction in one paragraph without jargon.
-- Write down the main formula or workflow for literature summarization and idea extraction from memory.
-- Connect literature summarization and idea extraction to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: literature summarization and idea extraction.
-- Reflection: What from literature summarization and idea extraction felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for literature summarization and idea extraction from memory.
+- Connect literature summarization and idea extraction to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for literature summarization and idea extraction with explicit citation and hallucination checks.
+- Reflection: What from literature summarization and idea extraction is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Feature brainstorming and hypothesis generation
 - Why it matters in quant: Feature brainstorming and hypothesis generation is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
-- Core explanation: Start with intuition for feature brainstorming and hypothesis generation, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around feature brainstorming and hypothesis generation and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build feature brainstorming and hypothesis generation from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for feature brainstorming and hypothesis generation and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain feature brainstorming and hypothesis generation in one paragraph without jargon.
-- Write down the main formula or workflow for feature brainstorming and hypothesis generation from memory.
-- Connect feature brainstorming and hypothesis generation to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: feature brainstorming and hypothesis generation.
-- Reflection: What from feature brainstorming and hypothesis generation felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for feature brainstorming and hypothesis generation from memory.
+- Connect feature brainstorming and hypothesis generation to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for feature brainstorming and hypothesis generation with explicit citation and hallucination checks.
+- Reflection: What from feature brainstorming and hypothesis generation is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Code review assistants and debugging workflow
 - Why it matters in quant: Code review assistants and debugging workflow is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
-- Core explanation: Start with intuition for code review assistants and debugging workflow, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around code review assistants and debugging workflow and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build code review assistants and debugging workflow from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for code review assistants and debugging workflow and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain code review assistants and debugging workflow in one paragraph without jargon.
-- Write down the main formula or workflow for code review assistants and debugging workflow from memory.
-- Connect code review assistants and debugging workflow to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: code review assistants and debugging workflow.
-- Reflection: What from code review assistants and debugging workflow felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for code review assistants and debugging workflow from memory.
+- Connect code review assistants and debugging workflow to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for code review assistants and debugging workflow with explicit citation and hallucination checks.
+- Reflection: What from code review assistants and debugging workflow is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Guardrails: hallucination, leakage, benchmark cheating
 - Why it matters in quant: Guardrails: hallucination, leakage, benchmark cheating is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
-- Core explanation: Start with intuition for guardrails: hallucination, leakage, benchmark cheating, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around guardrails: hallucination, leakage, benchmark cheating and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build guardrails: hallucination, leakage, benchmark cheating from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for guardrails: hallucination, leakage, benchmark cheating and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain guardrails: hallucination, leakage, benchmark cheating in one paragraph without jargon.
-- Write down the main formula or workflow for guardrails: hallucination, leakage, benchmark cheating from memory.
-- Connect guardrails: hallucination, leakage, benchmark cheating to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: guardrails: hallucination, leakage, benchmark cheating.
-- Reflection: What from guardrails: hallucination, leakage, benchmark cheating felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for guardrails: hallucination, leakage, benchmark cheating from memory.
+- Connect guardrails: hallucination, leakage, benchmark cheating to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for guardrails: hallucination, leakage, benchmark cheating with explicit citation and hallucination checks.
+- Reflection: What from guardrails: hallucination, leakage, benchmark cheating is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mini lab: AI-assisted research memo
 - Why it matters in quant: Mini lab: AI-assisted research memo is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini lab: ai-assisted research memo, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini lab: ai-assisted research memo and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini lab: ai-assisted research memo from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini lab: ai-assisted research memo and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini lab: ai-assisted research memo in one paragraph without jargon.
-- Write down the main formula or workflow for mini lab: ai-assisted research memo from memory.
-- Connect mini lab: ai-assisted research memo to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini lab: ai-assisted research memo.
-- Reflection: What from mini lab: ai-assisted research memo felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini lab: ai-assisted research memo from memory.
+- Connect mini lab: ai-assisted research memo to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for mini lab: ai-assisted research memo with explicit citation and hallucination checks.
+- Reflection: What from mini lab: ai-assisted research memo is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and policy checklist
 - Why it matters in quant: Review and policy checklist is part of real quant work inside agentic ai for quant i: research automation, literature review, idea generation, and guardrails research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and policy checklist, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and policy checklist and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and policy checklist from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and policy checklist and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and policy checklist in one paragraph without jargon.
-- Write down the main formula or workflow for review and policy checklist from memory.
-- Connect review and policy checklist to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and policy checklist.
-- Reflection: What from review and policy checklist felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and policy checklist from memory.
+- Connect review and policy checklist to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for review and policy checklist with explicit citation and hallucination checks.
+- Reflection: What from review and policy checklist is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Research automation

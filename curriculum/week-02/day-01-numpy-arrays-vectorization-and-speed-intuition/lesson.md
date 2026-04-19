@@ -1,6 +1,6 @@
 # Week 02 Mon: NumPy arrays, vectorization, and speed intuition
 
-**Estimated time:** 8 hours
+**Estimated time:** 6 hours
 
 ## Session Plan
 | Session | Duration | Focus |
@@ -86,7 +86,7 @@ Notation check: Use consistent annualized units for return, risk-free rate, and 
 | $R_f$ | Risk-free rate | annualized decimal | 0.03 |
 | $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
 
-## Extended Study (to complete a full 4-hour day)
+## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
 2. Add one extra worked example using different numbers or assumptions.
 3. Explain one failure mode where this concept can be misapplied in trading or risk work.
@@ -101,14 +101,14 @@ Notation check: Use consistent annualized units for return, risk-free rate, and 
 6. Write one practical portfolio/risk insight from the data.
 
 ## Coding Task
-Implement one notebook cell or small script focused on: numpy arrays, vectorization, and speed intuition.
+Build a cleaned feature table for numpy arrays, vectorization, and speed intuition and show one validation check that catches a data issue.
 
 ## Daily Interview Drill
 ### Q: Why do quants use NumPy instead of plain Python lists for many calculations?
 A: Because NumPy arrays support faster, clearer numerical operations and map naturally to vectors and matrices used in finance.
 
 ## Reflection Question
-What from numpy arrays, vectorization, and speed intuition felt truly clear, and what still needs a slower revisit?
+What from numpy arrays, vectorization, and speed intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Completion Checklist
 - I completed the planned study blocks or adjusted them honestly.

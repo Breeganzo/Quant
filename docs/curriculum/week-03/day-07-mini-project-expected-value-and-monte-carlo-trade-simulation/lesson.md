@@ -1,6 +1,6 @@
 # Week 03 Sun: Mini project: expected value and Monte Carlo trade simulation
 
-**Estimated time:** 8 hours
+**Estimated time:** 6 hours
 
 ## Session Plan
 | Session | Duration | Focus |
@@ -66,7 +66,7 @@ Notation check: Use consistent annualized units for return, risk-free rate, and 
 | $R_f$ | Risk-free rate | annualized decimal | 0.03 |
 | $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
 
-## Extended Study (to complete a full 4-hour day)
+## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
 2. Add one extra worked example using different numbers or assumptions.
 3. Explain one failure mode where this concept can be misapplied in trading or risk work.
@@ -81,14 +81,14 @@ Notation check: Use consistent annualized units for return, risk-free rate, and 
 6. Write one practical portfolio/risk insight from the data.
 
 ## Coding Task
-Implement one notebook cell or small script focused on: mini project: expected value and monte carlo trade simulation.
+Implement a small reproducible example for mini project: expected value and monte carlo trade simulation and explain one assumption that could fail in markets.
 
 ## Daily Interview Drill
 ### Q: What does a Monte Carlo simulation help you see that a single expected value does not?
 A: It shows dispersion, tail outcomes, streaks, and the range of realistic sample paths.
 
 ## Reflection Question
-What from mini project: expected value and monte carlo trade simulation felt truly clear, and what still needs a slower revisit?
+What from mini project: expected value and monte carlo trade simulation is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Completion Checklist
 - I completed the planned study blocks or adjusted them honestly.

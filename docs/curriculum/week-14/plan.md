@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Backtesting workflow from signal to trades
 - Why it matters in quant: Backtesting workflow from signal to trades is part of real quant work inside quant workflow ii: backtesting architecture, position sizing, and performance attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for backtesting workflow from signal to trades, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around backtesting workflow from signal to trades and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build backtesting workflow from signal to trades from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for backtesting workflow from signal to trades and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain backtesting workflow from signal to trades in one paragraph without jargon.
-- Write down the main formula or workflow for backtesting workflow from signal to trades from memory.
-- Connect backtesting workflow from signal to trades to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: backtesting workflow from signal to trades.
-- Reflection: What from backtesting workflow from signal to trades felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for backtesting workflow from signal to trades from memory.
+- Connect backtesting workflow from signal to trades to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Backtest a toy rule for backtesting workflow from signal to trades with transaction costs and report net metrics.
+- Reflection: What from backtesting workflow from signal to trades is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Look-ahead, survivorship, and data snooping pitfalls
 - Why it matters in quant: Look-ahead, survivorship, and data snooping pitfalls is part of real quant work inside quant workflow ii: backtesting architecture, position sizing, and performance attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for look-ahead, survivorship, and data snooping pitfalls, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around look-ahead, survivorship, and data snooping pitfalls and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build look-ahead, survivorship, and data snooping pitfalls from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for look-ahead, survivorship, and data snooping pitfalls and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain look-ahead, survivorship, and data snooping pitfalls in one paragraph without jargon.
-- Write down the main formula or workflow for look-ahead, survivorship, and data snooping pitfalls from memory.
-- Connect look-ahead, survivorship, and data snooping pitfalls to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: look-ahead, survivorship, and data snooping pitfalls.
-- Reflection: What from look-ahead, survivorship, and data snooping pitfalls felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for look-ahead, survivorship, and data snooping pitfalls from memory.
+- Connect look-ahead, survivorship, and data snooping pitfalls to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Backtest a toy rule for look-ahead, survivorship, and data snooping pitfalls with transaction costs and report net metrics.
+- Reflection: What from look-ahead, survivorship, and data snooping pitfalls is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Position sizing and exposure control
 - Why it matters in quant: Position sizing and exposure control is part of real quant work inside quant workflow ii: backtesting architecture, position sizing, and performance attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for position sizing and exposure control, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around position sizing and exposure control and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build position sizing and exposure control from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for position sizing and exposure control and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain position sizing and exposure control in one paragraph without jargon.
-- Write down the main formula or workflow for position sizing and exposure control from memory.
-- Connect position sizing and exposure control to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: position sizing and exposure control.
-- Reflection: What from position sizing and exposure control felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for position sizing and exposure control from memory.
+- Connect position sizing and exposure control to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Backtest a toy rule for position sizing and exposure control with transaction costs and report net metrics.
+- Reflection: What from position sizing and exposure control is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Turnover, slippage, and implementation realism
 - Why it matters in quant: Turnover, slippage, and implementation realism is part of real quant work inside quant workflow ii: backtesting architecture, position sizing, and performance attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for turnover, slippage, and implementation realism, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around turnover, slippage, and implementation realism and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build turnover, slippage, and implementation realism from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for turnover, slippage, and implementation realism and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain turnover, slippage, and implementation realism in one paragraph without jargon.
-- Write down the main formula or workflow for turnover, slippage, and implementation realism from memory.
-- Connect turnover, slippage, and implementation realism to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: turnover, slippage, and implementation realism.
-- Reflection: What from turnover, slippage, and implementation realism felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for turnover, slippage, and implementation realism from memory.
+- Connect turnover, slippage, and implementation realism to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Backtest a toy rule for turnover, slippage, and implementation realism with transaction costs and report net metrics.
+- Reflection: What from turnover, slippage, and implementation realism is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Performance attribution and diagnostics
 - Why it matters in quant: Performance attribution and diagnostics is part of real quant work inside quant workflow ii: backtesting architecture, position sizing, and performance attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for performance attribution and diagnostics, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around performance attribution and diagnostics and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build performance attribution and diagnostics from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for performance attribution and diagnostics and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain performance attribution and diagnostics in one paragraph without jargon.
-- Write down the main formula or workflow for performance attribution and diagnostics from memory.
-- Connect performance attribution and diagnostics to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: performance attribution and diagnostics.
-- Reflection: What from performance attribution and diagnostics felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for performance attribution and diagnostics from memory.
+- Connect performance attribution and diagnostics to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Backtest a toy rule for performance attribution and diagnostics with transaction costs and report net metrics.
+- Reflection: What from performance attribution and diagnostics is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mini lab: backtest a toy rule with costs
 - Why it matters in quant: Mini lab: backtest a toy rule with costs is part of real quant work inside quant workflow ii: backtesting architecture, position sizing, and performance attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini lab: backtest a toy rule with costs, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini lab: backtest a toy rule with costs and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini lab: backtest a toy rule with costs from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini lab: backtest a toy rule with costs and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini lab: backtest a toy rule with costs in one paragraph without jargon.
-- Write down the main formula or workflow for mini lab: backtest a toy rule with costs from memory.
-- Connect mini lab: backtest a toy rule with costs to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini lab: backtest a toy rule with costs.
-- Reflection: What from mini lab: backtest a toy rule with costs felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini lab: backtest a toy rule with costs from memory.
+- Connect mini lab: backtest a toy rule with costs to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Backtest a toy rule for mini lab: backtest a toy rule with costs with transaction costs and report net metrics.
+- Reflection: What from mini lab: backtest a toy rule with costs is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and write-up
 - Why it matters in quant: Review and write-up is part of real quant work inside quant workflow ii: backtesting architecture, position sizing, and performance attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and write-up, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and write-up and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and write-up from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and write-up and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and write-up in one paragraph without jargon.
-- Write down the main formula or workflow for review and write-up from memory.
-- Connect review and write-up to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and write-up.
-- Reflection: What from review and write-up felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and write-up from memory.
+- Connect review and write-up to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Backtest a toy rule for review and write-up with transaction costs and report net metrics.
+- Reflection: What from review and write-up is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Backtesting pipeline

@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Sampling, estimators, bias, and variance
 - Why it matters in quant: Sampling, estimators, bias, and variance is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
-- Core explanation: Start with intuition for sampling, estimators, bias, and variance, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around sampling, estimators, bias, and variance and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build sampling, estimators, bias, and variance from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for sampling, estimators, bias, and variance and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain sampling, estimators, bias, and variance in one paragraph without jargon.
-- Write down the main formula or workflow for sampling, estimators, bias, and variance from memory.
-- Connect sampling, estimators, bias, and variance to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: sampling, estimators, bias, and variance.
-- Reflection: What from sampling, estimators, bias, and variance felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for sampling, estimators, bias, and variance from memory.
+- Connect sampling, estimators, bias, and variance to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for sampling, estimators, bias, and variance and explain one assumption that could fail in markets.
+- Reflection: What from sampling, estimators, bias, and variance is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Confidence intervals and hypothesis testing intuition
 - Why it matters in quant: Confidence intervals and hypothesis testing intuition is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
-- Core explanation: Start with intuition for confidence intervals and hypothesis testing intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around confidence intervals and hypothesis testing intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build confidence intervals and hypothesis testing intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for confidence intervals and hypothesis testing intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain confidence intervals and hypothesis testing intuition in one paragraph without jargon.
-- Write down the main formula or workflow for confidence intervals and hypothesis testing intuition from memory.
-- Connect confidence intervals and hypothesis testing intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: confidence intervals and hypothesis testing intuition.
-- Reflection: What from confidence intervals and hypothesis testing intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for confidence intervals and hypothesis testing intuition from memory.
+- Connect confidence intervals and hypothesis testing intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for confidence intervals and hypothesis testing intuition and explain one assumption that could fail in markets.
+- Reflection: What from confidence intervals and hypothesis testing intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: OLS regression intuition and interpretation
 - Why it matters in quant: OLS regression intuition and interpretation is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
-- Core explanation: Start with intuition for ols regression intuition and interpretation, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around ols regression intuition and interpretation and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build ols regression intuition and interpretation from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for ols regression intuition and interpretation and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain ols regression intuition and interpretation in one paragraph without jargon.
-- Write down the main formula or workflow for ols regression intuition and interpretation from memory.
-- Connect ols regression intuition and interpretation to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: ols regression intuition and interpretation.
-- Reflection: What from ols regression intuition and interpretation felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for ols regression intuition and interpretation from memory.
+- Connect ols regression intuition and interpretation to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for ols regression intuition and interpretation and explain one assumption that could fail in markets.
+- Reflection: What from ols regression intuition and interpretation is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Optimization basics and constrained thinking
 - Why it matters in quant: Optimization basics and constrained thinking is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
-- Core explanation: Start with intuition for optimization basics and constrained thinking, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around optimization basics and constrained thinking and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build optimization basics and constrained thinking from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for optimization basics and constrained thinking and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain optimization basics and constrained thinking in one paragraph without jargon.
-- Write down the main formula or workflow for optimization basics and constrained thinking from memory.
-- Connect optimization basics and constrained thinking to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: optimization basics and constrained thinking.
-- Reflection: What from optimization basics and constrained thinking felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for optimization basics and constrained thinking from memory.
+- Connect optimization basics and constrained thinking to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for optimization basics and constrained thinking and explain one assumption that could fail in markets.
+- Reflection: What from optimization basics and constrained thinking is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Portfolio theory, efficient frontier, and Sharpe ratio intuition
 - Why it matters in quant: Portfolio theory, efficient frontier, and Sharpe ratio intuition is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
-- Core explanation: Start with intuition for portfolio theory, efficient frontier, and sharpe ratio intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around portfolio theory, efficient frontier, and sharpe ratio intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build portfolio theory, efficient frontier, and sharpe ratio intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for portfolio theory, efficient frontier, and sharpe ratio intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain portfolio theory, efficient frontier, and sharpe ratio intuition in one paragraph without jargon.
-- Write down the main formula or workflow for portfolio theory, efficient frontier, and sharpe ratio intuition from memory.
-- Connect portfolio theory, efficient frontier, and sharpe ratio intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: portfolio theory, efficient frontier, and sharpe ratio intuition.
-- Reflection: What from portfolio theory, efficient frontier, and sharpe ratio intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for portfolio theory, efficient frontier, and sharpe ratio intuition from memory.
+- Connect portfolio theory, efficient frontier, and sharpe ratio intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for portfolio theory, efficient frontier, and sharpe ratio intuition and explain one assumption that could fail in markets.
+- Reflection: What from portfolio theory, efficient frontier, and sharpe ratio intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Capstone build day
 - Why it matters in quant: Capstone build day is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone build day, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone build day and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone build day from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone build day and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone build day in one paragraph without jargon.
-- Write down the main formula or workflow for capstone build day from memory.
-- Connect capstone build day to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone build day.
-- Reflection: What from capstone build day felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone build day from memory.
+- Connect capstone build day to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for capstone build day and explain one assumption that could fail in markets.
+- Reflection: What from capstone build day is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Capstone review and write-up
 - Why it matters in quant: Capstone review and write-up is part of real quant work inside math rebuild ii: statistics, inference, regression, optimization, and portfolio theory research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone review and write-up, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone review and write-up and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone review and write-up from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone review and write-up and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone review and write-up in one paragraph without jargon.
-- Write down the main formula or workflow for capstone review and write-up from memory.
-- Connect capstone review and write-up to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone review and write-up.
-- Reflection: What from capstone review and write-up felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone review and write-up from memory.
+- Connect capstone review and write-up to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement a small reproducible example for capstone review and write-up and explain one assumption that could fail in markets.
+- Reflection: What from capstone review and write-up is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Bias-variance trade-off

@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Momentum intuition and empirical logic
 - Why it matters in quant: Momentum intuition and empirical logic is part of real quant work inside signals i: momentum, mean reversion, cross-sectional signals, and attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for momentum intuition and empirical logic, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around momentum intuition and empirical logic and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build momentum intuition and empirical logic from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for momentum intuition and empirical logic and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain momentum intuition and empirical logic in one paragraph without jargon.
-- Write down the main formula or workflow for momentum intuition and empirical logic from memory.
-- Connect momentum intuition and empirical logic to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: momentum intuition and empirical logic.
-- Reflection: What from momentum intuition and empirical logic felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for momentum intuition and empirical logic from memory.
+- Connect momentum intuition and empirical logic to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build and compare at least two signal variants for momentum intuition and empirical logic and explain why one is more robust.
+- Reflection: What from momentum intuition and empirical logic is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Mean reversion intuition and failure modes
 - Why it matters in quant: Mean reversion intuition and failure modes is part of real quant work inside signals i: momentum, mean reversion, cross-sectional signals, and attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for mean reversion intuition and failure modes, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mean reversion intuition and failure modes and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mean reversion intuition and failure modes from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mean reversion intuition and failure modes and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mean reversion intuition and failure modes in one paragraph without jargon.
-- Write down the main formula or workflow for mean reversion intuition and failure modes from memory.
-- Connect mean reversion intuition and failure modes to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mean reversion intuition and failure modes.
-- Reflection: What from mean reversion intuition and failure modes felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mean reversion intuition and failure modes from memory.
+- Connect mean reversion intuition and failure modes to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build and compare at least two signal variants for mean reversion intuition and failure modes and explain why one is more robust.
+- Reflection: What from mean reversion intuition and failure modes is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Cross-sectional ranking signals
 - Why it matters in quant: Cross-sectional ranking signals is part of real quant work inside signals i: momentum, mean reversion, cross-sectional signals, and attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for cross-sectional ranking signals, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around cross-sectional ranking signals and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build cross-sectional ranking signals from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for cross-sectional ranking signals and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain cross-sectional ranking signals in one paragraph without jargon.
-- Write down the main formula or workflow for cross-sectional ranking signals from memory.
-- Connect cross-sectional ranking signals to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: cross-sectional ranking signals.
-- Reflection: What from cross-sectional ranking signals felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for cross-sectional ranking signals from memory.
+- Connect cross-sectional ranking signals to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build and compare at least two signal variants for cross-sectional ranking signals and explain why one is more robust.
+- Reflection: What from cross-sectional ranking signals is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Signal combination and normalization
 - Why it matters in quant: Signal combination and normalization is part of real quant work inside signals i: momentum, mean reversion, cross-sectional signals, and attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for signal combination and normalization, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around signal combination and normalization and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build signal combination and normalization from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for signal combination and normalization and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain signal combination and normalization in one paragraph without jargon.
-- Write down the main formula or workflow for signal combination and normalization from memory.
-- Connect signal combination and normalization to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: signal combination and normalization.
-- Reflection: What from signal combination and normalization felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for signal combination and normalization from memory.
+- Connect signal combination and normalization to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build and compare at least two signal variants for signal combination and normalization and explain why one is more robust.
+- Reflection: What from signal combination and normalization is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Attribution: what is actually driving PnL?
 - Why it matters in quant: Attribution: what is actually driving PnL? is part of real quant work inside signals i: momentum, mean reversion, cross-sectional signals, and attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for attribution: what is actually driving pnl?, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around attribution: what is actually driving pnl? and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build attribution: what is actually driving pnl? from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for attribution: what is actually driving pnl? and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain attribution: what is actually driving pnl? in one paragraph without jargon.
-- Write down the main formula or workflow for attribution: what is actually driving pnl? from memory.
-- Connect attribution: what is actually driving pnl? to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: attribution: what is actually driving pnl?.
-- Reflection: What from attribution: what is actually driving pnl? felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for attribution: what is actually driving pnl? from memory.
+- Connect attribution: what is actually driving pnl? to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build and compare at least two signal variants for attribution: what is actually driving pnl? and explain why one is more robust.
+- Reflection: What from attribution: what is actually driving pnl? is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mini lab: compare momentum versus mean reversion rule
 - Why it matters in quant: Mini lab: compare momentum versus mean reversion rule is part of real quant work inside signals i: momentum, mean reversion, cross-sectional signals, and attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini lab: compare momentum versus mean reversion rule, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini lab: compare momentum versus mean reversion rule and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini lab: compare momentum versus mean reversion rule from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini lab: compare momentum versus mean reversion rule and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini lab: compare momentum versus mean reversion rule in one paragraph without jargon.
-- Write down the main formula or workflow for mini lab: compare momentum versus mean reversion rule from memory.
-- Connect mini lab: compare momentum versus mean reversion rule to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini lab: compare momentum versus mean reversion rule.
-- Reflection: What from mini lab: compare momentum versus mean reversion rule felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini lab: compare momentum versus mean reversion rule from memory.
+- Connect mini lab: compare momentum versus mean reversion rule to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build and compare at least two signal variants for mini lab: compare momentum versus mean reversion rule and explain why one is more robust.
+- Reflection: What from mini lab: compare momentum versus mean reversion rule is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and critique
 - Why it matters in quant: Review and critique is part of real quant work inside signals i: momentum, mean reversion, cross-sectional signals, and attribution research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and critique, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and critique and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and critique from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and critique and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and critique in one paragraph without jargon.
-- Write down the main formula or workflow for review and critique from memory.
-- Connect review and critique to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and critique.
-- Reflection: What from review and critique felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and critique from memory.
+- Connect review and critique to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build and compare at least two signal variants for review and critique and explain why one is more robust.
+- Reflection: What from review and critique is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Momentum

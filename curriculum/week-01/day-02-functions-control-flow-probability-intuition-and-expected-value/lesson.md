@@ -1,6 +1,6 @@
 # Week 01 Tue: Functions, control flow, probability intuition, and expected value
 
-**Estimated time:** 4 hours
+**Estimated time:** 6 hours
 
 ## Study Blocks
 - Block 1 (45 min): Review Python functions and reusable finance logic.

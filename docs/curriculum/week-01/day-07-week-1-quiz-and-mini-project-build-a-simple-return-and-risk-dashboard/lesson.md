@@ -1,6 +1,6 @@
 # Week 01 Sun: Week 1 quiz and mini project: build a simple return and risk dashboard
 
-**Estimated time:** 4 hours
+**Estimated time:** 6 hours
 
 ## Study Blocks
 - Block 1 (45 min): Closed-book quiz and formula retrieval from memory.

@@ -11,63 +11,44 @@
 ### Q1 (basic)
 Interview question: Explain sql and data reasoning drills in plain language for a trading or risk audience.
 
-Model answer: A strong answer defines sql and data reasoning drills, gives one concrete market example, and states why the concept improves decisions under uncertainty.
+Model answer: A strong answer defines sql and data reasoning drills, gives one concrete workflow or market-facing decision example, and states one practical limitation that must be monitored.
 Why this matters: This tests communication quality, not just memorized definitions.
 
-Python drill: Compute log returns for SPY and QQQ daily closes and explain one volatile day.
-Suggested Python solution:
-```python
-import numpy as np
-import pandas as pd
-prices = market.pivot(index='date', columns='symbol', values='close')[['SPY','QQQ']].dropna()
-log_ret = np.log(prices / prices.shift(1)).dropna()
-print(log_ret.tail())
-```
-
 ### Q2 (intermediate)
-Interview question: Write one key formula/workflow and define every symbol with units.
+Interview question: Write the Expected Value formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes formula meaning, variable units, and one implementation caveat (for example, annualization assumptions or missing data handling).
+Model answer: A strong answer includes Expected Value exactly, explains each symbol, and states one caveat: Forgetting payoff asymmetry.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Estimate annualized volatility for SPY, QQQ, TLT, and GLD.
+Python drill: Run a short timed drill set and compute accuracy by topic category.
 Suggested Python solution:
 ```python
-returns = prices.pct_change().dropna()
-ann_vol = returns.std() * (252 ** 0.5)
-print(ann_vol.sort_values(ascending=False).round(4))
+import pandas as pd
+
+drills = pd.DataFrame(
+    {
+        "topic": ["probability", "stats", "python", "sql", "markets"],
+        "correct": [1, 0, 1, 1, 0],
+        "minutes": [6, 8, 7, 5, 9],
+    }
+)
+print(drills)
+print("Accuracy:", round(float(drills["correct"].mean()), 3))
+print("Mean minutes:", round(float(drills["minutes"].mean()), 2))
+
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to signal design, portfolio sizing, or risk control, then names one concrete failure mode and detection check.
+Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
-Python drill: Compute a simple Sharpe ratio proxy and explain one fragility.
-Suggested Python solution:
-```python
-rf = 0.03
-ann_ret = returns.mean() * 252
-ann_vol = returns.std() * (252 ** 0.5)
-sharpe = (ann_ret - rf) / ann_vol
-print(sharpe.round(3))
-```
-
 ### Q4 (advanced)
-Interview question: How would you validate real data from yfinance/Robinhood export/local CSV before trusting conclusions?
+Interview question: How would you validate data quality and implementation assumptions before trusting conclusions?
 
-Model answer: Check schema consistency, missing values, split/dividend handling, date alignment, and sensitivity to stress windows. Then compare at least one metric across two data sources.
-Why this matters: This tests real-data robustness discipline and source reconciliation.
-
-Python drill: Run a source-quality checklist before analysis.
-Suggested Python solution:
-```python
-print('rows:', len(market))
-print('missing close:', market['close'].isna().sum())
-print('duplicates:', market.duplicated(['date','symbol']).sum())
-print('symbols:', sorted(market['symbol'].unique()))
-```
+Model answer: Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources.
+Why this matters: This tests robustness discipline and implementation realism.
 
 ## Reflection
 - Which item was weakest and why?

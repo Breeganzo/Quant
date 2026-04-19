@@ -1,6 +1,6 @@
 # Week 04 Sat: Capstone build day
 
-**Estimated time:** 8 hours
+**Estimated time:** 6 hours
 
 ## Session Plan
 | Session | Duration | Focus |
@@ -65,7 +65,7 @@ Notation check: Use consistent annualized units for return, risk-free rate, and 
 | $R_f$ | Risk-free rate | annualized decimal | 0.03 |
 | $TO_t$ | Portfolio turnover | fraction of portfolio | 0.12 |
 
-## Extended Study (to complete a full 4-hour day)
+## Extended Study (to complete a full 6-hour day)
 1. Rewrite each core concept in your own words without looking at notes.
 2. Add one extra worked example using different numbers or assumptions.
 3. Explain one failure mode where this concept can be misapplied in trading or risk work.
@@ -80,14 +80,14 @@ Notation check: Use consistent annualized units for return, risk-free rate, and 
 6. Write one practical portfolio/risk insight from the data.
 
 ## Coding Task
-Implement one notebook cell or small script focused on: capstone build day.
+Implement a small reproducible example for capstone build day and explain one assumption that could fail in markets.
 
 ## Daily Interview Drill
 ### Q: How would you describe this capstone briefly?
 A: I built an exploratory asset-allocation study comparing a few simple portfolios using return, volatility, and correlation logic.
 
 ## Reflection Question
-What from capstone build day felt truly clear, and what still needs a slower revisit?
+What from capstone build day is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Completion Checklist
 - I completed the planned study blocks or adjusted them honestly.

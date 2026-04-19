@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Factor models and common risk decomposition
 - Why it matters in quant: Factor models and common risk decomposition is part of real quant work inside signals ii: factor models, statistical arbitrage intuition, cointegration, and regime shifts research, trading, or risk workflows.
-- Core explanation: Start with intuition for factor models and common risk decomposition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around factor models and common risk decomposition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build factor models and common risk decomposition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for factor models and common risk decomposition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain factor models and common risk decomposition in one paragraph without jargon.
-- Write down the main formula or workflow for factor models and common risk decomposition from memory.
-- Connect factor models and common risk decomposition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: factor models and common risk decomposition.
-- Reflection: What from factor models and common risk decomposition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for factor models and common risk decomposition from memory.
+- Connect factor models and common risk decomposition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Estimate spread/z-score style metrics for factor models and common risk decomposition and define one disciplined entry/exit rule.
+- Reflection: What from factor models and common risk decomposition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Residual signals and relative-value intuition
 - Why it matters in quant: Residual signals and relative-value intuition is part of real quant work inside signals ii: factor models, statistical arbitrage intuition, cointegration, and regime shifts research, trading, or risk workflows.
-- Core explanation: Start with intuition for residual signals and relative-value intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around residual signals and relative-value intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build residual signals and relative-value intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for residual signals and relative-value intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain residual signals and relative-value intuition in one paragraph without jargon.
-- Write down the main formula or workflow for residual signals and relative-value intuition from memory.
-- Connect residual signals and relative-value intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: residual signals and relative-value intuition.
-- Reflection: What from residual signals and relative-value intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for residual signals and relative-value intuition from memory.
+- Connect residual signals and relative-value intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Estimate spread/z-score style metrics for residual signals and relative-value intuition and define one disciplined entry/exit rule.
+- Reflection: What from residual signals and relative-value intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Cointegration and spread logic
 - Why it matters in quant: Cointegration and spread logic is part of real quant work inside signals ii: factor models, statistical arbitrage intuition, cointegration, and regime shifts research, trading, or risk workflows.
-- Core explanation: Start with intuition for cointegration and spread logic, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around cointegration and spread logic and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build cointegration and spread logic from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for cointegration and spread logic and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain cointegration and spread logic in one paragraph without jargon.
-- Write down the main formula or workflow for cointegration and spread logic from memory.
-- Connect cointegration and spread logic to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: cointegration and spread logic.
-- Reflection: What from cointegration and spread logic felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for cointegration and spread logic from memory.
+- Connect cointegration and spread logic to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Estimate spread/z-score style metrics for cointegration and spread logic and define one disciplined entry/exit rule.
+- Reflection: What from cointegration and spread logic is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Regime shifts and model instability
 - Why it matters in quant: Regime shifts and model instability is part of real quant work inside signals ii: factor models, statistical arbitrage intuition, cointegration, and regime shifts research, trading, or risk workflows.
-- Core explanation: Start with intuition for regime shifts and model instability, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around regime shifts and model instability and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build regime shifts and model instability from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for regime shifts and model instability and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain regime shifts and model instability in one paragraph without jargon.
-- Write down the main formula or workflow for regime shifts and model instability from memory.
-- Connect regime shifts and model instability to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: regime shifts and model instability.
-- Reflection: What from regime shifts and model instability felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for regime shifts and model instability from memory.
+- Connect regime shifts and model instability to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Estimate spread/z-score style metrics for regime shifts and model instability and define one disciplined entry/exit rule.
+- Reflection: What from regime shifts and model instability is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Cross-sectional portfolio construction
 - Why it matters in quant: Cross-sectional portfolio construction is part of real quant work inside signals ii: factor models, statistical arbitrage intuition, cointegration, and regime shifts research, trading, or risk workflows.
-- Core explanation: Start with intuition for cross-sectional portfolio construction, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around cross-sectional portfolio construction and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build cross-sectional portfolio construction from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for cross-sectional portfolio construction and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain cross-sectional portfolio construction in one paragraph without jargon.
-- Write down the main formula or workflow for cross-sectional portfolio construction from memory.
-- Connect cross-sectional portfolio construction to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: cross-sectional portfolio construction.
-- Reflection: What from cross-sectional portfolio construction felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for cross-sectional portfolio construction from memory.
+- Connect cross-sectional portfolio construction to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Estimate spread/z-score style metrics for cross-sectional portfolio construction and define one disciplined entry/exit rule.
+- Reflection: What from cross-sectional portfolio construction is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Capstone build day
 - Why it matters in quant: Capstone build day is part of real quant work inside signals ii: factor models, statistical arbitrage intuition, cointegration, and regime shifts research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone build day, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone build day and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone build day from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone build day and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone build day in one paragraph without jargon.
-- Write down the main formula or workflow for capstone build day from memory.
-- Connect capstone build day to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone build day.
-- Reflection: What from capstone build day felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone build day from memory.
+- Connect capstone build day to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Estimate spread/z-score style metrics for capstone build day and define one disciplined entry/exit rule.
+- Reflection: What from capstone build day is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Capstone review and write-up
 - Why it matters in quant: Capstone review and write-up is part of real quant work inside signals ii: factor models, statistical arbitrage intuition, cointegration, and regime shifts research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone review and write-up, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone review and write-up and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone review and write-up from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone review and write-up and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone review and write-up in one paragraph without jargon.
-- Write down the main formula or workflow for capstone review and write-up from memory.
-- Connect capstone review and write-up to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone review and write-up.
-- Reflection: What from capstone review and write-up felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone review and write-up from memory.
+- Connect capstone review and write-up to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Estimate spread/z-score style metrics for capstone review and write-up and define one disciplined entry/exit rule.
+- Reflection: What from capstone review and write-up is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Factor models

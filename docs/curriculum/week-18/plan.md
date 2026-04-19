@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Volatility clustering and stylized facts
 - Why it matters in quant: Volatility clustering and stylized facts is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
-- Core explanation: Start with intuition for volatility clustering and stylized facts, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around volatility clustering and stylized facts and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build volatility clustering and stylized facts from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for volatility clustering and stylized facts and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain volatility clustering and stylized facts in one paragraph without jargon.
-- Write down the main formula or workflow for volatility clustering and stylized facts from memory.
-- Connect volatility clustering and stylized facts to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: volatility clustering and stylized facts.
-- Reflection: What from volatility clustering and stylized facts felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for volatility clustering and stylized facts from memory.
+- Connect volatility clustering and stylized facts to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compare at least two volatility/risk forecasts for volatility clustering and stylized facts and discuss one stress weakness.
+- Reflection: What from volatility clustering and stylized facts is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Rolling volatility and EWMA
 - Why it matters in quant: Rolling volatility and EWMA is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
-- Core explanation: Start with intuition for rolling volatility and ewma, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around rolling volatility and ewma and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build rolling volatility and ewma from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for rolling volatility and ewma and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain rolling volatility and ewma in one paragraph without jargon.
-- Write down the main formula or workflow for rolling volatility and ewma from memory.
-- Connect rolling volatility and ewma to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: rolling volatility and ewma.
-- Reflection: What from rolling volatility and ewma felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for rolling volatility and ewma from memory.
+- Connect rolling volatility and ewma to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compare at least two volatility/risk forecasts for rolling volatility and ewma and discuss one stress weakness.
+- Reflection: What from rolling volatility and ewma is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: GARCH intuition and limitations
 - Why it matters in quant: GARCH intuition and limitations is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
-- Core explanation: Start with intuition for garch intuition and limitations, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around garch intuition and limitations and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build garch intuition and limitations from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for garch intuition and limitations and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain garch intuition and limitations in one paragraph without jargon.
-- Write down the main formula or workflow for garch intuition and limitations from memory.
-- Connect garch intuition and limitations to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: garch intuition and limitations.
-- Reflection: What from garch intuition and limitations felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for garch intuition and limitations from memory.
+- Connect garch intuition and limitations to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compare at least two volatility/risk forecasts for garch intuition and limitations and discuss one stress weakness.
+- Reflection: What from garch intuition and limitations is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Forecast evaluation for risk models
 - Why it matters in quant: Forecast evaluation for risk models is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
-- Core explanation: Start with intuition for forecast evaluation for risk models, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around forecast evaluation for risk models and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build forecast evaluation for risk models from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for forecast evaluation for risk models and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain forecast evaluation for risk models in one paragraph without jargon.
-- Write down the main formula or workflow for forecast evaluation for risk models from memory.
-- Connect forecast evaluation for risk models to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: forecast evaluation for risk models.
-- Reflection: What from forecast evaluation for risk models felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for forecast evaluation for risk models from memory.
+- Connect forecast evaluation for risk models to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compare at least two volatility/risk forecasts for forecast evaluation for risk models and discuss one stress weakness.
+- Reflection: What from forecast evaluation for risk models is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Stress testing and scenario design
 - Why it matters in quant: Stress testing and scenario design is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
-- Core explanation: Start with intuition for stress testing and scenario design, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around stress testing and scenario design and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build stress testing and scenario design from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for stress testing and scenario design and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain stress testing and scenario design in one paragraph without jargon.
-- Write down the main formula or workflow for stress testing and scenario design from memory.
-- Connect stress testing and scenario design to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: stress testing and scenario design.
-- Reflection: What from stress testing and scenario design felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for stress testing and scenario design from memory.
+- Connect stress testing and scenario design to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compare at least two volatility/risk forecasts for stress testing and scenario design and discuss one stress weakness.
+- Reflection: What from stress testing and scenario design is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mini lab: volatility forecast comparison
 - Why it matters in quant: Mini lab: volatility forecast comparison is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini lab: volatility forecast comparison, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini lab: volatility forecast comparison and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini lab: volatility forecast comparison from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini lab: volatility forecast comparison and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini lab: volatility forecast comparison in one paragraph without jargon.
-- Write down the main formula or workflow for mini lab: volatility forecast comparison from memory.
-- Connect mini lab: volatility forecast comparison to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini lab: volatility forecast comparison.
-- Reflection: What from mini lab: volatility forecast comparison felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini lab: volatility forecast comparison from memory.
+- Connect mini lab: volatility forecast comparison to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compare at least two volatility/risk forecasts for mini lab: volatility forecast comparison and discuss one stress weakness.
+- Reflection: What from mini lab: volatility forecast comparison is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and risk memo
 - Why it matters in quant: Review and risk memo is part of real quant work inside ml for quant ii: volatility, ewma, garch intuition, risk forecasting, and stress testing research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and risk memo, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and risk memo and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and risk memo from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and risk memo and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and risk memo in one paragraph without jargon.
-- Write down the main formula or workflow for review and risk memo from memory.
-- Connect review and risk memo to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and risk memo.
-- Reflection: What from review and risk memo felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and risk memo from memory.
+- Connect review and risk memo to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Compare at least two volatility/risk forecasts for review and risk memo and discuss one stress weakness.
+- Reflection: What from review and risk memo is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Volatility clustering

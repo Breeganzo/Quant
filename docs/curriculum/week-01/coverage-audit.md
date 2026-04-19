@@ -2,7 +2,7 @@
 
 ## What Was Fixed
 
-The original Week 1 daily lesson PDFs were too thin for serious study. They were roughly 226 to 279 words per day, which was not enough for a real 4-hour weekday learning block.
+The original Week 1 daily lesson PDFs were too thin for serious study. They were roughly 226 to 279 words per day, which was not enough for a real 6-hour daily learning block.
 
 Week 1 has now been rebuilt with:
 
@@ -17,17 +17,17 @@ Week 1 has now been rebuilt with:
 
 | Day | Lesson Words | Notebook Markdown Words | Code Labs | Time Target | Audit |
 | --- | --- | --- | --- | --- | --- |
-| Mon | ~767 | ~535 | 2 | 4h | Good for 4h when reading, hand-calculating, coding, and reflecting |
-| Tue | ~705 | ~486 | 3 | 4h | Good for 4h with simulation and expected-value practice |
-| Wed | ~656 | ~464 | 3 | 4h | Good for 4h with linear algebra examples and coding |
-| Thu | ~667 | ~447 | 2 | 4h | Good for 4h with plotting and stats interpretation |
-| Fri | ~685 | ~477 | 2 | 4h | Good for 4h with role mapping, market structure, and coding |
-| Sat | ~548 | ~348 | 2 | 2.5h | Good for weekend revision workload |
-| Sun | ~547 | ~348 | 1 + mini-project notebook | 2.5h | Good for quiz plus mini-project |
+| Mon | ~767 | ~535 | 2 | 6h | Good for 6h when reading, hand-calculating, coding, and reflecting |
+| Tue | ~705 | ~486 | 3 | 6h | Good for 6h with simulation and expected-value practice |
+| Wed | ~656 | ~464 | 3 | 6h | Good for 6h with linear algebra examples and coding |
+| Thu | ~667 | ~447 | 2 | 6h | Good for 6h with plotting and stats interpretation |
+| Fri | ~685 | ~477 | 2 | 6h | Good for 6h with role mapping, market structure, and coding |
+| Sat | ~548 | ~348 | 2 | 6h | Good for weekend revision workload |
+| Sun | ~547 | ~348 | 1 + mini-project notebook | 6h | Good for quiz plus mini-project |
 
 ## Important Interpretation
 
-The daily PDF alone is not meant to consume the full 4 hours as pure reading. A serious learning block includes:
+The daily PDF alone is not meant to consume the full 6 hours as pure reading. A serious learning block includes:
 
 - reading and note-taking
 - hand-worked practice

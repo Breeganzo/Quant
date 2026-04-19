@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: What makes a good quant hypothesis?
 - Why it matters in quant: What makes a good quant hypothesis? is part of real quant work inside quant workflow i: idea generation, research logs, labels, and data hygiene research, trading, or risk workflows.
-- Core explanation: Start with intuition for what makes a good quant hypothesis?, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around what makes a good quant hypothesis? and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build what makes a good quant hypothesis? from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for what makes a good quant hypothesis? and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain what makes a good quant hypothesis? in one paragraph without jargon.
-- Write down the main formula or workflow for what makes a good quant hypothesis? from memory.
-- Connect what makes a good quant hypothesis? to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: what makes a good quant hypothesis?.
-- Reflection: What from what makes a good quant hypothesis? felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for what makes a good quant hypothesis? from memory.
+- Connect what makes a good quant hypothesis? to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a hypothesis test workflow for what makes a good quant hypothesis? and log one anti-leakage guardrail.
+- Reflection: What from what makes a good quant hypothesis? is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Signal design and economic reasoning
 - Why it matters in quant: Signal design and economic reasoning is part of real quant work inside quant workflow i: idea generation, research logs, labels, and data hygiene research, trading, or risk workflows.
-- Core explanation: Start with intuition for signal design and economic reasoning, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around signal design and economic reasoning and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build signal design and economic reasoning from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for signal design and economic reasoning and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain signal design and economic reasoning in one paragraph without jargon.
-- Write down the main formula or workflow for signal design and economic reasoning from memory.
-- Connect signal design and economic reasoning to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: signal design and economic reasoning.
-- Reflection: What from signal design and economic reasoning felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for signal design and economic reasoning from memory.
+- Connect signal design and economic reasoning to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a hypothesis test workflow for signal design and economic reasoning and log one anti-leakage guardrail.
+- Reflection: What from signal design and economic reasoning is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Label design and target horizon choice
 - Why it matters in quant: Label design and target horizon choice is part of real quant work inside quant workflow i: idea generation, research logs, labels, and data hygiene research, trading, or risk workflows.
-- Core explanation: Start with intuition for label design and target horizon choice, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around label design and target horizon choice and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build label design and target horizon choice from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for label design and target horizon choice and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain label design and target horizon choice in one paragraph without jargon.
-- Write down the main formula or workflow for label design and target horizon choice from memory.
-- Connect label design and target horizon choice to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: label design and target horizon choice.
-- Reflection: What from label design and target horizon choice felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for label design and target horizon choice from memory.
+- Connect label design and target horizon choice to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a hypothesis test workflow for label design and target horizon choice and log one anti-leakage guardrail.
+- Reflection: What from label design and target horizon choice is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Data cleaning, survivorship bias, and look-ahead bias
 - Why it matters in quant: Data cleaning, survivorship bias, and look-ahead bias is part of real quant work inside quant workflow i: idea generation, research logs, labels, and data hygiene research, trading, or risk workflows.
-- Core explanation: Start with intuition for data cleaning, survivorship bias, and look-ahead bias, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around data cleaning, survivorship bias, and look-ahead bias and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build data cleaning, survivorship bias, and look-ahead bias from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for data cleaning, survivorship bias, and look-ahead bias and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain data cleaning, survivorship bias, and look-ahead bias in one paragraph without jargon.
-- Write down the main formula or workflow for data cleaning, survivorship bias, and look-ahead bias from memory.
-- Connect data cleaning, survivorship bias, and look-ahead bias to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: data cleaning, survivorship bias, and look-ahead bias.
-- Reflection: What from data cleaning, survivorship bias, and look-ahead bias felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for data cleaning, survivorship bias, and look-ahead bias from memory.
+- Connect data cleaning, survivorship bias, and look-ahead bias to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a hypothesis test workflow for data cleaning, survivorship bias, and look-ahead bias and log one anti-leakage guardrail.
+- Reflection: What from data cleaning, survivorship bias, and look-ahead bias is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Research logging and experiment notebooks
 - Why it matters in quant: Research logging and experiment notebooks is part of real quant work inside quant workflow i: idea generation, research logs, labels, and data hygiene research, trading, or risk workflows.
-- Core explanation: Start with intuition for research logging and experiment notebooks, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around research logging and experiment notebooks and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build research logging and experiment notebooks from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for research logging and experiment notebooks and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain research logging and experiment notebooks in one paragraph without jargon.
-- Write down the main formula or workflow for research logging and experiment notebooks from memory.
-- Connect research logging and experiment notebooks to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: research logging and experiment notebooks.
-- Reflection: What from research logging and experiment notebooks felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for research logging and experiment notebooks from memory.
+- Connect research logging and experiment notebooks to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a hypothesis test workflow for research logging and experiment notebooks and log one anti-leakage guardrail.
+- Reflection: What from research logging and experiment notebooks is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mini lab: define one alpha hypothesis cleanly
 - Why it matters in quant: Mini lab: define one alpha hypothesis cleanly is part of real quant work inside quant workflow i: idea generation, research logs, labels, and data hygiene research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini lab: define one alpha hypothesis cleanly, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini lab: define one alpha hypothesis cleanly and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini lab: define one alpha hypothesis cleanly from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini lab: define one alpha hypothesis cleanly and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini lab: define one alpha hypothesis cleanly in one paragraph without jargon.
-- Write down the main formula or workflow for mini lab: define one alpha hypothesis cleanly from memory.
-- Connect mini lab: define one alpha hypothesis cleanly to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini lab: define one alpha hypothesis cleanly.
-- Reflection: What from mini lab: define one alpha hypothesis cleanly felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini lab: define one alpha hypothesis cleanly from memory.
+- Connect mini lab: define one alpha hypothesis cleanly to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a hypothesis test workflow for mini lab: define one alpha hypothesis cleanly and log one anti-leakage guardrail.
+- Reflection: What from mini lab: define one alpha hypothesis cleanly is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and refinement
 - Why it matters in quant: Review and refinement is part of real quant work inside quant workflow i: idea generation, research logs, labels, and data hygiene research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and refinement, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and refinement and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and refinement from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and refinement and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and refinement in one paragraph without jargon.
-- Write down the main formula or workflow for review and refinement from memory.
-- Connect review and refinement to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and refinement.
-- Reflection: What from review and refinement felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and refinement from memory.
+- Connect review and refinement to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a hypothesis test workflow for review and refinement and log one anti-leakage guardrail.
+- Reflection: What from review and refinement is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Hypothesis-driven research

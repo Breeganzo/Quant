@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Choose final capstone question and scope
 - Why it matters in quant: Choose final capstone question and scope is part of real quant work inside final integration: end-to-end capstone, final assessments, and application transition plan research, trading, or risk workflows.
-- Core explanation: Start with intuition for choose final capstone question and scope, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around choose final capstone question and scope and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build choose final capstone question and scope from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for choose final capstone question and scope and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain choose final capstone question and scope in one paragraph without jargon.
-- Write down the main formula or workflow for choose final capstone question and scope from memory.
-- Connect choose final capstone question and scope to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: choose final capstone question and scope.
-- Reflection: What from choose final capstone question and scope felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for choose final capstone question and scope from memory.
+- Connect choose final capstone question and scope to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement one capstone-grade module for choose final capstone question and scope with validation outputs and a limitation note.
+- Reflection: What from choose final capstone question and scope is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Implement pipeline and verify assumptions
 - Why it matters in quant: Implement pipeline and verify assumptions is part of real quant work inside final integration: end-to-end capstone, final assessments, and application transition plan research, trading, or risk workflows.
-- Core explanation: Start with intuition for implement pipeline and verify assumptions, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around implement pipeline and verify assumptions and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build implement pipeline and verify assumptions from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for implement pipeline and verify assumptions and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain implement pipeline and verify assumptions in one paragraph without jargon.
-- Write down the main formula or workflow for implement pipeline and verify assumptions from memory.
-- Connect implement pipeline and verify assumptions to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: implement pipeline and verify assumptions.
-- Reflection: What from implement pipeline and verify assumptions felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for implement pipeline and verify assumptions from memory.
+- Connect implement pipeline and verify assumptions to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement one capstone-grade module for implement pipeline and verify assumptions with validation outputs and a limitation note.
+- Reflection: What from implement pipeline and verify assumptions is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Evaluate, stress test, and document limitations
 - Why it matters in quant: Evaluate, stress test, and document limitations is part of real quant work inside final integration: end-to-end capstone, final assessments, and application transition plan research, trading, or risk workflows.
-- Core explanation: Start with intuition for evaluate, stress test, and document limitations, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around evaluate, stress test, and document limitations and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build evaluate, stress test, and document limitations from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for evaluate, stress test, and document limitations and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain evaluate, stress test, and document limitations in one paragraph without jargon.
-- Write down the main formula or workflow for evaluate, stress test, and document limitations from memory.
-- Connect evaluate, stress test, and document limitations to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: evaluate, stress test, and document limitations.
-- Reflection: What from evaluate, stress test, and document limitations felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for evaluate, stress test, and document limitations from memory.
+- Connect evaluate, stress test, and document limitations to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement one capstone-grade module for evaluate, stress test, and document limitations with validation outputs and a limitation note.
+- Reflection: What from evaluate, stress test, and document limitations is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Prepare final report and presentation
 - Why it matters in quant: Prepare final report and presentation is part of real quant work inside final integration: end-to-end capstone, final assessments, and application transition plan research, trading, or risk workflows.
-- Core explanation: Start with intuition for prepare final report and presentation, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around prepare final report and presentation and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build prepare final report and presentation from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for prepare final report and presentation and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain prepare final report and presentation in one paragraph without jargon.
-- Write down the main formula or workflow for prepare final report and presentation from memory.
-- Connect prepare final report and presentation to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: prepare final report and presentation.
-- Reflection: What from prepare final report and presentation felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for prepare final report and presentation from memory.
+- Connect prepare final report and presentation to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement one capstone-grade module for prepare final report and presentation with validation outputs and a limitation note.
+- Reflection: What from prepare final report and presentation is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Final self-assessment and gap map
 - Why it matters in quant: Final self-assessment and gap map is part of real quant work inside final integration: end-to-end capstone, final assessments, and application transition plan research, trading, or risk workflows.
-- Core explanation: Start with intuition for final self-assessment and gap map, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around final self-assessment and gap map and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build final self-assessment and gap map from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for final self-assessment and gap map and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain final self-assessment and gap map in one paragraph without jargon.
-- Write down the main formula or workflow for final self-assessment and gap map from memory.
-- Connect final self-assessment and gap map to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: final self-assessment and gap map.
-- Reflection: What from final self-assessment and gap map felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for final self-assessment and gap map from memory.
+- Connect final self-assessment and gap map to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement one capstone-grade module for final self-assessment and gap map with validation outputs and a limitation note.
+- Reflection: What from final self-assessment and gap map is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Capstone presentation day
 - Why it matters in quant: Capstone presentation day is part of real quant work inside final integration: end-to-end capstone, final assessments, and application transition plan research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone presentation day, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone presentation day and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone presentation day from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone presentation day and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone presentation day in one paragraph without jargon.
-- Write down the main formula or workflow for capstone presentation day from memory.
-- Connect capstone presentation day to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone presentation day.
-- Reflection: What from capstone presentation day felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone presentation day from memory.
+- Connect capstone presentation day to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement one capstone-grade module for capstone presentation day with validation outputs and a limitation note.
+- Reflection: What from capstone presentation day is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Transition roadmap for 2026-2027 applications
 - Why it matters in quant: Transition roadmap for 2026-2027 applications is part of real quant work inside final integration: end-to-end capstone, final assessments, and application transition plan research, trading, or risk workflows.
-- Core explanation: Start with intuition for transition roadmap for 2026-2027 applications, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around transition roadmap for 2026-2027 applications and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build transition roadmap for 2026-2027 applications from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for transition roadmap for 2026-2027 applications and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain transition roadmap for 2026-2027 applications in one paragraph without jargon.
-- Write down the main formula or workflow for transition roadmap for 2026-2027 applications from memory.
-- Connect transition roadmap for 2026-2027 applications to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: transition roadmap for 2026-2027 applications.
-- Reflection: What from transition roadmap for 2026-2027 applications felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for transition roadmap for 2026-2027 applications from memory.
+- Connect transition roadmap for 2026-2027 applications to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Implement one capstone-grade module for transition roadmap for 2026-2027 applications with validation outputs and a limitation note.
+- Reflection: What from transition roadmap for 2026-2027 applications is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - End-to-end research pipeline

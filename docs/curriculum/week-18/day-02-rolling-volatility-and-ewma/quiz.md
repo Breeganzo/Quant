@@ -11,63 +11,42 @@
 ### Q1 (basic)
 Interview question: Explain rolling volatility and ewma in plain language for a trading or risk audience.
 
-Model answer: A strong answer defines rolling volatility and ewma, gives one concrete market example, and states why the concept improves decisions under uncertainty.
+Model answer: A strong answer defines rolling volatility and ewma, gives one concrete workflow or market-facing decision example, and states one practical limitation that must be monitored.
 Why this matters: This tests communication quality, not just memorized definitions.
 
-Python drill: Compute log returns for SPY and QQQ daily closes and explain one volatile day.
-Suggested Python solution:
-```python
-import numpy as np
-import pandas as pd
-prices = market.pivot(index='date', columns='symbol', values='close')[['SPY','QQQ']].dropna()
-log_ret = np.log(prices / prices.shift(1)).dropna()
-print(log_ret.tail())
-```
-
 ### Q2 (intermediate)
-Interview question: Write one key formula/workflow and define every symbol with units.
+Interview question: Write the Realized Volatility formula/workflow from memory and define each symbol.
 
-Model answer: A strong answer includes formula meaning, variable units, and one implementation caveat (for example, annualization assumptions or missing data handling).
+Model answer: A strong answer includes Realized Volatility exactly, explains each symbol, and states one caveat: Ignoring clustering and regime changes.
 Why this matters: This checks mathematical fluency and operational reliability.
 
-Python drill: Estimate annualized volatility for SPY, QQQ, TLT, and GLD.
+Python drill: Compare rolling volatility and EWMA volatility estimates.
 Suggested Python solution:
 ```python
-returns = prices.pct_change().dropna()
-ann_vol = returns.std() * (252 ** 0.5)
-print(ann_vol.sort_values(ascending=False).round(4))
+from pathlib import Path
+import pandas as pd
+
+market = pd.read_csv(Path("curriculum/datasets/real_market_prices.csv"), parse_dates=["date"])
+spy = market[market["symbol"] == "SPY"].sort_values("date").set_index("date")["close"]
+ret = spy.pct_change().dropna()
+roll = ret.rolling(20).std()
+ewma = ret.pow(2).ewm(alpha=0.06, adjust=False).mean().pow(0.5)
+out = pd.DataFrame({"roll20": roll, "ewma": ewma}).dropna()
+print(out.tail())
+
 ```
 
 ### Q3 (intermediate)
 Interview question: Give one realistic use case and one failure mode if this concept is misapplied.
 
-Model answer: A strong answer ties the concept to signal design, portfolio sizing, or risk control, then names one concrete failure mode and detection check.
+Model answer: A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.
 Why this matters: This evaluates transfer from theory to practical quant workflow.
 
-Python drill: Compute a simple Sharpe ratio proxy and explain one fragility.
-Suggested Python solution:
-```python
-rf = 0.03
-ann_ret = returns.mean() * 252
-ann_vol = returns.std() * (252 ** 0.5)
-sharpe = (ann_ret - rf) / ann_vol
-print(sharpe.round(3))
-```
-
 ### Q4 (advanced)
-Interview question: How would you validate real data from yfinance/Robinhood export/local CSV before trusting conclusions?
+Interview question: How would you validate data quality and implementation assumptions before trusting conclusions?
 
-Model answer: Check schema consistency, missing values, split/dividend handling, date alignment, and sensitivity to stress windows. Then compare at least one metric across two data sources.
-Why this matters: This tests real-data robustness discipline and source reconciliation.
-
-Python drill: Run a source-quality checklist before analysis.
-Suggested Python solution:
-```python
-print('rows:', len(market))
-print('missing close:', market['close'].isna().sum())
-print('duplicates:', market.duplicated(['date','symbol']).sum())
-print('symbols:', sorted(market['symbol'].unique()))
-```
+Model answer: Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources.
+Why this matters: This tests robustness discipline and implementation realism.
 
 ## Reflection
 - Which item was weakest and why?

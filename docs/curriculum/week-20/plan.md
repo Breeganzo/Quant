@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Alternative data and when it is useful
 - Why it matters in quant: Alternative data and when it is useful is part of real quant work inside agentic ai for quant ii: alternative data, nlp, experiment tracking, and robust research delivery research, trading, or risk workflows.
-- Core explanation: Start with intuition for alternative data and when it is useful, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around alternative data and when it is useful and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build alternative data and when it is useful from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for alternative data and when it is useful and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain alternative data and when it is useful in one paragraph without jargon.
-- Write down the main formula or workflow for alternative data and when it is useful from memory.
-- Connect alternative data and when it is useful to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: alternative data and when it is useful.
-- Reflection: What from alternative data and when it is useful felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for alternative data and when it is useful from memory.
+- Connect alternative data and when it is useful to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for alternative data and when it is useful with explicit citation and hallucination checks.
+- Reflection: What from alternative data and when it is useful is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: NLP and sentiment feature intuition
 - Why it matters in quant: NLP and sentiment feature intuition is part of real quant work inside agentic ai for quant ii: alternative data, nlp, experiment tracking, and robust research delivery research, trading, or risk workflows.
-- Core explanation: Start with intuition for nlp and sentiment feature intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around nlp and sentiment feature intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build nlp and sentiment feature intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for nlp and sentiment feature intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain nlp and sentiment feature intuition in one paragraph without jargon.
-- Write down the main formula or workflow for nlp and sentiment feature intuition from memory.
-- Connect nlp and sentiment feature intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: nlp and sentiment feature intuition.
-- Reflection: What from nlp and sentiment feature intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for nlp and sentiment feature intuition from memory.
+- Connect nlp and sentiment feature intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for nlp and sentiment feature intuition with explicit citation and hallucination checks.
+- Reflection: What from nlp and sentiment feature intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Experiment tracking and reproducibility
 - Why it matters in quant: Experiment tracking and reproducibility is part of real quant work inside agentic ai for quant ii: alternative data, nlp, experiment tracking, and robust research delivery research, trading, or risk workflows.
-- Core explanation: Start with intuition for experiment tracking and reproducibility, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around experiment tracking and reproducibility and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build experiment tracking and reproducibility from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for experiment tracking and reproducibility and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain experiment tracking and reproducibility in one paragraph without jargon.
-- Write down the main formula or workflow for experiment tracking and reproducibility from memory.
-- Connect experiment tracking and reproducibility to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: experiment tracking and reproducibility.
-- Reflection: What from experiment tracking and reproducibility felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for experiment tracking and reproducibility from memory.
+- Connect experiment tracking and reproducibility to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for experiment tracking and reproducibility with explicit citation and hallucination checks.
+- Reflection: What from experiment tracking and reproducibility is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Research report generation with AI support
 - Why it matters in quant: Research report generation with AI support is part of real quant work inside agentic ai for quant ii: alternative data, nlp, experiment tracking, and robust research delivery research, trading, or risk workflows.
-- Core explanation: Start with intuition for research report generation with ai support, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around research report generation with ai support and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build research report generation with ai support from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for research report generation with ai support and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain research report generation with ai support in one paragraph without jargon.
-- Write down the main formula or workflow for research report generation with ai support from memory.
-- Connect research report generation with ai support to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: research report generation with ai support.
-- Reflection: What from research report generation with ai support felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for research report generation with ai support from memory.
+- Connect research report generation with ai support to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for research report generation with ai support with explicit citation and hallucination checks.
+- Reflection: What from research report generation with ai support is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Robustness checks and final validation
 - Why it matters in quant: Robustness checks and final validation is part of real quant work inside agentic ai for quant ii: alternative data, nlp, experiment tracking, and robust research delivery research, trading, or risk workflows.
-- Core explanation: Start with intuition for robustness checks and final validation, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around robustness checks and final validation and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build robustness checks and final validation from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for robustness checks and final validation and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain robustness checks and final validation in one paragraph without jargon.
-- Write down the main formula or workflow for robustness checks and final validation from memory.
-- Connect robustness checks and final validation to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: robustness checks and final validation.
-- Reflection: What from robustness checks and final validation felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for robustness checks and final validation from memory.
+- Connect robustness checks and final validation to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for robustness checks and final validation with explicit citation and hallucination checks.
+- Reflection: What from robustness checks and final validation is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Capstone build day
 - Why it matters in quant: Capstone build day is part of real quant work inside agentic ai for quant ii: alternative data, nlp, experiment tracking, and robust research delivery research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone build day, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone build day and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone build day from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone build day and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone build day in one paragraph without jargon.
-- Write down the main formula or workflow for capstone build day from memory.
-- Connect capstone build day to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone build day.
-- Reflection: What from capstone build day felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone build day from memory.
+- Connect capstone build day to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for capstone build day with explicit citation and hallucination checks.
+- Reflection: What from capstone build day is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Capstone review and write-up
 - Why it matters in quant: Capstone review and write-up is part of real quant work inside agentic ai for quant ii: alternative data, nlp, experiment tracking, and robust research delivery research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone review and write-up, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone review and write-up and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone review and write-up from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone review and write-up and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone review and write-up in one paragraph without jargon.
-- Write down the main formula or workflow for capstone review and write-up from memory.
-- Connect capstone review and write-up to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone review and write-up.
-- Reflection: What from capstone review and write-up felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone review and write-up from memory.
+- Connect capstone review and write-up to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a small AI-assisted workflow for capstone review and write-up with explicit citation and hallucination checks.
+- Reflection: What from capstone review and write-up is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Alternative data

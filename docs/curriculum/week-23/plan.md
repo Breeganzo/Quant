@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: GitHub cleanup and repository storytelling
 - Why it matters in quant: GitHub cleanup and repository storytelling is part of real quant work inside interview prep ii: portfolio polish, github presentation, networking, and mock case defense research, trading, or risk workflows.
-- Core explanation: Start with intuition for github cleanup and repository storytelling, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around github cleanup and repository storytelling and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build github cleanup and repository storytelling from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for github cleanup and repository storytelling and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain github cleanup and repository storytelling in one paragraph without jargon.
-- Write down the main formula or workflow for github cleanup and repository storytelling from memory.
-- Connect github cleanup and repository storytelling to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: github cleanup and repository storytelling.
-- Reflection: What from github cleanup and repository storytelling felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for github cleanup and repository storytelling from memory.
+- Connect github cleanup and repository storytelling to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Prepare an evidence-first one-page artifact for github cleanup and repository storytelling that includes limitations and next steps.
+- Reflection: What from github cleanup and repository storytelling is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Project README writing and visual clarity
 - Why it matters in quant: Project README writing and visual clarity is part of real quant work inside interview prep ii: portfolio polish, github presentation, networking, and mock case defense research, trading, or risk workflows.
-- Core explanation: Start with intuition for project readme writing and visual clarity, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around project readme writing and visual clarity and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build project readme writing and visual clarity from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for project readme writing and visual clarity and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain project readme writing and visual clarity in one paragraph without jargon.
-- Write down the main formula or workflow for project readme writing and visual clarity from memory.
-- Connect project readme writing and visual clarity to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: project readme writing and visual clarity.
-- Reflection: What from project readme writing and visual clarity felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for project readme writing and visual clarity from memory.
+- Connect project readme writing and visual clarity to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Prepare an evidence-first one-page artifact for project readme writing and visual clarity that includes limitations and next steps.
+- Reflection: What from project readme writing and visual clarity is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Networking and outreach messages
 - Why it matters in quant: Networking and outreach messages is part of real quant work inside interview prep ii: portfolio polish, github presentation, networking, and mock case defense research, trading, or risk workflows.
-- Core explanation: Start with intuition for networking and outreach messages, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around networking and outreach messages and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build networking and outreach messages from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for networking and outreach messages and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain networking and outreach messages in one paragraph without jargon.
-- Write down the main formula or workflow for networking and outreach messages from memory.
-- Connect networking and outreach messages to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: networking and outreach messages.
-- Reflection: What from networking and outreach messages felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for networking and outreach messages from memory.
+- Connect networking and outreach messages to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Prepare an evidence-first one-page artifact for networking and outreach messages that includes limitations and next steps.
+- Reflection: What from networking and outreach messages is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Case-study presentation and limitations defense
 - Why it matters in quant: Case-study presentation and limitations defense is part of real quant work inside interview prep ii: portfolio polish, github presentation, networking, and mock case defense research, trading, or risk workflows.
-- Core explanation: Start with intuition for case-study presentation and limitations defense, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around case-study presentation and limitations defense and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build case-study presentation and limitations defense from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for case-study presentation and limitations defense and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain case-study presentation and limitations defense in one paragraph without jargon.
-- Write down the main formula or workflow for case-study presentation and limitations defense from memory.
-- Connect case-study presentation and limitations defense to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: case-study presentation and limitations defense.
-- Reflection: What from case-study presentation and limitations defense felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for case-study presentation and limitations defense from memory.
+- Connect case-study presentation and limitations defense to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Prepare an evidence-first one-page artifact for case-study presentation and limitations defense that includes limitations and next steps.
+- Reflection: What from case-study presentation and limitations defense is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Behavioral stories for finance roles
 - Why it matters in quant: Behavioral stories for finance roles is part of real quant work inside interview prep ii: portfolio polish, github presentation, networking, and mock case defense research, trading, or risk workflows.
-- Core explanation: Start with intuition for behavioral stories for finance roles, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around behavioral stories for finance roles and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build behavioral stories for finance roles from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for behavioral stories for finance roles and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain behavioral stories for finance roles in one paragraph without jargon.
-- Write down the main formula or workflow for behavioral stories for finance roles from memory.
-- Connect behavioral stories for finance roles to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: behavioral stories for finance roles.
-- Reflection: What from behavioral stories for finance roles felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for behavioral stories for finance roles from memory.
+- Connect behavioral stories for finance roles to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Prepare an evidence-first one-page artifact for behavioral stories for finance roles that includes limitations and next steps.
+- Reflection: What from behavioral stories for finance roles is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mock presentation day
 - Why it matters in quant: Mock presentation day is part of real quant work inside interview prep ii: portfolio polish, github presentation, networking, and mock case defense research, trading, or risk workflows.
-- Core explanation: Start with intuition for mock presentation day, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mock presentation day and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mock presentation day from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mock presentation day and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mock presentation day in one paragraph without jargon.
-- Write down the main formula or workflow for mock presentation day from memory.
-- Connect mock presentation day to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mock presentation day.
-- Reflection: What from mock presentation day felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mock presentation day from memory.
+- Connect mock presentation day to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Prepare an evidence-first one-page artifact for mock presentation day that includes limitations and next steps.
+- Reflection: What from mock presentation day is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and polish
 - Why it matters in quant: Review and polish is part of real quant work inside interview prep ii: portfolio polish, github presentation, networking, and mock case defense research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and polish, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and polish and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and polish from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and polish and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and polish in one paragraph without jargon.
-- Write down the main formula or workflow for review and polish from memory.
-- Connect review and polish to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and polish.
-- Reflection: What from review and polish felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and polish from memory.
+- Connect review and polish to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Prepare an evidence-first one-page artifact for review and polish that includes limitations and next steps.
+- Reflection: What from review and polish is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Project communication

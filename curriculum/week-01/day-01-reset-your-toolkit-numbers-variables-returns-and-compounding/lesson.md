@@ -1,6 +1,6 @@
 # Week 01 Mon: Reset your toolkit: numbers, variables, returns, and compounding
 
-**Estimated time:** 4 hours
+**Estimated time:** 6 hours
 
 ## Study Blocks
 - Block 1 (45 min): Reset notation: prices, returns, percentages, and variables.

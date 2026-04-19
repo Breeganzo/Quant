@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: NumPy arrays, vectorization, and speed intuition
 - Why it matters in quant: NumPy arrays, vectorization, and speed intuition is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
-- Core explanation: Start with intuition for numpy arrays, vectorization, and speed intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around numpy arrays, vectorization, and speed intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build numpy arrays, vectorization, and speed intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for numpy arrays, vectorization, and speed intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain numpy arrays, vectorization, and speed intuition in one paragraph without jargon.
-- Write down the main formula or workflow for numpy arrays, vectorization, and speed intuition from memory.
-- Connect numpy arrays, vectorization, and speed intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: numpy arrays, vectorization, and speed intuition.
-- Reflection: What from numpy arrays, vectorization, and speed intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for numpy arrays, vectorization, and speed intuition from memory.
+- Connect numpy arrays, vectorization, and speed intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a cleaned feature table for numpy arrays, vectorization, and speed intuition and show one validation check that catches a data issue.
+- Reflection: What from numpy arrays, vectorization, and speed intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: pandas DataFrames, indexing, joins, and missing values
 - Why it matters in quant: pandas DataFrames, indexing, joins, and missing values is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
-- Core explanation: Start with intuition for pandas dataframes, indexing, joins, and missing values, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around pandas dataframes, indexing, joins, and missing values and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build pandas dataframes, indexing, joins, and missing values from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for pandas dataframes, indexing, joins, and missing values and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain pandas dataframes, indexing, joins, and missing values in one paragraph without jargon.
-- Write down the main formula or workflow for pandas dataframes, indexing, joins, and missing values from memory.
-- Connect pandas dataframes, indexing, joins, and missing values to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: pandas dataframes, indexing, joins, and missing values.
-- Reflection: What from pandas dataframes, indexing, joins, and missing values felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for pandas dataframes, indexing, joins, and missing values from memory.
+- Connect pandas dataframes, indexing, joins, and missing values to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a cleaned feature table for pandas dataframes, indexing, joins, and missing values and show one validation check that catches a data issue.
+- Reflection: What from pandas dataframes, indexing, joins, and missing values is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Plotting and exploratory data analysis for prices and returns
 - Why it matters in quant: Plotting and exploratory data analysis for prices and returns is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
-- Core explanation: Start with intuition for plotting and exploratory data analysis for prices and returns, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around plotting and exploratory data analysis for prices and returns and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build plotting and exploratory data analysis for prices and returns from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for plotting and exploratory data analysis for prices and returns and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain plotting and exploratory data analysis for prices and returns in one paragraph without jargon.
-- Write down the main formula or workflow for plotting and exploratory data analysis for prices and returns from memory.
-- Connect plotting and exploratory data analysis for prices and returns to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: plotting and exploratory data analysis for prices and returns.
-- Reflection: What from plotting and exploratory data analysis for prices and returns felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for plotting and exploratory data analysis for prices and returns from memory.
+- Connect plotting and exploratory data analysis for prices and returns to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a cleaned feature table for plotting and exploratory data analysis for prices and returns and show one validation check that catches a data issue.
+- Reflection: What from plotting and exploratory data analysis for prices and returns is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Correlation, covariance, and diversification
 - Why it matters in quant: Correlation, covariance, and diversification is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
-- Core explanation: Start with intuition for correlation, covariance, and diversification, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around correlation, covariance, and diversification and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build correlation, covariance, and diversification from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for correlation, covariance, and diversification and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain correlation, covariance, and diversification in one paragraph without jargon.
-- Write down the main formula or workflow for correlation, covariance, and diversification from memory.
-- Connect correlation, covariance, and diversification to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: correlation, covariance, and diversification.
-- Reflection: What from correlation, covariance, and diversification felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for correlation, covariance, and diversification from memory.
+- Connect correlation, covariance, and diversification to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a cleaned feature table for correlation, covariance, and diversification and show one validation check that catches a data issue.
+- Reflection: What from correlation, covariance, and diversification is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Portfolio weights, rebalancing, cumulative performance, and SQL workflow
 - Why it matters in quant: Portfolio weights, rebalancing, cumulative performance, and SQL workflow is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
-- Core explanation: Start with intuition for portfolio weights, rebalancing, cumulative performance, and sql workflow, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around portfolio weights, rebalancing, cumulative performance, and sql workflow and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build portfolio weights, rebalancing, cumulative performance, and sql workflow from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for portfolio weights, rebalancing, cumulative performance, and sql workflow and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain portfolio weights, rebalancing, cumulative performance, and sql workflow in one paragraph without jargon.
-- Write down the main formula or workflow for portfolio weights, rebalancing, cumulative performance, and sql workflow from memory.
-- Connect portfolio weights, rebalancing, cumulative performance, and sql workflow to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: portfolio weights, rebalancing, cumulative performance, and sql workflow.
-- Reflection: What from portfolio weights, rebalancing, cumulative performance, and sql workflow felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for portfolio weights, rebalancing, cumulative performance, and sql workflow from memory.
+- Connect portfolio weights, rebalancing, cumulative performance, and sql workflow to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a cleaned feature table for portfolio weights, rebalancing, cumulative performance, and sql workflow and show one validation check that catches a data issue.
+- Reflection: What from portfolio weights, rebalancing, cumulative performance, and sql workflow is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Revision, error log, and data workflow drill
 - Why it matters in quant: Revision, error log, and data workflow drill is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
-- Core explanation: Start with intuition for revision, error log, and data workflow drill, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around revision, error log, and data workflow drill and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build revision, error log, and data workflow drill from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for revision, error log, and data workflow drill and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain revision, error log, and data workflow drill in one paragraph without jargon.
-- Write down the main formula or workflow for revision, error log, and data workflow drill from memory.
-- Connect revision, error log, and data workflow drill to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: revision, error log, and data workflow drill.
-- Reflection: What from revision, error log, and data workflow drill felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for revision, error log, and data workflow drill from memory.
+- Connect revision, error log, and data workflow drill to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a cleaned feature table for revision, error log, and data workflow drill and show one validation check that catches a data issue.
+- Reflection: What from revision, error log, and data workflow drill is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Mini project: compare three assets and explain diversification
 - Why it matters in quant: Mini project: compare three assets and explain diversification is part of real quant work inside data and linear algebra: numpy, pandas, visualization, diversification, and sql basics research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini project: compare three assets and explain diversification, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini project: compare three assets and explain diversification and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini project: compare three assets and explain diversification from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini project: compare three assets and explain diversification and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini project: compare three assets and explain diversification in one paragraph without jargon.
-- Write down the main formula or workflow for mini project: compare three assets and explain diversification from memory.
-- Connect mini project: compare three assets and explain diversification to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini project: compare three assets and explain diversification.
-- Reflection: What from mini project: compare three assets and explain diversification felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini project: compare three assets and explain diversification from memory.
+- Connect mini project: compare three assets and explain diversification to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Build a cleaned feature table for mini project: compare three assets and explain diversification and show one validation check that catches a data issue.
+- Reflection: What from mini project: compare three assets and explain diversification is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Array operations and broadcasting

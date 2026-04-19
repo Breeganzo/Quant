@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: What makes time series different from tabular data?
 - Why it matters in quant: What makes time series different from tabular data? is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
-- Core explanation: Start with intuition for what makes time series different from tabular data?, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around what makes time series different from tabular data? and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build what makes time series different from tabular data? from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for what makes time series different from tabular data? and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain what makes time series different from tabular data? in one paragraph without jargon.
-- Write down the main formula or workflow for what makes time series different from tabular data? from memory.
-- Connect what makes time series different from tabular data? to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: what makes time series different from tabular data?.
-- Reflection: What from what makes time series different from tabular data? felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for what makes time series different from tabular data? from memory.
+- Connect what makes time series different from tabular data? to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Construct a lag-based pipeline for what makes time series different from tabular data? and compare one forecast baseline to one improved variant.
+- Reflection: What from what makes time series different from tabular data? is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Stationarity, trends, seasonality, and differencing
 - Why it matters in quant: Stationarity, trends, seasonality, and differencing is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
-- Core explanation: Start with intuition for stationarity, trends, seasonality, and differencing, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around stationarity, trends, seasonality, and differencing and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build stationarity, trends, seasonality, and differencing from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for stationarity, trends, seasonality, and differencing and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain stationarity, trends, seasonality, and differencing in one paragraph without jargon.
-- Write down the main formula or workflow for stationarity, trends, seasonality, and differencing from memory.
-- Connect stationarity, trends, seasonality, and differencing to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: stationarity, trends, seasonality, and differencing.
-- Reflection: What from stationarity, trends, seasonality, and differencing felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for stationarity, trends, seasonality, and differencing from memory.
+- Connect stationarity, trends, seasonality, and differencing to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Construct a lag-based pipeline for stationarity, trends, seasonality, and differencing and compare one forecast baseline to one improved variant.
+- Reflection: What from stationarity, trends, seasonality, and differencing is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: AR, MA, and ARIMA intuition
 - Why it matters in quant: AR, MA, and ARIMA intuition is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
-- Core explanation: Start with intuition for ar, ma, and arima intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around ar, ma, and arima intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build ar, ma, and arima intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for ar, ma, and arima intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain ar, ma, and arima intuition in one paragraph without jargon.
-- Write down the main formula or workflow for ar, ma, and arima intuition from memory.
-- Connect ar, ma, and arima intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: ar, ma, and arima intuition.
-- Reflection: What from ar, ma, and arima intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for ar, ma, and arima intuition from memory.
+- Connect ar, ma, and arima intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Construct a lag-based pipeline for ar, ma, and arima intuition and compare one forecast baseline to one improved variant.
+- Reflection: What from ar, ma, and arima intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Autocorrelation, partial autocorrelation, and lag structure
 - Why it matters in quant: Autocorrelation, partial autocorrelation, and lag structure is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
-- Core explanation: Start with intuition for autocorrelation, partial autocorrelation, and lag structure, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around autocorrelation, partial autocorrelation, and lag structure and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build autocorrelation, partial autocorrelation, and lag structure from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for autocorrelation, partial autocorrelation, and lag structure and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain autocorrelation, partial autocorrelation, and lag structure in one paragraph without jargon.
-- Write down the main formula or workflow for autocorrelation, partial autocorrelation, and lag structure from memory.
-- Connect autocorrelation, partial autocorrelation, and lag structure to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: autocorrelation, partial autocorrelation, and lag structure.
-- Reflection: What from autocorrelation, partial autocorrelation, and lag structure felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for autocorrelation, partial autocorrelation, and lag structure from memory.
+- Connect autocorrelation, partial autocorrelation, and lag structure to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Construct a lag-based pipeline for autocorrelation, partial autocorrelation, and lag structure and compare one forecast baseline to one improved variant.
+- Reflection: What from autocorrelation, partial autocorrelation, and lag structure is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Walk-forward validation and forecast error metrics
 - Why it matters in quant: Walk-forward validation and forecast error metrics is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
-- Core explanation: Start with intuition for walk-forward validation and forecast error metrics, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around walk-forward validation and forecast error metrics and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build walk-forward validation and forecast error metrics from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for walk-forward validation and forecast error metrics and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain walk-forward validation and forecast error metrics in one paragraph without jargon.
-- Write down the main formula or workflow for walk-forward validation and forecast error metrics from memory.
-- Connect walk-forward validation and forecast error metrics to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: walk-forward validation and forecast error metrics.
-- Reflection: What from walk-forward validation and forecast error metrics felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for walk-forward validation and forecast error metrics from memory.
+- Connect walk-forward validation and forecast error metrics to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Construct a lag-based pipeline for walk-forward validation and forecast error metrics and compare one forecast baseline to one improved variant.
+- Reflection: What from walk-forward validation and forecast error metrics is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Capstone build day
 - Why it matters in quant: Capstone build day is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone build day, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone build day and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone build day from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone build day and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone build day in one paragraph without jargon.
-- Write down the main formula or workflow for capstone build day from memory.
-- Connect capstone build day to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone build day.
-- Reflection: What from capstone build day felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone build day from memory.
+- Connect capstone build day to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Construct a lag-based pipeline for capstone build day and compare one forecast baseline to one improved variant.
+- Reflection: What from capstone build day is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Capstone review and write-up
 - Why it matters in quant: Capstone review and write-up is part of real quant work inside time series i: stationarity, ar/ma/arima intuition, walk-forward testing, and forecasting research, trading, or risk workflows.
-- Core explanation: Start with intuition for capstone review and write-up, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around capstone review and write-up and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build capstone review and write-up from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for capstone review and write-up and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain capstone review and write-up in one paragraph without jargon.
-- Write down the main formula or workflow for capstone review and write-up from memory.
-- Connect capstone review and write-up to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: capstone review and write-up.
-- Reflection: What from capstone review and write-up felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for capstone review and write-up from memory.
+- Connect capstone review and write-up to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Construct a lag-based pipeline for capstone review and write-up and compare one forecast baseline to one improved variant.
+- Reflection: What from capstone review and write-up is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Stationarity

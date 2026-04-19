@@ -4,7 +4,7 @@
 - Math is being rebuilt almost from zero, so each lesson starts with intuition and then adds technical language.
 - Coding is good enough to move quickly once finance and math are tied back to practice.
 - The 24-week plan runs from 2026-04-20 to 2026-10-04 if you start on the next Monday after this build.
-- Weekly workload is sized for about 56 hours (8 hours/day intensive track).
+- Weekly workload is sized for about 42 hours (6 hours/day intensive track).
 
 ## 24-Week Roadmap Table
 | Week | Dates | Theme | Key Outcome |

@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Program tiers and fit analysis
 - Why it matters in quant: Program tiers and fit analysis is part of real quant work inside admissions track i: target programs, scholarships, sop structure, and recommendation strategy research, trading, or risk workflows.
-- Core explanation: Start with intuition for program tiers and fit analysis, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around program tiers and fit analysis and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build program tiers and fit analysis from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for program tiers and fit analysis and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain program tiers and fit analysis in one paragraph without jargon.
-- Write down the main formula or workflow for program tiers and fit analysis from memory.
-- Connect program tiers and fit analysis to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: program tiers and fit analysis.
-- Reflection: What from program tiers and fit analysis felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for program tiers and fit analysis from memory.
+- Connect program tiers and fit analysis to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a scoring matrix for program tiers and fit analysis and justify one decision using evidence weights.
+- Reflection: What from program tiers and fit analysis is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Scholarship matrix and funding logic
 - Why it matters in quant: Scholarship matrix and funding logic is part of real quant work inside admissions track i: target programs, scholarships, sop structure, and recommendation strategy research, trading, or risk workflows.
-- Core explanation: Start with intuition for scholarship matrix and funding logic, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around scholarship matrix and funding logic and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build scholarship matrix and funding logic from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for scholarship matrix and funding logic and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain scholarship matrix and funding logic in one paragraph without jargon.
-- Write down the main formula or workflow for scholarship matrix and funding logic from memory.
-- Connect scholarship matrix and funding logic to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: scholarship matrix and funding logic.
-- Reflection: What from scholarship matrix and funding logic felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for scholarship matrix and funding logic from memory.
+- Connect scholarship matrix and funding logic to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a scoring matrix for scholarship matrix and funding logic and justify one decision using evidence weights.
+- Reflection: What from scholarship matrix and funding logic is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: SOP structure: past, pivot, proof, future
 - Why it matters in quant: SOP structure: past, pivot, proof, future is part of real quant work inside admissions track i: target programs, scholarships, sop structure, and recommendation strategy research, trading, or risk workflows.
-- Core explanation: Start with intuition for sop structure: past, pivot, proof, future, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around sop structure: past, pivot, proof, future and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build sop structure: past, pivot, proof, future from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for sop structure: past, pivot, proof, future and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain sop structure: past, pivot, proof, future in one paragraph without jargon.
-- Write down the main formula or workflow for sop structure: past, pivot, proof, future from memory.
-- Connect sop structure: past, pivot, proof, future to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: sop structure: past, pivot, proof, future.
-- Reflection: What from sop structure: past, pivot, proof, future felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for sop structure: past, pivot, proof, future from memory.
+- Connect sop structure: past, pivot, proof, future to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a scoring matrix for sop structure: past, pivot, proof, future and justify one decision using evidence weights.
+- Reflection: What from sop structure: past, pivot, proof, future is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Recommendation strategy and evidence package
 - Why it matters in quant: Recommendation strategy and evidence package is part of real quant work inside admissions track i: target programs, scholarships, sop structure, and recommendation strategy research, trading, or risk workflows.
-- Core explanation: Start with intuition for recommendation strategy and evidence package, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around recommendation strategy and evidence package and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build recommendation strategy and evidence package from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for recommendation strategy and evidence package and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain recommendation strategy and evidence package in one paragraph without jargon.
-- Write down the main formula or workflow for recommendation strategy and evidence package from memory.
-- Connect recommendation strategy and evidence package to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: recommendation strategy and evidence package.
-- Reflection: What from recommendation strategy and evidence package felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for recommendation strategy and evidence package from memory.
+- Connect recommendation strategy and evidence package to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a scoring matrix for recommendation strategy and evidence package and justify one decision using evidence weights.
+- Reflection: What from recommendation strategy and evidence package is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: CV and project narrative refinement
 - Why it matters in quant: CV and project narrative refinement is part of real quant work inside admissions track i: target programs, scholarships, sop structure, and recommendation strategy research, trading, or risk workflows.
-- Core explanation: Start with intuition for cv and project narrative refinement, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around cv and project narrative refinement and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build cv and project narrative refinement from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for cv and project narrative refinement and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain cv and project narrative refinement in one paragraph without jargon.
-- Write down the main formula or workflow for cv and project narrative refinement from memory.
-- Connect cv and project narrative refinement to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: cv and project narrative refinement.
-- Reflection: What from cv and project narrative refinement felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for cv and project narrative refinement from memory.
+- Connect cv and project narrative refinement to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a scoring matrix for cv and project narrative refinement and justify one decision using evidence weights.
+- Reflection: What from cv and project narrative refinement is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mini lab: draft your application story
 - Why it matters in quant: Mini lab: draft your application story is part of real quant work inside admissions track i: target programs, scholarships, sop structure, and recommendation strategy research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini lab: draft your application story, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini lab: draft your application story and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini lab: draft your application story from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini lab: draft your application story and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini lab: draft your application story in one paragraph without jargon.
-- Write down the main formula or workflow for mini lab: draft your application story from memory.
-- Connect mini lab: draft your application story to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini lab: draft your application story.
-- Reflection: What from mini lab: draft your application story felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini lab: draft your application story from memory.
+- Connect mini lab: draft your application story to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a scoring matrix for mini lab: draft your application story and justify one decision using evidence weights.
+- Reflection: What from mini lab: draft your application story is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and evidence gap check
 - Why it matters in quant: Review and evidence gap check is part of real quant work inside admissions track i: target programs, scholarships, sop structure, and recommendation strategy research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and evidence gap check, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and evidence gap check and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and evidence gap check from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and evidence gap check and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and evidence gap check in one paragraph without jargon.
-- Write down the main formula or workflow for review and evidence gap check from memory.
-- Connect review and evidence gap check to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and evidence gap check.
-- Reflection: What from review and evidence gap check felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and evidence gap check from memory.
+- Connect review and evidence gap check to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Create a scoring matrix for review and evidence gap check and justify one decision using evidence weights.
+- Reflection: What from review and evidence gap check is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Program fit

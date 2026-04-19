@@ -1,6 +1,6 @@
 # Week 01 Thu: Descriptive statistics, sampling intuition, and visualizing market data
 
-**Estimated time:** 4 hours
+**Estimated time:** 6 hours
 
 ## Study Blocks
 - Block 1 (45 min): Understand mean, median, variance, and standard deviation.

@@ -1,6 +1,6 @@
 # Week 01 Sat: Revision, spaced repetition, and first market diary notebook
 
-**Estimated time:** 4 hours
+**Estimated time:** 6 hours
 
 ## Study Blocks
 - Block 1 (45 min): Active recall and formula rewrite from memory.

@@ -1,6 +1,6 @@
 # Week 01 Fri: Market structure, asset classes, risk, return, and what quants actually do
 
-**Estimated time:** 4 hours
+**Estimated time:** 6 hours
 
 ## Study Blocks
 - Block 1 (45 min): Understand what markets are and who participates.

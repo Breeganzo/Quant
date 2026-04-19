@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Unsupervised learning overview
 - Why it matters in quant: Unsupervised learning overview is part of real quant work inside unsupervised learning: clustering, pca, latent structure, and factor intuition research, trading, or risk workflows.
-- Core explanation: Start with intuition for unsupervised learning overview, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around unsupervised learning overview and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build unsupervised learning overview from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for unsupervised learning overview and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain unsupervised learning overview in one paragraph without jargon.
-- Write down the main formula or workflow for unsupervised learning overview from memory.
-- Connect unsupervised learning overview to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: unsupervised learning overview.
-- Reflection: What from unsupervised learning overview felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for unsupervised learning overview from memory.
+- Connect unsupervised learning overview to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for unsupervised learning overview on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from unsupervised learning overview is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Clustering assets and regimes
 - Why it matters in quant: Clustering assets and regimes is part of real quant work inside unsupervised learning: clustering, pca, latent structure, and factor intuition research, trading, or risk workflows.
-- Core explanation: Start with intuition for clustering assets and regimes, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around clustering assets and regimes and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build clustering assets and regimes from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for clustering assets and regimes and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain clustering assets and regimes in one paragraph without jargon.
-- Write down the main formula or workflow for clustering assets and regimes from memory.
-- Connect clustering assets and regimes to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: clustering assets and regimes.
-- Reflection: What from clustering assets and regimes felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for clustering assets and regimes from memory.
+- Connect clustering assets and regimes to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for clustering assets and regimes on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from clustering assets and regimes is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: PCA and variance decomposition
 - Why it matters in quant: PCA and variance decomposition is part of real quant work inside unsupervised learning: clustering, pca, latent structure, and factor intuition research, trading, or risk workflows.
-- Core explanation: Start with intuition for pca and variance decomposition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around pca and variance decomposition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build pca and variance decomposition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for pca and variance decomposition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain pca and variance decomposition in one paragraph without jargon.
-- Write down the main formula or workflow for pca and variance decomposition from memory.
-- Connect pca and variance decomposition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: pca and variance decomposition.
-- Reflection: What from pca and variance decomposition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for pca and variance decomposition from memory.
+- Connect pca and variance decomposition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for pca and variance decomposition on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from pca and variance decomposition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Factor intuition and common risk drivers
 - Why it matters in quant: Factor intuition and common risk drivers is part of real quant work inside unsupervised learning: clustering, pca, latent structure, and factor intuition research, trading, or risk workflows.
-- Core explanation: Start with intuition for factor intuition and common risk drivers, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around factor intuition and common risk drivers and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build factor intuition and common risk drivers from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for factor intuition and common risk drivers and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain factor intuition and common risk drivers in one paragraph without jargon.
-- Write down the main formula or workflow for factor intuition and common risk drivers from memory.
-- Connect factor intuition and common risk drivers to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: factor intuition and common risk drivers.
-- Reflection: What from factor intuition and common risk drivers felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for factor intuition and common risk drivers from memory.
+- Connect factor intuition and common risk drivers to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for factor intuition and common risk drivers on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from factor intuition and common risk drivers is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Feature compression and dimensionality reduction
 - Why it matters in quant: Feature compression and dimensionality reduction is part of real quant work inside unsupervised learning: clustering, pca, latent structure, and factor intuition research, trading, or risk workflows.
-- Core explanation: Start with intuition for feature compression and dimensionality reduction, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around feature compression and dimensionality reduction and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build feature compression and dimensionality reduction from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for feature compression and dimensionality reduction and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain feature compression and dimensionality reduction in one paragraph without jargon.
-- Write down the main formula or workflow for feature compression and dimensionality reduction from memory.
-- Connect feature compression and dimensionality reduction to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: feature compression and dimensionality reduction.
-- Reflection: What from feature compression and dimensionality reduction felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for feature compression and dimensionality reduction from memory.
+- Connect feature compression and dimensionality reduction to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for feature compression and dimensionality reduction on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from feature compression and dimensionality reduction is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mini lab: cluster assets by behavior
 - Why it matters in quant: Mini lab: cluster assets by behavior is part of real quant work inside unsupervised learning: clustering, pca, latent structure, and factor intuition research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini lab: cluster assets by behavior, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini lab: cluster assets by behavior and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini lab: cluster assets by behavior from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini lab: cluster assets by behavior and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini lab: cluster assets by behavior in one paragraph without jargon.
-- Write down the main formula or workflow for mini lab: cluster assets by behavior from memory.
-- Connect mini lab: cluster assets by behavior to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini lab: cluster assets by behavior.
-- Reflection: What from mini lab: cluster assets by behavior felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini lab: cluster assets by behavior from memory.
+- Connect mini lab: cluster assets by behavior to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for mini lab: cluster assets by behavior on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from mini lab: cluster assets by behavior is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and communication practice
 - Why it matters in quant: Review and communication practice is part of real quant work inside unsupervised learning: clustering, pca, latent structure, and factor intuition research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and communication practice, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and communication practice and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and communication practice from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and communication practice and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and communication practice in one paragraph without jargon.
-- Write down the main formula or workflow for review and communication practice from memory.
-- Connect review and communication practice to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and communication practice.
-- Reflection: What from review and communication practice felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and communication practice from memory.
+- Connect review and communication practice to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for review and communication practice on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from review and communication practice is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Clustering

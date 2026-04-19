@@ -1,6 +1,6 @@
 # Week 01 Wed: Vectors, matrices, and linear algebra intuition for portfolios and ML
 
-**Estimated time:** 4 hours
+**Estimated time:** 6 hours
 
 ## Study Blocks
 - Block 1 (45 min): Learn scalars, vectors, and matrices through finance objects.

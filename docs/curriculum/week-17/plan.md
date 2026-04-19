@@ -10,80 +10,80 @@
 ## Daily Schedule
 ### Mon: Decision trees and rule-based splits
 - Why it matters in quant: Decision trees and rule-based splits is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
-- Core explanation: Start with intuition for decision trees and rule-based splits, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around decision trees and rule-based splits and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build decision trees and rule-based splits from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for decision trees and rule-based splits and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain decision trees and rule-based splits in one paragraph without jargon.
-- Write down the main formula or workflow for decision trees and rule-based splits from memory.
-- Connect decision trees and rule-based splits to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: decision trees and rule-based splits.
-- Reflection: What from decision trees and rule-based splits felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for decision trees and rule-based splits from memory.
+- Connect decision trees and rule-based splits to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for decision trees and rule-based splits on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from decision trees and rule-based splits is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Tue: Random forests and bagging intuition
 - Why it matters in quant: Random forests and bagging intuition is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
-- Core explanation: Start with intuition for random forests and bagging intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around random forests and bagging intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build random forests and bagging intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for random forests and bagging intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain random forests and bagging intuition in one paragraph without jargon.
-- Write down the main formula or workflow for random forests and bagging intuition from memory.
-- Connect random forests and bagging intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: random forests and bagging intuition.
-- Reflection: What from random forests and bagging intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for random forests and bagging intuition from memory.
+- Connect random forests and bagging intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for random forests and bagging intuition on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from random forests and bagging intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Wed: Gradient boosting intuition
 - Why it matters in quant: Gradient boosting intuition is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
-- Core explanation: Start with intuition for gradient boosting intuition, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around gradient boosting intuition and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build gradient boosting intuition from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for gradient boosting intuition and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain gradient boosting intuition in one paragraph without jargon.
-- Write down the main formula or workflow for gradient boosting intuition from memory.
-- Connect gradient boosting intuition to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: gradient boosting intuition.
-- Reflection: What from gradient boosting intuition felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for gradient boosting intuition from memory.
+- Connect gradient boosting intuition to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for gradient boosting intuition on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from gradient boosting intuition is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Thu: Feature importance and interpretation caveats
 - Why it matters in quant: Feature importance and interpretation caveats is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
-- Core explanation: Start with intuition for feature importance and interpretation caveats, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around feature importance and interpretation caveats and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build feature importance and interpretation caveats from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for feature importance and interpretation caveats and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain feature importance and interpretation caveats in one paragraph without jargon.
-- Write down the main formula or workflow for feature importance and interpretation caveats from memory.
-- Connect feature importance and interpretation caveats to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: feature importance and interpretation caveats.
-- Reflection: What from feature importance and interpretation caveats felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for feature importance and interpretation caveats from memory.
+- Connect feature importance and interpretation caveats to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for feature importance and interpretation caveats on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from feature importance and interpretation caveats is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Fri: Model risk and stability across regimes
 - Why it matters in quant: Model risk and stability across regimes is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
-- Core explanation: Start with intuition for model risk and stability across regimes, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around model risk and stability across regimes and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build model risk and stability across regimes from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for model risk and stability across regimes and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain model risk and stability across regimes in one paragraph without jargon.
-- Write down the main formula or workflow for model risk and stability across regimes from memory.
-- Connect model risk and stability across regimes to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: model risk and stability across regimes.
-- Reflection: What from model risk and stability across regimes felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for model risk and stability across regimes from memory.
+- Connect model risk and stability across regimes to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for model risk and stability across regimes on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from model risk and stability across regimes is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sat: Mini lab: nonlinear tabular finance model
 - Why it matters in quant: Mini lab: nonlinear tabular finance model is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
-- Core explanation: Start with intuition for mini lab: nonlinear tabular finance model, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around mini lab: nonlinear tabular finance model and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build mini lab: nonlinear tabular finance model from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for mini lab: nonlinear tabular finance model and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain mini lab: nonlinear tabular finance model in one paragraph without jargon.
-- Write down the main formula or workflow for mini lab: nonlinear tabular finance model from memory.
-- Connect mini lab: nonlinear tabular finance model to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: mini lab: nonlinear tabular finance model.
-- Reflection: What from mini lab: nonlinear tabular finance model felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for mini lab: nonlinear tabular finance model from memory.
+- Connect mini lab: nonlinear tabular finance model to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for mini lab: nonlinear tabular finance model on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from mini lab: nonlinear tabular finance model is now evidence-backed in your notes, and what still needs a focused retry?
 
 ### Sun: Review and limitations
 - Why it matters in quant: Review and limitations is part of real quant work inside ml for quant i: trees, ensembles, nonlinear interactions, and model interpretation research, trading, or risk workflows.
-- Core explanation: Start with intuition for review and limitations, then restate it using the formal quantitative language used in finance and ML.
-- Worked example: Build one small finance example around review and limitations and explain what the output would mean for a trader or risk analyst.
+- Core explanation: Build review and limitations from intuition to implementation: define the core mechanism, map it to measurable outputs, and state one assumption that can break in live deployment.
+- Worked example: Run one compact, reproducible example for review and limitations and explain both the signal and the main failure mode a quant team should watch.
 - Practice problems:
 - Explain review and limitations in one paragraph without jargon.
-- Write down the main formula or workflow for review and limitations from memory.
-- Connect review and limitations to one trading, portfolio, or risk problem.
-- Coding task: Implement one notebook cell or small script focused on: review and limitations.
-- Reflection: What from review and limitations felt truly clear, and what still needs a slower revisit?
+- Write down one topic-specific formula or workflow for review and limitations from memory.
+- Connect review and limitations to one realistic trading, portfolio, risk, or research decision.
+- Coding task: Train a baseline classifier/regressor for review and limitations on market-derived features and report one robust metric beyond accuracy.
+- Reflection: What from review and limitations is now evidence-backed in your notes, and what still needs a focused retry?
 
 ## Concept Lessons
 - Decision trees

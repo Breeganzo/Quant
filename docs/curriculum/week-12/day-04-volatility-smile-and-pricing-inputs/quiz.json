@@ -8,37 +8,31 @@
       "id": "q1",
       "difficulty": "basic",
       "question": "Explain volatility smile and pricing inputs in plain language for a trading or risk audience.",
-      "answer": "A strong answer defines volatility smile and pricing inputs, gives one concrete market example, and states why the concept improves decisions under uncertainty.",
-      "explanation": "This tests communication quality, not just memorized definitions.",
-      "python_task": "Compute log returns for SPY and QQQ daily closes and explain one volatile day.",
-      "python_solution": "import numpy as np\nimport pandas as pd\nprices = market.pivot(index='date', columns='symbol', values='close')[['SPY','QQQ']].dropna()\nlog_ret = np.log(prices / prices.shift(1)).dropna()\nprint(log_ret.tail())"
+      "answer": "A strong answer defines volatility smile and pricing inputs, gives one concrete workflow or market-facing decision example, and states one practical limitation that must be monitored.",
+      "explanation": "This tests communication quality, not just memorized definitions."
     },
     {
       "id": "q2",
       "difficulty": "intermediate",
-      "question": "Write one key formula/workflow and define every symbol with units.",
-      "answer": "A strong answer includes formula meaning, variable units, and one implementation caveat (for example, annualization assumptions or missing data handling).",
+      "question": "Write the Call Payoff formula/workflow from memory and define each symbol.",
+      "answer": "A strong answer includes Call Payoff exactly, explains each symbol, and states one caveat: Confusing payoff with profit (ignoring premium).",
       "explanation": "This checks mathematical fluency and operational reliability.",
-      "python_task": "Estimate annualized volatility for SPY, QQQ, TLT, and GLD.",
-      "python_solution": "returns = prices.pct_change().dropna()\nann_vol = returns.std() * (252 ** 0.5)\nprint(ann_vol.sort_values(ascending=False).round(4))"
+      "python_task": "Build option payoff vectors and estimate delta numerically at one point.",
+      "python_solution": "import numpy as np\n\nk = 100\ns_grid = np.linspace(70, 130, 13)\ncall = np.maximum(s_grid - k, 0)\nput = np.maximum(k - s_grid, 0)\ns0 = 101\neps = 0.5\ncall_price = lambda s: max(s - k, 0)\ndelta = (call_price(s0 + eps) - call_price(s0 - eps)) / (2 * eps)\nprint(\"Call payoff:\", call)\nprint(\"Put payoff:\", put)\nprint(\"Delta estimate near S=101:\", round(float(delta), 4))\n"
     },
     {
       "id": "q3",
       "difficulty": "intermediate",
       "question": "Give one realistic use case and one failure mode if this concept is misapplied.",
-      "answer": "A strong answer ties the concept to signal design, portfolio sizing, or risk control, then names one concrete failure mode and detection check.",
-      "explanation": "This evaluates transfer from theory to practical quant workflow.",
-      "python_task": "Compute a simple Sharpe ratio proxy and explain one fragility.",
-      "python_solution": "rf = 0.03\nann_ret = returns.mean() * 252\nann_vol = returns.std() * (252 ** 0.5)\nsharpe = (ann_ret - rf) / ann_vol\nprint(sharpe.round(3))"
+      "answer": "A strong answer ties the concept to one production decision, defines a measurable success metric, and names one concrete failure mode plus detection check.",
+      "explanation": "This evaluates transfer from theory to practical quant workflow."
     },
     {
       "id": "q4",
       "difficulty": "advanced",
-      "question": "How would you validate real data from yfinance/Robinhood export/local CSV before trusting conclusions?",
-      "answer": "Check schema consistency, missing values, split/dividend handling, date alignment, and sensitivity to stress windows. Then compare at least one metric across two data sources.",
-      "explanation": "This tests real-data robustness discipline and source reconciliation.",
-      "python_task": "Run a source-quality checklist before analysis.",
-      "python_solution": "print('rows:', len(market))\nprint('missing close:', market['close'].isna().sum())\nprint('duplicates:', market.duplicated(['date','symbol']).sum())\nprint('symbols:', sorted(market['symbol'].unique()))"
+      "question": "How would you validate data quality and implementation assumptions before trusting conclusions?",
+      "answer": "Check schema consistency, missing values, temporal alignment, leakage risks, and sensitivity to stress windows. Then compare one metric across alternate assumptions or data sources.",
+      "explanation": "This tests robustness discipline and implementation realism."
     }
   ]
 }
